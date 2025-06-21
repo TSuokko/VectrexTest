@@ -50,10 +50,10 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           00EF  l_.0xf5                         
           00F1  l_.bss                          
           0100  l_.direct                       
-          0685  l_.text                         
-          06E3  s_.text.unlikely                
-          06E3  s_.text.last                    
-          06E3  s_.text.hot                     
+          63F0  l_.text                         
+          644E  s_.text.unlikely                
+          644E  s_.text.last                    
+          644E  s_.text.hot                     
           C800  s_.dpc8                         
           C880  s_.data                         
           C881  s_.bss                          
@@ -139,891 +139,1043 @@ Hexidecimal  [16-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          005E  _MousePointer                      main.enr.c
-          0069  _setup                             main.enr.c
-          0069  A$main$55                          main.enr.c
-          006C  A$main$60                          main.enr.c
-          006F  A$main$65                          main.enr.c
-          0072  A$main$70                          main.enr.c
-          0075  A$main$75                          main.enr.c
-          0078  A$main$80                          main.enr.c
-          007B  A$main$81                          main.enr.c
-          007C  A$main$83                          main.enr.c
-          007F  A$main$84                          main.enr.c
-          0080  A$main$86                          main.enr.c
-          0083  A$main$87                          main.enr.c
-          0084  A$main$89                          main.enr.c
-          0086  A$main$90                          main.enr.c
-          0089  A$main$91                          main.enr.c
-          008A  A$main$93                          main.enr.c
-          008C  A$main$94                          main.enr.c
-          008F  A$main$95                          main.enr.c
-          0145  A$main$136                         main.enr.c
-          0145  _mainMenu                          main.enr.c
-          0147  A$main$137                         main.enr.c
-          0149  A$main$138                         main.enr.c
-          014C  A$main$139                         main.enr.c
-          014E  A$main$140                         main.enr.c
-          0151  A$main$141                         main.enr.c
-          0153  A$main$146                         main.enr.c
-          0155  A$main$147                         main.enr.c
-          0157  A$main$148                         main.enr.c
-          015A  A$main$149                         main.enr.c
-          015C  A$main$150                         main.enr.c
-          015F  A$main$151                         main.enr.c
-          0161  A$main$156                         main.enr.c
-          0163  A$main$157                         main.enr.c
-          0165  A$main$158                         main.enr.c
-          0168  A$main$159                         main.enr.c
-          016A  A$main$160                         main.enr.c
-          016D  A$main$161                         main.enr.c
-          016F  A$main$166                         main.enr.c
-          0171  A$main$167                         main.enr.c
-          0173  A$main$168                         main.enr.c
-          0176  A$main$169                         main.enr.c
-          0178  A$main$170                         main.enr.c
-          017B  A$main$171                         main.enr.c
-          017D  A$main$176                         main.enr.c
-          017F  A$main$177                         main.enr.c
-          0181  A$main$178                         main.enr.c
-          0184  A$main$179                         main.enr.c
-          0186  A$main$180                         main.enr.c
+          005E  _ANbass_start                      anbass
+          0060  _ANbass_reg_0                      anbass
+          0069  _ANbass_pd_0                       anbass
+          0078  _ANbass_reg_0_data                 anbass
+          0178  _ANbass_reg_1                      anbass
+          017E  _ANbass_pd_1                       anbass
+          018A  _ANbass_reg_1_data                 anbass
+          0276  _ANbass_reg_2                      anbass
+          02F4  _ANbass_pd_2                       anbass
+          0431  _ANbass_reg_2_data                 anbass
+          0837  _ANbass_reg_3                      anbass
+          0843  _ANbass_pd_3                       anbass
+          0861  _ANbass_reg_3_data                 anbass
+          0A1E  _ANbass_reg_4                      anbass
+          0A60  _ANbass_pd_4                       anbass
+          0AE4  _ANbass_reg_4_data                 anbass
+          1103  _ANbass_reg_5                      anbass
+          110F  _ANbass_pd_5                       anbass
+          1124  _ANbass_reg_5_data                 anbass
+          11E7  _ANbass_reg_6                      anbass
+          11ED  _ANbass_pd_6                       anbass
+          11FF  _ANbass_reg_6_data                 anbass
+          1350  _ANbass_reg_7                      anbass
+          1356  _ANbass_pd_7                       anbass
+          1362  _ANbass_reg_7_data                 anbass
+          145F  _ANbass_reg_8                      anbass
+          1468  _ANbass_pd_8                       anbass
+          147A  _ANbass_reg_8_data                 anbass
+          15E8  _ANbass_reg_9                      anbass
+          15F4  _ANbass_pd_9                       anbass
+          1624  _ANbass_reg_9_data                 anbass
+          170E  _ANbass_reg_10                     anbass
+          171D  _ANbass_pd_10                      anbass
+          174D  _ANbass_reg_10_data                anbass
+          184C  _ANbass_data                       anbass
+          189C  _ANbass_name                       anbass
+          18AE  _MousePointer                      main.enr.c
+          18B9  _setup                             main.enr.c
+          18B9  A$main$55                          main.enr.c
+          18BC  A$main$60                          main.enr.c
+          18BF  A$main$65                          main.enr.c
+          18C2  A$main$70                          main.enr.c
+          18C5  A$main$75                          main.enr.c
+          18C8  A$main$80                          main.enr.c
+          18CB  A$main$81                          main.enr.c
+          18CC  A$main$83                          main.enr.c
+          18CF  A$main$84                          main.enr.c
+          18D0  A$main$86                          main.enr.c
+          18D3  A$main$87                          main.enr.c
 ASxxxx Linker V05.00,  page 6.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0189  A$main$181                         main.enr.c
-          018B  A$main$186                         main.enr.c
-          018E  A$main$187                         main.enr.c
-          0190  A$main$188                         main.enr.c
-          0191  A$main$189                         main.enr.c
-          0193  A$main$194                         main.enr.c
-          0195  A$main$195                         main.enr.c
-          0198  A$main$200                         main.enr.c
-          019A  A$main$201                         main.enr.c
-          019C  A$main$202                         main.enr.c
-          019F  A$main$203                         main.enr.c
-          01A1  A$main$204                         main.enr.c
-          01A4  A$main$205                         main.enr.c
-          01A6  A$main$206                         main.enr.c
-          01A9  A$main$208                         main.enr.c
-          01AC  A$main$209                         main.enr.c
-          01AE  A$main$210                         main.enr.c
-          01AF  A$main$211                         main.enr.c
-          01B1  A$main$216                         main.enr.c
-          01B3  A$main$217                         main.enr.c
-          01B6  A$main$222                         main.enr.c
-          01B8  A$main$223                         main.enr.c
-          01BA  A$main$224                         main.enr.c
-          01BD  A$main$225                         main.enr.c
-          01BF  A$main$226                         main.enr.c
-          01C2  A$main$227                         main.enr.c
-          01C4  A$main$228                         main.enr.c
-          01C7  A$main$230                         main.enr.c
-          01CA  A$main$231                         main.enr.c
-          01CC  A$main$232                         main.enr.c
-          01CD  A$main$233                         main.enr.c
-          01CF  A$main$238                         main.enr.c
-          01D1  A$main$239                         main.enr.c
-          01D4  A$main$244                         main.enr.c
-          01D6  A$main$245                         main.enr.c
-          01D8  A$main$246                         main.enr.c
-          01DB  A$main$247                         main.enr.c
-          01DD  A$main$248                         main.enr.c
-          01E0  A$main$249                         main.enr.c
-          01E2  A$main$250                         main.enr.c
-          01E4  A$main$252                         main.enr.c
-          01E7  A$main$253                         main.enr.c
-          01E9  A$main$254                         main.enr.c
-          01EA  A$main$255                         main.enr.c
-          01EC  A$main$260                         main.enr.c
-          01EE  A$main$261                         main.enr.c
-          01F1  A$main$266                         main.enr.c
-          01F3  A$main$267                         main.enr.c
-          01F5  A$main$268                         main.enr.c
-          01F8  A$main$269                         main.enr.c
+          18D4  A$main$89                          main.enr.c
+          18D6  A$main$90                          main.enr.c
+          18D9  A$main$91                          main.enr.c
+          18DA  A$main$93                          main.enr.c
+          18DC  A$main$94                          main.enr.c
+          18DF  A$main$95                          main.enr.c
+          1995  A$main$132                         main.enr.c
+          1995  _mainMenu                          main.enr.c
+          1997  A$main$133                         main.enr.c
+          1999  A$main$138                         main.enr.c
+          199B  A$main$139                         main.enr.c
+          199D  A$main$140                         main.enr.c
+          19A0  A$main$141                         main.enr.c
+          19A2  A$main$142                         main.enr.c
+          19A5  A$main$143                         main.enr.c
+          19A7  A$main$148                         main.enr.c
+          19A9  A$main$149                         main.enr.c
+          19AB  A$main$150                         main.enr.c
+          19AE  A$main$151                         main.enr.c
+          19B0  A$main$152                         main.enr.c
+          19B3  A$main$153                         main.enr.c
+          19B5  A$main$158                         main.enr.c
+          19B7  A$main$159                         main.enr.c
+          19B9  A$main$160                         main.enr.c
+          19BC  A$main$161                         main.enr.c
+          19BE  A$main$162                         main.enr.c
+          19C1  A$main$163                         main.enr.c
+          19C3  A$main$168                         main.enr.c
+          19C5  A$main$169                         main.enr.c
+          19C7  A$main$170                         main.enr.c
+          19CA  A$main$171                         main.enr.c
+          19CC  A$main$172                         main.enr.c
+          19CF  A$main$173                         main.enr.c
+          19D1  A$main$178                         main.enr.c
+          19D3  A$main$179                         main.enr.c
+          19D5  A$main$180                         main.enr.c
+          19D8  A$main$181                         main.enr.c
+          19DA  A$main$182                         main.enr.c
+          19DD  A$main$183                         main.enr.c
+          19DF  A$main$188                         main.enr.c
+          19E2  A$main$193                         main.enr.c
+          19E5  A$main$194                         main.enr.c
+          19E8  A$main$195                         main.enr.c
+          19EA  A$main$200                         main.enr.c
+          19ED  A$main$201                         main.enr.c
+          19EF  A$main$204                         main.enr.c
+          19F1  A$main$205                         main.enr.c
+          19F4  A$main$213                         main.enr.c
+          19F7  A$main$218                         main.enr.c
+          19FA  A$main$223                         main.enr.c
 ASxxxx Linker V05.00,  page 7.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          01FA  A$main$270                         main.enr.c
-          01FD  A$main$271                         main.enr.c
-          01FF  A$main$273                         main.enr.c
-          0200  _RepairIdentityGame                main.enr.c
-          0200  A$main$276                         main.enr.c
-          0202  A$main$281                         main.enr.c
-          0204  A$main$282                         main.enr.c
-          0207  A$main$287                         main.enr.c
-          020A  A$main$288                         main.enr.c
-          020C  A$main$289                         main.enr.c
-          020F  A$main$290                         main.enr.c
-          0211  A$main$291                         main.enr.c
-          0213  A$main$292                         main.enr.c
-          0215  A$main$293                         main.enr.c
-          0217  A$main$294                         main.enr.c
-          0219  A$main$295                         main.enr.c
-          021B  A$main$296                         main.enr.c
-          021D  A$main$297                         main.enr.c
-          021F  A$main$298                         main.enr.c
-          0222  A$main$299                         main.enr.c
-          0224  A$main$304                         main.enr.c
-          0226  A$main$305                         main.enr.c
-          0229  A$main$310                         main.enr.c
-          022C  A$main$311                         main.enr.c
-          022F  A$main$316                         main.enr.c
-          0232  A$main$317                         main.enr.c
-          0233  A$main$318                         main.enr.c
-          0235  A$main$323                         main.enr.c
-          0238  A$main$324                         main.enr.c
-          023A  A$main$325                         main.enr.c
-          023D  A$main$326                         main.enr.c
-          023F  A$main$328                         main.enr.c
-          0242  A$main$329                         main.enr.c
-          0243  A$main$330                         main.enr.c
-          0245  A$main$335                         main.enr.c
-          0248  A$main$336                         main.enr.c
-          024A  A$main$337                         main.enr.c
-          024D  A$main$343                         main.enr.c
-          0250  A$main$344                         main.enr.c
-          0251  A$main$345                         main.enr.c
-          0253  A$main$350                         main.enr.c
-          0256  A$main$351                         main.enr.c
-          0258  A$main$352                         main.enr.c
-          025B  A$main$353                         main.enr.c
-          025D  A$main$355                         main.enr.c
-          0260  A$main$356                         main.enr.c
-          0261  A$main$357                         main.enr.c
-          0263  A$main$362                         main.enr.c
-          0266  A$main$363                         main.enr.c
-          0268  A$main$364                         main.enr.c
+          19FD  A$main$224                         main.enr.c
+          19FF  A$main$225                         main.enr.c
+          1A00  A$main$226                         main.enr.c
+          1A02  A$main$231                         main.enr.c
+          1A04  A$main$232                         main.enr.c
+          1A07  A$main$237                         main.enr.c
+          1A09  A$main$238                         main.enr.c
+          1A0B  A$main$239                         main.enr.c
+          1A0E  A$main$240                         main.enr.c
+          1A10  A$main$241                         main.enr.c
+          1A13  A$main$242                         main.enr.c
+          1A15  A$main$243                         main.enr.c
+          1A18  A$main$245                         main.enr.c
+          1A1B  A$main$246                         main.enr.c
+          1A1D  A$main$247                         main.enr.c
+          1A1E  A$main$248                         main.enr.c
+          1A20  A$main$253                         main.enr.c
+          1A22  A$main$254                         main.enr.c
+          1A25  A$main$259                         main.enr.c
+          1A27  A$main$260                         main.enr.c
+          1A29  A$main$261                         main.enr.c
+          1A2C  A$main$262                         main.enr.c
+          1A2E  A$main$263                         main.enr.c
+          1A31  A$main$264                         main.enr.c
+          1A33  A$main$265                         main.enr.c
+          1A36  A$main$267                         main.enr.c
+          1A39  A$main$268                         main.enr.c
+          1A3B  A$main$269                         main.enr.c
+          1A3C  A$main$270                         main.enr.c
+          1A3E  A$main$275                         main.enr.c
+          1A40  A$main$276                         main.enr.c
+          1A43  A$main$281                         main.enr.c
+          1A45  A$main$282                         main.enr.c
+          1A47  A$main$283                         main.enr.c
+          1A4A  A$main$284                         main.enr.c
+          1A4C  A$main$285                         main.enr.c
+          1A4F  A$main$286                         main.enr.c
+          1A51  A$main$287                         main.enr.c
+          1A53  A$main$289                         main.enr.c
+          1A56  A$main$290                         main.enr.c
+          1A58  A$main$291                         main.enr.c
+          1A59  A$main$292                         main.enr.c
+          1A5B  A$main$297                         main.enr.c
+          1A5D  A$main$298                         main.enr.c
+          1A60  A$main$303                         main.enr.c
+          1A62  A$main$304                         main.enr.c
+          1A64  A$main$305                         main.enr.c
+          1A67  A$main$306                         main.enr.c
+          1A69  A$main$307                         main.enr.c
+          1A6C  A$main$308                         main.enr.c
 ASxxxx Linker V05.00,  page 8.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          026B  A$main$370                         main.enr.c
-          026E  A$main$371                         main.enr.c
-          0270  A$main$372                         main.enr.c
-          0272  A$main$373                         main.enr.c
-          0274  A$main$374                         main.enr.c
-          0277  A$main$380                         main.enr.c
-          027A  A$main$381                         main.enr.c
-          027C  A$main$382                         main.enr.c
-          027E  A$main$383                         main.enr.c
-          0280  A$main$384                         main.enr.c
-          0283  A$main$390                         main.enr.c
-          0286  A$main$391                         main.enr.c
-          0288  A$main$392                         main.enr.c
-          028A  A$main$393                         main.enr.c
-          028C  A$main$394                         main.enr.c
-          028F  A$main$400                         main.enr.c
-          0292  A$main$401                         main.enr.c
-          0294  A$main$402                         main.enr.c
-          0296  A$main$403                         main.enr.c
-          0298  A$main$404                         main.enr.c
-          029B  A$main$410                         main.enr.c
-          029E  A$main$411                         main.enr.c
-          02A0  A$main$412                         main.enr.c
-          02A1  A$main$414                         main.enr.c
-          02A4  A$main$415                         main.enr.c
-          02A5  A$main$417                         main.enr.c
-          02A8  A$main$418                         main.enr.c
-          02BD  _main                              main.enr.c
-          02BD  A$main$425                         main.enr.c
-          02BF  A$main$426                         main.enr.c
-          02C1  A$main$431                         main.enr.c
-          02C4  A$main$436                         main.enr.c
-          02C7  A$main$441                         main.enr.c
-          02CA  A$main$446                         main.enr.c
-          02CD  A$main$451                         main.enr.c
-          02D0  A$main$461                         main.enr.c
-          02D3  A$main$466                         main.enr.c
-          02D6  A$main$471                         main.enr.c
-          02D9  A$main$476                         main.enr.c
-          02DB  A$main$477                         main.enr.c
-          02DE  A$main$482                         main.enr.c
-          02E1  A$main$483                         main.enr.c
-          02E3  A$main$484                         main.enr.c
-          02E5  A$main$485                         main.enr.c
-          02E7  A$main$486                         main.enr.c
-          02E9  A$main$487                         main.enr.c
-          02EB  A$main$488                         main.enr.c
-          02EC  A$main$489                         main.enr.c
-          02EE  A$main$490                         main.enr.c
-          02F0  A$main$491                         main.enr.c
+          1A6E  A$main$310                         main.enr.c
+          1A70  A$main$311                         main.enr.c
+          1A72  _RepairIdentityGame                main.enr.c
+          1A72  A$main$314                         main.enr.c
+          1A74  A$main$319                         main.enr.c
+          1A76  A$main$320                         main.enr.c
+          1A79  A$main$325                         main.enr.c
+          1A7C  A$main$326                         main.enr.c
+          1A7E  A$main$327                         main.enr.c
+          1A81  A$main$328                         main.enr.c
+          1A83  A$main$329                         main.enr.c
+          1A85  A$main$330                         main.enr.c
+          1A87  A$main$331                         main.enr.c
+          1A89  A$main$332                         main.enr.c
+          1A8B  A$main$333                         main.enr.c
+          1A8D  A$main$334                         main.enr.c
+          1A8F  A$main$335                         main.enr.c
+          1A91  A$main$336                         main.enr.c
+          1A94  A$main$337                         main.enr.c
+          1A96  A$main$342                         main.enr.c
+          1A98  A$main$343                         main.enr.c
+          1A9B  A$main$348                         main.enr.c
+          1A9E  A$main$349                         main.enr.c
+          1AA1  A$main$354                         main.enr.c
+          1AA4  A$main$355                         main.enr.c
+          1AA5  A$main$356                         main.enr.c
+          1AA7  A$main$361                         main.enr.c
+          1AAA  A$main$362                         main.enr.c
+          1AAC  A$main$363                         main.enr.c
+          1AAF  A$main$364                         main.enr.c
+          1AB1  A$main$366                         main.enr.c
+          1AB4  A$main$367                         main.enr.c
+          1AB5  A$main$368                         main.enr.c
+          1AB7  A$main$373                         main.enr.c
+          1ABA  A$main$374                         main.enr.c
+          1ABC  A$main$375                         main.enr.c
+          1ABF  A$main$381                         main.enr.c
+          1AC2  A$main$382                         main.enr.c
+          1AC3  A$main$383                         main.enr.c
+          1AC5  A$main$388                         main.enr.c
+          1AC8  A$main$389                         main.enr.c
+          1ACA  A$main$390                         main.enr.c
+          1ACD  A$main$391                         main.enr.c
+          1ACF  A$main$393                         main.enr.c
+          1AD2  A$main$394                         main.enr.c
+          1AD3  A$main$395                         main.enr.c
+          1AD5  A$main$400                         main.enr.c
+          1AD8  A$main$401                         main.enr.c
+          1ADA  A$main$402                         main.enr.c
+          1ADD  A$main$408                         main.enr.c
 ASxxxx Linker V05.00,  page 9.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          02F1  A$main$492                         main.enr.c
-          02F2  A$main$493                         main.enr.c
-          02F5  A$main$494                         main.enr.c
-          02F7  A$main$495                         main.enr.c
-          02F9  A$main$496                         main.enr.c
-          0305  A$main$508                         main.enr.c
-          0307  A$main$509                         main.enr.c
-          0309  A$main$510                         main.enr.c
-          030C  A$main$511                         main.enr.c
-          030E  A$main$512                         main.enr.c
-          0311  A$main$513                         main.enr.c
-          0313  A$main$518                         main.enr.c
-          0316  A$main$524                         main.enr.c
-          0318  A$main$525                         main.enr.c
-          031A  A$main$526                         main.enr.c
-          031D  A$main$527                         main.enr.c
-          031F  A$main$528                         main.enr.c
-          0322  A$main$529                         main.enr.c
-          0324  A$main$534                         main.enr.c
-          0327  A$main$540                         main.enr.c
-          032A  A$main$541                         main.enr.c
-          032C  A$main$542                         main.enr.c
-          032D  A$main$543                         main.enr.c
-          032F  A$main$544                         main.enr.c
-          0332  A$main$545                         main.enr.c
-          0333  A$main$546                         main.enr.c
-          0335  A$main$551                         main.enr.c
-          0337  A$main$552                         main.enr.c
-          033A  A$main$553                         main.enr.c
-          033D  A$main$555                         main.enr.c
-          0340  A$main$556                         main.enr.c
-          0341  A$main$557                         main.enr.c
-          0343  A$main$562                         main.enr.c
-          0345  A$main$563                         main.enr.c
-          0347  A$main$564                         main.enr.c
-          034A  A$main$565                         main.enr.c
-          034C  A$main$566                         main.enr.c
-          034F  A$main$567                         main.enr.c
-          0351  A$main$572                         main.enr.c
-          0354  A$main$573                         main.enr.c
-          0356  A$main$574                         main.enr.c
-          0357  A$main$575                         main.enr.c
-          0359  A$main$576                         main.enr.c
-          035C  A$main$577                         main.enr.c
-          035E  A$main$578                         main.enr.c
-          035F  A$main$579                         main.enr.c
-          0361  A$main$580                         main.enr.c
-          0364  A$main$581                         main.enr.c
-          0366  A$main$582                         main.enr.c
-          0367  A$main$583                         main.enr.c
+          1AE0  A$main$409                         main.enr.c
+          1AE2  A$main$410                         main.enr.c
+          1AE4  A$main$411                         main.enr.c
+          1AE6  A$main$412                         main.enr.c
+          1AE9  A$main$418                         main.enr.c
+          1AEC  A$main$419                         main.enr.c
+          1AEE  A$main$420                         main.enr.c
+          1AF0  A$main$421                         main.enr.c
+          1AF2  A$main$422                         main.enr.c
+          1AF5  A$main$428                         main.enr.c
+          1AF8  A$main$429                         main.enr.c
+          1AFA  A$main$430                         main.enr.c
+          1AFC  A$main$431                         main.enr.c
+          1AFE  A$main$432                         main.enr.c
+          1B01  A$main$438                         main.enr.c
+          1B04  A$main$439                         main.enr.c
+          1B06  A$main$440                         main.enr.c
+          1B08  A$main$441                         main.enr.c
+          1B0A  A$main$442                         main.enr.c
+          1B0D  A$main$448                         main.enr.c
+          1B10  A$main$449                         main.enr.c
+          1B12  A$main$450                         main.enr.c
+          1B13  A$main$452                         main.enr.c
+          1B16  A$main$453                         main.enr.c
+          1B17  A$main$455                         main.enr.c
+          1B1A  A$main$456                         main.enr.c
+          1B2F  _main                              main.enr.c
+          1B2F  A$main$463                         main.enr.c
+          1B31  A$main$464                         main.enr.c
+          1B33  A$main$469                         main.enr.c
+          1B36  A$main$474                         main.enr.c
+          1B39  A$main$479                         main.enr.c
+          1B3C  A$main$484                         main.enr.c
+          1B3F  A$main$489                         main.enr.c
+          1B42  A$main$499                         main.enr.c
+          1B45  A$main$504                         main.enr.c
+          1B48  A$main$509                         main.enr.c
+          1B4B  A$main$514                         main.enr.c
+          1B4D  A$main$515                         main.enr.c
+          1B50  A$main$520                         main.enr.c
+          1B53  A$main$521                         main.enr.c
+          1B55  A$main$522                         main.enr.c
+          1B57  A$main$523                         main.enr.c
+          1B59  A$main$524                         main.enr.c
+          1B5B  A$main$525                         main.enr.c
+          1B5D  A$main$526                         main.enr.c
+          1B5E  A$main$527                         main.enr.c
+          1B60  A$main$528                         main.enr.c
+          1B62  A$main$529                         main.enr.c
+          1B63  A$main$530                         main.enr.c
 ASxxxx Linker V05.00,  page 10.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0369  A$main$589                         main.enr.c
-          036C  A$main$594                         main.enr.c
-          036F  A$main$595                         main.enr.c
-          0371  A$main$601                         main.enr.c
-          0374  A$main$607                         main.enr.c
-          0377  A$main$613                         main.enr.c
-          0379  A$main$614                         main.enr.c
-          037B  A$main$615                         main.enr.c
-          037E  A$main$616                         main.enr.c
-          0380  A$main$617                         main.enr.c
-          0383  A$main$618                         main.enr.c
-          0385  A$main$623                         main.enr.c
-          0388  A$main$629                         main.enr.c
-          038B  A$main$634                         main.enr.c
-          038E  _reg_max_data                      ymplayer.pre.s
-          038E  A$ymPlayer.pre.asx$79              ymplayer.pre.s
-          039E  rleEncodedData                     ymplayer.pre.s
-          039E  A$ymPlayer.pre.asx$88              ymplayer.pre.s
-          039F  moreBits                           ymplayer.pre.s
-          039F  A$ymPlayer.pre.asx$91              ymplayer.pre.s
-          03A0  A$ymPlayer.pre.asx$94              ymplayer.pre.s
-          03A2  A$ymPlayer.pre.asx$95              ymplayer.pre.s
-          03A4  A$ymPlayer.pre.asx$97              ymplayer.pre.s
-          03A6  A$ymPlayer.pre.asx$98              ymplayer.pre.s
-          03A8  A$ymPlayer.pre.asx$99              ymplayer.pre.s
-          03AA  A$ymPlayer.pre.asx$100             ymplayer.pre.s
-          03AC  A$ymPlayer.pre.asx$101             ymplayer.pre.s
-          03AE  A$ymPlayer.pre.asx$102             ymplayer.pre.s
-          03B0  bit_is_ready1                      ymplayer.pre.s
-          03B0  A$ymPlayer.pre.asx$108             ymplayer.pre.s
-          03B2  A$ymPlayer.pre.asx$110             ymplayer.pre.s
-          03B4  A$ymPlayer.pre.asx$112             ymplayer.pre.s
-          03B6  A$ymPlayer.pre.asx$113             ymplayer.pre.s
-          03B8  A$ymPlayer.pre.asx$114             ymplayer.pre.s
-          03BA  A$ymPlayer.pre.asx$119             ymplayer.pre.s
-          03BB  A$ymPlayer.pre.asx$122             ymplayer.pre.s
-          03BD  A$ymPlayer.pre.asx$123             ymplayer.pre.s
-          03BF  A$ymPlayer.pre.asx$125             ymplayer.pre.s
-          03C1  A$ymPlayer.pre.asx$126             ymplayer.pre.s
-          03C3  A$ymPlayer.pre.asx$127             ymplayer.pre.s
-          03C5  A$ymPlayer.pre.asx$128             ymplayer.pre.s
-          03C7  A$ymPlayer.pre.asx$129             ymplayer.pre.s
-          03C9  A$ymPlayer.pre.asx$130             ymplayer.pre.s
-          03CB  bit_is_ready2                      ymplayer.pre.s
-          03CB  A$ymPlayer.pre.asx$136             ymplayer.pre.s
-          03CD  A$ymPlayer.pre.asx$138             ymplayer.pre.s
-          03CF  A$ymPlayer.pre.asx$140             ymplayer.pre.s
-          03D1  A$ymPlayer.pre.asx$141             ymplayer.pre.s
-          03D2  rleCounterBit0NotSet               ymplayer.pre.s
-          03D2  A$ymPlayer.pre.asx$144             ymplayer.pre.s
+          1B64  A$main$531                         main.enr.c
+          1B67  A$main$532                         main.enr.c
+          1B69  A$main$533                         main.enr.c
+          1B6B  A$main$534                         main.enr.c
+          1B77  A$main$546                         main.enr.c
+          1B79  A$main$547                         main.enr.c
+          1B7B  A$main$548                         main.enr.c
+          1B7E  A$main$549                         main.enr.c
+          1B80  A$main$550                         main.enr.c
+          1B83  A$main$551                         main.enr.c
+          1B85  A$main$556                         main.enr.c
+          1B88  A$main$562                         main.enr.c
+          1B8A  A$main$563                         main.enr.c
+          1B8C  A$main$564                         main.enr.c
+          1B8F  A$main$565                         main.enr.c
+          1B91  A$main$566                         main.enr.c
+          1B94  A$main$567                         main.enr.c
+          1B96  A$main$572                         main.enr.c
+          1B99  A$main$578                         main.enr.c
+          1B9C  A$main$579                         main.enr.c
+          1B9E  A$main$580                         main.enr.c
+          1B9F  A$main$581                         main.enr.c
+          1BA1  A$main$582                         main.enr.c
+          1BA4  A$main$583                         main.enr.c
+          1BA5  A$main$584                         main.enr.c
+          1BA7  A$main$589                         main.enr.c
+          1BA9  A$main$590                         main.enr.c
+          1BAC  A$main$591                         main.enr.c
+          1BAF  A$main$593                         main.enr.c
+          1BB2  A$main$594                         main.enr.c
+          1BB3  A$main$595                         main.enr.c
+          1BB5  A$main$600                         main.enr.c
+          1BB7  A$main$601                         main.enr.c
+          1BB9  A$main$602                         main.enr.c
+          1BBC  A$main$603                         main.enr.c
+          1BBE  A$main$604                         main.enr.c
+          1BC1  A$main$605                         main.enr.c
+          1BC3  A$main$610                         main.enr.c
+          1BC6  A$main$611                         main.enr.c
+          1BC8  A$main$612                         main.enr.c
+          1BC9  A$main$613                         main.enr.c
+          1BCB  A$main$614                         main.enr.c
+          1BCE  A$main$615                         main.enr.c
+          1BD0  A$main$616                         main.enr.c
+          1BD1  A$main$617                         main.enr.c
+          1BD3  A$main$618                         main.enr.c
+          1BD6  A$main$619                         main.enr.c
+          1BD8  A$main$620                         main.enr.c
+          1BD9  A$main$621                         main.enr.c
+          1BDB  A$main$627                         main.enr.c
 ASxxxx Linker V05.00,  page 11.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          03D3  A$ymPlayer.pre.asx$147             ymplayer.pre.s
-          03D5  A$ymPlayer.pre.asx$148             ymplayer.pre.s
-          03D7  A$ymPlayer.pre.asx$150             ymplayer.pre.s
-          03D9  A$ymPlayer.pre.asx$151             ymplayer.pre.s
-          03DB  A$ymPlayer.pre.asx$152             ymplayer.pre.s
-          03DD  A$ymPlayer.pre.asx$153             ymplayer.pre.s
-          03DF  A$ymPlayer.pre.asx$154             ymplayer.pre.s
-          03E1  A$ymPlayer.pre.asx$155             ymplayer.pre.s
-          03E3  bit_is_ready3                      ymplayer.pre.s
-          03E3  A$ymPlayer.pre.asx$161             ymplayer.pre.s
-          03E5  A$ymPlayer.pre.asx$163             ymplayer.pre.s
-          03E7  A$ymPlayer.pre.asx$165             ymplayer.pre.s
-          03E9  A$ymPlayer.pre.asx$166             ymplayer.pre.s
-          03EA  rleCounterBit1NotSet               ymplayer.pre.s
-          03EA  A$ymPlayer.pre.asx$169             ymplayer.pre.s
-          03EB  A$ymPlayer.pre.asx$172             ymplayer.pre.s
-          03ED  A$ymPlayer.pre.asx$173             ymplayer.pre.s
-          03EF  A$ymPlayer.pre.asx$175             ymplayer.pre.s
-          03F1  A$ymPlayer.pre.asx$176             ymplayer.pre.s
-          03F3  A$ymPlayer.pre.asx$177             ymplayer.pre.s
-          03F5  A$ymPlayer.pre.asx$178             ymplayer.pre.s
-          03F7  A$ymPlayer.pre.asx$179             ymplayer.pre.s
-          03F9  A$ymPlayer.pre.asx$180             ymplayer.pre.s
-          03FB  bit_is_ready4                      ymplayer.pre.s
-          03FB  A$ymPlayer.pre.asx$186             ymplayer.pre.s
-          03FD  A$ymPlayer.pre.asx$188             ymplayer.pre.s
-          03FF  A$ymPlayer.pre.asx$190             ymplayer.pre.s
-          0401  A$ymPlayer.pre.asx$191             ymplayer.pre.s
-          0402  rleCounterBit2NotSet               ymplayer.pre.s
-          0402  A$ymPlayer.pre.asx$194             ymplayer.pre.s
-          0404  A$ymPlayer.pre.asx$195             ymplayer.pre.s
-          0408  A$ymPlayer.pre.asx$196             ymplayer.pre.s
-          0409  A$ymPlayer.pre.asx$199             ymplayer.pre.s
-          040B  A$ymPlayer.pre.asx$200             ymplayer.pre.s
-          040D  A$ymPlayer.pre.asx$202             ymplayer.pre.s
-          040F  A$ymPlayer.pre.asx$203             ymplayer.pre.s
-          0411  A$ymPlayer.pre.asx$204             ymplayer.pre.s
-          0413  A$ymPlayer.pre.asx$205             ymplayer.pre.s
-          0415  A$ymPlayer.pre.asx$206             ymplayer.pre.s
-          0417  A$ymPlayer.pre.asx$207             ymplayer.pre.s
-          0419  A$ymPlayer.pre.asx$213             ymplayer.pre.s
-          0419  bit_is_ready5                      ymplayer.pre.s
-          041B  A$ymPlayer.pre.asx$215             ymplayer.pre.s
-          041D  A$ymPlayer.pre.asx$217             ymplayer.pre.s
-          041F  A$ymPlayer.pre.asx$218             ymplayer.pre.s
-          0420  rleCounterBit3NotSet               ymplayer.pre.s
-          0420  A$ymPlayer.pre.asx$221             ymplayer.pre.s
-          0422  A$ymPlayer.pre.asx$222             ymplayer.pre.s
-          0426  A$ymPlayer.pre.asx$223             ymplayer.pre.s
-          0427  A$ymPlayer.pre.asx$226             ymplayer.pre.s
+          1BDE  A$main$632                         main.enr.c
+          1BE1  A$main$633                         main.enr.c
+          1BE3  A$main$639                         main.enr.c
+          1BE6  A$main$645                         main.enr.c
+          1BE9  A$main$651                         main.enr.c
+          1BEB  A$main$652                         main.enr.c
+          1BED  A$main$653                         main.enr.c
+          1BF0  A$main$654                         main.enr.c
+          1BF2  A$main$655                         main.enr.c
+          1BF5  A$main$656                         main.enr.c
+          1BF7  A$main$661                         main.enr.c
+          1BFA  A$main$667                         main.enr.c
+          1BFD  A$main$672                         main.enr.c
+          1C00  _Drooling_start                    song_025
+          1C02  _Drooling_reg_0                    song_025
+          1C20  _Drooling_pd_0                     song_025
+          1C47  _Drooling_reg_0_data               song_025
+          208C  _Drooling_reg_1                    song_025
+          2095  _Drooling_pd_1                     song_025
+          20AA  _Drooling_reg_1_data               song_025
+          227A  _Drooling_reg_2                    song_025
+          22A1  _Drooling_pd_2                     song_025
+          22F3  _Drooling_reg_2_data               song_025
+          29C7  _Drooling_reg_3                    song_025
+          29E2  _Drooling_pd_3                     song_025
+          2A3D  _Drooling_reg_3_data               song_025
+          2C85  _Drooling_reg_4                    song_025
+          2CDC  _Drooling_pd_4                     song_025
+          2D75  _Drooling_reg_4_data               song_025
+          3058  _Drooling_reg_5                    song_025
+          305B  _Drooling_pd_5                     song_025
+          305E  _Drooling_reg_5_data               song_025
+          3113  _Drooling_reg_6                    song_025
+          3116  _Drooling_pd_6                     song_025
+          3121  _Drooling_reg_6_data               song_025
+          3241  _Drooling_reg_7                    song_025
+          324D  _Drooling_pd_7                     song_025
+          3278  _Drooling_reg_7_data               song_025
+          36F7  _Drooling_reg_8                    song_025
+          3709  _Drooling_pd_8                     song_025
+          3731  _Drooling_reg_8_data               song_025
+          3D52  _Drooling_reg_9                    song_025
+          3D70  _Drooling_pd_9                     song_025
+          3DBE  _Drooling_reg_9_data               song_025
+          3E49  _Drooling_reg_10                   song_025
+          3E67  _Drooling_pd_10                    song_025
+          3EA3  _Drooling_reg_10_data              song_025
+          40A7  _Drooling_data                     song_025
+          40F7  _Drooling_name                     song_025
+          4100  _Wolfchild_start                   wolfch1
 ASxxxx Linker V05.00,  page 12.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0429  A$ymPlayer.pre.asx$227             ymplayer.pre.s
-          042B  A$ymPlayer.pre.asx$229             ymplayer.pre.s
-          042D  A$ymPlayer.pre.asx$230             ymplayer.pre.s
-          042F  A$ymPlayer.pre.asx$231             ymplayer.pre.s
-          0431  A$ymPlayer.pre.asx$232             ymplayer.pre.s
-          0433  A$ymPlayer.pre.asx$233             ymplayer.pre.s
-          0435  A$ymPlayer.pre.asx$234             ymplayer.pre.s
-          0437  A$ymPlayer.pre.asx$240             ymplayer.pre.s
-          0437  bit_is_ready6                      ymplayer.pre.s
-          0439  A$ymPlayer.pre.asx$242             ymplayer.pre.s
-          043B  A$ymPlayer.pre.asx$244             ymplayer.pre.s
-          043D  A$ymPlayer.pre.asx$245             ymplayer.pre.s
-          043E  rleCounterBit4NotSet               ymplayer.pre.s
-          043E  A$ymPlayer.pre.asx$248             ymplayer.pre.s
-          0440  A$ymPlayer.pre.asx$249             ymplayer.pre.s
-          0442  A$ymPlayer.pre.asx$250             ymplayer.pre.s
-          0443  A$ymPlayer.pre.asx$253             ymplayer.pre.s
-          0445  A$ymPlayer.pre.asx$254             ymplayer.pre.s
-          0447  A$ymPlayer.pre.asx$256             ymplayer.pre.s
-          0449  A$ymPlayer.pre.asx$257             ymplayer.pre.s
-          044B  A$ymPlayer.pre.asx$258             ymplayer.pre.s
-          044D  A$ymPlayer.pre.asx$259             ymplayer.pre.s
-          044F  A$ymPlayer.pre.asx$260             ymplayer.pre.s
-          0451  A$ymPlayer.pre.asx$261             ymplayer.pre.s
-          0453  bit_is_ready7                      ymplayer.pre.s
-          0453  A$ymPlayer.pre.asx$267             ymplayer.pre.s
-          0455  A$ymPlayer.pre.asx$269             ymplayer.pre.s
-          0457  A$ymPlayer.pre.asx$271             ymplayer.pre.s
-          0459  A$ymPlayer.pre.asx$272             ymplayer.pre.s
-          045A  rleCounterBit5NotSet               ymplayer.pre.s
-          045A  A$ymPlayer.pre.asx$275             ymplayer.pre.s
-          045C  A$ymPlayer.pre.asx$276             ymplayer.pre.s
-          045E  A$ymPlayer.pre.asx$277             ymplayer.pre.s
-          045F  A$ymPlayer.pre.asx$280             ymplayer.pre.s
-          0461  A$ymPlayer.pre.asx$281             ymplayer.pre.s
-          0463  A$ymPlayer.pre.asx$283             ymplayer.pre.s
-          0465  A$ymPlayer.pre.asx$284             ymplayer.pre.s
-          0467  A$ymPlayer.pre.asx$285             ymplayer.pre.s
-          0469  A$ymPlayer.pre.asx$286             ymplayer.pre.s
-          046B  A$ymPlayer.pre.asx$287             ymplayer.pre.s
-          046D  A$ymPlayer.pre.asx$288             ymplayer.pre.s
-          046F  bit_is_ready8                      ymplayer.pre.s
-          046F  A$ymPlayer.pre.asx$294             ymplayer.pre.s
-          0471  A$ymPlayer.pre.asx$296             ymplayer.pre.s
-          0473  A$ymPlayer.pre.asx$298             ymplayer.pre.s
-          0475  A$ymPlayer.pre.asx$299             ymplayer.pre.s
-          0476  rleCounterBit6NotSet               ymplayer.pre.s
-          0476  A$ymPlayer.pre.asx$302             ymplayer.pre.s
-          0478  A$ymPlayer.pre.asx$303             ymplayer.pre.s
-          047A  A$ymPlayer.pre.asx$304             ymplayer.pre.s
+          4102  _Wolfchild_reg_0                   wolfch1
+          4135  _Wolfchild_pd_0                    wolfch1
+          41CC  _Wolfchild_reg_0_data              wolfch1
+          46FE  Wolfchild_reg_1                    wolfch1
+          46FE  Wolfchild_pd_1                     wolfch1
+          46FE  _Wolfchild_reg_1_data              wolfch1
+          48A3  _Wolfchild_reg_2                   wolfch1
+          48B5  _Wolfchild_pd_2                    wolfch1
+          48F5  _Wolfchild_reg_2_data              wolfch1
+          4FD7  _Wolfchild_reg_3                   wolfch1
+          4FE0  _Wolfchild_pd_3                    wolfch1
+          5008  _Wolfchild_reg_3_data              wolfch1
+          5151  _Wolfchild_reg_4                   wolfch1
+          51BA  _Wolfchild_pd_4                    wolfch1
+          537D  _Wolfchild_reg_4_data              wolfch1
+          575D  _Wolfchild_reg_5                   wolfch1
+          5760  _Wolfchild_pd_5                    wolfch1
+          5767  _Wolfchild_reg_5_data              wolfch1
+          586D  Wolfchild_reg_6                    wolfch1
+          586D  Wolfchild_pd_6                     wolfch1
+          586D  _Wolfchild_reg_6_data              wolfch1
+          5871  _Wolfchild_reg_7                   wolfch1
+          587A  _Wolfchild_pd_7                    wolfch1
+          589C  _Wolfchild_reg_7_data              wolfch1
+          5A15  _Wolfchild_reg_8                   wolfch1
+          5A24  _Wolfchild_pd_8                    wolfch1
+          5A56  _Wolfchild_reg_8_data              wolfch1
+          5D0C  _Wolfchild_reg_9                   wolfch1
+          5D15  _Wolfchild_pd_9                    wolfch1
+          5D3D  _Wolfchild_reg_9_data              wolfch1
+          5E0A  _Wolfchild_reg_10                  wolfch1
+          5E16  _Wolfchild_pd_10                   wolfch1
+          5E47  _Wolfchild_reg_10_data             wolfch1
+          6098  _Wolfchild_data                    wolfch1
+          60E8  _Wolfchild_name                    wolfch1
+          60F2  _reg_max_data                      ymplayer.pre.s
+          60F2  A$ymPlayer.pre.asx$79              ymplayer.pre.s
+          6102  rleEncodedData                     ymplayer.pre.s
+          6102  A$ymPlayer.pre.asx$88              ymplayer.pre.s
+          6103  moreBits                           ymplayer.pre.s
+          6103  A$ymPlayer.pre.asx$91              ymplayer.pre.s
+          6104  A$ymPlayer.pre.asx$94              ymplayer.pre.s
+          6106  A$ymPlayer.pre.asx$95              ymplayer.pre.s
+          6108  A$ymPlayer.pre.asx$97              ymplayer.pre.s
+          610A  A$ymPlayer.pre.asx$98              ymplayer.pre.s
+          610C  A$ymPlayer.pre.asx$99              ymplayer.pre.s
+          610E  A$ymPlayer.pre.asx$100             ymplayer.pre.s
+          6110  A$ymPlayer.pre.asx$101             ymplayer.pre.s
+          6112  A$ymPlayer.pre.asx$102             ymplayer.pre.s
+          6114  bit_is_ready1                      ymplayer.pre.s
 ASxxxx Linker V05.00,  page 13.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          047B  A$ymPlayer.pre.asx$307             ymplayer.pre.s
-          047D  A$ymPlayer.pre.asx$308             ymplayer.pre.s
-          047F  A$ymPlayer.pre.asx$310             ymplayer.pre.s
-          0481  A$ymPlayer.pre.asx$311             ymplayer.pre.s
-          0483  A$ymPlayer.pre.asx$312             ymplayer.pre.s
-          0485  A$ymPlayer.pre.asx$313             ymplayer.pre.s
-          0487  A$ymPlayer.pre.asx$314             ymplayer.pre.s
-          0489  A$ymPlayer.pre.asx$315             ymplayer.pre.s
-          048B  A$ymPlayer.pre.asx$321             ymplayer.pre.s
-          048B  bit_is_ready9                      ymplayer.pre.s
-          048D  A$ymPlayer.pre.asx$323             ymplayer.pre.s
-          048F  A$ymPlayer.pre.asx$325             ymplayer.pre.s
-          0491  A$ymPlayer.pre.asx$326             ymplayer.pre.s
-          0492  rleCounterBit7NotSet               ymplayer.pre.s
-          0492  A$ymPlayer.pre.asx$329             ymplayer.pre.s
-          0494  A$ymPlayer.pre.asx$330             ymplayer.pre.s
-          0496  A$ymPlayer.pre.asx$332             ymplayer.pre.s
-          0498  read16bitContinue                  ymplayer.pre.s
-          0498  A$ymPlayer.pre.asx$335             ymplayer.pre.s
-          049A  A$ymPlayer.pre.asx$337             ymplayer.pre.s
-          049B  A$ymPlayer.pre.asx$338             ymplayer.pre.s
-          049C  A$ymPlayer.pre.asx$339             ymplayer.pre.s
-          049E  A$ymPlayer.pre.asx$340             ymplayer.pre.s
-          04A0  no_carry                           ymplayer.pre.s
-          04A0  A$ymPlayer.pre.asx$344             ymplayer.pre.s
-          04A2  A$ymPlayer.pre.asx$347             ymplayer.pre.s
-          04A4  A$ymPlayer.pre.asx$348             ymplayer.pre.s
-          04A6  A$ymPlayer.pre.asx$350             ymplayer.pre.s
-          04A8  A$ymPlayer.pre.asx$351             ymplayer.pre.s
-          04AA  A$ymPlayer.pre.asx$352             ymplayer.pre.s
-          04AC  A$ymPlayer.pre.asx$353             ymplayer.pre.s
-          04AE  A$ymPlayer.pre.asx$354             ymplayer.pre.s
-          04B0  A$ymPlayer.pre.asx$355             ymplayer.pre.s
-          04B2  bit_is_ready10                     ymplayer.pre.s
-          04B2  A$ymPlayer.pre.asx$361             ymplayer.pre.s
-          04B4  A$ymPlayer.pre.asx$363             ymplayer.pre.s
-          04B6  A$ymPlayer.pre.asx$365             ymplayer.pre.s
-          04B8  A$ymPlayer.pre.asx$366             ymplayer.pre.s
-          04BA  A$ymPlayer.pre.asx$369             ymplayer.pre.s
-          04BA  rleCounterBitXNotSet               ymplayer.pre.s
-          04BC  A$ymPlayer.pre.asx$370             ymplayer.pre.s
-          04BE  rle16bitdone                       ymplayer.pre.s
-          04BE  A$ymPlayer.pre.asx$375             ymplayer.pre.s
-          04C0  rle8bitdone                        ymplayer.pre.s
-          04C0  A$ymPlayer.pre.asx$379             ymplayer.pre.s
-          04C2  A$ymPlayer.pre.asx$382             ymplayer.pre.s
-          04C4  do_ym_sound                        ymplayer.pre.s
-          04C4  A$ymPlayer.pre.asx$388             ymplayer.pre.s
-          04C7  A$ymPlayer.pre.asx$389             ymplayer.pre.s
-          04C9  A$ymPlayer.pre.asx$390             ymplayer.pre.s
+          6114  A$ymPlayer.pre.asx$108             ymplayer.pre.s
+          6116  A$ymPlayer.pre.asx$110             ymplayer.pre.s
+          6118  A$ymPlayer.pre.asx$112             ymplayer.pre.s
+          611A  A$ymPlayer.pre.asx$113             ymplayer.pre.s
+          611C  A$ymPlayer.pre.asx$114             ymplayer.pre.s
+          611E  A$ymPlayer.pre.asx$119             ymplayer.pre.s
+          611F  A$ymPlayer.pre.asx$122             ymplayer.pre.s
+          6121  A$ymPlayer.pre.asx$123             ymplayer.pre.s
+          6123  A$ymPlayer.pre.asx$125             ymplayer.pre.s
+          6125  A$ymPlayer.pre.asx$126             ymplayer.pre.s
+          6127  A$ymPlayer.pre.asx$127             ymplayer.pre.s
+          6129  A$ymPlayer.pre.asx$128             ymplayer.pre.s
+          612B  A$ymPlayer.pre.asx$129             ymplayer.pre.s
+          612D  A$ymPlayer.pre.asx$130             ymplayer.pre.s
+          612F  bit_is_ready2                      ymplayer.pre.s
+          612F  A$ymPlayer.pre.asx$136             ymplayer.pre.s
+          6131  A$ymPlayer.pre.asx$138             ymplayer.pre.s
+          6133  A$ymPlayer.pre.asx$140             ymplayer.pre.s
+          6135  A$ymPlayer.pre.asx$141             ymplayer.pre.s
+          6136  rleCounterBit0NotSet               ymplayer.pre.s
+          6136  A$ymPlayer.pre.asx$144             ymplayer.pre.s
+          6137  A$ymPlayer.pre.asx$147             ymplayer.pre.s
+          6139  A$ymPlayer.pre.asx$148             ymplayer.pre.s
+          613B  A$ymPlayer.pre.asx$150             ymplayer.pre.s
+          613D  A$ymPlayer.pre.asx$151             ymplayer.pre.s
+          613F  A$ymPlayer.pre.asx$152             ymplayer.pre.s
+          6141  A$ymPlayer.pre.asx$153             ymplayer.pre.s
+          6143  A$ymPlayer.pre.asx$154             ymplayer.pre.s
+          6145  A$ymPlayer.pre.asx$155             ymplayer.pre.s
+          6147  bit_is_ready3                      ymplayer.pre.s
+          6147  A$ymPlayer.pre.asx$161             ymplayer.pre.s
+          6149  A$ymPlayer.pre.asx$163             ymplayer.pre.s
+          614B  A$ymPlayer.pre.asx$165             ymplayer.pre.s
+          614D  A$ymPlayer.pre.asx$166             ymplayer.pre.s
+          614E  rleCounterBit1NotSet               ymplayer.pre.s
+          614E  A$ymPlayer.pre.asx$169             ymplayer.pre.s
+          614F  A$ymPlayer.pre.asx$172             ymplayer.pre.s
+          6151  A$ymPlayer.pre.asx$173             ymplayer.pre.s
+          6153  A$ymPlayer.pre.asx$175             ymplayer.pre.s
+          6155  A$ymPlayer.pre.asx$176             ymplayer.pre.s
+          6157  A$ymPlayer.pre.asx$177             ymplayer.pre.s
+          6159  A$ymPlayer.pre.asx$178             ymplayer.pre.s
+          615B  A$ymPlayer.pre.asx$179             ymplayer.pre.s
+          615D  A$ymPlayer.pre.asx$180             ymplayer.pre.s
+          615F  bit_is_ready4                      ymplayer.pre.s
+          615F  A$ymPlayer.pre.asx$186             ymplayer.pre.s
+          6161  A$ymPlayer.pre.asx$188             ymplayer.pre.s
+          6163  A$ymPlayer.pre.asx$190             ymplayer.pre.s
+          6165  A$ymPlayer.pre.asx$191             ymplayer.pre.s
+          6166  rleCounterBit2NotSet               ymplayer.pre.s
 ASxxxx Linker V05.00,  page 14.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          04CC  A$ymPlayer.pre.asx$391             ymplayer.pre.s
-          04CF  A$ymPlayer.pre.asx$392             ymplayer.pre.s
-          04D2  A$ymPlayer.pre.asx$393             ymplayer.pre.s
-          04D5  A$ymPlayer.pre.asx$394             ymplayer.pre.s
-          04D8  getCurrentRegByte                  ymplayer.pre.s
-          04D8  next_reg                           ymplayer.pre.s
-          04D8  A$ymPlayer.pre.asx$404             ymplayer.pre.s
-          04DA  A$ymPlayer.pre.asx$405             ymplayer.pre.s
-          04DC  A$ymPlayer.pre.asx$407             ymplayer.pre.s
-          04DE  A$ymPlayer.pre.asx$408             ymplayer.pre.s
-          04E0  A$ymPlayer.pre.asx$409             ymplayer.pre.s
-          04E2  A$ymPlayer.pre.asx$410             ymplayer.pre.s
-          04E4  A$ymPlayer.pre.asx$413             ymplayer.pre.s
-          04E4  inPhraseOut                        ymplayer.pre.s
-          04E6  A$ymPlayer.pre.asx$414             ymplayer.pre.s
-          04E8  A$ymPlayer.pre.asx$415             ymplayer.pre.s
-          04EA  A$ymPlayer.pre.asx$416             ymplayer.pre.s
-          04EC  A$ymPlayer.pre.asx$417             ymplayer.pre.s
-          04EE  A$ymPlayer.pre.asx$418             ymplayer.pre.s
-          04F0  A$ymPlayer.pre.asx$419             ymplayer.pre.s
-          04F2  A$ymPlayer.pre.asx$422             ymplayer.pre.s
-          04F2  not_in_phrase                      ymplayer.pre.s
-          04F5  A$ymPlayer.pre.asx$423             ymplayer.pre.s
-          04F7  done                               ymplayer.pre.s
-          04F7  A$ymPlayer.pre.asx$429             ymplayer.pre.s
-          04F7  currentPharseNotEnded              ymplayer.pre.s
-          04F9  A$ymPlayer.pre.asx$430             ymplayer.pre.s
-          04FB  A$ymPlayer.pre.asx$433             ymplayer.pre.s
-          04FD  A$ymPlayer.pre.asx$434             ymplayer.pre.s
-          04FF  A$ymPlayer.pre.asx$435             ymplayer.pre.s
-          0501  A$ymPlayer.pre.asx$436             ymplayer.pre.s
-          0503  no13                               ymplayer.pre.s
-          0503  A$ymPlayer.pre.asx$440             ymplayer.pre.s
-          0505  A$ymPlayer.pre.asx$441             ymplayer.pre.s
-          0507  A$ymPlayer.pre.asx$442             ymplayer.pre.s
-          0509  A$ymPlayer.pre.asx$443             ymplayer.pre.s
-          050B  A$ymPlayer.pre.asx$444             ymplayer.pre.s
-          050D  A$ymPlayer.pre.asx$445             ymplayer.pre.s
-          050F  A$ymPlayer.pre.asx$446             ymplayer.pre.s
-          0511  A$ymPlayer.pre.asx$447             ymplayer.pre.s
-          0513  A$ymPlayer.pre.asx$448             ymplayer.pre.s
-          0515  A$ymPlayer.pre.asx$449             ymplayer.pre.s
-          0517  A$ymPlayer.pre.asx$450             ymplayer.pre.s
-          0519  doNotWriteReg13                    ymplayer.pre.s
-          0519  A$ymPlayer.pre.asx$455             ymplayer.pre.s
-          051C  A$ymPlayer.pre.asx$456             ymplayer.pre.s
-          051F  A$ymPlayer.pre.asx$457             ymplayer.pre.s
-          0521  A$ymPlayer.pre.asx$460             ymplayer.pre.s
-          0521  ymsodone                           ymplayer.pre.s
-          0522  noValidByte                        ymplayer.pre.s
+          6166  A$ymPlayer.pre.asx$194             ymplayer.pre.s
+          6168  A$ymPlayer.pre.asx$195             ymplayer.pre.s
+          616C  A$ymPlayer.pre.asx$196             ymplayer.pre.s
+          616D  A$ymPlayer.pre.asx$199             ymplayer.pre.s
+          616F  A$ymPlayer.pre.asx$200             ymplayer.pre.s
+          6171  A$ymPlayer.pre.asx$202             ymplayer.pre.s
+          6173  A$ymPlayer.pre.asx$203             ymplayer.pre.s
+          6175  A$ymPlayer.pre.asx$204             ymplayer.pre.s
+          6177  A$ymPlayer.pre.asx$205             ymplayer.pre.s
+          6179  A$ymPlayer.pre.asx$206             ymplayer.pre.s
+          617B  A$ymPlayer.pre.asx$207             ymplayer.pre.s
+          617D  A$ymPlayer.pre.asx$213             ymplayer.pre.s
+          617D  bit_is_ready5                      ymplayer.pre.s
+          617F  A$ymPlayer.pre.asx$215             ymplayer.pre.s
+          6181  A$ymPlayer.pre.asx$217             ymplayer.pre.s
+          6183  A$ymPlayer.pre.asx$218             ymplayer.pre.s
+          6184  rleCounterBit3NotSet               ymplayer.pre.s
+          6184  A$ymPlayer.pre.asx$221             ymplayer.pre.s
+          6186  A$ymPlayer.pre.asx$222             ymplayer.pre.s
+          618A  A$ymPlayer.pre.asx$223             ymplayer.pre.s
+          618B  A$ymPlayer.pre.asx$226             ymplayer.pre.s
+          618D  A$ymPlayer.pre.asx$227             ymplayer.pre.s
+          618F  A$ymPlayer.pre.asx$229             ymplayer.pre.s
+          6191  A$ymPlayer.pre.asx$230             ymplayer.pre.s
+          6193  A$ymPlayer.pre.asx$231             ymplayer.pre.s
+          6195  A$ymPlayer.pre.asx$232             ymplayer.pre.s
+          6197  A$ymPlayer.pre.asx$233             ymplayer.pre.s
+          6199  A$ymPlayer.pre.asx$234             ymplayer.pre.s
+          619B  A$ymPlayer.pre.asx$240             ymplayer.pre.s
+          619B  bit_is_ready6                      ymplayer.pre.s
+          619D  A$ymPlayer.pre.asx$242             ymplayer.pre.s
+          619F  A$ymPlayer.pre.asx$244             ymplayer.pre.s
+          61A1  A$ymPlayer.pre.asx$245             ymplayer.pre.s
+          61A2  rleCounterBit4NotSet               ymplayer.pre.s
+          61A2  A$ymPlayer.pre.asx$248             ymplayer.pre.s
+          61A4  A$ymPlayer.pre.asx$249             ymplayer.pre.s
+          61A6  A$ymPlayer.pre.asx$250             ymplayer.pre.s
+          61A7  A$ymPlayer.pre.asx$253             ymplayer.pre.s
+          61A9  A$ymPlayer.pre.asx$254             ymplayer.pre.s
+          61AB  A$ymPlayer.pre.asx$256             ymplayer.pre.s
+          61AD  A$ymPlayer.pre.asx$257             ymplayer.pre.s
+          61AF  A$ymPlayer.pre.asx$258             ymplayer.pre.s
+          61B1  A$ymPlayer.pre.asx$259             ymplayer.pre.s
+          61B3  A$ymPlayer.pre.asx$260             ymplayer.pre.s
+          61B5  A$ymPlayer.pre.asx$261             ymplayer.pre.s
+          61B7  bit_is_ready7                      ymplayer.pre.s
+          61B7  A$ymPlayer.pre.asx$267             ymplayer.pre.s
+          61B9  A$ymPlayer.pre.asx$269             ymplayer.pre.s
+          61BB  A$ymPlayer.pre.asx$271             ymplayer.pre.s
+          61BD  A$ymPlayer.pre.asx$272             ymplayer.pre.s
 ASxxxx Linker V05.00,  page 15.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0522  A$ymPlayer.pre.asx$470             ymplayer.pre.s
-          0524  A$ymPlayer.pre.asx$471             ymplayer.pre.s
-          0526  A$ymPlayer.pre.asx$473             ymplayer.pre.s
-          0528  A$ymPlayer.pre.asx$474             ymplayer.pre.s
-          052A  A$ymPlayer.pre.asx$475             ymplayer.pre.s
-          052C  A$ymPlayer.pre.asx$476             ymplayer.pre.s
-          052E  A$ymPlayer.pre.asx$477             ymplayer.pre.s
-          0530  A$ymPlayer.pre.asx$478             ymplayer.pre.s
-          0532  bit_is_ready12                     ymplayer.pre.s
-          0532  A$ymPlayer.pre.asx$484             ymplayer.pre.s
-          0534  A$ymPlayer.pre.asx$486             ymplayer.pre.s
-          0536  A$ymPlayer.pre.asx$490             ymplayer.pre.s
-          053A  A$ymPlayer.pre.asx$493             ymplayer.pre.s
-          053C  A$ymPlayer.pre.asx$501             ymplayer.pre.s
-          053C  dechifer                           ymplayer.pre.s
-          053E  A$ymPlayer.pre.asx$502             ymplayer.pre.s
-          0540  A$ymPlayer.pre.asx$504             ymplayer.pre.s
-          0542  A$ymPlayer.pre.asx$505             ymplayer.pre.s
-          0544  A$ymPlayer.pre.asx$506             ymplayer.pre.s
-          0546  A$ymPlayer.pre.asx$507             ymplayer.pre.s
-          0548  A$ymPlayer.pre.asx$508             ymplayer.pre.s
-          054A  A$ymPlayer.pre.asx$509             ymplayer.pre.s
-          054C  bit_is_ready13                     ymplayer.pre.s
-          054C  A$ymPlayer.pre.asx$515             ymplayer.pre.s
-          054E  A$ymPlayer.pre.asx$517             ymplayer.pre.s
-          0550  A$ymPlayer.pre.asx$519             ymplayer.pre.s
-          0552  A$ymPlayer.pre.asx$520             ymplayer.pre.s
-          0556  A$ymPlayer.pre.asx$521             ymplayer.pre.s
-          0559  A$ymPlayer.pre.asx$522             ymplayer.pre.s
-          055C  A$ymPlayer.pre.asx$523             ymplayer.pre.s
-          055D  A$ymPlayer.pre.asx$524             ymplayer.pre.s
-          0560  A$ymPlayer.pre.asx$527             ymplayer.pre.s
-          0560  getNextCodeBit                     ymplayer.pre.s
-          0563  A$ymPlayer.pre.asx$528             ymplayer.pre.s
-          0564  A$ymPlayer.pre.asx$531             ymplayer.pre.s
-          0566  A$ymPlayer.pre.asx$532             ymplayer.pre.s
-          0568  A$ymPlayer.pre.asx$534             ymplayer.pre.s
-          056A  A$ymPlayer.pre.asx$535             ymplayer.pre.s
-          056C  A$ymPlayer.pre.asx$536             ymplayer.pre.s
-          056E  A$ymPlayer.pre.asx$537             ymplayer.pre.s
-          0570  A$ymPlayer.pre.asx$538             ymplayer.pre.s
-          0572  A$ymPlayer.pre.asx$539             ymplayer.pre.s
-          0574  bit_is_ready14                     ymplayer.pre.s
-          0574  A$ymPlayer.pre.asx$545             ymplayer.pre.s
-          0576  A$ymPlayer.pre.asx$547             ymplayer.pre.s
-          0578  A$ymPlayer.pre.asx$549             ymplayer.pre.s
-          057A  A$ymPlayer.pre.asx$550             ymplayer.pre.s
-          057D  testNextPhrase                     ymplayer.pre.s
-          057D  A$ymPlayer.pre.asx$555             ymplayer.pre.s
-          057D  code_bit_notset                    ymplayer.pre.s
+          61BE  rleCounterBit5NotSet               ymplayer.pre.s
+          61BE  A$ymPlayer.pre.asx$275             ymplayer.pre.s
+          61C0  A$ymPlayer.pre.asx$276             ymplayer.pre.s
+          61C2  A$ymPlayer.pre.asx$277             ymplayer.pre.s
+          61C3  A$ymPlayer.pre.asx$280             ymplayer.pre.s
+          61C5  A$ymPlayer.pre.asx$281             ymplayer.pre.s
+          61C7  A$ymPlayer.pre.asx$283             ymplayer.pre.s
+          61C9  A$ymPlayer.pre.asx$284             ymplayer.pre.s
+          61CB  A$ymPlayer.pre.asx$285             ymplayer.pre.s
+          61CD  A$ymPlayer.pre.asx$286             ymplayer.pre.s
+          61CF  A$ymPlayer.pre.asx$287             ymplayer.pre.s
+          61D1  A$ymPlayer.pre.asx$288             ymplayer.pre.s
+          61D3  bit_is_ready8                      ymplayer.pre.s
+          61D3  A$ymPlayer.pre.asx$294             ymplayer.pre.s
+          61D5  A$ymPlayer.pre.asx$296             ymplayer.pre.s
+          61D7  A$ymPlayer.pre.asx$298             ymplayer.pre.s
+          61D9  A$ymPlayer.pre.asx$299             ymplayer.pre.s
+          61DA  rleCounterBit6NotSet               ymplayer.pre.s
+          61DA  A$ymPlayer.pre.asx$302             ymplayer.pre.s
+          61DC  A$ymPlayer.pre.asx$303             ymplayer.pre.s
+          61DE  A$ymPlayer.pre.asx$304             ymplayer.pre.s
+          61DF  A$ymPlayer.pre.asx$307             ymplayer.pre.s
+          61E1  A$ymPlayer.pre.asx$308             ymplayer.pre.s
+          61E3  A$ymPlayer.pre.asx$310             ymplayer.pre.s
+          61E5  A$ymPlayer.pre.asx$311             ymplayer.pre.s
+          61E7  A$ymPlayer.pre.asx$312             ymplayer.pre.s
+          61E9  A$ymPlayer.pre.asx$313             ymplayer.pre.s
+          61EB  A$ymPlayer.pre.asx$314             ymplayer.pre.s
+          61ED  A$ymPlayer.pre.asx$315             ymplayer.pre.s
+          61EF  A$ymPlayer.pre.asx$321             ymplayer.pre.s
+          61EF  bit_is_ready9                      ymplayer.pre.s
+          61F1  A$ymPlayer.pre.asx$323             ymplayer.pre.s
+          61F3  A$ymPlayer.pre.asx$325             ymplayer.pre.s
+          61F5  A$ymPlayer.pre.asx$326             ymplayer.pre.s
+          61F6  rleCounterBit7NotSet               ymplayer.pre.s
+          61F6  A$ymPlayer.pre.asx$329             ymplayer.pre.s
+          61F8  A$ymPlayer.pre.asx$330             ymplayer.pre.s
+          61FA  A$ymPlayer.pre.asx$332             ymplayer.pre.s
+          61FC  read16bitContinue                  ymplayer.pre.s
+          61FC  A$ymPlayer.pre.asx$335             ymplayer.pre.s
+          61FE  A$ymPlayer.pre.asx$337             ymplayer.pre.s
+          61FF  A$ymPlayer.pre.asx$338             ymplayer.pre.s
+          6200  A$ymPlayer.pre.asx$339             ymplayer.pre.s
+          6202  A$ymPlayer.pre.asx$340             ymplayer.pre.s
+          6204  no_carry                           ymplayer.pre.s
+          6204  A$ymPlayer.pre.asx$344             ymplayer.pre.s
+          6206  A$ymPlayer.pre.asx$347             ymplayer.pre.s
+          6208  A$ymPlayer.pre.asx$348             ymplayer.pre.s
+          620A  A$ymPlayer.pre.asx$350             ymplayer.pre.s
+          620C  A$ymPlayer.pre.asx$351             ymplayer.pre.s
 ASxxxx Linker V05.00,  page 16.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          057F  A$ymPlayer.pre.asx$556             ymplayer.pre.s
-          0581  A$ymPlayer.pre.asx$557             ymplayer.pre.s
-          0583  increaseCodeBits                   ymplayer.pre.s
-          0583  A$ymPlayer.pre.asx$561             ymplayer.pre.s
-          0585  A$ymPlayer.pre.asx$562             ymplayer.pre.s
-          0587  A$ymPlayer.pre.asx$563             ymplayer.pre.s
-          0589  A$ymPlayer.pre.asx$564             ymplayer.pre.s
-          058B  bitLenFound                        ymplayer.pre.s
-          058B  A$ymPlayer.pre.asx$572             ymplayer.pre.s
-          058D  A$ymPlayer.pre.asx$573             ymplayer.pre.s
-          0590  A$ymPlayer.pre.asx$574             ymplayer.pre.s
-          0592  A$ymPlayer.pre.asx$575             ymplayer.pre.s
-          0594  A$ymPlayer.pre.asx$576             ymplayer.pre.s
-          0596  A$ymPlayer.pre.asx$577             ymplayer.pre.s
-          059A  A$ymPlayer.pre.asx$578             ymplayer.pre.s
-          059C  A$ymPlayer.pre.asx$579             ymplayer.pre.s
-          059D  A$ymPlayer.pre.asx$580             ymplayer.pre.s
-          059F  A$ymPlayer.pre.asx$581             ymplayer.pre.s
-          05A1  A$ymPlayer.pre.asx$582             ymplayer.pre.s
-          05A4  directByte                         ymplayer.pre.s
-          05A4  A$ymPlayer.pre.asx$588             ymplayer.pre.s
-          05A6  A$ymPlayer.pre.asx$589             ymplayer.pre.s
-          05A9  A$ymPlayer.pre.asx$590             ymplayer.pre.s
-          05AB  A$ymPlayer.pre.asx$591             ymplayer.pre.s
-          05AC  A$ymPlayer.pre.asx$592             ymplayer.pre.s
-          05AE  A$ymPlayer.pre.asx$593             ymplayer.pre.s
-          05B0  A$ymPlayer.pre.asx$599             ymplayer.pre.s
-          05B3  A$ymPlayer.pre.asx$600             ymplayer.pre.s
-          05B5  A$ymPlayer.pre.asx$601             ymplayer.pre.s
-          05B7  A$ymPlayer.pre.asx$602             ymplayer.pre.s
-          05B9  A$ymPlayer.pre.asx$603             ymplayer.pre.s
-          05BB  A$ymPlayer.pre.asx$604             ymplayer.pre.s
-          05BD  A$ymPlayer.pre.asx$605             ymplayer.pre.s
-          05BF  A$ymPlayer.pre.asx$606             ymplayer.pre.s
-          05C1  A$ymPlayer.pre.asx$607             ymplayer.pre.s
-          05C3  A$ymPlayer.pre.asx$608             ymplayer.pre.s
-          05C5  A$ymPlayer.pre.asx$609             ymplayer.pre.s
-          05C7  reg8Bits                           ymplayer.pre.s
-          05C7  A$ymPlayer.pre.asx$614             ymplayer.pre.s
-          05C9  A$ymPlayer.pre.asx$615             ymplayer.pre.s
-          05CB  A$ymPlayer.pre.asx$617             ymplayer.pre.s
-          05CD  A$ymPlayer.pre.asx$618             ymplayer.pre.s
-          05CF  A$ymPlayer.pre.asx$619             ymplayer.pre.s
-          05D1  A$ymPlayer.pre.asx$620             ymplayer.pre.s
-          05D3  A$ymPlayer.pre.asx$621             ymplayer.pre.s
-          05D5  A$ymPlayer.pre.asx$622             ymplayer.pre.s
-          05D7  bit_is_ready15                     ymplayer.pre.s
-          05D7  A$ymPlayer.pre.asx$628             ymplayer.pre.s
-          05D9  A$ymPlayer.pre.asx$630             ymplayer.pre.s
-          05DB  A$ymPlayer.pre.asx$632             ymplayer.pre.s
+          620E  A$ymPlayer.pre.asx$352             ymplayer.pre.s
+          6210  A$ymPlayer.pre.asx$353             ymplayer.pre.s
+          6212  A$ymPlayer.pre.asx$354             ymplayer.pre.s
+          6214  A$ymPlayer.pre.asx$355             ymplayer.pre.s
+          6216  bit_is_ready10                     ymplayer.pre.s
+          6216  A$ymPlayer.pre.asx$361             ymplayer.pre.s
+          6218  A$ymPlayer.pre.asx$363             ymplayer.pre.s
+          621A  A$ymPlayer.pre.asx$365             ymplayer.pre.s
+          621C  A$ymPlayer.pre.asx$366             ymplayer.pre.s
+          621E  A$ymPlayer.pre.asx$369             ymplayer.pre.s
+          621E  rleCounterBitXNotSet               ymplayer.pre.s
+          6220  A$ymPlayer.pre.asx$370             ymplayer.pre.s
+          6222  rle16bitdone                       ymplayer.pre.s
+          6222  A$ymPlayer.pre.asx$375             ymplayer.pre.s
+          6224  rle8bitdone                        ymplayer.pre.s
+          6224  A$ymPlayer.pre.asx$379             ymplayer.pre.s
+          6226  A$ymPlayer.pre.asx$382             ymplayer.pre.s
+          6228  do_ym_sound                        ymplayer.pre.s
+          6228  A$ymPlayer.pre.asx$388             ymplayer.pre.s
+          622B  A$ymPlayer.pre.asx$389             ymplayer.pre.s
+          622D  A$ymPlayer.pre.asx$390             ymplayer.pre.s
+          6230  A$ymPlayer.pre.asx$391             ymplayer.pre.s
+          6233  A$ymPlayer.pre.asx$392             ymplayer.pre.s
+          6236  A$ymPlayer.pre.asx$393             ymplayer.pre.s
+          6239  A$ymPlayer.pre.asx$394             ymplayer.pre.s
+          623C  getCurrentRegByte                  ymplayer.pre.s
+          623C  next_reg                           ymplayer.pre.s
+          623C  A$ymPlayer.pre.asx$404             ymplayer.pre.s
+          623E  A$ymPlayer.pre.asx$405             ymplayer.pre.s
+          6240  A$ymPlayer.pre.asx$407             ymplayer.pre.s
+          6242  A$ymPlayer.pre.asx$408             ymplayer.pre.s
+          6244  A$ymPlayer.pre.asx$409             ymplayer.pre.s
+          6246  A$ymPlayer.pre.asx$410             ymplayer.pre.s
+          6248  A$ymPlayer.pre.asx$413             ymplayer.pre.s
+          6248  inPhraseOut                        ymplayer.pre.s
+          624A  A$ymPlayer.pre.asx$414             ymplayer.pre.s
+          624C  A$ymPlayer.pre.asx$415             ymplayer.pre.s
+          624E  A$ymPlayer.pre.asx$416             ymplayer.pre.s
+          6250  A$ymPlayer.pre.asx$417             ymplayer.pre.s
+          6252  A$ymPlayer.pre.asx$418             ymplayer.pre.s
+          6254  A$ymPlayer.pre.asx$419             ymplayer.pre.s
+          6256  A$ymPlayer.pre.asx$422             ymplayer.pre.s
+          6256  not_in_phrase                      ymplayer.pre.s
+          6259  A$ymPlayer.pre.asx$423             ymplayer.pre.s
+          625B  done                               ymplayer.pre.s
+          625B  A$ymPlayer.pre.asx$429             ymplayer.pre.s
+          625B  currentPharseNotEnded              ymplayer.pre.s
+          625D  A$ymPlayer.pre.asx$430             ymplayer.pre.s
+          625F  A$ymPlayer.pre.asx$433             ymplayer.pre.s
+          6261  A$ymPlayer.pre.asx$434             ymplayer.pre.s
 ASxxxx Linker V05.00,  page 17.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          05DD  A$ymPlayer.pre.asx$633             ymplayer.pre.s
-          05DE  A$ymPlayer.pre.asx$636             ymplayer.pre.s
-          05DE  noBit1                             ymplayer.pre.s
-          05DF  A$ymPlayer.pre.asx$639             ymplayer.pre.s
-          05E1  A$ymPlayer.pre.asx$640             ymplayer.pre.s
-          05E3  A$ymPlayer.pre.asx$642             ymplayer.pre.s
-          05E5  A$ymPlayer.pre.asx$643             ymplayer.pre.s
-          05E7  A$ymPlayer.pre.asx$644             ymplayer.pre.s
-          05E9  A$ymPlayer.pre.asx$645             ymplayer.pre.s
-          05EB  A$ymPlayer.pre.asx$646             ymplayer.pre.s
-          05ED  A$ymPlayer.pre.asx$647             ymplayer.pre.s
-          05EF  bit_is_ready16                     ymplayer.pre.s
-          05EF  A$ymPlayer.pre.asx$653             ymplayer.pre.s
-          05F1  A$ymPlayer.pre.asx$655             ymplayer.pre.s
-          05F3  A$ymPlayer.pre.asx$657             ymplayer.pre.s
-          05F5  A$ymPlayer.pre.asx$658             ymplayer.pre.s
-          05F6  A$ymPlayer.pre.asx$661             ymplayer.pre.s
-          05F6  noBit2                             ymplayer.pre.s
-          05F7  reg6Bits                           ymplayer.pre.s
-          05F7  A$ymPlayer.pre.asx$666             ymplayer.pre.s
-          05F9  A$ymPlayer.pre.asx$667             ymplayer.pre.s
-          05FB  A$ymPlayer.pre.asx$669             ymplayer.pre.s
-          05FD  A$ymPlayer.pre.asx$670             ymplayer.pre.s
-          05FF  A$ymPlayer.pre.asx$671             ymplayer.pre.s
-          0601  A$ymPlayer.pre.asx$672             ymplayer.pre.s
-          0603  A$ymPlayer.pre.asx$673             ymplayer.pre.s
-          0605  A$ymPlayer.pre.asx$674             ymplayer.pre.s
-          0607  bit_is_ready17                     ymplayer.pre.s
-          0607  A$ymPlayer.pre.asx$680             ymplayer.pre.s
-          0609  A$ymPlayer.pre.asx$682             ymplayer.pre.s
-          060B  A$ymPlayer.pre.asx$684             ymplayer.pre.s
-          060D  A$ymPlayer.pre.asx$685             ymplayer.pre.s
-          060E  noBit3                             ymplayer.pre.s
-          060E  A$ymPlayer.pre.asx$688             ymplayer.pre.s
-          060F  reg5Bits                           ymplayer.pre.s
-          060F  A$ymPlayer.pre.asx$693             ymplayer.pre.s
-          0611  A$ymPlayer.pre.asx$694             ymplayer.pre.s
-          0613  A$ymPlayer.pre.asx$696             ymplayer.pre.s
-          0615  A$ymPlayer.pre.asx$697             ymplayer.pre.s
-          0617  A$ymPlayer.pre.asx$698             ymplayer.pre.s
-          0619  A$ymPlayer.pre.asx$699             ymplayer.pre.s
-          061B  A$ymPlayer.pre.asx$700             ymplayer.pre.s
-          061D  A$ymPlayer.pre.asx$701             ymplayer.pre.s
-          061F  bit_is_ready18                     ymplayer.pre.s
-          061F  A$ymPlayer.pre.asx$707             ymplayer.pre.s
-          0621  A$ymPlayer.pre.asx$709             ymplayer.pre.s
-          0623  A$ymPlayer.pre.asx$711             ymplayer.pre.s
-          0625  A$ymPlayer.pre.asx$712             ymplayer.pre.s
-          0626  A$ymPlayer.pre.asx$715             ymplayer.pre.s
-          0626  noBit4                             ymplayer.pre.s
+          6263  A$ymPlayer.pre.asx$435             ymplayer.pre.s
+          6265  A$ymPlayer.pre.asx$436             ymplayer.pre.s
+          6267  no13                               ymplayer.pre.s
+          6267  A$ymPlayer.pre.asx$440             ymplayer.pre.s
+          6269  A$ymPlayer.pre.asx$441             ymplayer.pre.s
+          626B  A$ymPlayer.pre.asx$442             ymplayer.pre.s
+          626D  A$ymPlayer.pre.asx$443             ymplayer.pre.s
+          626F  A$ymPlayer.pre.asx$444             ymplayer.pre.s
+          6271  A$ymPlayer.pre.asx$445             ymplayer.pre.s
+          6273  A$ymPlayer.pre.asx$446             ymplayer.pre.s
+          6275  A$ymPlayer.pre.asx$447             ymplayer.pre.s
+          6277  A$ymPlayer.pre.asx$448             ymplayer.pre.s
+          6279  A$ymPlayer.pre.asx$449             ymplayer.pre.s
+          627B  A$ymPlayer.pre.asx$450             ymplayer.pre.s
+          627D  doNotWriteReg13                    ymplayer.pre.s
+          627D  A$ymPlayer.pre.asx$455             ymplayer.pre.s
+          6280  A$ymPlayer.pre.asx$456             ymplayer.pre.s
+          6283  A$ymPlayer.pre.asx$457             ymplayer.pre.s
+          6285  A$ymPlayer.pre.asx$460             ymplayer.pre.s
+          6285  ymsodone                           ymplayer.pre.s
+          6286  noValidByte                        ymplayer.pre.s
+          6286  A$ymPlayer.pre.asx$470             ymplayer.pre.s
+          6288  A$ymPlayer.pre.asx$471             ymplayer.pre.s
+          628A  A$ymPlayer.pre.asx$473             ymplayer.pre.s
+          628C  A$ymPlayer.pre.asx$474             ymplayer.pre.s
+          628E  A$ymPlayer.pre.asx$475             ymplayer.pre.s
+          6290  A$ymPlayer.pre.asx$476             ymplayer.pre.s
+          6292  A$ymPlayer.pre.asx$477             ymplayer.pre.s
+          6294  A$ymPlayer.pre.asx$478             ymplayer.pre.s
+          6296  bit_is_ready12                     ymplayer.pre.s
+          6296  A$ymPlayer.pre.asx$484             ymplayer.pre.s
+          6298  A$ymPlayer.pre.asx$486             ymplayer.pre.s
+          629A  A$ymPlayer.pre.asx$490             ymplayer.pre.s
+          629E  A$ymPlayer.pre.asx$493             ymplayer.pre.s
+          62A0  A$ymPlayer.pre.asx$501             ymplayer.pre.s
+          62A0  dechifer                           ymplayer.pre.s
+          62A2  A$ymPlayer.pre.asx$502             ymplayer.pre.s
+          62A4  A$ymPlayer.pre.asx$504             ymplayer.pre.s
+          62A6  A$ymPlayer.pre.asx$505             ymplayer.pre.s
+          62A8  A$ymPlayer.pre.asx$506             ymplayer.pre.s
+          62AA  A$ymPlayer.pre.asx$507             ymplayer.pre.s
+          62AC  A$ymPlayer.pre.asx$508             ymplayer.pre.s
+          62AE  A$ymPlayer.pre.asx$509             ymplayer.pre.s
+          62B0  bit_is_ready13                     ymplayer.pre.s
+          62B0  A$ymPlayer.pre.asx$515             ymplayer.pre.s
+          62B2  A$ymPlayer.pre.asx$517             ymplayer.pre.s
+          62B4  A$ymPlayer.pre.asx$519             ymplayer.pre.s
+          62B6  A$ymPlayer.pre.asx$520             ymplayer.pre.s
+          62BA  A$ymPlayer.pre.asx$521             ymplayer.pre.s
+          62BD  A$ymPlayer.pre.asx$522             ymplayer.pre.s
 ASxxxx Linker V05.00,  page 18.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0627  reg4Bits                           ymplayer.pre.s
-          0627  A$ymPlayer.pre.asx$720             ymplayer.pre.s
-          0629  A$ymPlayer.pre.asx$721             ymplayer.pre.s
-          062B  A$ymPlayer.pre.asx$723             ymplayer.pre.s
-          062D  A$ymPlayer.pre.asx$724             ymplayer.pre.s
-          062F  A$ymPlayer.pre.asx$725             ymplayer.pre.s
-          0631  A$ymPlayer.pre.asx$726             ymplayer.pre.s
-          0633  A$ymPlayer.pre.asx$727             ymplayer.pre.s
-          0635  A$ymPlayer.pre.asx$728             ymplayer.pre.s
-          0637  bit_is_ready19                     ymplayer.pre.s
-          0637  A$ymPlayer.pre.asx$734             ymplayer.pre.s
-          0639  A$ymPlayer.pre.asx$736             ymplayer.pre.s
-          063B  A$ymPlayer.pre.asx$738             ymplayer.pre.s
-          063D  A$ymPlayer.pre.asx$739             ymplayer.pre.s
-          063E  A$ymPlayer.pre.asx$742             ymplayer.pre.s
-          063E  noBit5                             ymplayer.pre.s
-          063F  A$ymPlayer.pre.asx$745             ymplayer.pre.s
-          0641  A$ymPlayer.pre.asx$746             ymplayer.pre.s
-          0643  A$ymPlayer.pre.asx$748             ymplayer.pre.s
-          0645  A$ymPlayer.pre.asx$749             ymplayer.pre.s
-          0647  A$ymPlayer.pre.asx$750             ymplayer.pre.s
-          0649  A$ymPlayer.pre.asx$751             ymplayer.pre.s
-          064B  A$ymPlayer.pre.asx$752             ymplayer.pre.s
-          064D  A$ymPlayer.pre.asx$753             ymplayer.pre.s
-          064F  bit_is_ready20                     ymplayer.pre.s
-          064F  A$ymPlayer.pre.asx$759             ymplayer.pre.s
-          0651  A$ymPlayer.pre.asx$761             ymplayer.pre.s
-          0653  A$ymPlayer.pre.asx$763             ymplayer.pre.s
-          0655  A$ymPlayer.pre.asx$764             ymplayer.pre.s
-          0656  A$ymPlayer.pre.asx$767             ymplayer.pre.s
-          0656  noBit6                             ymplayer.pre.s
-          0657  A$ymPlayer.pre.asx$770             ymplayer.pre.s
-          0659  A$ymPlayer.pre.asx$771             ymplayer.pre.s
-          065B  A$ymPlayer.pre.asx$773             ymplayer.pre.s
-          065D  A$ymPlayer.pre.asx$774             ymplayer.pre.s
-          065F  A$ymPlayer.pre.asx$775             ymplayer.pre.s
-          0661  A$ymPlayer.pre.asx$776             ymplayer.pre.s
-          0663  A$ymPlayer.pre.asx$777             ymplayer.pre.s
-          0665  A$ymPlayer.pre.asx$778             ymplayer.pre.s
-          0667  bit_is_ready21                     ymplayer.pre.s
-          0667  A$ymPlayer.pre.asx$784             ymplayer.pre.s
-          0669  A$ymPlayer.pre.asx$786             ymplayer.pre.s
-          066B  A$ymPlayer.pre.asx$788             ymplayer.pre.s
-          066D  A$ymPlayer.pre.asx$789             ymplayer.pre.s
-          066E  A$ymPlayer.pre.asx$792             ymplayer.pre.s
-          066E  noBit7                             ymplayer.pre.s
-          066F  A$ymPlayer.pre.asx$795             ymplayer.pre.s
-          0671  A$ymPlayer.pre.asx$796             ymplayer.pre.s
-          0673  A$ymPlayer.pre.asx$798             ymplayer.pre.s
-          0675  A$ymPlayer.pre.asx$799             ymplayer.pre.s
+          62C0  A$ymPlayer.pre.asx$523             ymplayer.pre.s
+          62C1  A$ymPlayer.pre.asx$524             ymplayer.pre.s
+          62C4  A$ymPlayer.pre.asx$527             ymplayer.pre.s
+          62C4  getNextCodeBit                     ymplayer.pre.s
+          62C7  A$ymPlayer.pre.asx$528             ymplayer.pre.s
+          62C8  A$ymPlayer.pre.asx$531             ymplayer.pre.s
+          62CA  A$ymPlayer.pre.asx$532             ymplayer.pre.s
+          62CC  A$ymPlayer.pre.asx$534             ymplayer.pre.s
+          62CE  A$ymPlayer.pre.asx$535             ymplayer.pre.s
+          62D0  A$ymPlayer.pre.asx$536             ymplayer.pre.s
+          62D2  A$ymPlayer.pre.asx$537             ymplayer.pre.s
+          62D4  A$ymPlayer.pre.asx$538             ymplayer.pre.s
+          62D6  A$ymPlayer.pre.asx$539             ymplayer.pre.s
+          62D8  bit_is_ready14                     ymplayer.pre.s
+          62D8  A$ymPlayer.pre.asx$545             ymplayer.pre.s
+          62DA  A$ymPlayer.pre.asx$547             ymplayer.pre.s
+          62DC  A$ymPlayer.pre.asx$549             ymplayer.pre.s
+          62DE  A$ymPlayer.pre.asx$550             ymplayer.pre.s
+          62E1  testNextPhrase                     ymplayer.pre.s
+          62E1  A$ymPlayer.pre.asx$555             ymplayer.pre.s
+          62E1  code_bit_notset                    ymplayer.pre.s
+          62E3  A$ymPlayer.pre.asx$556             ymplayer.pre.s
+          62E5  A$ymPlayer.pre.asx$557             ymplayer.pre.s
+          62E7  increaseCodeBits                   ymplayer.pre.s
+          62E7  A$ymPlayer.pre.asx$561             ymplayer.pre.s
+          62E9  A$ymPlayer.pre.asx$562             ymplayer.pre.s
+          62EB  A$ymPlayer.pre.asx$563             ymplayer.pre.s
+          62ED  A$ymPlayer.pre.asx$564             ymplayer.pre.s
+          62EF  bitLenFound                        ymplayer.pre.s
+          62EF  A$ymPlayer.pre.asx$572             ymplayer.pre.s
+          62F1  A$ymPlayer.pre.asx$573             ymplayer.pre.s
+          62F4  A$ymPlayer.pre.asx$574             ymplayer.pre.s
+          62F6  A$ymPlayer.pre.asx$575             ymplayer.pre.s
+          62F8  A$ymPlayer.pre.asx$576             ymplayer.pre.s
+          62FA  A$ymPlayer.pre.asx$577             ymplayer.pre.s
+          62FE  A$ymPlayer.pre.asx$578             ymplayer.pre.s
+          6300  A$ymPlayer.pre.asx$579             ymplayer.pre.s
+          6301  A$ymPlayer.pre.asx$580             ymplayer.pre.s
+          6303  A$ymPlayer.pre.asx$581             ymplayer.pre.s
+          6305  A$ymPlayer.pre.asx$582             ymplayer.pre.s
+          6308  directByte                         ymplayer.pre.s
+          6308  A$ymPlayer.pre.asx$588             ymplayer.pre.s
+          630A  A$ymPlayer.pre.asx$589             ymplayer.pre.s
+          630D  A$ymPlayer.pre.asx$590             ymplayer.pre.s
+          630F  A$ymPlayer.pre.asx$591             ymplayer.pre.s
+          6310  A$ymPlayer.pre.asx$592             ymplayer.pre.s
+          6312  A$ymPlayer.pre.asx$593             ymplayer.pre.s
+          6314  A$ymPlayer.pre.asx$599             ymplayer.pre.s
+          6317  A$ymPlayer.pre.asx$600             ymplayer.pre.s
+          6319  A$ymPlayer.pre.asx$601             ymplayer.pre.s
 ASxxxx Linker V05.00,  page 19.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      005E        0685 =        1669. bytes (REL,CON,CSEG)
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0677  A$ymPlayer.pre.asx$800             ymplayer.pre.s
-          0679  A$ymPlayer.pre.asx$801             ymplayer.pre.s
-          067B  A$ymPlayer.pre.asx$802             ymplayer.pre.s
-          067D  A$ymPlayer.pre.asx$803             ymplayer.pre.s
-          067F  bit_is_ready22                     ymplayer.pre.s
-          067F  A$ymPlayer.pre.asx$809             ymplayer.pre.s
-          0681  A$ymPlayer.pre.asx$811             ymplayer.pre.s
-          0683  A$ymPlayer.pre.asx$813             ymplayer.pre.s
-          0685  A$ymPlayer.pre.asx$814             ymplayer.pre.s
-          0686  A$ymPlayer.pre.asx$817             ymplayer.pre.s
-          0686  noBit8                             ymplayer.pre.s
-          0688  A$ymPlayer.pre.asx$818             ymplayer.pre.s
-          068B  init_ym_sound                      ymplayer.pre.s
-          068B  A$ymPlayer.pre.asx$823             ymplayer.pre.s
-          068E  A$ymPlayer.pre.asx$824             ymplayer.pre.s
-          0691  A$ymPlayer.pre.asx$825             ymplayer.pre.s
-          0694  A$ymPlayer.pre.asx$826             ymplayer.pre.s
-          0697  A$ymPlayer.pre.asx$827             ymplayer.pre.s
-          069A  A$ymPlayer.pre.asx$828             ymplayer.pre.s
-          069C  A$ymPlayer.pre.asx$829             ymplayer.pre.s
-          069F  A$ymPlayer.pre.asx$830             ymplayer.pre.s
-          06A2  A$ymPlayer.pre.asx$831             ymplayer.pre.s
-          06A4  A$ymPlayer.pre.asx$834             ymplayer.pre.s
-          06A4  nreg_init                          ymplayer.pre.s
-          06A7  A$ymPlayer.pre.asx$835             ymplayer.pre.s
-          06A9  A$ymPlayer.pre.asx$836             ymplayer.pre.s
-          06AC  A$ymPlayer.pre.asx$837             ymplayer.pre.s
-          06AF  A$ymPlayer.pre.asx$838             ymplayer.pre.s
-          06B2  A$ymPlayer.pre.asx$839             ymplayer.pre.s
-          06B5  A$ymPlayer.pre.asx$840             ymplayer.pre.s
-          06B8  A$ymPlayer.pre.asx$841             ymplayer.pre.s
-          06BB  A$ymPlayer.pre.asx$842             ymplayer.pre.s
-          06BE  A$ymPlayer.pre.asx$843             ymplayer.pre.s
-          06C0  A$ymPlayer.pre.asx$844             ymplayer.pre.s
-          06C2  regInitDone                        ymplayer.pre.s
-          06C2  A$ymPlayer.pre.asx$847             ymplayer.pre.s
-          06C5  A$ymPlayer.pre.asx$848             ymplayer.pre.s
-          06C6  __Intensity_a                      vec_rum_14_05_Intensity_a.c
-          06CB  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
-          06DE  __Moveto_d                         vec_rum_13_07_Moveto_d.c
-
+          631B  A$ymPlayer.pre.asx$602             ymplayer.pre.s
+          631D  A$ymPlayer.pre.asx$603             ymplayer.pre.s
+          631F  A$ymPlayer.pre.asx$604             ymplayer.pre.s
+          6321  A$ymPlayer.pre.asx$605             ymplayer.pre.s
+          6323  A$ymPlayer.pre.asx$606             ymplayer.pre.s
+          6325  A$ymPlayer.pre.asx$607             ymplayer.pre.s
+          6327  A$ymPlayer.pre.asx$608             ymplayer.pre.s
+          6329  A$ymPlayer.pre.asx$609             ymplayer.pre.s
+          632B  reg8Bits                           ymplayer.pre.s
+          632B  A$ymPlayer.pre.asx$614             ymplayer.pre.s
+          632D  A$ymPlayer.pre.asx$615             ymplayer.pre.s
+          632F  A$ymPlayer.pre.asx$617             ymplayer.pre.s
+          6331  A$ymPlayer.pre.asx$618             ymplayer.pre.s
+          6333  A$ymPlayer.pre.asx$619             ymplayer.pre.s
+          6335  A$ymPlayer.pre.asx$620             ymplayer.pre.s
+          6337  A$ymPlayer.pre.asx$621             ymplayer.pre.s
+          6339  A$ymPlayer.pre.asx$622             ymplayer.pre.s
+          633B  bit_is_ready15                     ymplayer.pre.s
+          633B  A$ymPlayer.pre.asx$628             ymplayer.pre.s
+          633D  A$ymPlayer.pre.asx$630             ymplayer.pre.s
+          633F  A$ymPlayer.pre.asx$632             ymplayer.pre.s
+          6341  A$ymPlayer.pre.asx$633             ymplayer.pre.s
+          6342  A$ymPlayer.pre.asx$636             ymplayer.pre.s
+          6342  noBit1                             ymplayer.pre.s
+          6343  A$ymPlayer.pre.asx$639             ymplayer.pre.s
+          6345  A$ymPlayer.pre.asx$640             ymplayer.pre.s
+          6347  A$ymPlayer.pre.asx$642             ymplayer.pre.s
+          6349  A$ymPlayer.pre.asx$643             ymplayer.pre.s
+          634B  A$ymPlayer.pre.asx$644             ymplayer.pre.s
+          634D  A$ymPlayer.pre.asx$645             ymplayer.pre.s
+          634F  A$ymPlayer.pre.asx$646             ymplayer.pre.s
+          6351  A$ymPlayer.pre.asx$647             ymplayer.pre.s
+          6353  bit_is_ready16                     ymplayer.pre.s
+          6353  A$ymPlayer.pre.asx$653             ymplayer.pre.s
+          6355  A$ymPlayer.pre.asx$655             ymplayer.pre.s
+          6357  A$ymPlayer.pre.asx$657             ymplayer.pre.s
+          6359  A$ymPlayer.pre.asx$658             ymplayer.pre.s
+          635A  A$ymPlayer.pre.asx$661             ymplayer.pre.s
+          635A  noBit2                             ymplayer.pre.s
+          635B  reg6Bits                           ymplayer.pre.s
+          635B  A$ymPlayer.pre.asx$666             ymplayer.pre.s
+          635D  A$ymPlayer.pre.asx$667             ymplayer.pre.s
+          635F  A$ymPlayer.pre.asx$669             ymplayer.pre.s
+          6361  A$ymPlayer.pre.asx$670             ymplayer.pre.s
+          6363  A$ymPlayer.pre.asx$671             ymplayer.pre.s
+          6365  A$ymPlayer.pre.asx$672             ymplayer.pre.s
+          6367  A$ymPlayer.pre.asx$673             ymplayer.pre.s
+          6369  A$ymPlayer.pre.asx$674             ymplayer.pre.s
+          636B  bit_is_ready17                     ymplayer.pre.s
+          636B  A$ymPlayer.pre.asx$680             ymplayer.pre.s
 ASxxxx Linker V05.00,  page 20.
+Hexidecimal  [16-Bits]
+[ Bank == rom ]
+
+Area                       Addr        Size        Decimal Bytes (Attributes)
+--------------------       ----        ----        ------- ----- ------------
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+          636D  A$ymPlayer.pre.asx$682             ymplayer.pre.s
+          636F  A$ymPlayer.pre.asx$684             ymplayer.pre.s
+          6371  A$ymPlayer.pre.asx$685             ymplayer.pre.s
+          6372  noBit3                             ymplayer.pre.s
+          6372  A$ymPlayer.pre.asx$688             ymplayer.pre.s
+          6373  reg5Bits                           ymplayer.pre.s
+          6373  A$ymPlayer.pre.asx$693             ymplayer.pre.s
+          6375  A$ymPlayer.pre.asx$694             ymplayer.pre.s
+          6377  A$ymPlayer.pre.asx$696             ymplayer.pre.s
+          6379  A$ymPlayer.pre.asx$697             ymplayer.pre.s
+          637B  A$ymPlayer.pre.asx$698             ymplayer.pre.s
+          637D  A$ymPlayer.pre.asx$699             ymplayer.pre.s
+          637F  A$ymPlayer.pre.asx$700             ymplayer.pre.s
+          6381  A$ymPlayer.pre.asx$701             ymplayer.pre.s
+          6383  bit_is_ready18                     ymplayer.pre.s
+          6383  A$ymPlayer.pre.asx$707             ymplayer.pre.s
+          6385  A$ymPlayer.pre.asx$709             ymplayer.pre.s
+          6387  A$ymPlayer.pre.asx$711             ymplayer.pre.s
+          6389  A$ymPlayer.pre.asx$712             ymplayer.pre.s
+          638A  A$ymPlayer.pre.asx$715             ymplayer.pre.s
+          638A  noBit4                             ymplayer.pre.s
+          638B  reg4Bits                           ymplayer.pre.s
+          638B  A$ymPlayer.pre.asx$720             ymplayer.pre.s
+          638D  A$ymPlayer.pre.asx$721             ymplayer.pre.s
+          638F  A$ymPlayer.pre.asx$723             ymplayer.pre.s
+          6391  A$ymPlayer.pre.asx$724             ymplayer.pre.s
+          6393  A$ymPlayer.pre.asx$725             ymplayer.pre.s
+          6395  A$ymPlayer.pre.asx$726             ymplayer.pre.s
+          6397  A$ymPlayer.pre.asx$727             ymplayer.pre.s
+          6399  A$ymPlayer.pre.asx$728             ymplayer.pre.s
+          639B  bit_is_ready19                     ymplayer.pre.s
+          639B  A$ymPlayer.pre.asx$734             ymplayer.pre.s
+          639D  A$ymPlayer.pre.asx$736             ymplayer.pre.s
+          639F  A$ymPlayer.pre.asx$738             ymplayer.pre.s
+          63A1  A$ymPlayer.pre.asx$739             ymplayer.pre.s
+          63A2  A$ymPlayer.pre.asx$742             ymplayer.pre.s
+          63A2  noBit5                             ymplayer.pre.s
+          63A3  A$ymPlayer.pre.asx$745             ymplayer.pre.s
+          63A5  A$ymPlayer.pre.asx$746             ymplayer.pre.s
+          63A7  A$ymPlayer.pre.asx$748             ymplayer.pre.s
+          63A9  A$ymPlayer.pre.asx$749             ymplayer.pre.s
+          63AB  A$ymPlayer.pre.asx$750             ymplayer.pre.s
+          63AD  A$ymPlayer.pre.asx$751             ymplayer.pre.s
+          63AF  A$ymPlayer.pre.asx$752             ymplayer.pre.s
+          63B1  A$ymPlayer.pre.asx$753             ymplayer.pre.s
+          63B3  bit_is_ready20                     ymplayer.pre.s
+          63B3  A$ymPlayer.pre.asx$759             ymplayer.pre.s
+          63B5  A$ymPlayer.pre.asx$761             ymplayer.pre.s
+          63B7  A$ymPlayer.pre.asx$763             ymplayer.pre.s
+          63B9  A$ymPlayer.pre.asx$764             ymplayer.pre.s
+ASxxxx Linker V05.00,  page 21.
+Hexidecimal  [16-Bits]
+[ Bank == rom ]
+
+Area                       Addr        Size        Decimal Bytes (Attributes)
+--------------------       ----        ----        ------- ----- ------------
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+          63BA  A$ymPlayer.pre.asx$767             ymplayer.pre.s
+          63BA  noBit6                             ymplayer.pre.s
+          63BB  A$ymPlayer.pre.asx$770             ymplayer.pre.s
+          63BD  A$ymPlayer.pre.asx$771             ymplayer.pre.s
+          63BF  A$ymPlayer.pre.asx$773             ymplayer.pre.s
+          63C1  A$ymPlayer.pre.asx$774             ymplayer.pre.s
+          63C3  A$ymPlayer.pre.asx$775             ymplayer.pre.s
+          63C5  A$ymPlayer.pre.asx$776             ymplayer.pre.s
+          63C7  A$ymPlayer.pre.asx$777             ymplayer.pre.s
+          63C9  A$ymPlayer.pre.asx$778             ymplayer.pre.s
+          63CB  bit_is_ready21                     ymplayer.pre.s
+          63CB  A$ymPlayer.pre.asx$784             ymplayer.pre.s
+          63CD  A$ymPlayer.pre.asx$786             ymplayer.pre.s
+          63CF  A$ymPlayer.pre.asx$788             ymplayer.pre.s
+          63D1  A$ymPlayer.pre.asx$789             ymplayer.pre.s
+          63D2  A$ymPlayer.pre.asx$792             ymplayer.pre.s
+          63D2  noBit7                             ymplayer.pre.s
+          63D3  A$ymPlayer.pre.asx$795             ymplayer.pre.s
+          63D5  A$ymPlayer.pre.asx$796             ymplayer.pre.s
+          63D7  A$ymPlayer.pre.asx$798             ymplayer.pre.s
+          63D9  A$ymPlayer.pre.asx$799             ymplayer.pre.s
+          63DB  A$ymPlayer.pre.asx$800             ymplayer.pre.s
+          63DD  A$ymPlayer.pre.asx$801             ymplayer.pre.s
+          63DF  A$ymPlayer.pre.asx$802             ymplayer.pre.s
+          63E1  A$ymPlayer.pre.asx$803             ymplayer.pre.s
+          63E3  bit_is_ready22                     ymplayer.pre.s
+          63E3  A$ymPlayer.pre.asx$809             ymplayer.pre.s
+          63E5  A$ymPlayer.pre.asx$811             ymplayer.pre.s
+          63E7  A$ymPlayer.pre.asx$813             ymplayer.pre.s
+          63E9  A$ymPlayer.pre.asx$814             ymplayer.pre.s
+          63EA  A$ymPlayer.pre.asx$817             ymplayer.pre.s
+          63EA  noBit8                             ymplayer.pre.s
+          63EC  A$ymPlayer.pre.asx$818             ymplayer.pre.s
+          63EF  init_ym_sound                      ymplayer.pre.s
+          63EF  A$ymPlayer.pre.asx$823             ymplayer.pre.s
+          63F2  A$ymPlayer.pre.asx$824             ymplayer.pre.s
+          63F5  A$ymPlayer.pre.asx$825             ymplayer.pre.s
+          63F8  A$ymPlayer.pre.asx$826             ymplayer.pre.s
+          63FB  A$ymPlayer.pre.asx$827             ymplayer.pre.s
+          63FE  A$ymPlayer.pre.asx$828             ymplayer.pre.s
+          6400  A$ymPlayer.pre.asx$829             ymplayer.pre.s
+          6403  A$ymPlayer.pre.asx$830             ymplayer.pre.s
+          6406  A$ymPlayer.pre.asx$831             ymplayer.pre.s
+          6408  A$ymPlayer.pre.asx$834             ymplayer.pre.s
+          6408  nreg_init                          ymplayer.pre.s
+          640B  A$ymPlayer.pre.asx$835             ymplayer.pre.s
+          640D  A$ymPlayer.pre.asx$836             ymplayer.pre.s
+          6410  A$ymPlayer.pre.asx$837             ymplayer.pre.s
+          6413  A$ymPlayer.pre.asx$838             ymplayer.pre.s
+          6416  A$ymPlayer.pre.asx$839             ymplayer.pre.s
+ASxxxx Linker V05.00,  page 22.
+Hexidecimal  [16-Bits]
+[ Bank == rom ]
+
+Area                       Addr        Size        Decimal Bytes (Attributes)
+--------------------       ----        ----        ------- ----- ------------
+.text                      005E        63F0 =       25584. bytes (REL,CON,CSEG)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+          6419  A$ymPlayer.pre.asx$840             ymplayer.pre.s
+          641C  A$ymPlayer.pre.asx$841             ymplayer.pre.s
+          641F  A$ymPlayer.pre.asx$842             ymplayer.pre.s
+          6422  A$ymPlayer.pre.asx$843             ymplayer.pre.s
+          6424  A$ymPlayer.pre.asx$844             ymplayer.pre.s
+          6426  regInitDone                        ymplayer.pre.s
+          6426  A$ymPlayer.pre.asx$847             ymplayer.pre.s
+          6429  A$ymPlayer.pre.asx$848             ymplayer.pre.s
+          642A  __Intensity_a                      vec_rum_14_05_Intensity_a.c
+          642F  __Do_Sound                         vec_rum_12_06_Do_Sound.c
+          6436  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
+          6449  __Moveto_d                         vec_rum_13_07_Moveto_d.c
+
+ASxxxx Linker V05.00,  page 23.
 Hexidecimal  [16-Bits]
 [ Bank == ram ]
 
@@ -1035,7 +1187,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           C880  _exitText                          main.enr.c
 
-ASxxxx Linker V05.00,  page 21.
+ASxxxx Linker V05.00,  page 24.
 Hexidecimal  [16-Bits]
 [ Bank == ram ]
 
@@ -1061,7 +1213,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C891  _ym_regs_count                     ymplayer.pre.s
           C892  _ym_data_start                     ymplayer.pre.s
 
-ASxxxx Linker V05.00,  page 22.
+ASxxxx Linker V05.00,  page 25.
 Hexidecimal  [16-Bits]
 [ Bank == page_c8 ]
 
@@ -1120,7 +1272,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C837  _Vec_Run_Index                     vec_ram_0xc8_0.c
           C839  _Vec_Rise_Index                    vec_ram_0xc8_0.c
           C839  _Vec_XXX_00                        vec_ram_0xc8_1.c
-ASxxxx Linker V05.00,  page 23.
+ASxxxx Linker V05.00,  page 26.
 Hexidecimal  [16-Bits]
 [ Bank == page_c8 ]
 
@@ -1180,7 +1332,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C86D  _Vec_XXX_15                        vec_ram_0xc8_0.c
           C86E  _Vec_XXX_16                        vec_ram_0xc8_0.c
           C86F  _Vec_XXX_17                        vec_ram_0xc8_0.c
-ASxxxx Linker V05.00,  page 24.
+ASxxxx Linker V05.00,  page 27.
 Hexidecimal  [16-Bits]
 [ Bank == page_c8 ]
 
@@ -1207,7 +1359,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C87E  _Vec_Random_Seed1                  vec_ram_0xc8_0.c
           C87F  _Vec_Random_Seed2                  vec_ram_0xc8_0.c
 
-ASxxxx Linker V05.00,  page 25.
+ASxxxx Linker V05.00,  page 28.
 Hexidecimal  [16-Bits]
 [ Bank == page_cb ]
 
@@ -1233,7 +1385,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           CBFB  _Vec_NWI_Vector                    vec_ram_0xcb_2.c
           CBFB  _Vec_NWI_vector                    vec_ram_0xcb_3.c
           CBFE  _Vec_Cold_Flag                     vec_ram_0xcb_0.c
-ASxxxx Linker V05.00,  page 26.
+ASxxxx Linker V05.00,  page 29.
 Hexidecimal  [16-Bits]
 [ Bank == page_d0 ]
 
@@ -1267,7 +1419,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           D00E  _VIA_int_enable                    vec_ram_0xd0_0.c
           D00F  _VIA_port_a_nohs                   vec_ram_0xd0_0.c
 
-ASxxxx Linker V05.00,  page 27.
+ASxxxx Linker V05.00,  page 30.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -1326,7 +1478,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           001F  _dp_Vec_Joy_Mux                    vec_ram_dpc8_2.c
           0020  _dp_Vec_Joy_Mux_1_Y                vec_ram_dpc8_1.c
           0021  _dp_Vec_Joy_Mux_2_X                vec_ram_dpc8_1.c
-ASxxxx Linker V05.00,  page 28.
+ASxxxx Linker V05.00,  page 31.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -1386,7 +1538,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           004C  _dp_Vec_XXX_08                     vec_ram_dpc8_0.c
           004D  _dp_Vec_Freq_Table                 vec_ram_dpc8_0.c
           004F  _dp_Vec_ADSR_Table                 vec_ram_dpc8_0.c
-ASxxxx Linker V05.00,  page 29.
+ASxxxx Linker V05.00,  page 32.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -1446,7 +1598,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           007A  _dp_Vec_Num_Game                   vec_ram_dpc8_0.c
           007A  _dp_Vec_Music_c                    vec_rom_dpff_0.c
           007B  _dp_Vec_Seed_Ptr                   vec_ram_dpc8_0.c
-ASxxxx Linker V05.00,  page 30.
+ASxxxx Linker V05.00,  page 33.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -1490,7 +1642,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           00FB  _dp_Vec_NWI_vector                 vec_ram_dpcb_3.c
           00FE  _dp_Vec_Cold_Flag                  vec_ram_dpcb_0.c
 
-ASxxxx Linker V05.00,  page 31.
+ASxxxx Linker V05.00,  page 34.
 Hexidecimal  [16-Bits]
 [ Bank == page_ed ]
 
@@ -1503,7 +1655,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           ED77  _Vec_Music_0                       vec_rom_0xed_0.c
           ED8F  _Vec_ADSR_FADE66                   vec_rom_0xed_0.c
 
-ASxxxx Linker V05.00,  page 32.
+ASxxxx Linker V05.00,  page 35.
 Hexidecimal  [16-Bits]
 [ Bank == page_fc ]
 
@@ -1517,7 +1669,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FC7D  _Vec_Cosine_Table                  vec_rom_0xfc_0.c
           FC8D  _Vec_Note_Table                    vec_rom_0xfc_0.c
 
-ASxxxx Linker V05.00,  page 33.
+ASxxxx Linker V05.00,  page 36.
 Hexidecimal  [16-Bits]
 [ Bank == page_fd ]
 
@@ -1535,7 +1687,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FDC3  _Vec_ADSR_FADE12                   vec_rom_0xfd_0.c
           FDD3  _Vec_Music_4                       vec_rom_0xfd_0.c
 
-ASxxxx Linker V05.00,  page 34.
+ASxxxx Linker V05.00,  page 37.
 Hexidecimal  [16-Bits]
 [ Bank == page_fe ]
 
@@ -1556,7 +1708,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FEE8  _Vec_ADSR_FADE4                    vec_rom_0xfe_0.c
           FEF8  _Vec_Music_8                       vec_rom_0xfe_0.c
 
-ASxxxx Linker V05.00,  page 35.
+ASxxxx Linker V05.00,  page 38.
 Hexidecimal  [16-Bits]
 [ Bank == page_ff ]
 
@@ -1573,7 +1725,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FF7A  _Vec_Music_c                       vec_rom_0xff_0.c
           FF8F  _Vec_Music_d                       vec_rom_0xff_0.c
 
-ASxxxx Linker V05.00,  page 36.
+ASxxxx Linker V05.00,  page 39.
 Hexidecimal  [16-Bits]
 [ Bank == page_e7 ]
 
@@ -1586,7 +1738,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           E7B5  ___Displ8_xy                       vec_rum_0xe7.c
           E7D2  ___Displ16_xy                      vec_rum_0xe7.c
 
-ASxxxx Linker V05.00,  page 37.
+ASxxxx Linker V05.00,  page 40.
 Hexidecimal  [16-Bits]
 [ Bank == page_e9 ]
 
@@ -1598,7 +1750,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           E98A  ___Ranpos                          vec_rum_0xe9.c
 
-ASxxxx Linker V05.00,  page 38.
+ASxxxx Linker V05.00,  page 41.
 Hexidecimal  [16-Bits]
 [ Bank == page_ea ]
 
@@ -1618,7 +1770,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           EACF  ___Draw_Scores                     vec_rum_0xea.c
           EAF0  ___Wait_Bound                      vec_rum_0xea.c
 
-ASxxxx Linker V05.00,  page 39.
+ASxxxx Linker V05.00,  page 42.
 Hexidecimal  [16-Bits]
 [ Bank == page_f0 ]
 
@@ -1630,7 +1782,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           F000  ___Reset                           vec_rum_0xf0.c
 
-ASxxxx Linker V05.00,  page 40.
+ASxxxx Linker V05.00,  page 43.
 Hexidecimal  [16-Bits]
 [ Bank == page_f1 ]
 
@@ -1651,7 +1803,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F1F5  ___Joy_Analog                      vec_rum_0xf1.c
           F1F8  ___Joy_Digital                     vec_rum_0xf1.c
 
-ASxxxx Linker V05.00,  page 41.
+ASxxxx Linker V05.00,  page 44.
 Hexidecimal  [16-Bits]
 [ Bank == page_f2 ]
 
@@ -1683,7 +1835,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F2F2  ___Moveto_x_7F                     vec_rum_0xf2.c
           F2FC  ___Moveto_d_7F                     vec_rum_0xf2.c
 
-ASxxxx Linker V05.00,  page 42.
+ASxxxx Linker V05.00,  page 45.
 Hexidecimal  [16-Bits]
 [ Bank == page_f3 ]
 
@@ -1725,7 +1877,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F3DA  ___Draw_VL_a                       vec_rum_0xf3.c
           F3DD  ___Draw_VL                         vec_rum_0xf3.c
           F3DF  ___Draw_Line_d                     vec_rum_0xf3.c
-ASxxxx Linker V05.00,  page 43.
+ASxxxx Linker V05.00,  page 46.
 Hexidecimal  [16-Bits]
 [ Bank == page_f4 ]
 
@@ -1747,7 +1899,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F46E  ___Draw_VL_mode                    vec_rum_0xf4.c
           F495  ___Print_Str                       vec_rum_0xf4.c
           F498  ___Print_MRast                     vec_rum_0xf4.c
-ASxxxx Linker V05.00,  page 44.
+ASxxxx Linker V05.00,  page 47.
 Hexidecimal  [16-Bits]
 [ Bank == page_f5 ]
 
@@ -1784,7 +1936,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F5EF  ___Get_Rise_Run                    vec_rum_0xf5.c
           F5FF  ___Rise_Run_X                      vec_rum_0xf5.c
 
-ASxxxx Linker V05.00,  page 45.
+ASxxxx Linker V05.00,  page 48.
 Hexidecimal  [16-Bits]
 [ Bank == page_f6 ]
 
@@ -1813,7 +1965,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F690  ___Init_Music_a                    vec_rum_0xf6.c
           F692  ___Init_Music_x                    vec_rum_0xf6.c
 
-ASxxxx Linker V05.00,  page 46.
+ASxxxx Linker V05.00,  page 49.
 Hexidecimal  [16-Bits]
 [ Bank == page_f7 ]
 
@@ -1826,7 +1978,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F742  ___Stop_Sound                      vec_rum_0xf7.c
           F7A9  ___Select_Game                     vec_rum_0xf7.c
 
-ASxxxx Linker V05.00,  page 47.
+ASxxxx Linker V05.00,  page 50.
 Hexidecimal  [16-Bits]
 [ Bank == page_f8 ]
 
@@ -1847,7 +1999,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F8F3  ___Obj_Will_Hit                    vec_rum_0xf8.c
           F8FF  ___Obj_Hit                         vec_rum_0xf8.c
 
-ASxxxx Linker V05.00,  page 48.
+ASxxxx Linker V05.00,  page 51.
 Hexidecimal  [16-Bits]
 [ Bank == page_f9 ]
 
@@ -1860,7 +2012,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F92E  ___Explosion_Snd                   vec_rum_0xf9.c
           F9CA  ___Set_Amp                         vec_rum_0xf9.c
 
-ASxxxx Linker V05.00,  page 49.
+ASxxxx Linker V05.00,  page 52.
 Hexidecimal  [16-Bits]
 [ Bank == page_ffx ]
 
@@ -1872,65 +2024,69 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           FF9F  ___Draw_Grid_VL                    vec_rum_0xff.c
 
-ASxxxx Linker V05.00,  page 50.
+ASxxxx Linker V05.00,  page 53.
 
 Files Linked                              [ module(s) ]
 
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ crt0.c ]
-C:\Users\tsuok\FalloutTTRPG\VectrexTest\  [ cartridge.enr.c ]
-C:\Users\tsuok\FalloutTTRPG\VectrexTest\  [ main.enr.c ]
-C:\Users\tsuok\FalloutTTRPG\VectrexTest\  [ ymplayer.pre.s ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xc8_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xc8_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xc8_2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_3.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xd0_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xd0_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpc8_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpc8_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpc8_2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_3.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpd0_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpd0_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xed_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfc_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfd_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfe_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfe_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xff_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dped_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfc_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfd_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfe_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfe_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpff_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xe7.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xe9.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xea.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf3.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf4.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf5.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf6.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf7.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf8.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf9.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xff.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ crt0.c ]
+C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ anbass ]
+C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ cartridge.enr.c ]
+C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ main.enr.c ]
+C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ song_025 ]
+C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ wolfch1 ]
+C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ ymplayer.pre.s ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xc8_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xc8_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xc8_2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_3.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xd0_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xd0_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpc8_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpc8_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpc8_2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_3.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpd0_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpd0_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xed_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfc_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfd_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfe_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfe_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xff_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dped_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfc_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfd_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfe_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfe_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpff_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xe7.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xe9.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xea.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf3.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf4.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf5.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf6.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf7.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf8.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf9.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xff.c ]
 
 
 Libraries Linked                          [ object file ]
 
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ ./rum/vec_rum_14_05_Intensity_a. ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ ./rum/vec_rum_05_02_03_Print_Str ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ ./rum/vec_rum_13_07_Moveto_d.rel ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ ./rum/vec_rum_14_05_Intensity_a. ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ ./rum/vec_rum_12_06_Do_Sound.rel ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ ./rum/vec_rum_05_02_03_Print_Str ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ ./rum/vec_rum_13_07_Moveto_d.rel ]
 
 
 

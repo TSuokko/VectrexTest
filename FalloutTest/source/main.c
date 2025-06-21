@@ -14,9 +14,11 @@
 // ---------------------------------------------------------------------------
 
 #include <vectrex.h>
-#include <assert.h>	
+#include <assert.h>
+#include <ymPlayerOptimSpeed.h>	
 #include "stdbool.h"
 #include "controller.h"
+#include "ANBASS.h"
 
 
 // As default assertions are enabled.
@@ -75,6 +77,7 @@ void setup(void)
 
 void mainMenu()
 {
+
 	//Vec_Text_Width = 90;	
     Print_Str_d(120, -90, "ROBOT REPAIR V0.1\x80");
     Print_Str_d(70, -120, "1 DATA TRANSFER UPLOAD\x80");
@@ -82,6 +85,15 @@ void mainMenu()
     Print_Str_d(10, -120, "3 REPAIR IDENTITY CORE\x80");
 	Print_Str_d(-20, -120, "4 COMPILE INTELLIGENCE\x80");
 
+      ym_sound();
+      if (ym_data_current == 0)
+      {
+       ym_init(&ANbass_data);
+      }
+      Wait_Recal();
+      Do_Sound();
+
+ 
 	if (Vec_Buttons & 1) {
      	gameState = Game_DataTransfer;
 		Print_Str_d(-70, -120, "STARTING ROUTINE 1\x80");
@@ -98,7 +110,7 @@ void mainMenu()
 		gameState = Game_CompileInt;
 		Print_Str_d(-70, -120, "FINAL ROUTINE 4\x80");
 	}
-
+ 
 }
 
 void RepairIdentityGame()
