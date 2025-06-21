@@ -36,7 +36,7 @@ int main(void)
 	while(1)
 	{
 		Wait_Recal();
-		Print_Str_d(0, -70, "HELLO WORLD\x80");
+		Print_Str_d(0, -70, "FALLOUT HACK CONSOLE\x80");
 	};
 
 	// if return value is <= 0, then a warm reset will be performed,

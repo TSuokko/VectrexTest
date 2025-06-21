@@ -10,10 +10,9 @@
 ; -Wall -Wextra -Wconversion -Werror -fomit-frame-pointer
 ; -fno-toplevel-reorder -mint8 -msoft-reg-count=0 -std=gnu99
 ; -fno-time-report
-; -IC:\Users\tsuok\Downloads\Vide2.6_RC03.w32\Vide.w32\C\PeerC\vectrex\include
+; -IC:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\PeerC\vectrex\include
 ; -D__RUM_FUNCTION=1 -DOMMIT_FRAMEPOINTER=1
-; -IC:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\include
-; C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c
+; C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c
 ; options enabled:  -falign-loops -fargument-alias -fauto-inc-dec
 ; -fbranch-count-reg -fcommon -fearly-inlining
 ; -feliminate-unused-debug-types -ffunction-cse -fgcse-lm -fident -fivopts
@@ -29,22 +28,23 @@
 
 	.area	.text
 LC0:
-	.byte	72,69,76,76,79,32,87,79
-	.byte	82,76,68,-128,0
+	.byte	70,65,76,76,79,85,84,32
+	.byte	72,65,67,75,32,67,79,78
+	.byte	83,79,76,69,-128,0
 	.globl	_main
 _main:
 ;----- asm -----
-; 36 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+; 36 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
 	; #ENR#[35]while(1)
 ;--- end asm ---
 L2:
 ;----- asm -----
-; 39 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+; 39 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
 	; #ENR#[37]wait_recal();
 ;--- end asm ---
 	jsr	___Wait_Recal
 ;----- asm -----
-; 41 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+; 41 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
 	; #ENR#[38]print_str_d(0, -70, );
 ;--- end asm ---
 	clr	,-s	;

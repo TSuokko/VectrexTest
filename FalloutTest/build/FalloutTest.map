@@ -31,7 +31,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           001D  l_.cartridge                    
           001E  l_.0xe7                         
           0021  l_.dpfc                         
-          0031  l_.text                         
+          003A  l_.text                         
           003B  l_.bootloader                   
           0058  s_.text                         
           0058  s_.bankswitch.data              
@@ -39,10 +39,10 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           0068  l_.0xf7                         
           007A  l_.dpff                         
           0080  l_.dpc8                         
-          0089  s_.text.unlikely                
-          0089  s_.text.last                    
-          0089  s_.text.hot                     
+          0092  s_.text.unlikely                
+          0092  s_.text.last                    
           0092  l_.0xf6                         
+          0092  s_.text.hot                     
           0095  l_.0xf4                         
           009D  l_.0xf9                         
           00A7  l_.0xf2                         
@@ -139,19 +139,19 @@ Hexidecimal  [16-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0058        0031 =          49. bytes (REL,CON,CSEG)
+.text                      0058        003A =          58. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0065  _main                              main.enr.c
-          0065  A$main$45                          main.enr.c
-          0068  A$main$50                          main.enr.c
-          006A  A$main$51                          main.enr.c
-          006D  A$main$52                          main.enr.c
-          006F  A$main$53                          main.enr.c
-          0072  A$main$54                          main.enr.c
-          0074  A$main$55                          main.enr.c
-          0076  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
+          006E  _main                              main.enr.c
+          006E  A$main$45                          main.enr.c
+          0071  A$main$50                          main.enr.c
+          0073  A$main$51                          main.enr.c
+          0076  A$main$52                          main.enr.c
+          0078  A$main$53                          main.enr.c
+          007B  A$main$54                          main.enr.c
+          007D  A$main$55                          main.enr.c
+          007F  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
 
 ASxxxx Linker V05.00,  page 6.
 Hexidecimal  [16-Bits]
@@ -968,58 +968,58 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
 
 Files Linked                              [ module(s) ]
 
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ crt0.c ]
-C:\Users\tsuok\FalloutTTRPG\VectrexTest\  [ cartridge.enr.c ]
-C:\Users\tsuok\FalloutTTRPG\VectrexTest\  [ main.enr.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xc8_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xc8_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xc8_2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_3.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xd0_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xd0_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpc8_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpc8_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpc8_2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_3.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpd0_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpd0_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xed_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfc_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfd_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfe_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfe_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xff_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dped_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfc_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfd_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfe_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfe_1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpff_0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xe7.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xe9.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xea.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf0.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf1.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf2.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf3.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf4.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf5.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf6.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf7.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf8.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf9.c ]
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xff.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ crt0.c ]
+C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ cartridge.enr.c ]
+C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ main.enr.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xc8_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xc8_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xc8_2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_3.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xd0_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xd0_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpc8_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpc8_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpc8_2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_3.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpd0_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpd0_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xed_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfc_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfd_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfe_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfe_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xff_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dped_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfc_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfd_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfe_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfe_1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpff_0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xe7.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xe9.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xea.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf0.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf1.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf2.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf3.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf4.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf5.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf6.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf7.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf8.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf9.c ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xff.c ]
 
 
 Libraries Linked                          [ object file ]
 
-C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ ./rum/vec_rum_05_02_03_Print_Str ]
+C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ ./rum/vec_rum_05_02_03_Print_Str ]
 
 
 
