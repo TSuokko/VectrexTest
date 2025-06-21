@@ -31,10 +31,10 @@
 	.area	.cartridge
 _game_header:
 ; copyright:
-	.byte	103,32,71,67,69,32,50,48
-	.byte	49,55,-128
+	.byte	103,32,71,67,69,32,50,49
+	.byte	50,53,-128
 ; music:
-	.word	_Vec_Music_1
+	.word	_Vec_Music_d
 ; title_height:
 	.byte	-8
 ; title_width:
@@ -44,5 +44,6 @@ _game_header:
 ; title_x:
 	.byte	-72
 ; title:
-	.byte	71,65,77,69,32,84,73,84
-	.byte	76,69,-128,0
+	.byte	67,79,77,80,85,84,69,82
+	.byte	32,67,79,78,83,79,76,69
+	.byte	-128,0

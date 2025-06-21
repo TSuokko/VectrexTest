@@ -1,224 +1,394 @@
-HIGHEST_USED_RAM $C884
-COMMENT $C884 not used RAM onword...
+HIGHEST_USED_RAM $C972
+COMMENT $C972 not used RAM onword...
 LABEL $0000 _game_header
-LABEL $001D _crt0_init_data
-LABEL $0035 _crt0_copy_data
-LABEL $003D _crt0_init_bss
-LABEL $0046 _crt0_zero_bss
-LABEL $004C _crt0_startup
-LABEL $0055 _crt0_restart
-LABEL $0058 _MousePointer
-LABEL $0063 _setup
-LABEL $0076 _disable_controller_2_y
-LABEL $007A _disable_controller_2_x
-LABEL $007E _enable_controller_1_y
-LABEL $0084 _enable_controller_1_x
-LABEL $008A LC0
-LABEL $009D LC1
-LABEL $00B5 LC2
-LABEL $00CB LC3
-LABEL $00E3 LC4
-LABEL $00FB LC5
-LABEL $010F LC6
-LABEL $011F LC7
-LABEL $012E LC8
-LABEL $013F _mainMenu
-LABEL $01A3 L12
-LABEL $01C1 L14
-LABEL $01DE L15
-LABEL $01F9 L16
-LABEL $01FA _RepairIdentityGame
-LABEL $0239 L18
-LABEL $0247 L19
-LABEL $0257 L20
-LABEL $0265 L21
-LABEL $0271 L22
-LABEL $027D L23
-LABEL $0289 L24
-LABEL $0295 L25
-LABEL $029B _joystick_1_y
-LABEL $029F _joystick_1_x
-LABEL $02A3 LC9
-LABEL $02B7 _main
-LABEL $02CA L42
-LABEL $02F5 L38
-LABEL $02FF L34
-LABEL $0310 L35
-LABEL $0321 L36
-LABEL $0336 L39
-LABEL $034C L41
-LABEL $034F L40
-LABEL $0352 L37
-LABEL $0363 L33
+LABEL $0023 _crt0_init_data
+LABEL $003B _crt0_copy_data
+LABEL $0043 _crt0_init_bss
+LABEL $004C _crt0_zero_bss
+LABEL $0052 _crt0_startup
+LABEL $005B _crt0_restart
+LABEL $005E _MousePointer
+LABEL $0069 _setup
+LABEL $007C _disable_controller_2_y
+LABEL $0080 _disable_controller_2_x
+LABEL $0084 _enable_controller_1_y
+LABEL $008A _enable_controller_1_x
+LABEL $0090 LC0
+LABEL $00A3 LC1
+LABEL $00BB LC2
+LABEL $00D1 LC3
+LABEL $00E9 LC4
+LABEL $0101 LC5
+LABEL $0115 LC6
+LABEL $0125 LC7
+LABEL $0134 LC8
+LABEL $0145 _mainMenu
+LABEL $01A9 L12
+LABEL $01C7 L14
+LABEL $01E4 L15
+LABEL $01FF L16
+LABEL $0200 _RepairIdentityGame
+LABEL $023F L18
+LABEL $024D L19
+LABEL $025D L20
+LABEL $026B L21
+LABEL $0277 L22
+LABEL $0283 L23
+LABEL $028F L24
+LABEL $029B L25
+LABEL $02A1 _joystick_1_y
+LABEL $02A5 _joystick_1_x
+LABEL $02A9 LC9
+LABEL $02BD _main
+LABEL $02D0 L42
+LABEL $02FB L38
+LABEL $0305 L34
+LABEL $0316 L35
+LABEL $0327 L36
+LABEL $033C L39
+LABEL $0352 L41
+LABEL $0355 L40
+LABEL $0358 L37
+LABEL $0369 L33
+LABEL $036F _reg_max_data
+LABEL $037F rleEncodedData
+LABEL $0380 moreBits
+LABEL $0391 bit_is_ready1
+LABEL $03AC bit_is_ready2
+LABEL $03B3 rleCounterBit0NotSet
+LABEL $03C4 bit_is_ready3
+LABEL $03CB rleCounterBit1NotSet
+LABEL $03DC bit_is_ready4
+LABEL $03E3 rleCounterBit2NotSet
+LABEL $03FA bit_is_ready5
+LABEL $0401 rleCounterBit3NotSet
+LABEL $0418 bit_is_ready6
+LABEL $041F rleCounterBit4NotSet
+LABEL $0434 bit_is_ready7
+LABEL $043B rleCounterBit5NotSet
+LABEL $0450 bit_is_ready8
+LABEL $0457 rleCounterBit6NotSet
+LABEL $046C bit_is_ready9
+LABEL $0473 rleCounterBit7NotSet
+LABEL $0479 read16bitContinue
+LABEL $0481 no_carry
+LABEL $0493 bit_is_ready10
+LABEL $049B rleCounterBitXNotSet
+LABEL $049F rle16bitdone
+LABEL $04A1 rle8bitdone
+LABEL $04A5 do_ym_sound
+LABEL $04B9 getCurrentRegByte:next_reg
+LABEL $04C5 inPhraseOut
+LABEL $04D3 not_in_phrase
+LABEL $04D8 done:currentPharseNotEnded
+LABEL $04E4 no13
+LABEL $04FA doNotWriteReg13
+LABEL $0502 ymsodone
+LABEL $0503 noValidByte
+LABEL $0513 bit_is_ready12
+LABEL $051D dechifer
+LABEL $052D bit_is_ready13
+LABEL $0541 getNextCodeBit
+LABEL $0555 bit_is_ready14
+LABEL $055E testNextPhrase:code_bit_notset
+LABEL $0564 increaseCodeBits
+LABEL $056C bitLenFound
+LABEL $0585 directByte
+LABEL $05A8 reg8Bits
+LABEL $05B8 bit_is_ready15
+LABEL $05BF noBit1
+LABEL $05D0 bit_is_ready16
+LABEL $05D7 noBit2
+LABEL $05D8 reg6Bits
+LABEL $05E8 bit_is_ready17
+LABEL $05EF noBit3
+LABEL $05F0 reg5Bits
+LABEL $0600 bit_is_ready18
+LABEL $0607 noBit4
+LABEL $0608 reg4Bits
+LABEL $0618 bit_is_ready19
+LABEL $061F noBit5
+LABEL $0630 bit_is_ready20
+LABEL $0637 noBit6
+LABEL $0648 bit_is_ready21
+LABEL $064F noBit7
+LABEL $0660 bit_is_ready22
+LABEL $0667 noBit8
+LABEL $066C init_ym_sound
+LABEL $0685 nreg_init
+LABEL $06A3 regInitDone
 LABEL $C880 _exitText
 LABEL $C881 _cursor_x
 LABEL $C882 _cursor_y
 LABEL $C883 _gameState
-COMMENT $0076 Vec_Joy_Mux_2_Y
-COMMENT $007A Vec_Joy_Mux_2_X
-COMMENT $0080 Vec_Joy_Mux_1_Y
-COMMENT $0086 Vec_Joy_Mux_1_X
-COMMENT $0185 Vec_Buttons.1, Vec_Buttons
-COMMENT $018F gameState
-COMMENT $01A3 Vec_Buttons.3, Vec_Buttons
-COMMENT $01AD gameState
-COMMENT $01C1 Vec_Buttons.4, Vec_Buttons
-COMMENT $01CB gameState
-COMMENT $01DE Vec_Buttons.5, Vec_Buttons
-COMMENT $01E8 gameState
-COMMENT $01FE VIA_t1_cnt_lo
-COMMENT $0201 cursor_y
-COMMENT $0204 cursor_y.6
-COMMENT $0206 cursor_x
-COMMENT $0209 cursor_x.7
-COMMENT $020B cursor_x.7
-COMMENT $020D a
-COMMENT $020F cursor_y.6
-COMMENT $0211 b
+LABEL $C884 _cregister
+LABEL $C885 _temp
+LABEL $C886 _temp2
+LABEL $C887 _temp3
+LABEL $C888 _calc_coder
+LABEL $C889 _calc_bits
+LABEL $C88A _ym_len
+LABEL $C88C _ym_data_current
+LABEL $C88E _ym_name
+LABEL $C890 _ym_regs_used
+LABEL $C891 _ym_regs_count
+LABEL $C892 _ym_data_start
+COMMENT $007C Vec_Joy_Mux_2_Y
+COMMENT $0080 Vec_Joy_Mux_2_X
+COMMENT $0086 Vec_Joy_Mux_1_Y
+COMMENT $008C Vec_Joy_Mux_1_X
+COMMENT $018B Vec_Buttons.1, Vec_Buttons
+COMMENT $0195 gameState
+COMMENT $01A9 Vec_Buttons.3, Vec_Buttons
+COMMENT $01B3 gameState
+COMMENT $01C7 Vec_Buttons.4, Vec_Buttons
+COMMENT $01D1 gameState
+COMMENT $01E4 Vec_Buttons.5, Vec_Buttons
+COMMENT $01EE gameState
+COMMENT $0204 VIA_t1_cnt_lo
+COMMENT $0207 cursor_y
+COMMENT $020A cursor_y.6
+COMMENT $020C cursor_x
+COMMENT $020F cursor_x.7
+COMMENT $0211 cursor_x.7
 COMMENT $0213 a
+COMMENT $0215 cursor_y.6
 COMMENT $0217 b
-COMMENT $0220 VIA_t1_cnt_lo
-COMMENT $022F cursor_y.8, cursor_y
-COMMENT $0232 cursor_y.9
-COMMENT $0234 cursor_y.9, cursor_y
-COMMENT $023F cursor_y.10, cursor_y
-COMMENT $0242 cursor_y.11
-COMMENT $0244 cursor_y.11, cursor_y
-COMMENT $024D cursor_x.12, cursor_x
-COMMENT $0250 cursor_x.13
-COMMENT $0252 cursor_x.13, cursor_x
-COMMENT $025D cursor_x.14, cursor_x
-COMMENT $0260 cursor_x.15
-COMMENT $0262 cursor_x.15, cursor_x
-COMMENT $0265 cursor_x.16, cursor_x
-COMMENT $0268 : ; cursor_x.16
-COMMENT $026E cursor_x
-COMMENT $0271 cursor_x.17, cursor_x
-COMMENT $0274 : ; cursor_x.17
-COMMENT $027A cursor_x
-COMMENT $027D cursor_y.18, cursor_y
-COMMENT $0280 : ; cursor_y.18
-COMMENT $0286 cursor_y
-COMMENT $0289 cursor_y.19, cursor_y
-COMMENT $028C : ; cursor_y.19
-COMMENT $0292 cursor_y
-COMMENT $029B D.3039, Vec_Joy_1_Y
-COMMENT $029F D.3035, Vec_Joy_1_X
-COMMENT $02BB cursor_x
-COMMENT $02BE cursor_y
-COMMENT $02C4 gameState
-COMMENT $02C7 exitText
-COMMENT $02D8 gameState
-COMMENT $02DB gameState.20
-COMMENT $02DD gameState.20
+COMMENT $0219 a
+COMMENT $021D b
+COMMENT $0226 VIA_t1_cnt_lo
+COMMENT $0235 cursor_y.8, cursor_y
+COMMENT $0238 cursor_y.9
+COMMENT $023A cursor_y.9, cursor_y
+COMMENT $0245 cursor_y.10, cursor_y
+COMMENT $0248 cursor_y.11
+COMMENT $024A cursor_y.11, cursor_y
+COMMENT $0253 cursor_x.12, cursor_x
+COMMENT $0256 cursor_x.13
+COMMENT $0258 cursor_x.13, cursor_x
+COMMENT $0263 cursor_x.14, cursor_x
+COMMENT $0266 cursor_x.15
+COMMENT $0268 cursor_x.15, cursor_x
+COMMENT $026B cursor_x.16, cursor_x
+COMMENT $026E : ; cursor_x.16
+COMMENT $0274 cursor_x
+COMMENT $0277 cursor_x.17, cursor_x
+COMMENT $027A : ; cursor_x.17
+COMMENT $0280 cursor_x
+COMMENT $0283 cursor_y.18, cursor_y
+COMMENT $0286 : ; cursor_y.18
+COMMENT $028C cursor_y
+COMMENT $028F cursor_y.19, cursor_y
+COMMENT $0292 : ; cursor_y.19
+COMMENT $0298 cursor_y
+COMMENT $02A1 D.3039, Vec_Joy_1_Y
+COMMENT $02A5 D.3035, Vec_Joy_1_X
+COMMENT $02C1 cursor_x
+COMMENT $02C4 cursor_y
+COMMENT $02CA gameState
+COMMENT $02CD exitText
+COMMENT $02DE gameState
+COMMENT $02E1 gameState.20
 COMMENT $02E3 gameState.20
-COMMENT $02E5 zero_extendqihi: R:b -> R:d
-COMMENT $02E8 tmp35
-COMMENT $02EF tmp36, tmp35
-COMMENT $02F1 tmp37
-COMMENT $02F3 tmp37
-COMMENT $0321 Vec_Buttons.21, Vec_Buttons
-COMMENT $0329 exitText.22, exitText
-COMMENT $032C exitText.22
-COMMENT $0331 exitText
-COMMENT $0336 exitText.23, exitText
-COMMENT $0339 exitText.23
-C_INFO_BLOCK $0063 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 65 "enable_controller_1_x(); " BKPOINT=0
-C_INFO_BLOCK $0066 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 66 "enable_controller_1_y(); " BKPOINT=0
-C_INFO_BLOCK $0069 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 67 "disable_controller_2_x(); " BKPOINT=0
-C_INFO_BLOCK $006C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 68 "disable_controller_2_y(); " BKPOINT=0
-C_INFO_BLOCK $006F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 69 "joy_digital(); " BKPOINT=0
-C_INFO_BLOCK $0072 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 71 "wait_recal(); " BKPOINT=0
-C_INFO_BLOCK $013F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 78 "print_str_d(120, -90, ); " BKPOINT=0
-C_INFO_BLOCK $014D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 79 "print_str_d(70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $015B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 80 "print_str_d(40, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0169 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 81 "print_str_d(10, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0177 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 82 "print_str_d(-20, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0185 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 84 "if (vec_buttons & 1) { " BKPOINT=0
-C_INFO_BLOCK $018D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 85 "gamestate = game_datatransfer; " BKPOINT=0
-C_INFO_BLOCK $0192 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 86 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $01AB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 89 "gamestate = game_reconstructbin; " BKPOINT=0
-C_INFO_BLOCK $01B0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 90 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $01C9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 93 "gamestate = game_repairidentity; " BKPOINT=0
-C_INFO_BLOCK $01CE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 94 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $01E6 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 97 "gamestate = game_compileint; " BKPOINT=0
-C_INFO_BLOCK $01EB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 98 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $01FC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 106 "via_t1_cnt_lo = 0x40; " BKPOINT=0
-C_INFO_BLOCK $0201 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 107 "moveto_d(cursor_x, cursor_y); " BKPOINT=0
-C_INFO_BLOCK $021E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 108 "via_t1_cnt_lo = 0x80; " BKPOINT=0
-C_INFO_BLOCK $0223 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 109 "draw_vlc((void*) mousepointer); " BKPOINT=0
-C_INFO_BLOCK $0229 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 112 "if (joystick_1_x()>0) " BKPOINT=0
-C_INFO_BLOCK $022F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 114 "cursor_y += 5; " BKPOINT=0
-C_INFO_BLOCK $023F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 118 "cursor_y -= 5; " BKPOINT=0
-C_INFO_BLOCK $0247 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 120 "if (joystick_1_y()>0) " BKPOINT=0
-C_INFO_BLOCK $024D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 122 "cursor_x += 5; " BKPOINT=0
-C_INFO_BLOCK $025D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 126 "cursor_x -= 5; " BKPOINT=0
-C_INFO_BLOCK $0265 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 128 "if (cursor_x>=100) cursor_x = 100; " BKPOINT=0
-C_INFO_BLOCK $0271 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 129 "if (cursor_x<=-100) cursor_x = -100; " BKPOINT=0
-C_INFO_BLOCK $027D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 130 "if (cursor_y>=100) cursor_y = 100; " BKPOINT=0
-C_INFO_BLOCK $0289 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 131 "if (cursor_y<=-100) cursor_y = -100; " BKPOINT=0
-C_INFO_BLOCK $0295 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 132 "joy_digital(); " BKPOINT=0
-C_INFO_BLOCK $02BB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 140 "cursor_x = 0; " BKPOINT=0
-C_INFO_BLOCK $02BE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 141 "cursor_y = 0; " BKPOINT=0
-C_INFO_BLOCK $02C1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 142 "setup(); " BKPOINT=0
-C_INFO_BLOCK $02C4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 144 "gamestate = mainmenu; " BKPOINT=0
-C_INFO_BLOCK $02C7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 145 "exittext = false; " BKPOINT=0
-C_INFO_BLOCK $02CA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 146 "while(1)read_btns(); " BKPOINT=0
-C_INFO_BLOCK $02CD "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 150 "wait_recal(); " BKPOINT=0
-C_INFO_BLOCK $02D0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 152 "frwait(); " BKPOINT=0
-C_INFO_BLOCK $02D3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 153 "intensity_a(0x5f); " BKPOINT=0
-C_INFO_BLOCK $02D8 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 155 "switch(gamestate) " BKPOINT=0
-C_INFO_BLOCK $02FF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 158 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $030D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 159 "break; " BKPOINT=0
-C_INFO_BLOCK $0310 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 161 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $031E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 162 "break; " BKPOINT=0
-C_INFO_BLOCK $0321 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 164 "if (vec_buttons & 4 && !exittext){ " BKPOINT=0
-C_INFO_BLOCK $032F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 165 "exittext = true; " BKPOINT=0
-C_INFO_BLOCK $033C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 169 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $034C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 173 "repairidentitygame(); " BKPOINT=0
-C_INFO_BLOCK $034F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 175 "break; " BKPOINT=0
-C_INFO_BLOCK $0352 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 178 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0360 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 179 "break; " BKPOINT=0
-C_INFO_BLOCK $0363 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 181 "mainmenu(); " BKPOINT=0
-C_INFO_BLOCK $0366 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 182 "break; " BKPOINT=0
+COMMENT $02E9 gameState.20
+COMMENT $02EB zero_extendqihi: R:b -> R:d
+COMMENT $02EE tmp35
+COMMENT $02F5 tmp36, tmp35
+COMMENT $02F7 tmp37
+COMMENT $02F9 tmp37
+COMMENT $0327 Vec_Buttons.21, Vec_Buttons
+COMMENT $032F exitText.22, exitText
+COMMENT $0332 exitText.22
+COMMENT $0337 exitText
+COMMENT $033C exitText.23, exitText
+COMMENT $033F exitText.23
+COMMENT $0399 in y now our count of bits
+COMMENT $0477 assuming high byte is zero of counter
+COMMENT $047B LSL A
+COMMENT $047C LSL B
+COMMENT $047D if no carry, than exit
+COMMENT $047F otherwise overflow from B to 0bit of A
+COMMENT $04A1 assuming high byte is zero of counter
+COMMENT $04A5 load current VBL Counter
+COMMENT $04A8 if 0, than we are done
+COMMENT $04AA otherwise remember we are doing one byte now
+COMMENT $04AD and store it
+COMMENT $04B0 get the number of regs we are working on
+COMMENT $04B3 and remember them as current counter
+COMMENT $04B6 load RAM start address of our wokring structure
+COMMENT $04B9 if current RLE counter is zero, than we must get a new byte
+COMMENT $04BB jump to get new byte
+COMMENT $04BD otherwise, lets check if we are in a phrase (x = pointer to phrase or zero)
+COMMENT $04BF jump if not
+COMMENT $04C1 where in our phrase are we?
+COMMENT $04C3 length of phrase
+COMMENT $04C5 load the next byte of our phrase
+COMMENT $04C7 store that to current output
+COMMENT $04C9 check if we are at the end of the phrase
+COMMENT $04CB (in a is phrase len)
+COMMENT $04CD if phrase is not at end - continue
+COMMENT $04CF other wise we set place to zero
+COMMENT $04D1 and decrease out RLE counter
+COMMENT $04DA load current register
+COMMENT $04E2 if b part of phrase than 0xff, if single byte than 0x1f, indicator for envelope not changed
+COMMENT $04E4 store register select byte
+COMMENT $04E6 sound BDIR on, BC1 on, mux off _ LATCH
+COMMENT $04EA sound BDIR off, BC1 off, mux off - INACTIVE
+COMMENT $04EE read sound chip status (?)
+COMMENT $04F0 store data byte
+COMMENT $04F2 sound BDIR on, BC1 off, mux off - WRITE
+COMMENT $04F6 sound BDIR off, BC1 off, mux off - INACTIVE
+COMMENT $04FA go to next "register" of sound data
+COMMENT $04FD but only if we are not done yet, if counter is zero
+COMMENT $0500 we do not branch :-)
+COMMENT $0531 if bit is zero - jump
+COMMENT $0533 save stackpointer
+COMMENT $0537 load the starting position of the phrase mappings for this register
+COMMENT $053A and also the phrase definition address
+COMMENT $053D was _calc_bits, a contains the number of bits our current shannon code checkings
+COMMENT $053E starting with zero for coder also
+COMMENT $0541 prepare load of next coder bit - shift all previous codes one position
+COMMENT $0544 increase used bits
+COMMENT $0559 if bit is zero - jump
+COMMENT $055B otherwise set bit in current code
+COMMENT $055E check if it count of currently referenced phrase equals the current shannon bitcount
+COMMENT $0560 if lower, load next bit (and increase shannon bits)
+COMMENT $0562 if equal, than we must check if codes equal
+COMMENT $0564 load length of last phase and
+COMMENT $0566 add that to our future pointer to phrases
+COMMENT $0568 advance one phrase in out mapping (one mapping = 3 byte)
+COMMENT $056A and test the next such got phrase
+COMMENT $056C load coder-byte, from current phrase
+COMMENT $056E and compare with current loaded coder-byte from "bitstream"
+COMMENT $0571 if not the same, check next phrase in phrase mapping (jump)
+COMMENT $0573 otherwise we found the correct phrase, load length of current phrase
+COMMENT $0575 and remember that
+COMMENT $0577 restore stack
+COMMENT $057B pointer to current found phrase to X (will be resused in out)
+COMMENT $057D current position in phrase is at start 0
+COMMENT $057E store the phrase to the structure
+COMMENT $0580 also the position
+COMMENT $0582 and output the next phrase byte
+COMMENT $0596 number of relevant bits for reg
+COMMENT $066C load start address of ram buffer for YM play
+COMMENT $066F load length of buffer
+COMMENT $0672 clear buffer
+COMMENT $0675 count of registers that are used by the player - reset
+COMMENT $0678 first load start of all data to y
+COMMENT $067B load vbl_len to d
+COMMENT $067D and store it to len reset
+COMMENT $0680 and store it to current data pointer
+COMMENT $0683 load number of next register to work on
+COMMENT $0685 count the registers we actually use
+COMMENT $0688 and store the register of the current data
+COMMENT $068A load location of translation map to y
+COMMENT $068D and store it
+COMMENT $0690 load location of phrases
+COMMENT $0693 and store it
+COMMENT $0696 load location of RLE data
+COMMENT $0699 and store it
+COMMENT $069C add structure length to x
+COMMENT $069F load number of next register to work on
+COMMENT $06A1 if negative than we are done
+C_INFO_BLOCK $0069 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 65 "enable_controller_1_x(); " BKPOINT=0
+C_INFO_BLOCK $006C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 66 "enable_controller_1_y(); " BKPOINT=0
+C_INFO_BLOCK $006F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 67 "disable_controller_2_x(); " BKPOINT=0
+C_INFO_BLOCK $0072 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 68 "disable_controller_2_y(); " BKPOINT=0
+C_INFO_BLOCK $0075 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 69 "joy_digital(); " BKPOINT=0
+C_INFO_BLOCK $0078 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 71 "wait_recal(); " BKPOINT=0
+C_INFO_BLOCK $0145 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 78 "print_str_d(120, -90, ); " BKPOINT=0
+C_INFO_BLOCK $0153 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 79 "print_str_d(70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0161 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 80 "print_str_d(40, -120, ); " BKPOINT=0
+C_INFO_BLOCK $016F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 81 "print_str_d(10, -120, ); " BKPOINT=0
+C_INFO_BLOCK $017D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 82 "print_str_d(-20, -120, ); " BKPOINT=0
+C_INFO_BLOCK $018B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 84 "if (vec_buttons & 1) { " BKPOINT=0
+C_INFO_BLOCK $0193 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 85 "gamestate = game_datatransfer; " BKPOINT=0
+C_INFO_BLOCK $0198 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 86 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $01B1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 89 "gamestate = game_reconstructbin; " BKPOINT=0
+C_INFO_BLOCK $01B6 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 90 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $01CF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 93 "gamestate = game_repairidentity; " BKPOINT=0
+C_INFO_BLOCK $01D4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 94 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $01EC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 97 "gamestate = game_compileint; " BKPOINT=0
+C_INFO_BLOCK $01F1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 98 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0202 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 106 "via_t1_cnt_lo = 0x40; " BKPOINT=0
+C_INFO_BLOCK $0207 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 107 "moveto_d(cursor_x, cursor_y); " BKPOINT=0
+C_INFO_BLOCK $0224 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 108 "via_t1_cnt_lo = 0x80; " BKPOINT=0
+C_INFO_BLOCK $0229 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 109 "draw_vlc((void*) mousepointer); " BKPOINT=0
+C_INFO_BLOCK $022F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 112 "if (joystick_1_x()>0) " BKPOINT=0
+C_INFO_BLOCK $0235 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 114 "cursor_y += 5; " BKPOINT=0
+C_INFO_BLOCK $0245 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 118 "cursor_y -= 5; " BKPOINT=0
+C_INFO_BLOCK $024D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 120 "if (joystick_1_y()>0) " BKPOINT=0
+C_INFO_BLOCK $0253 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 122 "cursor_x += 5; " BKPOINT=0
+C_INFO_BLOCK $0263 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 126 "cursor_x -= 5; " BKPOINT=0
+C_INFO_BLOCK $026B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 128 "if (cursor_x>=100) cursor_x = 100; " BKPOINT=0
+C_INFO_BLOCK $0277 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 129 "if (cursor_x<=-100) cursor_x = -100; " BKPOINT=0
+C_INFO_BLOCK $0283 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 130 "if (cursor_y>=100) cursor_y = 100; " BKPOINT=0
+C_INFO_BLOCK $028F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 131 "if (cursor_y<=-100) cursor_y = -100; " BKPOINT=0
+C_INFO_BLOCK $029B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 132 "joy_digital(); " BKPOINT=0
+C_INFO_BLOCK $02C1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 140 "cursor_x = 0; " BKPOINT=0
+C_INFO_BLOCK $02C4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 141 "cursor_y = 0; " BKPOINT=0
+C_INFO_BLOCK $02C7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 142 "setup(); " BKPOINT=0
+C_INFO_BLOCK $02CA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 144 "gamestate = mainmenu; " BKPOINT=0
+C_INFO_BLOCK $02CD "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 145 "exittext = false; " BKPOINT=0
+C_INFO_BLOCK $02D0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 146 "while(1)read_btns(); " BKPOINT=0
+C_INFO_BLOCK $02D3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 150 "wait_recal(); " BKPOINT=0
+C_INFO_BLOCK $02D6 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 152 "frwait(); " BKPOINT=0
+C_INFO_BLOCK $02D9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 153 "intensity_a(0x5f); " BKPOINT=0
+C_INFO_BLOCK $02DE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 155 "switch(gamestate) " BKPOINT=0
+C_INFO_BLOCK $0305 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 158 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0313 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 159 "break; " BKPOINT=0
+C_INFO_BLOCK $0316 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 161 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0324 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 162 "break; " BKPOINT=0
+C_INFO_BLOCK $0327 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 164 "if (vec_buttons & 4 && !exittext){ " BKPOINT=0
+C_INFO_BLOCK $0335 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 165 "exittext = true; " BKPOINT=0
+C_INFO_BLOCK $0342 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 169 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0352 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 173 "repairidentitygame(); " BKPOINT=0
+C_INFO_BLOCK $0355 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 175 "break; " BKPOINT=0
+C_INFO_BLOCK $0358 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 178 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0366 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 179 "break; " BKPOINT=0
+C_INFO_BLOCK $0369 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 181 "mainmenu(); " BKPOINT=0
+C_INFO_BLOCK $036C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 182 "break; " BKPOINT=0
 RANGE $0000-$0001 DB_DATA 8
 RANGE $0008-$0009 DB_DATA 8
 RANGE $000B-$000D DW_DATA 4
 RANGE $000D-$0012 DB_DATA 8
 RANGE $0019-$001A DB_DATA 8
-RANGE $001D-$0058 CODE
-RANGE $0058-$0063 DB_DATA 8
-RANGE $0063-$008A CODE
-RANGE $008A-$008B DB_DATA 8
-RANGE $0092-$0093 DB_DATA 8
-RANGE $009A-$009B DB_DATA 8
-RANGE $009D-$009E DB_DATA 8
-RANGE $00A5-$00A6 DB_DATA 8
-RANGE $00AD-$00AE DB_DATA 8
-RANGE $00B5-$00B6 DB_DATA 8
-RANGE $00BD-$00BE DB_DATA 8
-RANGE $00C5-$00C6 DB_DATA 8
+RANGE $0021-$0022 DB_DATA 8
+RANGE $0023-$005E CODE
+RANGE $005E-$0069 DB_DATA 8
+RANGE $0069-$0090 CODE
+RANGE $0090-$0091 DB_DATA 8
+RANGE $0098-$0099 DB_DATA 8
+RANGE $00A0-$00A1 DB_DATA 8
+RANGE $00A3-$00A4 DB_DATA 8
+RANGE $00AB-$00AC DB_DATA 8
+RANGE $00B3-$00B4 DB_DATA 8
+RANGE $00BB-$00BC DB_DATA 8
+RANGE $00C3-$00C4 DB_DATA 8
 RANGE $00CB-$00CC DB_DATA 8
-RANGE $00D3-$00D4 DB_DATA 8
-RANGE $00DB-$00DC DB_DATA 8
-RANGE $00E3-$00E4 DB_DATA 8
-RANGE $00EB-$00EC DB_DATA 8
-RANGE $00F3-$00F4 DB_DATA 8
-RANGE $00FB-$00FC DB_DATA 8
-RANGE $0103-$0104 DB_DATA 8
-RANGE $010B-$010C DB_DATA 8
-RANGE $010F-$0110 DB_DATA 8
-RANGE $0117-$0118 DB_DATA 8
-RANGE $011F-$0120 DB_DATA 8
-RANGE $0127-$0128 DB_DATA 8
-RANGE $012E-$012F DB_DATA 8
-RANGE $0136-$0137 DB_DATA 8
-RANGE $013E-$013F DB_DATA 8
-RANGE $013F-$02A3 CODE
-RANGE $02A3-$02A4 DB_DATA 8
-RANGE $02AB-$02AC DB_DATA 8
-RANGE $02B3-$02B4 DB_DATA 8
-RANGE $02B7-$02F5 CODE
-RANGE $02F5-$02FF DW_DATA 4
-RANGE $02FF-$0369 CODE
+RANGE $00D1-$00D2 DB_DATA 8
+RANGE $00D9-$00DA DB_DATA 8
+RANGE $00E1-$00E2 DB_DATA 8
+RANGE $00E9-$00EA DB_DATA 8
+RANGE $00F1-$00F2 DB_DATA 8
+RANGE $00F9-$00FA DB_DATA 8
+RANGE $0101-$0102 DB_DATA 8
+RANGE $0109-$010A DB_DATA 8
+RANGE $0111-$0112 DB_DATA 8
+RANGE $0115-$0116 DB_DATA 8
+RANGE $011D-$011E DB_DATA 8
+RANGE $0125-$0126 DB_DATA 8
+RANGE $012D-$012E DB_DATA 8
+RANGE $0134-$0135 DB_DATA 8
+RANGE $013C-$013D DB_DATA 8
+RANGE $0144-$0145 DB_DATA 8
+RANGE $0145-$02A9 CODE
+RANGE $02A9-$02AA DB_DATA 8
+RANGE $02B1-$02B2 DB_DATA 8
+RANGE $02B9-$02BA DB_DATA 8
+RANGE $02BD-$02FB CODE
+RANGE $02FB-$0305 DW_DATA 4
+RANGE $0305-$036F CODE
+RANGE $036F-$0370 DB_DATA 8
+RANGE $037F-$06A7 CODE
 

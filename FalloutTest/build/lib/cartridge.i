@@ -1686,11 +1686,11 @@ struct cartridge_t
 
 const struct cartridge_t game_header __attribute__((section(".cartridge"), used)) =
 {
- .copyright = "g GCE 2017\x80",
- .music = &Vec_Music_1,
+ .copyright = "g GCE 2125\x80",
+ .music = &Vec_Music_d,
  .title_height = -8,
  .title_width = 80,
  .title_y = -16,
  .title_x = -72,
- .title = "GAME TITLE\x80"
+ .title = "COMPUTER CONSOLE\x80"
 };

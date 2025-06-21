@@ -31,11 +31,11 @@
                              31 	.area	.cartridge
    0000                      32 _game_header:
                              33 ; copyright:
-   0000 67 20 47 43 45 20    34 	.byte	103,32,71,67,69,32,50,48
-        32 30
-   0008 31 37 80             35 	.byte	49,55,-128
+   0000 67 20 47 43 45 20    34 	.byte	103,32,71,67,69,32,50,49
+        32 31
+   0008 32 35 80             35 	.byte	50,53,-128
                              36 ; music:
-   000B 00 00                37 	.word	_Vec_Music_1
+   000B 00 00                37 	.word	_Vec_Music_d
                              38 ; title_height:
    000D F8                   39 	.byte	-8
                              40 ; title_width:
@@ -45,9 +45,11 @@
                              44 ; title_x:
    0010 B8                   45 	.byte	-72
                              46 ; title:
-   0011 47 41 4D 45 20 54    47 	.byte	71,65,77,69,32,84,73,84
-        49 54
-   0019 4C 45 80 00          48 	.byte	76,69,-128,0
+   0011 43 4F 4D 50 55 54    47 	.byte	67,79,77,80,85,84,69,82
+        45 52
+   0019 20 43 4F 4E 53 4F    48 	.byte	32,67,79,78,83,79,76,69
+        4C 45
+   0021 80 00                49 	.byte	-128,0
 ASxxxx Assembler V05.00  (Motorola 6809), page 1.
 Hexidecimal [16-Bits]
 
@@ -55,7 +57,7 @@ Symbol Table
 
     .__.$$$.       =   2710 L   |     .__.ABS.       =   0000 G
     .__.CPU.       =   0000 L   |     .__.H$L.       =   0001 L
-    _Vec_Music_1       **** GX  |   2 _game_header       0000 GR
+    _Vec_Music_d       **** GX  |   2 _game_header       0000 GR
 
 ASxxxx Assembler V05.00  (Motorola 6809), page 2.
 Hexidecimal [16-Bits]
@@ -64,7 +66,7 @@ Area Table
 
 [_CSEG]
    0 _CODE            size    0   flags C080
-   2 .cartridge       size   1D   flags  100
+   2 .cartridge       size   23   flags  100
 [_DSEG]
    1 _DATA            size    0   flags C0C0
 
