@@ -14,11 +14,12 @@
 // ---------------------------------------------------------------------------
 
 #include <vectrex.h>
-#include <assert.h>
+#include <assert.h>	
 #include <ymPlayerOptimSpeed.h>	
 #include "stdbool.h"
 #include "controller.h"
 #include "ANBASS.h"
+
 
 
 // As default assertions are enabled.
@@ -77,7 +78,6 @@ void setup(void)
 
 void mainMenu()
 {
-
 	//Vec_Text_Width = 90;	
     Print_Str_d(120, -90, "ROBOT REPAIR V0.1\x80");
     Print_Str_d(70, -120, "1 DATA TRANSFER UPLOAD\x80");
@@ -85,33 +85,56 @@ void mainMenu()
     Print_Str_d(10, -120, "3 REPAIR IDENTITY CORE\x80");
 	Print_Str_d(-20, -120, "4 COMPILE INTELLIGENCE\x80");
 
-      ym_sound();
-      if (ym_data_current == 0)
-      {
-       ym_init(&ANbass_data);
-      }
-      Wait_Recal();
-      Do_Sound();
-
- 
 	if (Vec_Buttons & 1) {
      	gameState = Game_DataTransfer;
-		Print_Str_d(-70, -120, "STARTING ROUTINE 1\x80");
 	}
 	else if (Vec_Buttons & 2) {
 		gameState = Game_ReconstructBin;
-		Print_Str_d(-70, -120, "THEN ROUTINE 2\x80");
 	}
     else if (Vec_Buttons & 4) {
 		gameState = Game_RepairIdentity;
-        Print_Str_d(-70, -120, "NOW ROUTINE 3\x80");
     }
 	else if (Vec_Buttons & 8) {
 		gameState = Game_CompileInt;
-		Print_Str_d(-70, -120, "FINAL ROUTINE 4\x80");
 	}
- 
+
 }
+
+void moveCursor()
+{
+	if (joystick_1_x()>0)                /* check the joystick and */
+	{                                 /* update position */
+		cursor_y += 5;
+	}
+	else if (joystick_1_x()<0)
+	{
+		cursor_y -= 5;
+	}
+	if (joystick_1_y()>0)
+	{
+		cursor_x += 5;
+	}
+	else if (joystick_1_y()<0)
+	{
+		cursor_x -= 5;
+	}
+	if (cursor_x>=100) cursor_x = 100;    /* make sure cursor is not */
+	if (cursor_x<=-100) cursor_x = -100;  /* out of bounds */
+	if (cursor_y>=100) cursor_y = 100;
+	if (cursor_y<=-100) cursor_y = -100;
+	Joy_Digital();                        /* call once per round, to insure */
+}
+
+void renderRepairGameText()
+{
+    //Print_Str_d(120, -90, "LOREM IPSUM DOLORES TEKST\x80");
+    Print_Str_d(70, -127, "EVEN MORE TEXT HOW MUCH\x80");
+	Print_Str_d(40, -127, "INCLUDE HERE LET'S PUSH\x80");
+    Print_Str_d(10, -127, "THE ABSOLUTE LIMITS OF\x80");
+	Print_Str_d(-20, -127, "INCREDIBLE VECTREX GAMES\x80");
+}
+
+
 
 void RepairIdentityGame()
 {	
@@ -121,32 +144,10 @@ void RepairIdentityGame()
 	VIA_t1_cnt_lo = 0x80;
 	Draw_VLc((void*) MousePointer);
 	////////////////////////////////
-
-	if (joystick_1_x()>0)                /* check the joystick and */
-    {                                 /* update position */
-		cursor_y += 5;
-    }
-    else if (joystick_1_x()<0)
-    {
-		cursor_y -= 5;
-	}
-    if (joystick_1_y()>0)
-    {
-		cursor_x += 5;
-    }
-    else if (joystick_1_y()<0)
-    {
-		cursor_x -= 5;
-    }
-    if (cursor_x>=120) cursor_x = 120;    /* make sure cursor is not */
-    if (cursor_x<=-120) cursor_x = -120;  /* out of bounds */
-    if (cursor_y>=120) cursor_y = 120;
-    if (cursor_y<=-120) cursor_y = -120;
-    Joy_Digital();                        /* call once per round, to insure */
-
+	moveCursor();
+	renderRepairGameText();
 
 }
-
 
 int main(void)
 {
@@ -156,8 +157,13 @@ int main(void)
 
     gameState = MainMenu;
 	exitText = false;
+	if (ym_data_current == 0)
+	{
+		ym_init(&ANbass_data);
+	}
 	while(1)
 	{
+		ym_sound();
          Read_Btns();   
 		//DP_to_C8();                        /* vectrex internal... dp must point */
 		Wait_Recal();                       /* sets this up allright... */         
@@ -165,7 +171,12 @@ int main(void)
 		frwait();
 		Intensity_a(0x5f);
 
-         switch(gameState)
+
+		//Wait_Recal();
+		Do_Sound();
+		
+
+        switch(gameState)
 		{
 			case Game_DataTransfer:
 				Print_Str_d(-70, -120, "STARTING ROUTINE 1\x80");
@@ -186,6 +197,7 @@ int main(void)
                             exitText = false;
                         }
                     //some reason pressing button 3 again will now go into else
+					//no matter, this is what we want lmao
 				}
 				else
 				{

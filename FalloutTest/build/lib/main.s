@@ -10,10 +10,10 @@
 ; -Wall -Wextra -Wconversion -Werror -fomit-frame-pointer
 ; -fno-toplevel-reorder -mint8 -msoft-reg-count=0 -std=gnu99
 ; -fno-time-report
-; -IC:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\PeerC\vectrex\include
+; -IC:\Users\tsuok\Downloads\Vide2.6_RC03.w32\Vide.w32\C\PeerC\vectrex\include
 ; -D__RUM_FUNCTION=1 -DOMMIT_FRAMEPOINTER=1
-; -IC:\Vectrex\WorkFolder\VectrexTest\FalloutTest\include
-; C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c
+; -IC:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\include
+; C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c
 ; options enabled:  -falign-loops -fargument-alias -fauto-inc-dec
 ; -fbranch-count-reg -fcommon -fearly-inlining
 ; -feliminate-unused-debug-types -ffunction-cse -fgcse-lm -fident -fivopts
@@ -49,33 +49,33 @@ _exitText:
 	.globl	_setup
 _setup:
 ;----- asm -----
-; 68 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[67]enable_controller_1_x();
+; 69 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[68]enable_controller_1_x();
 ;--- end asm ---
 	jsr	_enable_controller_1_x
 ;----- asm -----
-; 70 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[68]enable_controller_1_y();
+; 71 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[69]enable_controller_1_y();
 ;--- end asm ---
 	jsr	_enable_controller_1_y
 ;----- asm -----
-; 72 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[69]disable_controller_2_x();
+; 73 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[70]disable_controller_2_x();
 ;--- end asm ---
 	jsr	_disable_controller_2_x
 ;----- asm -----
-; 74 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[70]disable_controller_2_y();
+; 75 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[71]disable_controller_2_y();
 ;--- end asm ---
 	jsr	_disable_controller_2_y
 ;----- asm -----
-; 76 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[71]joy_digital();
+; 77 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[72]joy_digital();
 ;--- end asm ---
 	jsr	___Joy_Digital
 ;----- asm -----
-; 79 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[73]wait_recal();
+; 80 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[74]wait_recal();
 ;--- end asm ---
 	jsr	___Wait_Recal
 	rts
@@ -113,26 +113,10 @@ LC4:
 	.byte	52,32,67,79,77,80,73,76
 	.byte	69,32,73,78,84,69,76,76
 	.byte	73,71,69,78,67,69,-128,0
-LC5:
-	.byte	83,84,65,82,84,73,78,71
-	.byte	32,82,79,85,84,73,78,69
-	.byte	32,49,-128,0
-LC6:
-	.byte	84,72,69,78,32,82,79,85
-	.byte	84,73,78,69,32,50,-128,0
-LC7:
-	.byte	78,79,87,32,82,79,85,84
-	.byte	73,78,69,32,51,-128,0
-LC8:
-	.byte	70,73,78,65,76,32,82,79
-	.byte	85,84,73,78,69,32,52,-128
-	.byte	0
 	.globl	_mainMenu
 _mainMenu:
-	pshs	y,u	;
-	leas	-2,s	;,,
 ;----- asm -----
-; 88 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
+; 88 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
 	; #ENR#[81]print_str_d(120, -90, );
 ;--- end asm ---
 	ldb	#120	;,
@@ -142,7 +126,7 @@ _mainMenu:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 90 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
+; 90 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
 	; #ENR#[82]print_str_d(70, -120, );
 ;--- end asm ---
 	ldb	#70	;,
@@ -152,7 +136,7 @@ _mainMenu:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 92 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
+; 92 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
 	; #ENR#[83]print_str_d(40, -120, );
 ;--- end asm ---
 	ldb	#40	;,
@@ -162,7 +146,7 @@ _mainMenu:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 94 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
+; 94 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
 	; #ENR#[84]print_str_d(10, -120, );
 ;--- end asm ---
 	ldb	#10	;,
@@ -172,7 +156,7 @@ _mainMenu:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 96 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
+; 96 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
 	; #ENR#[85]print_str_d(-20, -120, );
 ;--- end asm ---
 	ldb	#-20	;,
@@ -182,271 +166,158 @@ _mainMenu:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 99 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[87]ym_sound();
-; 91 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\include/ymPlayerOptimSpeed.h" 1
-	jsr do_ym_sound; YM_SOUND
-	
-; 101 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[88]if (ym_data_current == 0)
+; 99 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[87]if (vec_buttons & 1) {
 ;--- end asm ---
-	ldx	_ym_data_current	; ym_data_current.1, ym_data_current
-	cmpx	#0	; ym_data_current.1
-	bne	L12	;
+	ldb	_Vec_Buttons	; Vec_Buttons.1, Vec_Buttons
+	andb	#1	; D.3116,
+	tstb	; D.3117
+	beq	L12	;
 ;----- asm -----
-; 104 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[90]ym_init(&anbass_data);
-;--- end asm ---
-	ldx	#_ANbass_data	; tmp38,
-	stx	,s	; tmp38, u
-;----- asm -----
-; 94 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\include/ymPlayerOptimSpeed.h" 1
-	ldu ,s	; u
-	jsr init_ym_sound; YM_INIT
-	
-;--- end asm ---
-L12:
-;----- asm -----
-; 107 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[92]wait_recal();
-;--- end asm ---
-	jsr	___Wait_Recal
-;----- asm -----
-; 109 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[93]do_sound();
-;--- end asm ---
-	jsr	__Do_Sound
-;----- asm -----
-; 113 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[96]if (vec_buttons & 1) {
-;--- end asm ---
-	ldb	_Vec_Buttons	; Vec_Buttons.2, Vec_Buttons
-	andb	#1	; D.3117,
-	tstb	; D.3118
-	beq	L13	;
-;----- asm -----
-; 115 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[97]gamestate = game_datatransfer;
+; 101 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[88]gamestate = game_datatransfer;
 ;--- end asm ---
 	ldb	#1	;,
 	stb	_gameState	;, gameState
+	bra	L16	;
+L12:
+	ldb	_Vec_Buttons	; Vec_Buttons.3, Vec_Buttons
+	andb	#2	; D.3119,
+	tstb	; D.3119
+	beq	L14	;
 ;----- asm -----
-; 117 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[98]print_str_d(-70, -120, );
-;--- end asm ---
-	ldb	#-70	;,
-	stb	,-s	;,
-	ldx	#LC5	;,
-	ldb	#-120	;,
-	jsr	__Print_Str_d
-	leas	1,s	;,,
-	lbra	L17	;
-L13:
-	ldb	_Vec_Buttons	; Vec_Buttons.4, Vec_Buttons
-	andb	#2	; D.3120,
-	tstb	; D.3120
-	beq	L15	;
-;----- asm -----
-; 121 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[101]gamestate = game_reconstructbin;
+; 105 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[91]gamestate = game_reconstructbin;
 ;--- end asm ---
 	ldb	#2	;,
 	stb	_gameState	;, gameState
+	bra	L16	;
+L14:
+	ldb	_Vec_Buttons	; Vec_Buttons.4, Vec_Buttons
+	andb	#4	; D.3121,
+	tstb	; D.3121
+	beq	L15	;
 ;----- asm -----
-; 123 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[102]print_str_d(-70, -120, );
-;--- end asm ---
-	ldb	#-70	;,
-	stb	,-s	;,
-	ldx	#LC6	;,
-	ldb	#-120	;,
-	jsr	__Print_Str_d
-	leas	1,s	;,,
-	lbra	L17	;
-L15:
-	ldb	_Vec_Buttons	; Vec_Buttons.5, Vec_Buttons
-	andb	#4	; D.3122,
-	tstb	; D.3122
-	beq	L16	;
-;----- asm -----
-; 127 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[105]gamestate = game_repairidentity;
+; 109 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[94]gamestate = game_repairidentity;
 ;--- end asm ---
 	ldb	#3	;,
 	stb	_gameState	;, gameState
+	bra	L16	;
+L15:
+	ldb	_Vec_Buttons	; Vec_Buttons.5, Vec_Buttons
+	andb	#8	; D.3123,
+	tstb	; D.3123
+	beq	L16	;
 ;----- asm -----
-; 129 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[106]print_str_d(-70, -120, );
-;--- end asm ---
-	ldb	#-70	;,
-	stb	,-s	;,
-	ldx	#LC7	;,
-	ldb	#-120	;,
-	jsr	__Print_Str_d
-	leas	1,s	;,,
-	bra	L17	;
-L16:
-	ldb	_Vec_Buttons	; Vec_Buttons.6, Vec_Buttons
-	andb	#8	; D.3124,
-	tstb	; D.3124
-	beq	L17	;
-;----- asm -----
-; 133 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[109]gamestate = game_compileint;
+; 113 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[97]gamestate = game_compileint;
 ;--- end asm ---
 	ldb	#4	;,
 	stb	_gameState	;, gameState
+L16:
+	rts
+	.globl	_moveCursor
+_moveCursor:
 ;----- asm -----
-; 135 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[110]print_str_d(-70, -120, );
-;--- end asm ---
-	ldb	#-70	;,
-	stb	,-s	;,
-	ldx	#LC8	;,
-	ldb	#-120	;,
-	jsr	__Print_Str_d
-	leas	1,s	;,,
-L17:
-	leas	2,s	;,,
-	puls	y,u,pc	;
-	.globl	_RepairIdentityGame
-_RepairIdentityGame:
-	leas	-4,s	;,,
-;----- asm -----
-; 144 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[118]via_t1_cnt_lo = 0x40;
-;--- end asm ---
-	ldb	#64	;,
-	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
-;----- asm -----
-; 146 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[119]moveto_d(cursor_x, cursor_y);
-;--- end asm ---
-	ldb	_cursor_y	;, cursor_y
-	stb	,s	;, cursor_y.7
-	ldb	_cursor_x	;, cursor_x
-	stb	1,s	;, cursor_x.8
-	ldb	1,s	;, cursor_x.8
-	stb	3,s	;, a
-	ldb	,s	;, cursor_y.7
-	stb	2,s	;, b
-	ldb	3,s	;, a
-	stb	,-s	;,
-	ldb	3,s	;, b
-	jsr	__Moveto_d
-	leas	1,s	;,,
-;----- asm -----
-; 148 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[120]via_t1_cnt_lo = 0x80;
-;--- end asm ---
-	ldb	#-128	;,
-	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
-;----- asm -----
-; 150 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[121]draw_vlc((void*) mousepointer);
-;--- end asm ---
-	ldx	#_MousePointer	;,
-	jsr	___Draw_VLc
-;----- asm -----
-; 154 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[124]if (joystick_1_x()>0)
+; 121 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[104]if (joystick_1_x()>0)
 ;--- end asm ---
 	jsr	_joystick_1_x
-	tstb	; D.3143
-	ble	L19	;
+	tstb	; D.3137
+	ble	L18	;
 ;----- asm -----
-; 157 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[126]cursor_y += 5;
+; 124 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[106]cursor_y += 5;
 ;--- end asm ---
-	ldb	_cursor_y	; cursor_y.9, cursor_y
-	addb	#5	; cursor_y.10,
-	stb	_cursor_y	; cursor_y.10, cursor_y
-	bra	L20	;
+	ldb	_cursor_y	; cursor_y.6, cursor_y
+	addb	#5	; cursor_y.7,
+	stb	_cursor_y	; cursor_y.7, cursor_y
+	bra	L19	;
+L18:
+	jsr	_joystick_1_x
+	tstb	; D.3140
+	bge	L19	;
+;----- asm -----
+; 129 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[110]cursor_y -= 5;
+;--- end asm ---
+	ldb	_cursor_y	; cursor_y.8, cursor_y
+	addb	#-5	; cursor_y.9,
+	stb	_cursor_y	; cursor_y.9, cursor_y
 L19:
-	jsr	_joystick_1_x
-	tstb	; D.3146
-	bge	L20	;
 ;----- asm -----
-; 162 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[130]cursor_y -= 5;
+; 132 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[112]if (joystick_1_y()>0)
 ;--- end asm ---
-	ldb	_cursor_y	; cursor_y.11, cursor_y
-	addb	#-5	; cursor_y.12,
-	stb	_cursor_y	; cursor_y.12, cursor_y
+	jsr	_joystick_1_y
+	tstb	; D.3143
+	ble	L20	;
+;----- asm -----
+; 135 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[114]cursor_x += 5;
+;--- end asm ---
+	ldb	_cursor_x	; cursor_x.10, cursor_x
+	addb	#5	; cursor_x.11,
+	stb	_cursor_x	; cursor_x.11, cursor_x
+	bra	L21	;
 L20:
-;----- asm -----
-; 165 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[132]if (joystick_1_y()>0)
-;--- end asm ---
 	jsr	_joystick_1_y
-	tstb	; D.3149
-	ble	L21	;
+	tstb	; D.3146
+	bge	L21	;
 ;----- asm -----
-; 168 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[134]cursor_x += 5;
+; 140 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[118]cursor_x -= 5;
 ;--- end asm ---
-	ldb	_cursor_x	; cursor_x.13, cursor_x
-	addb	#5	; cursor_x.14,
-	stb	_cursor_x	; cursor_x.14, cursor_x
-	bra	L22	;
+	ldb	_cursor_x	; cursor_x.12, cursor_x
+	addb	#-5	; cursor_x.13,
+	stb	_cursor_x	; cursor_x.13, cursor_x
 L21:
-	jsr	_joystick_1_y
-	tstb	; D.3152
-	bge	L22	;
 ;----- asm -----
-; 173 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[138]cursor_x -= 5;
+; 143 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[120]if (cursor_x>=100) cursor_x = 100;
 ;--- end asm ---
-	ldb	_cursor_x	; cursor_x.15, cursor_x
-	addb	#-5	; cursor_x.16,
-	stb	_cursor_x	; cursor_x.16, cursor_x
+	ldb	_cursor_x	; cursor_x.14, cursor_x
+	cmpb	#99	;cmpqi:	; cursor_x.14,
+	ble	L22	;
+	ldb	#100	;,
+	stb	_cursor_x	;, cursor_x
 L22:
 ;----- asm -----
-; 176 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[140]if (cursor_x>=120) cursor_x = 120;
+; 145 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[121]if (cursor_x<=-100) cursor_x = -100;
 ;--- end asm ---
-	ldb	_cursor_x	; cursor_x.17, cursor_x
-	cmpb	#119	;cmpqi:	; cursor_x.17,
-	ble	L23	;
-	ldb	#120	;,
+	ldb	_cursor_x	; cursor_x.15, cursor_x
+	cmpb	#-100	;cmpqi:	; cursor_x.15,
+	bgt	L23	;
+	ldb	#-100	;,
 	stb	_cursor_x	;, cursor_x
 L23:
 ;----- asm -----
-; 178 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[141]if (cursor_x<=-120) cursor_x = -120;
+; 147 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[122]if (cursor_y>=100) cursor_y = 100;
 ;--- end asm ---
-	ldb	_cursor_x	; cursor_x.18, cursor_x
-	cmpb	#-120	;cmpqi:	; cursor_x.18,
-	bgt	L24	;
-	ldb	#-120	;,
-	stb	_cursor_x	;, cursor_x
+	ldb	_cursor_y	; cursor_y.16, cursor_y
+	cmpb	#99	;cmpqi:	; cursor_y.16,
+	ble	L24	;
+	ldb	#100	;,
+	stb	_cursor_y	;, cursor_y
 L24:
 ;----- asm -----
-; 180 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[142]if (cursor_y>=120) cursor_y = 120;
+; 149 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[123]if (cursor_y<=-100) cursor_y = -100;
 ;--- end asm ---
-	ldb	_cursor_y	; cursor_y.19, cursor_y
-	cmpb	#119	;cmpqi:	; cursor_y.19,
-	ble	L25	;
-	ldb	#120	;,
+	ldb	_cursor_y	; cursor_y.17, cursor_y
+	cmpb	#-100	;cmpqi:	; cursor_y.17,
+	bgt	L25	;
+	ldb	#-100	;,
 	stb	_cursor_y	;, cursor_y
 L25:
 ;----- asm -----
-; 182 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[143]if (cursor_y<=-120) cursor_y = -120;
-;--- end asm ---
-	ldb	_cursor_y	; cursor_y.20, cursor_y
-	cmpb	#-120	;cmpqi:	; cursor_y.20,
-	bgt	L26	;
-	ldb	#-120	;,
-	stb	_cursor_y	;, cursor_y
-L26:
-;----- asm -----
-; 184 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[144]joy_digital();
+; 151 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[124]joy_digital();
 ;--- end asm ---
 	jsr	___Joy_Digital
-	leas	4,s	;,,
 	rts
 _joystick_1_y:
 	ldb	_Vec_Joy_1_Y	; D.3047, Vec_Joy_1_Y
@@ -454,147 +325,244 @@ _joystick_1_y:
 _joystick_1_x:
 	ldb	_Vec_Joy_1_X	; D.3043, Vec_Joy_1_X
 	rts
+LC5:
+	.byte	69,86,69,78,32,77,79,82
+	.byte	69,32,84,69,88,84,32,72
+	.byte	79,87,32,77,85,67,72,-128
+	.byte	0
+LC6:
+	.byte	73,78,67,76,85,68,69,32
+	.byte	72,69,82,69,32,76,69,84
+	.byte	39,83,32,80,85,83,72,-128
+	.byte	0
+LC7:
+	.byte	84,72,69,32,65,66,83,79
+	.byte	76,85,84,69,32,76,73,77
+	.byte	73,84,83,32,79,70,-128,0
+LC8:
+	.byte	73,78,67,82,69,68,73,66
+	.byte	76,69,32,86,69,67,84,82
+	.byte	69,88,32,71,65,77,69,83
+	.byte	-128,0
+	.globl	_renderRepairGameText
+_renderRepairGameText:
+;----- asm -----
+; 158 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[130]print_str_d(70, -127, );
+;--- end asm ---
+	ldb	#70	;,
+	stb	,-s	;,
+	ldx	#LC5	;,
+	ldb	#-127	;,
+	jsr	__Print_Str_d
+	leas	1,s	;,,
+;----- asm -----
+; 160 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[131]print_str_d(40, -127, );
+;--- end asm ---
+	ldb	#40	;,
+	stb	,-s	;,
+	ldx	#LC6	;,
+	ldb	#-127	;,
+	jsr	__Print_Str_d
+	leas	1,s	;,,
+;----- asm -----
+; 162 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[132]print_str_d(10, -127, );
+;--- end asm ---
+	ldb	#10	;,
+	stb	,-s	;,
+	ldx	#LC7	;,
+	ldb	#-127	;,
+	jsr	__Print_Str_d
+	leas	1,s	;,,
+;----- asm -----
+; 164 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[133]print_str_d(-20, -127, );
+;--- end asm ---
+	ldb	#-20	;,
+	stb	,-s	;,
+	ldx	#LC8	;,
+	ldb	#-127	;,
+	jsr	__Print_Str_d
+	leas	1,s	;,,
+	rts
+	.globl	_RepairIdentityGame
+_RepairIdentityGame:
+	leas	-3,s	;,,
+;----- asm -----
+; 173 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[141]via_t1_cnt_lo = 0x40;
+;--- end asm ---
+	ldb	#64	;,
+	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
+;----- asm -----
+; 175 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[142]moveto_d(cursor_x, cursor_y);
+;--- end asm ---
+	ldb	_cursor_y	;, cursor_y
+	stb	,s	;, cursor_y.18
+	ldb	_cursor_x	; cursor_x.19, cursor_x
+	stb	2,s	; cursor_x.19, a
+	ldb	,s	;, cursor_y.18
+	stb	1,s	;, b
+	ldb	2,s	;, a
+	stb	,-s	;,
+	ldb	2,s	;, b
+	jsr	__Moveto_d
+	leas	1,s	;,,
+;----- asm -----
+; 177 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[143]via_t1_cnt_lo = 0x80;
+;--- end asm ---
+	ldb	#-128	;,
+	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
+;----- asm -----
+; 179 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[144]draw_vlc((void*) mousepointer);
+;--- end asm ---
+	ldx	#_MousePointer	;,
+	jsr	___Draw_VLc
+;----- asm -----
+; 182 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[146]movecursor();
+;--- end asm ---
+	jsr	_moveCursor
+;----- asm -----
+; 184 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[147]renderrepairgametext();
+;--- end asm ---
+	jsr	_renderRepairGameText
+	leas	3,s	;,,
+	rts
 LC9:
+	.byte	83,84,65,82,84,73,78,71
+	.byte	32,82,79,85,84,73,78,69
+	.byte	32,49,-128,0
+LC10:
+	.byte	84,72,69,78,32,82,79,85
+	.byte	84,73,78,69,32,50,-128,0
+LC11:
 	.byte	67,79,78,70,73,82,77,32
 	.byte	82,79,85,84,73,78,69,32
 	.byte	51,63,-128,0
+LC12:
+	.byte	70,73,78,65,76,32,82,79
+	.byte	85,84,73,78,69,32,52,-128
+	.byte	0
 	.globl	_main
 _main:
-	pshs	u	;
-	leas	-3,s	;,,
+	pshs	y,u	;
+	leas	-5,s	;,,
 ;----- asm -----
-; 193 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[152]cursor_x = 0;
+; 191 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[153]cursor_x = 0;
 ;--- end asm ---
 	clr	_cursor_x	; cursor_x
 ;----- asm -----
-; 195 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[153]cursor_y = 0;
+; 193 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[154]cursor_y = 0;
 ;--- end asm ---
 	clr	_cursor_y	; cursor_y
 ;----- asm -----
-; 197 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[154]setup();
+; 195 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[155]setup();
 ;--- end asm ---
 	jsr	_setup
 ;----- asm -----
-; 200 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[156]gamestate = mainmenu;
+; 198 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[157]gamestate = mainmenu;
 ;--- end asm ---
 	clr	_gameState	; gameState
 ;----- asm -----
-; 202 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[157]exittext = false;
+; 200 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[158]exittext = false;
 ;--- end asm ---
 	clr	_exitText	; exitText
 ;----- asm -----
-; 204 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[158]while(1)
+; 202 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[159]if (ym_data_current == 0)
 ;--- end asm ---
-L45:
+	ldx	_ym_data_current	; ym_data_current.20, ym_data_current
+	cmpx	#0	; ym_data_current.20
+	bne	L36	;
 ;----- asm -----
-; 207 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[160]read_btns();
+; 205 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[161]ym_init(&anbass_data);
+;--- end asm ---
+	ldx	#_ANbass_data	; tmp43,
+	stx	3,s	; tmp43, u
+;----- asm -----
+; 94 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\include/ymPlayerOptimSpeed.h" 1
+	ldu 3,s	; u
+	jsr init_ym_sound; YM_INIT
+	
+;--- end asm ---
+L36:
+;----- asm -----
+; 208 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[163]while(1)
+;--- end asm ---
+L49:
+;----- asm -----
+; 211 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[165]ym_sound();
+; 91 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\include/ymPlayerOptimSpeed.h" 1
+	jsr do_ym_sound; YM_SOUND
+	
+; 213 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[166]read_btns();
 ;--- end asm ---
 	jsr	___Read_Btns
 ;----- asm -----
-; 210 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[162]wait_recal();
+; 216 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[168]wait_recal();
 ;--- end asm ---
 	jsr	___Wait_Recal
 ;----- asm -----
-; 213 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[164]frwait();
+; 219 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[170]frwait();
 ;--- end asm ---
 	jsr	___Wait_Recal
 ;----- asm -----
-; 215 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[165]intensity_a(0x5f);
+; 221 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[171]intensity_a(0x5f);
 ;--- end asm ---
 	ldb	#95	;,
 	jsr	__Intensity_a
 ;----- asm -----
-; 218 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[167]switch(gamestate)
+; 226 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[175]do_sound();
+;--- end asm ---
+	jsr	__Do_Sound
+;----- asm -----
+; 230 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[178]switch(gamestate)
 ;--- end asm ---
 	ldb	_gameState	;, gameState
 	stb	2,s	;, gameState.21
 	ldb	2,s	;, gameState.21
 	cmpb	#4	;cmpqi:	;,
-	bhi	L45	;
+	bhi	L49	;
 	ldb	2,s	;, gameState.21
 	clra		;zero_extendqihi: R:b -> R:d	;,
 	std	,s	;,
-	ldd	,s	; tmp43,
+	ldd	,s	; tmp45,
 	aslb	;
 	rola	;
-	ldu	#L39	;,
-	leax	d,u	; tmp44, tmp43,
-	ldx	,x	; tmp45,
-	jmp	,x	; tmp45
-L39:
-	.word	L34
-	.word	L35
-	.word	L36
-	.word	L37
+	ldy	#L43	;,
+	leax	d,y	; tmp46, tmp45,
+	ldx	,x	; tmp47,
+	jmp	,x	; tmp47
+L43:
 	.word	L38
-L35:
+	.word	L39
+	.word	L40
+	.word	L41
+	.word	L42
+L39:
 ;----- asm -----
-; 223 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[170]print_str_d(-70, -120, );
-;--- end asm ---
-	ldb	#-70	;,
-	stb	,-s	;,
-	ldx	#LC5	;,
-	ldb	#-120	;,
-	jsr	__Print_Str_d
-	leas	1,s	;,,
-;----- asm -----
-; 225 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[171]break;
-;--- end asm ---
-	lbra	L45	;
-L36:
-;----- asm -----
-; 229 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[173]print_str_d(-70, -120, );
-;--- end asm ---
-	ldb	#-70	;,
-	stb	,-s	;,
-	ldx	#LC6	;,
-	ldb	#-120	;,
-	jsr	__Print_Str_d
-	leas	1,s	;,,
-;----- asm -----
-; 231 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[174]break;
-;--- end asm ---
-	lbra	L45	;
-L37:
-;----- asm -----
-; 235 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[176]if (vec_buttons & 4 && !exittext){
-;--- end asm ---
-	ldb	_Vec_Buttons	; Vec_Buttons.22, Vec_Buttons
-	andb	#4	; D.3193,
-	tstb	; D.3193
-	beq	L40	;
-	ldb	_exitText	; exitText.23, exitText
-	tstb	; exitText.23
-	bne	L40	;
-;----- asm -----
-; 237 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[177]exittext = true;
-;--- end asm ---
-	ldb	#1	;,
-	stb	_exitText	;, exitText
-	lbra	L41	;
-L40:
-	ldb	_exitText	; exitText.24, exitText
-	tstb	; exitText.24
-	bne	L42	;
-;----- asm -----
-; 242 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
+; 235 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
 	; #ENR#[181]print_str_d(-70, -120, );
 ;--- end asm ---
 	ldb	#-70	;,
@@ -604,72 +572,126 @@ L40:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 244 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[182]if(vec_buttons & 1 || vec_buttons & 2 || vec_buttons & 8)
+; 237 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[182]break;
 ;--- end asm ---
-	ldb	_Vec_Buttons	; Vec_Buttons.25, Vec_Buttons
-	andb	#1	; D.3200,
-	tstb	; D.3201
-	bne	L43	;
-	ldb	_Vec_Buttons	; Vec_Buttons.27, Vec_Buttons
-	andb	#2	; D.3203,
-	tstb	; D.3203
-	bne	L43	;
-	ldb	_Vec_Buttons	; Vec_Buttons.28, Vec_Buttons
-	andb	#8	; D.3205,
-	tstb	; D.3205
-	beq	L41	;
-L43:
+	lbra	L49	;
+L40:
 ;----- asm -----
-; 247 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[184]gamestate = mainmenu;
-;--- end asm ---
-	clr	_gameState	; gameState
-;----- asm -----
-; 249 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[185]exittext = false;
-;--- end asm ---
-	clr	_exitText	; exitText
-	bra	L41	;
-L42:
-;----- asm -----
-; 256 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[191]repairidentitygame();
-;--- end asm ---
-	jsr	_RepairIdentityGame
-L41:
-;----- asm -----
-; 259 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[193]break;
-;--- end asm ---
-	lbra	L45	;
-L38:
-;----- asm -----
-; 264 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[196]print_str_d(-70, -120, );
+; 241 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[184]print_str_d(-70, -120, );
 ;--- end asm ---
 	ldb	#-70	;,
 	stb	,-s	;,
-	ldx	#LC8	;,
+	ldx	#LC10	;,
 	ldb	#-120	;,
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 266 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[197]break;
+; 243 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[185]break;
 ;--- end asm ---
-	lbra	L45	;
-L34:
+	lbra	L49	;
+L41:
 ;----- asm -----
-; 270 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[199]mainmenu();
+; 247 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[187]if (vec_buttons & 4 && !exittext){
+;--- end asm ---
+	ldb	_Vec_Buttons	; Vec_Buttons.22, Vec_Buttons
+	andb	#4	; D.3194,
+	tstb	; D.3194
+	beq	L44	;
+	ldb	_exitText	; exitText.23, exitText
+	tstb	; exitText.23
+	bne	L44	;
+;----- asm -----
+; 249 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[188]exittext = true;
+;--- end asm ---
+	ldb	#1	;,
+	stb	_exitText	;, exitText
+	lbra	L45	;
+L44:
+	ldb	_exitText	; exitText.24, exitText
+	tstb	; exitText.24
+	bne	L46	;
+;----- asm -----
+; 254 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[192]print_str_d(-70, -120, );
+;--- end asm ---
+	ldb	#-70	;,
+	stb	,-s	;,
+	ldx	#LC11	;,
+	ldb	#-120	;,
+	jsr	__Print_Str_d
+	leas	1,s	;,,
+;----- asm -----
+; 256 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[193]if(vec_buttons & 1 || vec_buttons & 2 || vec_buttons & 8)
+;--- end asm ---
+	ldb	_Vec_Buttons	; Vec_Buttons.25, Vec_Buttons
+	andb	#1	; D.3201,
+	tstb	; D.3202
+	bne	L47	;
+	ldb	_Vec_Buttons	; Vec_Buttons.27, Vec_Buttons
+	andb	#2	; D.3204,
+	tstb	; D.3204
+	bne	L47	;
+	ldb	_Vec_Buttons	; Vec_Buttons.28, Vec_Buttons
+	andb	#8	; D.3206,
+	tstb	; D.3206
+	beq	L45	;
+L47:
+;----- asm -----
+; 259 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[195]gamestate = mainmenu;
+;--- end asm ---
+	clr	_gameState	; gameState
+;----- asm -----
+; 261 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[196]exittext = false;
+;--- end asm ---
+	clr	_exitText	; exitText
+	bra	L45	;
+L46:
+;----- asm -----
+; 269 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[203]repairidentitygame();
+;--- end asm ---
+	jsr	_RepairIdentityGame
+L45:
+;----- asm -----
+; 272 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[205]break;
+;--- end asm ---
+	lbra	L49	;
+L42:
+;----- asm -----
+; 277 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[208]print_str_d(-70, -120, );
+;--- end asm ---
+	ldb	#-70	;,
+	stb	,-s	;,
+	ldx	#LC12	;,
+	ldb	#-120	;,
+	jsr	__Print_Str_d
+	leas	1,s	;,,
+;----- asm -----
+; 279 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[209]break;
+;--- end asm ---
+	lbra	L49	;
+L38:
+;----- asm -----
+; 283 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[211]mainmenu();
 ;--- end asm ---
 	jsr	_mainMenu
 ;----- asm -----
-; 272 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.enr.c" 1
-	; #ENR#[200]break;
+; 285 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+	; #ENR#[212]break;
 ;--- end asm ---
-	lbra	L45	;
+	lbra	L49	;
 	.area	.bss
 	.globl	_cursor_x
 _cursor_x:	.blkb	1
