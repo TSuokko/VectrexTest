@@ -1688,7 +1688,230 @@ void _f_assert_failed(char* file, unsigned int length, unsigned long int line, c
 
 typedef enum { false, true } bool;
 # 19 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FalloutTest\\source\\main.c" 2
-# 27 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FalloutTest\\source\\main.c"
+# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FalloutTest\\source\\/controller.h" 1
+
+
+
+
+       
+# 16 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FalloutTest\\source\\/controller.h"
+static inline void enable_controller_1_x()
+{
+  Vec_Joy_Mux_1_X = 1;
+}
+
+static inline void enable_controller_1_y()
+{
+  Vec_Joy_Mux_1_Y = 3;
+}
+
+static inline void enable_controller_2_x()
+{
+  Vec_Joy_Mux_2_X = 5;
+}
+
+static inline void enable_controller_2_y()
+{
+  Vec_Joy_Mux_2_Y = 7;
+}
+
+static inline void disable_controller_1_x()
+{
+  Vec_Joy_Mux_1_X = 0;
+}
+
+static inline void disable_controller_1_y()
+{
+  Vec_Joy_Mux_1_Y = 0;
+}
+
+static inline void disable_controller_2_x()
+{
+  Vec_Joy_Mux_2_X = 0;
+}
+
+static inline void disable_controller_2_y()
+{
+  Vec_Joy_Mux_2_Y = 0;
+}
+
+
+
+
+
+static inline void check_buttons()
+{
+ Read_Btns();
+}
+
+static inline unsigned int buttons_pressed()
+{
+ return Vec_Buttons;
+}
+
+static inline unsigned int buttons_held()
+{
+ return Vec_Btn_State;
+}
+
+
+
+
+
+
+static inline unsigned int button_1_1_pressed()
+{
+ return (buttons_pressed() & 0b00000001);
+}
+
+static inline unsigned int button_1_2_pressed()
+{
+ return (buttons_pressed() & 0b00000010);
+}
+static inline unsigned int button_1_3_pressed()
+{
+ return (buttons_pressed() & 0b00000100);
+}
+static inline unsigned int button_1_4_pressed()
+{
+ return (buttons_pressed() & 0b00001000);
+}
+
+static inline unsigned int button_2_1_pressed()
+{
+ return (buttons_pressed() & 0b00010000);
+}
+
+static inline unsigned int button_2_2_pressed()
+{
+ return (buttons_pressed() & 0b00100000);
+}
+static inline unsigned int button_2_3_pressed()
+{
+ return (buttons_pressed() & 0b01000000);
+}
+
+static inline unsigned int button_2_4_pressed()
+{
+ return (buttons_pressed() & 0b10000000);
+}
+
+
+
+
+
+static inline unsigned int button_1_1_held()
+{
+ return (buttons_held() & 0b00000001);
+}
+
+static inline unsigned int button_1_2_held()
+{
+ return (buttons_held() & 0b00000010);
+}
+static inline unsigned int button_1_3_held()
+{
+ return (buttons_held() & 0b00000100);
+}
+static inline unsigned int button_1_4_held()
+{
+ return (buttons_held() & 0b00001000);
+}
+
+static inline unsigned int button_2_1_held()
+{
+ return (buttons_held() & 0b00010000);
+}
+
+static inline unsigned int button_2_2_held()
+{
+ return (buttons_held() & 0b00100000);
+}
+static inline unsigned int button_2_3_held()
+{
+ return (buttons_held() & 0b01000000);
+}
+
+static inline unsigned int button_2_4_held()
+{
+ return (buttons_held() & 0b10000000);
+}
+
+
+
+
+
+static inline void check_joysticks()
+{
+ Joy_Digital();
+}
+
+static inline int joystick_1_x()
+{
+ return Vec_Joy_1_X;
+}
+
+static inline int joystick_1_y()
+{
+ return Vec_Joy_1_Y;
+}
+
+static inline int joystick_2_x()
+{
+ return Vec_Joy_2_X;
+}
+
+static inline int joystick_2_y()
+{
+ return Vec_Joy_2_Y;
+}
+
+
+
+
+
+
+static inline int joystick_1_left()
+{
+ return (joystick_1_x() < 0);
+}
+
+static inline int joystick_1_right()
+{
+ return (joystick_1_x() > 0);
+}
+
+static inline int joystick_1_down()
+{
+ return (joystick_1_y() < 0);
+}
+
+static inline int joystick_1_up()
+{
+ return (joystick_1_y() > 0);
+}
+
+static inline int joystick_2_left()
+{
+ return (joystick_2_x() < 0);
+}
+
+static inline int joystick_2_right()
+{
+ return (joystick_2_x() > 0);
+}
+
+static inline int joystick_2_down()
+{
+ return (joystick_2_y() < 0);
+}
+
+static inline int joystick_2_up()
+{
+ return (joystick_2_y() > 0);
+}
+# 20 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FalloutTest\\source\\main.c" 2
+# 31 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FalloutTest\\source\\main.c"
 const signed char MousePointer[]=
 { +0x04,
  +0x00, +0x06,
@@ -1699,7 +1922,9 @@ const signed char MousePointer[]=
 };
 
 bool exitText = false;
-# 47 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FalloutTest\\source\\main.c"
+ signed char cursor_x;
+   signed char cursor_y;
+# 52 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FalloutTest\\source\\main.c"
 enum GameState_t {
  MainMenu,
  Game_DataTransfer,
@@ -1708,6 +1933,21 @@ enum GameState_t {
  Game_CompileInt
 } gameState;
 
+
+
+
+
+void setup(void)
+{
+  enable_controller_1_x();
+  enable_controller_1_y();
+  disable_controller_2_x();
+  disable_controller_2_y();
+  Joy_Digital();
+
+  Wait_Recal();
+
+}
 
 void mainMenu()
 {
@@ -1740,35 +1980,54 @@ void mainMenu()
 void RepairIdentityGame()
 {
 
- if (Vec_Buttons & 4 && !exitText){
-  exitText = true;
+ VIA_t1_cnt_lo = 0x40;
+ Moveto_d(cursor_x, cursor_y);
+ VIA_t1_cnt_lo = 0x80;
+ Draw_VLc((void*) MousePointer);
+
+
+ if (joystick_1_x()>0)
+    {
+  cursor_y += 5;
+    }
+    else if (joystick_1_x()<0)
+    {
+  cursor_y -= 5;
  }
- else if(!exitText)
- {
-  Print_Str_d(-70, -120, "STARTING ROUTINE 3\x80");
- }
- else
- {
-  VIA_t1_cnt_lo = 0x40;
-  Moveto_d(40, 0);
-  VIA_t1_cnt_lo = 0x80;
-  Draw_VLc((void*) MousePointer);
- }
+    if (joystick_1_y()>0)
+    {
+  cursor_x += 5;
+    }
+    else if (joystick_1_y()<0)
+    {
+  cursor_x -= 5;
+    }
+    if (cursor_x>=100) cursor_x = 100;
+    if (cursor_x<=-100) cursor_x = -100;
+    if (cursor_y>=100) cursor_y = 100;
+    if (cursor_y<=-100) cursor_y = -100;
+    Joy_Digital();
+
+
 }
 
 
 int main(void)
 {
+   cursor_x = 0;
+   cursor_y = 0;
+ setup();
+
     gameState = MainMenu;
  exitText = false;
  while(1)
  {
-  Wait_Recal();
+         Read_Btns();
 
+  Wait_Recal();
 
   Wait_Recal();
   Intensity_a(0x5f);
-  Read_Btns();
 
          switch(gameState)
   {
@@ -1779,7 +2038,17 @@ int main(void)
     Print_Str_d(-70, -120, "THEN ROUTINE 2\x80");
     break;
    case Game_RepairIdentity:{
-    RepairIdentityGame();
+    if (Vec_Buttons & 4 && !exitText){
+     exitText = true;
+    }
+    else if(exitText == false)
+    {
+     Print_Str_d(-70, -120, "STARTING ROUTINE 3\x80");
+    }
+    else
+    {
+     RepairIdentityGame();
+    }
     break;
    }
    case Game_CompileInt:

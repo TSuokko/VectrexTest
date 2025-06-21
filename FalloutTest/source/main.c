@@ -16,6 +16,8 @@
 #include <vectrex.h>
 #include <assert.h>	
 #include "stdbool.h"
+#include "controller.h"
+
 
 // As default assertions are enabled.
 // to disable do a
@@ -23,6 +25,8 @@
 // or set the gcc option "-D NDEBUG" (Vide project file)
 #define intens Intensity_a
 #define frwait Wait_Recal
+#define MAX_SCALE (0xf0)
+
 
 const signed char MousePointer[]=
 {	+0x04,
@@ -34,7 +38,8 @@ const signed char MousePointer[]=
 };
 
 bool exitText = false;
-
+	signed char cursor_x;               /* where is the cursor? */
+  	signed char cursor_y;
 // ---------------------------------------------------------------------------
 // cold reset: the vectrex logo is shown, all ram data is cleared
 // warm reset: skip vectrex logo and keep ram data
@@ -52,6 +57,21 @@ enum GameState_t {
 	Game_CompileInt
 } gameState;
 
+/*
+ * A simple setup routine, enables/disables the joystick, and makes sure
+ * that the button state is read correctly...
+ */
+void setup(void)
+{
+  enable_controller_1_x();
+  enable_controller_1_y();
+  disable_controller_2_x();
+  disable_controller_2_y();
+  Joy_Digital();
+  //check_buttons();                       /* last pressed button */
+  Wait_Recal();                       /* sets this up allright... */
+
+}
 
 void mainMenu()
 {
@@ -82,37 +102,56 @@ void mainMenu()
 }
 
 void RepairIdentityGame()
-{
-	
-	if (Vec_Buttons & 4 && !exitText){
-		exitText = true;
+{	
+	//draw cursor middle of screen 
+	VIA_t1_cnt_lo = 0x40;
+	Moveto_d(cursor_x, cursor_y);
+	VIA_t1_cnt_lo = 0x80;
+	Draw_VLc((void*) MousePointer);
+	////////////////////////////////
+
+	if (joystick_1_x()>0)                /* check the joystick and */
+    {                                 /* update position */
+		cursor_y += 5;
+    }
+    else if (joystick_1_x()<0)
+    {
+		cursor_y -= 5;
 	}
-	else if(!exitText)
-	{
-		Print_Str_d(-70, -120, "STARTING ROUTINE 3\x80");
-	}
-	else
-	{
-		VIA_t1_cnt_lo = 0x40;
-		Moveto_d(40, 0);
-		VIA_t1_cnt_lo = 0x80;
-		Draw_VLc((void*) MousePointer);
-	}
+    if (joystick_1_y()>0)
+    {
+		cursor_x += 5;
+    }
+    else if (joystick_1_y()<0)
+    {
+		cursor_x -= 5;
+    }
+    if (cursor_x>=100) cursor_x = 100;    /* make sure cursor is not */
+    if (cursor_x<=-100) cursor_x = -100;  /* out of bounds */
+    if (cursor_y>=100) cursor_y = 100;
+    if (cursor_y<=-100) cursor_y = -100;
+    Joy_Digital();                        /* call once per round, to insure */
+
+
 }
 
 
 int main(void)
 {
+  	cursor_x = 0;
+  	cursor_y = 0;
+	setup();                            /* setup our program */
+
     gameState = MainMenu;
 	exitText = false;
 	while(1)
 	{
-		Wait_Recal();
-		//Print_Str_d(0, -70, "FALLOUT HACK CONSOLE\x80");
-         // wait for frame boundary (one frame = 30,000 cyles = 50 Hz)
+         Read_Btns();   
+		//DP_to_C8();                        /* vectrex internal... dp must point */
+		Wait_Recal();                       /* sets this up allright... */         
+		// wait for frame boundary (one frame = 30,000 cyles = 50 Hz)
 		frwait();
 		Intensity_a(0x5f);
-		Read_Btns();
 
          switch(gameState)
 		{
@@ -123,7 +162,17 @@ int main(void)
 				Print_Str_d(-70, -120, "THEN ROUTINE 2\x80");
 				break;
 			case Game_RepairIdentity:{
-				RepairIdentityGame();
+				if (Vec_Buttons & 4 && !exitText){
+					exitText = true;
+				}
+				else if(exitText == false)
+				{
+					Print_Str_d(-70, -120, "STARTING ROUTINE 3\x80");
+				}
+				else
+				{
+					RepairIdentityGame();
+				}
 				break;
 			}
 			case Game_CompileInt:

@@ -19,11 +19,11 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           0000  s_.cartridge                    
           0000  l_.text.hot                     
           0000  s_.direct                       
-          0001  l_.bss                          
           0001  l_.data                         
           0001  l_.0xffx                        
           0001  l_.0xf0                         
           0002  l_.0xe9                         
+          0003  l_.bss                          
           0010  l_.dpd0                         
           0016  l_.dpcb                         
           0019  l_.dped                         
@@ -50,10 +50,10 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           00D8  l_.0xf3                         
           00EF  l_.0xf5                         
           0100  l_.direct                       
-          0271  l_.text                         
-          02C9  s_.text.unlikely                
-          02C9  s_.text.last                    
-          02C9  s_.text.hot                     
+          032E  l_.text                         
+          0386  s_.text.unlikely                
+          0386  s_.text.last                    
+          0386  s_.text.hot                     
           C800  s_.dpc8                         
           C880  s_.data                         
           C881  s_.bss                          
@@ -139,212 +139,313 @@ Hexidecimal  [16-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0058        0271 =         625. bytes (REL,CON,CSEG)
+.text                      0058        032E =         814. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
           0058  _MousePointer                      main.enr.c
-          0118  _mainMenu                          main.enr.c
-          0118  A$main$89                          main.enr.c
-          011A  A$main$90                          main.enr.c
-          011C  A$main$91                          main.enr.c
-          011F  A$main$92                          main.enr.c
-          0121  A$main$93                          main.enr.c
-          0124  A$main$94                          main.enr.c
-          0126  A$main$99                          main.enr.c
-          0128  A$main$100                         main.enr.c
-          012A  A$main$101                         main.enr.c
-          012D  A$main$102                         main.enr.c
-          012F  A$main$103                         main.enr.c
-          0132  A$main$104                         main.enr.c
-          0134  A$main$109                         main.enr.c
-          0136  A$main$110                         main.enr.c
-          0138  A$main$111                         main.enr.c
-          013B  A$main$112                         main.enr.c
-          013D  A$main$113                         main.enr.c
-          0140  A$main$114                         main.enr.c
-          0142  A$main$119                         main.enr.c
-          0144  A$main$120                         main.enr.c
-          0146  A$main$121                         main.enr.c
-          0149  A$main$122                         main.enr.c
-          014B  A$main$123                         main.enr.c
-          014E  A$main$124                         main.enr.c
-          0150  A$main$129                         main.enr.c
-          0152  A$main$130                         main.enr.c
-          0154  A$main$131                         main.enr.c
-          0157  A$main$132                         main.enr.c
-          0159  A$main$133                         main.enr.c
-          015C  A$main$134                         main.enr.c
-          015E  A$main$139                         main.enr.c
-          0161  A$main$140                         main.enr.c
-          0163  A$main$141                         main.enr.c
-          0164  A$main$142                         main.enr.c
-          0166  A$main$147                         main.enr.c
-          0168  A$main$148                         main.enr.c
-          016B  A$main$153                         main.enr.c
-          016D  A$main$154                         main.enr.c
-          016F  A$main$155                         main.enr.c
-          0172  A$main$156                         main.enr.c
-          0174  A$main$157                         main.enr.c
-          0177  A$main$158                         main.enr.c
-          0179  A$main$159                         main.enr.c
-          017C  A$main$161                         main.enr.c
-          017F  A$main$162                         main.enr.c
-          0181  A$main$163                         main.enr.c
-          0182  A$main$164                         main.enr.c
+          0063  _setup                             main.enr.c
+          0063  A$main$55                          main.enr.c
+          0066  A$main$60                          main.enr.c
+          0069  A$main$65                          main.enr.c
+          006C  A$main$70                          main.enr.c
+          006F  A$main$75                          main.enr.c
+          0072  A$main$80                          main.enr.c
+          0075  A$main$81                          main.enr.c
+          0076  A$main$83                          main.enr.c
+          0079  A$main$84                          main.enr.c
+          007A  A$main$86                          main.enr.c
+          007D  A$main$87                          main.enr.c
+          007E  A$main$89                          main.enr.c
+          0080  A$main$90                          main.enr.c
+          0083  A$main$91                          main.enr.c
+          0084  A$main$93                          main.enr.c
+          0086  A$main$94                          main.enr.c
+          0089  A$main$95                          main.enr.c
+          013F  A$main$136                         main.enr.c
+          013F  _mainMenu                          main.enr.c
+          0141  A$main$137                         main.enr.c
+          0143  A$main$138                         main.enr.c
+          0146  A$main$139                         main.enr.c
+          0148  A$main$140                         main.enr.c
+          014B  A$main$141                         main.enr.c
+          014D  A$main$146                         main.enr.c
+          014F  A$main$147                         main.enr.c
+          0151  A$main$148                         main.enr.c
+          0154  A$main$149                         main.enr.c
+          0156  A$main$150                         main.enr.c
+          0159  A$main$151                         main.enr.c
+          015B  A$main$156                         main.enr.c
+          015D  A$main$157                         main.enr.c
+          015F  A$main$158                         main.enr.c
+          0162  A$main$159                         main.enr.c
+          0164  A$main$160                         main.enr.c
+          0167  A$main$161                         main.enr.c
+          0169  A$main$166                         main.enr.c
+          016B  A$main$167                         main.enr.c
+          016D  A$main$168                         main.enr.c
+          0170  A$main$169                         main.enr.c
+          0172  A$main$170                         main.enr.c
+          0175  A$main$171                         main.enr.c
+          0177  A$main$176                         main.enr.c
+          0179  A$main$177                         main.enr.c
+          017B  A$main$178                         main.enr.c
+          017E  A$main$179                         main.enr.c
+          0180  A$main$180                         main.enr.c
 ASxxxx Linker V05.00,  page 6.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0058        0271 =         625. bytes (REL,CON,CSEG)
+.text                      0058        032E =         814. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0184  A$main$169                         main.enr.c
-          0186  A$main$170                         main.enr.c
-          0189  A$main$175                         main.enr.c
-          018B  A$main$176                         main.enr.c
-          018D  A$main$177                         main.enr.c
-          0190  A$main$178                         main.enr.c
-          0192  A$main$179                         main.enr.c
-          0195  A$main$180                         main.enr.c
-          0197  A$main$181                         main.enr.c
-          019A  A$main$183                         main.enr.c
-          019D  A$main$184                         main.enr.c
-          019F  A$main$185                         main.enr.c
-          01A0  A$main$186                         main.enr.c
-          01A2  A$main$191                         main.enr.c
-          01A4  A$main$192                         main.enr.c
-          01A7  A$main$197                         main.enr.c
-          01A9  A$main$198                         main.enr.c
-          01AB  A$main$199                         main.enr.c
-          01AE  A$main$200                         main.enr.c
-          01B0  A$main$201                         main.enr.c
-          01B3  A$main$202                         main.enr.c
-          01B5  A$main$203                         main.enr.c
-          01B7  A$main$205                         main.enr.c
-          01BA  A$main$206                         main.enr.c
-          01BC  A$main$207                         main.enr.c
-          01BD  A$main$208                         main.enr.c
-          01BF  A$main$213                         main.enr.c
-          01C1  A$main$214                         main.enr.c
-          01C4  A$main$219                         main.enr.c
-          01C6  A$main$220                         main.enr.c
-          01C8  A$main$221                         main.enr.c
-          01CB  A$main$222                         main.enr.c
-          01CD  A$main$223                         main.enr.c
-          01D0  A$main$224                         main.enr.c
-          01D2  A$main$226                         main.enr.c
-          01E7  _RepairIdentityGame                main.enr.c
-          01E7  A$main$237                         main.enr.c
-          01EA  A$main$238                         main.enr.c
-          01EC  A$main$239                         main.enr.c
-          01ED  A$main$240                         main.enr.c
-          01EF  A$main$241                         main.enr.c
-          01F2  A$main$242                         main.enr.c
-          01F3  A$main$243                         main.enr.c
-          01F5  A$main$248                         main.enr.c
-          01F7  A$main$249                         main.enr.c
-          01FA  A$main$250                         main.enr.c
-          01FD  A$main$252                         main.enr.c
-          0200  A$main$253                         main.enr.c
-          0201  A$main$254                         main.enr.c
-          0203  A$main$259                         main.enr.c
+          0183  A$main$181                         main.enr.c
+          0185  A$main$186                         main.enr.c
+          0188  A$main$187                         main.enr.c
+          018A  A$main$188                         main.enr.c
+          018B  A$main$189                         main.enr.c
+          018D  A$main$194                         main.enr.c
+          018F  A$main$195                         main.enr.c
+          0192  A$main$200                         main.enr.c
+          0194  A$main$201                         main.enr.c
+          0196  A$main$202                         main.enr.c
+          0199  A$main$203                         main.enr.c
+          019B  A$main$204                         main.enr.c
+          019E  A$main$205                         main.enr.c
+          01A0  A$main$206                         main.enr.c
+          01A3  A$main$208                         main.enr.c
+          01A6  A$main$209                         main.enr.c
+          01A8  A$main$210                         main.enr.c
+          01A9  A$main$211                         main.enr.c
+          01AB  A$main$216                         main.enr.c
+          01AD  A$main$217                         main.enr.c
+          01B0  A$main$222                         main.enr.c
+          01B2  A$main$223                         main.enr.c
+          01B4  A$main$224                         main.enr.c
+          01B7  A$main$225                         main.enr.c
+          01B9  A$main$226                         main.enr.c
+          01BC  A$main$227                         main.enr.c
+          01BE  A$main$228                         main.enr.c
+          01C1  A$main$230                         main.enr.c
+          01C4  A$main$231                         main.enr.c
+          01C6  A$main$232                         main.enr.c
+          01C7  A$main$233                         main.enr.c
+          01C9  A$main$238                         main.enr.c
+          01CB  A$main$239                         main.enr.c
+          01CE  A$main$244                         main.enr.c
+          01D0  A$main$245                         main.enr.c
+          01D2  A$main$246                         main.enr.c
+          01D5  A$main$247                         main.enr.c
+          01D7  A$main$248                         main.enr.c
+          01DA  A$main$249                         main.enr.c
+          01DC  A$main$250                         main.enr.c
+          01DE  A$main$252                         main.enr.c
+          01E1  A$main$253                         main.enr.c
+          01E3  A$main$254                         main.enr.c
+          01E4  A$main$255                         main.enr.c
+          01E6  A$main$260                         main.enr.c
+          01E8  A$main$261                         main.enr.c
+          01EB  A$main$266                         main.enr.c
+          01ED  A$main$267                         main.enr.c
+          01EF  A$main$268                         main.enr.c
+          01F2  A$main$269                         main.enr.c
 ASxxxx Linker V05.00,  page 7.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0058        0271 =         625. bytes (REL,CON,CSEG)
+.text                      0058        032E =         814. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0205  A$main$260                         main.enr.c
-          0207  A$main$261                         main.enr.c
-          020A  A$main$262                         main.enr.c
-          020C  A$main$263                         main.enr.c
-          020F  A$main$264                         main.enr.c
-          0211  A$main$265                         main.enr.c
-          0213  A$main$271                         main.enr.c
-          0215  A$main$272                         main.enr.c
-          0218  A$main$277                         main.enr.c
-          021A  A$main$278                         main.enr.c
-          021C  A$main$279                         main.enr.c
-          021D  A$main$280                         main.enr.c
-          0220  A$main$281                         main.enr.c
-          0222  A$main$286                         main.enr.c
-          0224  A$main$287                         main.enr.c
-          0227  A$main$292                         main.enr.c
-          022A  A$main$293                         main.enr.c
-          022D  A$main$295                         main.enr.c
-          022E  _main                              main.enr.c
-          022E  A$main$298                         main.enr.c
-          0230  A$main$299                         main.enr.c
-          0232  A$main$304                         main.enr.c
-          0235  A$main$309                         main.enr.c
-          0238  A$main$319                         main.enr.c
-          023B  A$main$324                         main.enr.c
-          023E  A$main$329                         main.enr.c
-          0240  A$main$330                         main.enr.c
-          0243  A$main$335                         main.enr.c
-          0246  A$main$340                         main.enr.c
-          0249  A$main$341                         main.enr.c
-          024B  A$main$342                         main.enr.c
-          024D  A$main$343                         main.enr.c
-          024F  A$main$344                         main.enr.c
-          0251  A$main$345                         main.enr.c
-          0253  A$main$346                         main.enr.c
-          0254  A$main$347                         main.enr.c
-          0256  A$main$348                         main.enr.c
-          0258  A$main$349                         main.enr.c
-          0259  A$main$350                         main.enr.c
-          025A  A$main$351                         main.enr.c
-          025D  A$main$352                         main.enr.c
-          025F  A$main$353                         main.enr.c
-          0261  A$main$354                         main.enr.c
-          026D  A$main$366                         main.enr.c
-          026F  A$main$367                         main.enr.c
-          0271  A$main$368                         main.enr.c
-          0274  A$main$369                         main.enr.c
-          0276  A$main$370                         main.enr.c
-          0279  A$main$371                         main.enr.c
-          027B  A$main$376                         main.enr.c
+          01F4  A$main$270                         main.enr.c
+          01F7  A$main$271                         main.enr.c
+          01F9  A$main$273                         main.enr.c
+          01FA  _RepairIdentityGame                main.enr.c
+          01FA  A$main$276                         main.enr.c
+          01FC  A$main$281                         main.enr.c
+          01FE  A$main$282                         main.enr.c
+          0201  A$main$287                         main.enr.c
+          0204  A$main$288                         main.enr.c
+          0206  A$main$289                         main.enr.c
+          0209  A$main$290                         main.enr.c
+          020B  A$main$291                         main.enr.c
+          020D  A$main$292                         main.enr.c
+          020F  A$main$293                         main.enr.c
+          0211  A$main$294                         main.enr.c
+          0213  A$main$295                         main.enr.c
+          0215  A$main$296                         main.enr.c
+          0217  A$main$297                         main.enr.c
+          0219  A$main$298                         main.enr.c
+          021C  A$main$299                         main.enr.c
+          021E  A$main$304                         main.enr.c
+          0220  A$main$305                         main.enr.c
+          0223  A$main$310                         main.enr.c
+          0226  A$main$311                         main.enr.c
+          0229  A$main$316                         main.enr.c
+          022C  A$main$317                         main.enr.c
+          022D  A$main$318                         main.enr.c
+          022F  A$main$323                         main.enr.c
+          0232  A$main$324                         main.enr.c
+          0234  A$main$325                         main.enr.c
+          0237  A$main$326                         main.enr.c
+          0239  A$main$328                         main.enr.c
+          023C  A$main$329                         main.enr.c
+          023D  A$main$330                         main.enr.c
+          023F  A$main$335                         main.enr.c
+          0242  A$main$336                         main.enr.c
+          0244  A$main$337                         main.enr.c
+          0247  A$main$343                         main.enr.c
+          024A  A$main$344                         main.enr.c
+          024B  A$main$345                         main.enr.c
+          024D  A$main$350                         main.enr.c
+          0250  A$main$351                         main.enr.c
+          0252  A$main$352                         main.enr.c
+          0255  A$main$353                         main.enr.c
+          0257  A$main$355                         main.enr.c
+          025A  A$main$356                         main.enr.c
+          025B  A$main$357                         main.enr.c
+          025D  A$main$362                         main.enr.c
+          0260  A$main$363                         main.enr.c
+          0262  A$main$364                         main.enr.c
 ASxxxx Linker V05.00,  page 8.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0058        0271 =         625. bytes (REL,CON,CSEG)
+.text                      0058        032E =         814. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          027E  A$main$382                         main.enr.c
-          0280  A$main$383                         main.enr.c
-          0282  A$main$384                         main.enr.c
-          0285  A$main$385                         main.enr.c
-          0287  A$main$386                         main.enr.c
-          028A  A$main$387                         main.enr.c
-          028C  A$main$392                         main.enr.c
-          028F  A$main$398                         main.enr.c
-          0292  A$main$403                         main.enr.c
-          0295  A$main$409                         main.enr.c
-          0297  A$main$410                         main.enr.c
-          0299  A$main$411                         main.enr.c
-          029C  A$main$412                         main.enr.c
-          029E  A$main$413                         main.enr.c
-          02A1  A$main$414                         main.enr.c
-          02A3  A$main$419                         main.enr.c
-          02A6  A$main$425                         main.enr.c
-          02A9  A$main$430                         main.enr.c
-          02AC  __Intensity_a                      vec_rum_14_05_Intensity_a.c
-          02B1  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
-          02C4  __Moveto_d                         vec_rum_13_07_Moveto_d.c
-
+          0265  A$main$370                         main.enr.c
+          0268  A$main$371                         main.enr.c
+          026A  A$main$372                         main.enr.c
+          026C  A$main$373                         main.enr.c
+          026E  A$main$374                         main.enr.c
+          0271  A$main$380                         main.enr.c
+          0274  A$main$381                         main.enr.c
+          0276  A$main$382                         main.enr.c
+          0278  A$main$383                         main.enr.c
+          027A  A$main$384                         main.enr.c
+          027D  A$main$390                         main.enr.c
+          0280  A$main$391                         main.enr.c
+          0282  A$main$392                         main.enr.c
+          0284  A$main$393                         main.enr.c
+          0286  A$main$394                         main.enr.c
+          0289  A$main$400                         main.enr.c
+          028C  A$main$401                         main.enr.c
+          028E  A$main$402                         main.enr.c
+          0290  A$main$403                         main.enr.c
+          0292  A$main$404                         main.enr.c
+          0295  A$main$410                         main.enr.c
+          0298  A$main$411                         main.enr.c
+          029A  A$main$412                         main.enr.c
+          029B  A$main$414                         main.enr.c
+          029E  A$main$415                         main.enr.c
+          029F  A$main$417                         main.enr.c
+          02A2  A$main$418                         main.enr.c
+          02B7  _main                              main.enr.c
+          02B7  A$main$425                         main.enr.c
+          02B9  A$main$426                         main.enr.c
+          02BB  A$main$431                         main.enr.c
+          02BE  A$main$436                         main.enr.c
+          02C1  A$main$441                         main.enr.c
+          02C4  A$main$446                         main.enr.c
+          02C7  A$main$451                         main.enr.c
+          02CA  A$main$461                         main.enr.c
+          02CD  A$main$466                         main.enr.c
+          02D0  A$main$471                         main.enr.c
+          02D3  A$main$476                         main.enr.c
+          02D5  A$main$477                         main.enr.c
+          02D8  A$main$482                         main.enr.c
+          02DB  A$main$483                         main.enr.c
+          02DD  A$main$484                         main.enr.c
+          02DF  A$main$485                         main.enr.c
+          02E1  A$main$486                         main.enr.c
+          02E3  A$main$487                         main.enr.c
+          02E5  A$main$488                         main.enr.c
+          02E6  A$main$489                         main.enr.c
+          02E8  A$main$490                         main.enr.c
+          02EA  A$main$491                         main.enr.c
 ASxxxx Linker V05.00,  page 9.
+Hexidecimal  [16-Bits]
+[ Bank == rom ]
+
+Area                       Addr        Size        Decimal Bytes (Attributes)
+--------------------       ----        ----        ------- ----- ------------
+.text                      0058        032E =         814. bytes (REL,CON,CSEG)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+          02EB  A$main$492                         main.enr.c
+          02EC  A$main$493                         main.enr.c
+          02EF  A$main$494                         main.enr.c
+          02F1  A$main$495                         main.enr.c
+          02F3  A$main$496                         main.enr.c
+          02FF  A$main$508                         main.enr.c
+          0301  A$main$509                         main.enr.c
+          0303  A$main$510                         main.enr.c
+          0306  A$main$511                         main.enr.c
+          0308  A$main$512                         main.enr.c
+          030B  A$main$513                         main.enr.c
+          030D  A$main$518                         main.enr.c
+          0310  A$main$524                         main.enr.c
+          0312  A$main$525                         main.enr.c
+          0314  A$main$526                         main.enr.c
+          0317  A$main$527                         main.enr.c
+          0319  A$main$528                         main.enr.c
+          031C  A$main$529                         main.enr.c
+          031E  A$main$534                         main.enr.c
+          0321  A$main$540                         main.enr.c
+          0324  A$main$541                         main.enr.c
+          0326  A$main$542                         main.enr.c
+          0327  A$main$543                         main.enr.c
+          0329  A$main$544                         main.enr.c
+          032C  A$main$545                         main.enr.c
+          032D  A$main$546                         main.enr.c
+          032F  A$main$551                         main.enr.c
+          0331  A$main$552                         main.enr.c
+          0334  A$main$553                         main.enr.c
+          0336  A$main$555                         main.enr.c
+          0339  A$main$556                         main.enr.c
+          033A  A$main$557                         main.enr.c
+          033C  A$main$562                         main.enr.c
+          033E  A$main$563                         main.enr.c
+          0340  A$main$564                         main.enr.c
+          0343  A$main$565                         main.enr.c
+          0345  A$main$566                         main.enr.c
+          0348  A$main$567                         main.enr.c
+          034A  A$main$568                         main.enr.c
+          034C  A$main$574                         main.enr.c
+          034F  A$main$580                         main.enr.c
+          0352  A$main$586                         main.enr.c
+          0354  A$main$587                         main.enr.c
+          0356  A$main$588                         main.enr.c
+          0359  A$main$589                         main.enr.c
+          035B  A$main$590                         main.enr.c
+          035E  A$main$591                         main.enr.c
+          0360  A$main$596                         main.enr.c
+          0363  A$main$602                         main.enr.c
+          0366  A$main$607                         main.enr.c
+ASxxxx Linker V05.00,  page 10.
+Hexidecimal  [16-Bits]
+[ Bank == rom ]
+
+Area                       Addr        Size        Decimal Bytes (Attributes)
+--------------------       ----        ----        ------- ----- ------------
+.text                      0058        032E =         814. bytes (REL,CON,CSEG)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+          0369  __Intensity_a                      vec_rum_14_05_Intensity_a.c
+          036E  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
+          0381  __Moveto_d                         vec_rum_13_07_Moveto_d.c
+ASxxxx Linker V05.00,  page 11.
 Hexidecimal  [16-Bits]
 [ Bank == ram ]
 
@@ -356,19 +457,21 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           C880  _exitText                          main.enr.c
 
-ASxxxx Linker V05.00,  page 10.
+ASxxxx Linker V05.00,  page 12.
 Hexidecimal  [16-Bits]
 [ Bank == ram ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.bss                       C881        0001 =           1. bytes (REL,CON,CSEG)
+.bss                       C881        0003 =           3. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          C881  _gameState                         main.enr.c
+          C881  _cursor_x                          main.enr.c
+          C882  _cursor_y                          main.enr.c
+          C883  _gameState                         main.enr.c
 
-ASxxxx Linker V05.00,  page 11.
+ASxxxx Linker V05.00,  page 13.
 Hexidecimal  [16-Bits]
 [ Bank == page_c8 ]
 
@@ -427,7 +530,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C837  _Vec_Run_Index                     vec_ram_0xc8_0.c
           C839  _Vec_Rise_Index                    vec_ram_0xc8_0.c
           C839  _Vec_XXX_00                        vec_ram_0xc8_1.c
-ASxxxx Linker V05.00,  page 12.
+ASxxxx Linker V05.00,  page 14.
 Hexidecimal  [16-Bits]
 [ Bank == page_c8 ]
 
@@ -487,7 +590,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C86D  _Vec_XXX_15                        vec_ram_0xc8_0.c
           C86E  _Vec_XXX_16                        vec_ram_0xc8_0.c
           C86F  _Vec_XXX_17                        vec_ram_0xc8_0.c
-ASxxxx Linker V05.00,  page 13.
+ASxxxx Linker V05.00,  page 15.
 Hexidecimal  [16-Bits]
 [ Bank == page_c8 ]
 
@@ -514,7 +617,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C87E  _Vec_Random_Seed1                  vec_ram_0xc8_0.c
           C87F  _Vec_Random_Seed2                  vec_ram_0xc8_0.c
 
-ASxxxx Linker V05.00,  page 14.
+ASxxxx Linker V05.00,  page 16.
 Hexidecimal  [16-Bits]
 [ Bank == page_cb ]
 
@@ -540,7 +643,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           CBFB  _Vec_NWI_Vector                    vec_ram_0xcb_2.c
           CBFB  _Vec_NWI_vector                    vec_ram_0xcb_3.c
           CBFE  _Vec_Cold_Flag                     vec_ram_0xcb_0.c
-ASxxxx Linker V05.00,  page 15.
+ASxxxx Linker V05.00,  page 17.
 Hexidecimal  [16-Bits]
 [ Bank == page_d0 ]
 
@@ -574,7 +677,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           D00E  _VIA_int_enable                    vec_ram_0xd0_0.c
           D00F  _VIA_port_a_nohs                   vec_ram_0xd0_0.c
 
-ASxxxx Linker V05.00,  page 16.
+ASxxxx Linker V05.00,  page 18.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -633,7 +736,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           001F  _dp_Vec_Joy_Mux                    vec_ram_dpc8_2.c
           0020  _dp_Vec_Joy_Mux_1_Y                vec_ram_dpc8_1.c
           0021  _dp_Vec_Joy_Mux_2_X                vec_ram_dpc8_1.c
-ASxxxx Linker V05.00,  page 17.
+ASxxxx Linker V05.00,  page 19.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -693,7 +796,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           004C  _dp_Vec_XXX_08                     vec_ram_dpc8_0.c
           004D  _dp_Vec_Freq_Table                 vec_ram_dpc8_0.c
           004F  _dp_Vec_ADSR_Table                 vec_ram_dpc8_0.c
-ASxxxx Linker V05.00,  page 18.
+ASxxxx Linker V05.00,  page 20.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -753,7 +856,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           007A  _dp_Vec_Num_Game                   vec_ram_dpc8_0.c
           007A  _dp_Vec_Music_c                    vec_rom_dpff_0.c
           007B  _dp_Vec_Seed_Ptr                   vec_ram_dpc8_0.c
-ASxxxx Linker V05.00,  page 19.
+ASxxxx Linker V05.00,  page 21.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -797,7 +900,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           00FB  _dp_Vec_NWI_vector                 vec_ram_dpcb_3.c
           00FE  _dp_Vec_Cold_Flag                  vec_ram_dpcb_0.c
 
-ASxxxx Linker V05.00,  page 20.
+ASxxxx Linker V05.00,  page 22.
 Hexidecimal  [16-Bits]
 [ Bank == page_ed ]
 
@@ -810,7 +913,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           ED77  _Vec_Music_0                       vec_rom_0xed_0.c
           ED8F  _Vec_ADSR_FADE66                   vec_rom_0xed_0.c
 
-ASxxxx Linker V05.00,  page 21.
+ASxxxx Linker V05.00,  page 23.
 Hexidecimal  [16-Bits]
 [ Bank == page_fc ]
 
@@ -824,7 +927,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FC7D  _Vec_Cosine_Table                  vec_rom_0xfc_0.c
           FC8D  _Vec_Note_Table                    vec_rom_0xfc_0.c
 
-ASxxxx Linker V05.00,  page 22.
+ASxxxx Linker V05.00,  page 24.
 Hexidecimal  [16-Bits]
 [ Bank == page_fd ]
 
@@ -842,7 +945,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FDC3  _Vec_ADSR_FADE12                   vec_rom_0xfd_0.c
           FDD3  _Vec_Music_4                       vec_rom_0xfd_0.c
 
-ASxxxx Linker V05.00,  page 23.
+ASxxxx Linker V05.00,  page 25.
 Hexidecimal  [16-Bits]
 [ Bank == page_fe ]
 
@@ -863,7 +966,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FEE8  _Vec_ADSR_FADE4                    vec_rom_0xfe_0.c
           FEF8  _Vec_Music_8                       vec_rom_0xfe_0.c
 
-ASxxxx Linker V05.00,  page 24.
+ASxxxx Linker V05.00,  page 26.
 Hexidecimal  [16-Bits]
 [ Bank == page_ff ]
 
@@ -880,7 +983,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FF7A  _Vec_Music_c                       vec_rom_0xff_0.c
           FF8F  _Vec_Music_d                       vec_rom_0xff_0.c
 
-ASxxxx Linker V05.00,  page 25.
+ASxxxx Linker V05.00,  page 27.
 Hexidecimal  [16-Bits]
 [ Bank == page_e7 ]
 
@@ -893,7 +996,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           E7B5  ___Displ8_xy                       vec_rum_0xe7.c
           E7D2  ___Displ16_xy                      vec_rum_0xe7.c
 
-ASxxxx Linker V05.00,  page 26.
+ASxxxx Linker V05.00,  page 28.
 Hexidecimal  [16-Bits]
 [ Bank == page_e9 ]
 
@@ -905,7 +1008,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           E98A  ___Ranpos                          vec_rum_0xe9.c
 
-ASxxxx Linker V05.00,  page 27.
+ASxxxx Linker V05.00,  page 29.
 Hexidecimal  [16-Bits]
 [ Bank == page_ea ]
 
@@ -925,7 +1028,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           EACF  ___Draw_Scores                     vec_rum_0xea.c
           EAF0  ___Wait_Bound                      vec_rum_0xea.c
 
-ASxxxx Linker V05.00,  page 28.
+ASxxxx Linker V05.00,  page 30.
 Hexidecimal  [16-Bits]
 [ Bank == page_f0 ]
 
@@ -937,7 +1040,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           F000  ___Reset                           vec_rum_0xf0.c
 
-ASxxxx Linker V05.00,  page 29.
+ASxxxx Linker V05.00,  page 31.
 Hexidecimal  [16-Bits]
 [ Bank == page_f1 ]
 
@@ -958,7 +1061,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F1F5  ___Joy_Analog                      vec_rum_0xf1.c
           F1F8  ___Joy_Digital                     vec_rum_0xf1.c
 
-ASxxxx Linker V05.00,  page 30.
+ASxxxx Linker V05.00,  page 32.
 Hexidecimal  [16-Bits]
 [ Bank == page_f2 ]
 
@@ -990,7 +1093,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F2F2  ___Moveto_x_7F                     vec_rum_0xf2.c
           F2FC  ___Moveto_d_7F                     vec_rum_0xf2.c
 
-ASxxxx Linker V05.00,  page 31.
+ASxxxx Linker V05.00,  page 33.
 Hexidecimal  [16-Bits]
 [ Bank == page_f3 ]
 
@@ -1032,7 +1135,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F3DA  ___Draw_VL_a                       vec_rum_0xf3.c
           F3DD  ___Draw_VL                         vec_rum_0xf3.c
           F3DF  ___Draw_Line_d                     vec_rum_0xf3.c
-ASxxxx Linker V05.00,  page 32.
+ASxxxx Linker V05.00,  page 34.
 Hexidecimal  [16-Bits]
 [ Bank == page_f4 ]
 
@@ -1054,7 +1157,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F46E  ___Draw_VL_mode                    vec_rum_0xf4.c
           F495  ___Print_Str                       vec_rum_0xf4.c
           F498  ___Print_MRast                     vec_rum_0xf4.c
-ASxxxx Linker V05.00,  page 33.
+ASxxxx Linker V05.00,  page 35.
 Hexidecimal  [16-Bits]
 [ Bank == page_f5 ]
 
@@ -1091,7 +1194,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F5EF  ___Get_Rise_Run                    vec_rum_0xf5.c
           F5FF  ___Rise_Run_X                      vec_rum_0xf5.c
 
-ASxxxx Linker V05.00,  page 34.
+ASxxxx Linker V05.00,  page 36.
 Hexidecimal  [16-Bits]
 [ Bank == page_f6 ]
 
@@ -1120,7 +1223,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F690  ___Init_Music_a                    vec_rum_0xf6.c
           F692  ___Init_Music_x                    vec_rum_0xf6.c
 
-ASxxxx Linker V05.00,  page 35.
+ASxxxx Linker V05.00,  page 37.
 Hexidecimal  [16-Bits]
 [ Bank == page_f7 ]
 
@@ -1133,7 +1236,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F742  ___Stop_Sound                      vec_rum_0xf7.c
           F7A9  ___Select_Game                     vec_rum_0xf7.c
 
-ASxxxx Linker V05.00,  page 36.
+ASxxxx Linker V05.00,  page 38.
 Hexidecimal  [16-Bits]
 [ Bank == page_f8 ]
 
@@ -1154,7 +1257,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F8F3  ___Obj_Will_Hit                    vec_rum_0xf8.c
           F8FF  ___Obj_Hit                         vec_rum_0xf8.c
 
-ASxxxx Linker V05.00,  page 37.
+ASxxxx Linker V05.00,  page 39.
 Hexidecimal  [16-Bits]
 [ Bank == page_f9 ]
 
@@ -1167,7 +1270,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F92E  ___Explosion_Snd                   vec_rum_0xf9.c
           F9CA  ___Set_Amp                         vec_rum_0xf9.c
 
-ASxxxx Linker V05.00,  page 38.
+ASxxxx Linker V05.00,  page 40.
 Hexidecimal  [16-Bits]
 [ Bank == page_ffx ]
 
@@ -1179,7 +1282,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           FF9F  ___Draw_Grid_VL                    vec_rum_0xff.c
 
-ASxxxx Linker V05.00,  page 39.
+ASxxxx Linker V05.00,  page 41.
 
 Files Linked                              [ module(s) ]
 
