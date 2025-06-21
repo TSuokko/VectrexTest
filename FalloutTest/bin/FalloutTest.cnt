@@ -1,5 +1,5 @@
-HIGHEST_USED_RAM $C881
-COMMENT $C881 not used RAM onword...
+HIGHEST_USED_RAM $C882
+COMMENT $C882 not used RAM onword...
 LABEL $0000 _game_header
 LABEL $001D _crt0_init_data
 LABEL $0035 _crt0_copy_data
@@ -18,73 +18,90 @@ LABEL $00E8 LC6
 LABEL $00F8 LC7
 LABEL $0107 LC8
 LABEL $0118 _mainMenu
-LABEL $019A L2
-LABEL $01B8 L4
-LABEL $01D5 L5
-LABEL $01F0 L3
-LABEL $020F L12
-LABEL $0219 L8
-LABEL $022A L9
-LABEL $023A L10
-LABEL $024A L11
-LABEL $025A L13:L7
-LABEL $025E _main
-LABEL $0261 L15
-LABEL $C880 _gameState
-COMMENT $0164 VIA_t1_cnt_lo
-COMMENT $0173 VIA_t1_cnt_lo
-COMMENT $017C Vec_Buttons.1, Vec_Buttons
+LABEL $017C L2
+LABEL $019A L4
+LABEL $01B7 L5
+LABEL $01D2 L6
+LABEL $01D3 LC9
+LABEL $01E7 _RepairIdentityGame
+LABEL $01FD L8
+LABEL $0213 L10
+LABEL $022D L11
+LABEL $022E _main
+LABEL $0238 L20
+LABEL $0263 L19
+LABEL $026D L15
+LABEL $027E L16
+LABEL $028F L17
+LABEL $0295 L18
+LABEL $02A6 L14
+LABEL $C880 _exitText
+LABEL $C881 _gameState
+COMMENT $015E Vec_Buttons.1, Vec_Buttons
+COMMENT $0168 gameState
+COMMENT $017C Vec_Buttons.3, Vec_Buttons
 COMMENT $0186 gameState
-COMMENT $019A Vec_Buttons.3, Vec_Buttons
+COMMENT $019A Vec_Buttons.4, Vec_Buttons
 COMMENT $01A4 gameState
-COMMENT $01B8 Vec_Buttons.4, Vec_Buttons
-COMMENT $01C2 gameState
-COMMENT $01D5 Vec_Buttons.5, Vec_Buttons
-COMMENT $01DF gameState
-COMMENT $01F0 gameState
-COMMENT $01F3 gameState.6
-COMMENT $01F5 gameState.6
-COMMENT $01FD gameState.6
-COMMENT $01FF zero_extendqihi: R:b -> R:d
-COMMENT $0202 tmp39
-COMMENT $0209 tmp40, tmp39
-COMMENT $020B tmp41
-COMMENT $020D tmp41
-COMMENT $025E gameState
-C_INFO_BLOCK $011C "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 58 "print_str_d(120, -90, ); " BKPOINT=0
-C_INFO_BLOCK $012A "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 59 "print_str_d(70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0138 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 60 "print_str_d(40, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0146 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 61 "print_str_d(10, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0154 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 62 "print_str_d(-20, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0162 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 64 "via_t1_cnt_lo = 0x40; " BKPOINT=0
-C_INFO_BLOCK $0167 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 65 "moveto_d(40, 0); " BKPOINT=0
-C_INFO_BLOCK $0171 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 66 "via_t1_cnt_lo = 0x80; " BKPOINT=0
-C_INFO_BLOCK $0176 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 67 "draw_vlc((void*) mousepointer); " BKPOINT=0
-C_INFO_BLOCK $017C "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 72 "if (vec_buttons & 1) { " BKPOINT=0
-C_INFO_BLOCK $0184 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 73 "gamestate = game_datatransfer; " BKPOINT=0
-C_INFO_BLOCK $0189 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 74 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $01A2 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 77 "gamestate = game_reconstructbin; " BKPOINT=0
-C_INFO_BLOCK $01A7 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 78 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $01C0 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 81 "gamestate = game_repairidentity; " BKPOINT=0
-C_INFO_BLOCK $01C5 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 82 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $01DD "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 85 "gamestate = game_compileint; " BKPOINT=0
-C_INFO_BLOCK $01E2 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 86 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $01F0 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 89 "switch(gamestate) " BKPOINT=0
-C_INFO_BLOCK $0219 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 92 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0227 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 93 "break; " BKPOINT=0
-C_INFO_BLOCK $022A "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 95 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0238 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 96 "break; " BKPOINT=0
-C_INFO_BLOCK $023A "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 98 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0248 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 99 "break; " BKPOINT=0
-C_INFO_BLOCK $024A "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 101 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0258 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 102 "break; " BKPOINT=0
-C_INFO_BLOCK $025A "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 104 "break; " BKPOINT=0
-C_INFO_BLOCK $025E "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 112 "gamestate = mainmenu; " BKPOINT=0
-C_INFO_BLOCK $0261 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 113 "while(1)wait_recal(); " BKPOINT=0
-C_INFO_BLOCK $0264 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 118 "frwait(); " BKPOINT=0
-C_INFO_BLOCK $0267 "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 119 "intensity_a(0x5f); " BKPOINT=0
-C_INFO_BLOCK $026C "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 120 "read_btns(); " BKPOINT=0
-C_INFO_BLOCK $026F "C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\main.c "FN_END 126 "mainmenu(); " BKPOINT=0
+COMMENT $01B7 Vec_Buttons.5, Vec_Buttons
+COMMENT $01C1 gameState
+COMMENT $01E7 Vec_Buttons.6, Vec_Buttons
+COMMENT $01EF exitText.7, exitText
+COMMENT $01F2 exitText.7
+COMMENT $01F7 exitText
+COMMENT $01FD exitText.8, exitText
+COMMENT $0200 exitText.8
+COMMENT $0215 VIA_t1_cnt_lo
+COMMENT $0224 VIA_t1_cnt_lo
+COMMENT $0232 gameState
+COMMENT $0235 exitText
+COMMENT $0246 gameState
+COMMENT $0249 gameState.9
+COMMENT $024B gameState.9
+COMMENT $0251 gameState.9
+COMMENT $0253 zero_extendqihi: R:b -> R:d
+COMMENT $0256 tmp31
+COMMENT $025D tmp32, tmp31
+COMMENT $025F tmp33
+COMMENT $0261 tmp33
+C_INFO_BLOCK $0118 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 58 "print_str_d(120, -90, ); " BKPOINT=0
+C_INFO_BLOCK $0126 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 59 "print_str_d(70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0134 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 60 "print_str_d(40, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0142 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 61 "print_str_d(10, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0150 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 62 "print_str_d(-20, -120, ); " BKPOINT=0
+C_INFO_BLOCK $015E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 64 "if (vec_buttons & 1) { " BKPOINT=0
+C_INFO_BLOCK $0166 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 65 "gamestate = game_datatransfer; " BKPOINT=0
+C_INFO_BLOCK $016B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 66 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0184 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 69 "gamestate = game_reconstructbin; " BKPOINT=0
+C_INFO_BLOCK $0189 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 70 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $01A2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 73 "gamestate = game_repairidentity; " BKPOINT=0
+C_INFO_BLOCK $01A7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 74 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $01BF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 77 "gamestate = game_compileint; " BKPOINT=0
+C_INFO_BLOCK $01C4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 78 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $01E7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 86 "if (vec_buttons & 4 && !exittext){ " BKPOINT=0
+C_INFO_BLOCK $01F5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 87 "exittext = true; " BKPOINT=0
+C_INFO_BLOCK $0203 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 91 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0213 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 95 "via_t1_cnt_lo = 0x40; " BKPOINT=0
+C_INFO_BLOCK $0218 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 96 "moveto_d(40, 0); " BKPOINT=0
+C_INFO_BLOCK $0222 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 97 "via_t1_cnt_lo = 0x80; " BKPOINT=0
+C_INFO_BLOCK $0227 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 98 "draw_vlc((void*) mousepointer); " BKPOINT=0
+C_INFO_BLOCK $0232 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 105 "gamestate = mainmenu; " BKPOINT=0
+C_INFO_BLOCK $0235 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 106 "exittext = false; " BKPOINT=0
+C_INFO_BLOCK $0238 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 107 "while(1)wait_recal(); " BKPOINT=0
+C_INFO_BLOCK $023B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 112 "frwait(); " BKPOINT=0
+C_INFO_BLOCK $023E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 113 "intensity_a(0x5f); " BKPOINT=0
+C_INFO_BLOCK $0243 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 114 "read_btns(); " BKPOINT=0
+C_INFO_BLOCK $0246 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 116 "switch(gamestate) " BKPOINT=0
+C_INFO_BLOCK $026D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 119 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $027B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 120 "break; " BKPOINT=0
+C_INFO_BLOCK $027E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 122 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $028C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 123 "break; " BKPOINT=0
+C_INFO_BLOCK $028F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 125 "repairidentitygame(); " BKPOINT=0
+C_INFO_BLOCK $0292 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 126 "break; " BKPOINT=0
+C_INFO_BLOCK $0295 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 129 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $02A3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 130 "break; " BKPOINT=0
+C_INFO_BLOCK $02A6 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 132 "mainmenu(); " BKPOINT=0
+C_INFO_BLOCK $02A9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 133 "break; " BKPOINT=0
 RANGE $0000-$0001 DB_DATA 8
 RANGE $0008-$0009 DB_DATA 8
 RANGE $000B-$000D DW_DATA 4
@@ -116,7 +133,11 @@ RANGE $0100-$0101 DB_DATA 8
 RANGE $0107-$0108 DB_DATA 8
 RANGE $010F-$0110 DB_DATA 8
 RANGE $0117-$0118 DB_DATA 8
-RANGE $0118-$020F CODE
-RANGE $020F-$0219 DW_DATA 4
-RANGE $0219-$0274 CODE
+RANGE $0118-$01D3 CODE
+RANGE $01D3-$01D4 DB_DATA 8
+RANGE $01DB-$01DC DB_DATA 8
+RANGE $01E3-$01E4 DB_DATA 8
+RANGE $01E7-$0263 CODE
+RANGE $0263-$026D DW_DATA 4
+RANGE $026D-$02AC CODE
 

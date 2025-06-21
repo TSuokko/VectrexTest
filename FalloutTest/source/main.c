@@ -14,7 +14,9 @@
 // ---------------------------------------------------------------------------
 
 #include <vectrex.h>
-#include <assert.h>			
+#include <assert.h>	
+#include "stdbool.h"
+
 // As default assertions are enabled.
 // to disable do a
 // "#define NDEBUG"
@@ -31,6 +33,7 @@ const signed char MousePointer[]=
 	+0x04, +0x00, // draw to y, x
 };
 
+bool exitText = false;
 
 // ---------------------------------------------------------------------------
 // cold reset: the vectrex logo is shown, all ram data is cleared
@@ -52,23 +55,12 @@ enum GameState_t {
 
 void mainMenu()
 {
-	//Vec_Text_Width = 90;
-    
-
-	
+	//Vec_Text_Width = 90;	
     Print_Str_d(120, -90, "ROBOT REPAIR V0.1\x80");
     Print_Str_d(70, -120, "1 DATA TRANSFER UPLOAD\x80");
 	Print_Str_d(40, -120, "2 RECONSTRUCT BINARY\x80");
     Print_Str_d(10, -120, "3 REPAIR IDENTITY CORE\x80");
 	Print_Str_d(-20, -120, "4 COMPILE INTELLIGENCE\x80");
-
-    VIA_t1_cnt_lo = 0x40;
-    Moveto_d(40, 0);
-    VIA_t1_cnt_lo = 0x80;
-    Draw_VLc((void*) MousePointer);
-
-   
-
 
 	if (Vec_Buttons & 1) {
      	gameState = Game_DataTransfer;
@@ -87,30 +79,32 @@ void mainMenu()
 		Print_Str_d(-70, -120, "FINAL ROUTINE 4\x80");
 	}
 
-	switch(gameState)
-	{
-		case Game_DataTransfer:
-			Print_Str_d(-70, -120, "STARTING ROUTINE 1\x80");
-			break;
-		case Game_ReconstructBin:
-			Print_Str_d(-70, -120, "THEN ROUTINE 2\x80");
-			break;
-		case Game_RepairIdentity:
-	        Print_Str_d(-70, -120, "NOW ROUTINE 3\x80");
-			break;
-		case Game_CompileInt:
-			Print_Str_d(-70, -120, "FINAL ROUTINE 4\x80");
-			break;
-         case MainMenu:
-              break;
-	}
-
-
 }
+
+void RepairIdentityGame()
+{
+	
+	if (Vec_Buttons & 4 && !exitText){
+		exitText = true;
+	}
+	else if(!exitText)
+	{
+		Print_Str_d(-70, -120, "STARTING ROUTINE 3\x80");
+	}
+	else
+	{
+		VIA_t1_cnt_lo = 0x40;
+		Moveto_d(40, 0);
+		VIA_t1_cnt_lo = 0x80;
+		Draw_VLc((void*) MousePointer);
+	}
+}
+
 
 int main(void)
 {
     gameState = MainMenu;
+	exitText = false;
 	while(1)
 	{
 		Wait_Recal();
@@ -120,11 +114,28 @@ int main(void)
 		Intensity_a(0x5f);
 		Read_Btns();
 
-         
+         switch(gameState)
+		{
+			case Game_DataTransfer:
+				Print_Str_d(-70, -120, "STARTING ROUTINE 1\x80");
+				break;
+			case Game_ReconstructBin:
+				Print_Str_d(-70, -120, "THEN ROUTINE 2\x80");
+				break;
+			case Game_RepairIdentity:{
+				RepairIdentityGame();
+				break;
+			}
+			case Game_CompileInt:
+				Print_Str_d(-70, -120, "FINAL ROUTINE 4\x80");
+				break;
+			case MainMenu:
+				mainMenu();
+				break;
+		}
             
 		//switch (gameState) {
 		//	case MainMenu:
-				mainMenu();
 		//		break;
 		//	}
 
