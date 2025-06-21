@@ -1,0 +1,23 @@
+HIGHEST_USED_RAM $0000
+COMMENT $0000 not used RAM onword...
+LABEL $0000 _game_header
+LABEL $001D _crt0_init_data
+LABEL $0035 _crt0_copy_data
+LABEL $003D _crt0_init_bss
+LABEL $0046 _crt0_zero_bss
+LABEL $004C _crt0_startup
+LABEL $0055 _crt0_restart
+LABEL $0058 LC0
+LABEL $0065 _main:L2
+C_INFO_BLOCK $0065 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 35 "while(1)wait_recal(); " BKPOINT=0
+C_INFO_BLOCK $0068 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 38 "print_str_d(0, -70, ); " BKPOINT=0
+RANGE $0000-$0001 DB_DATA 8
+RANGE $0008-$0009 DB_DATA 8
+RANGE $000B-$000D DW_DATA 4
+RANGE $000D-$0012 DB_DATA 8
+RANGE $0019-$001A DB_DATA 8
+RANGE $001D-$0058 CODE
+RANGE $0058-$0059 DB_DATA 8
+RANGE $0060-$0061 DB_DATA 8
+RANGE $0065-$0076 CODE
+

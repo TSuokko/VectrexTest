@@ -1,0 +1,33 @@
+;!FILE C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\build\lib\main.s
+XH2
+H 3 areas B global symbols 2 banks 1 modes
+M main.enr.c
+G 00 00 80 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F
+B _CSEG base 0 size 0 map 0 flags 0
+B _DSEG base 0 size 0 map 0 flags 4 fsfx _DS
+S .__.ABS. Def0000
+S __Print_Str_d Ref0000
+S ___Wait_Recal Ref0000
+A _CODE size 0 flags CC80 bank 0
+A _DATA size 0 flags CCC0 bank 1
+A .text size 1E flags D00
+S _main Def000D
+S A$main$50 Def0010
+S A$main$51 Def0012
+S A$main$52 Def0015
+S A$main$53 Def0017
+S A$main$54 Def001A
+S A$main$45 Def000D
+S A$main$55 Def001C
+T 00 00
+R 00 00 00 02
+T 00 00 48 45 4C 4C 4F 20 57 4F 52 4C 44 80 00
+R 00 00 00 02
+T 00 0D
+R 00 00 00 02
+T 00 0D
+R 00 00 00 02
+T 00 0D BD 00 00 6F E2 8E 00 00 C6 BA BD
+R 00 00 00 02 81 03 00 02 01 08 00 02
+T 00 18 00 00 32 61 20 EF
+R 00 00 00 02 81 02 00 01
