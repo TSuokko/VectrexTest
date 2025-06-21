@@ -40,83 +40,84 @@ LABEL $02A1 _joystick_1_y
 LABEL $02A5 _joystick_1_x
 LABEL $02A9 LC9
 LABEL $02BD _main
-LABEL $02D0 L42
+LABEL $02D0 L44
 LABEL $02FB L38
 LABEL $0305 L34
 LABEL $0316 L35
 LABEL $0327 L36
-LABEL $033C L39
-LABEL $0352 L41
-LABEL $0355 L40
-LABEL $0358 L37
-LABEL $0369 L33
-LABEL $036F _reg_max_data
-LABEL $037F rleEncodedData
-LABEL $0380 moreBits
-LABEL $0391 bit_is_ready1
-LABEL $03AC bit_is_ready2
-LABEL $03B3 rleCounterBit0NotSet
-LABEL $03C4 bit_is_ready3
-LABEL $03CB rleCounterBit1NotSet
-LABEL $03DC bit_is_ready4
-LABEL $03E3 rleCounterBit2NotSet
-LABEL $03FA bit_is_ready5
-LABEL $0401 rleCounterBit3NotSet
-LABEL $0418 bit_is_ready6
-LABEL $041F rleCounterBit4NotSet
-LABEL $0434 bit_is_ready7
-LABEL $043B rleCounterBit5NotSet
-LABEL $0450 bit_is_ready8
-LABEL $0457 rleCounterBit6NotSet
-LABEL $046C bit_is_ready9
-LABEL $0473 rleCounterBit7NotSet
-LABEL $0479 read16bitContinue
-LABEL $0481 no_carry
-LABEL $0493 bit_is_ready10
-LABEL $049B rleCounterBitXNotSet
-LABEL $049F rle16bitdone
-LABEL $04A1 rle8bitdone
-LABEL $04A5 do_ym_sound
-LABEL $04B9 getCurrentRegByte:next_reg
-LABEL $04C5 inPhraseOut
-LABEL $04D3 not_in_phrase
-LABEL $04D8 done:currentPharseNotEnded
-LABEL $04E4 no13
-LABEL $04FA doNotWriteReg13
-LABEL $0502 ymsodone
-LABEL $0503 noValidByte
-LABEL $0513 bit_is_ready12
-LABEL $051D dechifer
-LABEL $052D bit_is_ready13
-LABEL $0541 getNextCodeBit
-LABEL $0555 bit_is_ready14
-LABEL $055E testNextPhrase:code_bit_notset
-LABEL $0564 increaseCodeBits
-LABEL $056C bitLenFound
-LABEL $0585 directByte
-LABEL $05A8 reg8Bits
-LABEL $05B8 bit_is_ready15
-LABEL $05BF noBit1
-LABEL $05D0 bit_is_ready16
-LABEL $05D7 noBit2
-LABEL $05D8 reg6Bits
-LABEL $05E8 bit_is_ready17
-LABEL $05EF noBit3
-LABEL $05F0 reg5Bits
-LABEL $0600 bit_is_ready18
-LABEL $0607 noBit4
-LABEL $0608 reg4Bits
-LABEL $0618 bit_is_ready19
-LABEL $061F noBit5
-LABEL $0630 bit_is_ready20
-LABEL $0637 noBit6
-LABEL $0648 bit_is_ready21
-LABEL $064F noBit7
-LABEL $0660 bit_is_ready22
-LABEL $0667 noBit8
-LABEL $066C init_ym_sound
-LABEL $0685 nreg_init
-LABEL $06A3 regInitDone
+LABEL $033D L39
+LABEL $0369 L42
+LABEL $0371 L41
+LABEL $0374 L40
+LABEL $0377 L37
+LABEL $0388 L33
+LABEL $038E _reg_max_data
+LABEL $039E rleEncodedData
+LABEL $039F moreBits
+LABEL $03B0 bit_is_ready1
+LABEL $03CB bit_is_ready2
+LABEL $03D2 rleCounterBit0NotSet
+LABEL $03E3 bit_is_ready3
+LABEL $03EA rleCounterBit1NotSet
+LABEL $03FB bit_is_ready4
+LABEL $0402 rleCounterBit2NotSet
+LABEL $0419 bit_is_ready5
+LABEL $0420 rleCounterBit3NotSet
+LABEL $0437 bit_is_ready6
+LABEL $043E rleCounterBit4NotSet
+LABEL $0453 bit_is_ready7
+LABEL $045A rleCounterBit5NotSet
+LABEL $046F bit_is_ready8
+LABEL $0476 rleCounterBit6NotSet
+LABEL $048B bit_is_ready9
+LABEL $0492 rleCounterBit7NotSet
+LABEL $0498 read16bitContinue
+LABEL $04A0 no_carry
+LABEL $04B2 bit_is_ready10
+LABEL $04BA rleCounterBitXNotSet
+LABEL $04BE rle16bitdone
+LABEL $04C0 rle8bitdone
+LABEL $04C4 do_ym_sound
+LABEL $04D8 getCurrentRegByte:next_reg
+LABEL $04E4 inPhraseOut
+LABEL $04F2 not_in_phrase
+LABEL $04F7 done:currentPharseNotEnded
+LABEL $0503 no13
+LABEL $0519 doNotWriteReg13
+LABEL $0521 ymsodone
+LABEL $0522 noValidByte
+LABEL $0532 bit_is_ready12
+LABEL $053C dechifer
+LABEL $054C bit_is_ready13
+LABEL $0560 getNextCodeBit
+LABEL $0574 bit_is_ready14
+LABEL $057D testNextPhrase:code_bit_notset
+LABEL $0583 increaseCodeBits
+LABEL $058B bitLenFound
+LABEL $05A4 directByte
+LABEL $05C7 reg8Bits
+LABEL $05D7 bit_is_ready15
+LABEL $05DE noBit1
+LABEL $05EF bit_is_ready16
+LABEL $05F6 noBit2
+LABEL $05F7 reg6Bits
+LABEL $0607 bit_is_ready17
+LABEL $060E noBit3
+LABEL $060F reg5Bits
+LABEL $061F bit_is_ready18
+LABEL $0626 noBit4
+LABEL $0627 reg4Bits
+LABEL $0637 bit_is_ready19
+LABEL $063E noBit5
+LABEL $064F bit_is_ready20
+LABEL $0656 noBit6
+LABEL $0667 bit_is_ready21
+LABEL $066E noBit7
+LABEL $067F bit_is_ready22
+LABEL $0686 noBit8
+LABEL $068B init_ym_sound
+LABEL $06A4 nreg_init
+LABEL $06C2 regInitDone
 LABEL $C880 _exitText
 LABEL $C881 _cursor_x
 LABEL $C882 _cursor_y
@@ -192,104 +193,109 @@ COMMENT $02E1 gameState.20
 COMMENT $02E3 gameState.20
 COMMENT $02E9 gameState.20
 COMMENT $02EB zero_extendqihi: R:b -> R:d
-COMMENT $02EE tmp35
-COMMENT $02F5 tmp36, tmp35
-COMMENT $02F7 tmp37
-COMMENT $02F9 tmp37
+COMMENT $02EE tmp43
+COMMENT $02F5 tmp44, tmp43
+COMMENT $02F7 tmp45
+COMMENT $02F9 tmp45
 COMMENT $0327 Vec_Buttons.21, Vec_Buttons
 COMMENT $032F exitText.22, exitText
 COMMENT $0332 exitText.22
 COMMENT $0337 exitText
-COMMENT $033C exitText.23, exitText
-COMMENT $033F exitText.23
-COMMENT $0399 in y now our count of bits
-COMMENT $0477 assuming high byte is zero of counter
-COMMENT $047B LSL A
-COMMENT $047C LSL B
-COMMENT $047D if no carry, than exit
-COMMENT $047F otherwise overflow from B to 0bit of A
-COMMENT $04A1 assuming high byte is zero of counter
-COMMENT $04A5 load current VBL Counter
-COMMENT $04A8 if 0, than we are done
-COMMENT $04AA otherwise remember we are doing one byte now
-COMMENT $04AD and store it
-COMMENT $04B0 get the number of regs we are working on
-COMMENT $04B3 and remember them as current counter
-COMMENT $04B6 load RAM start address of our wokring structure
-COMMENT $04B9 if current RLE counter is zero, than we must get a new byte
-COMMENT $04BB jump to get new byte
-COMMENT $04BD otherwise, lets check if we are in a phrase (x = pointer to phrase or zero)
-COMMENT $04BF jump if not
-COMMENT $04C1 where in our phrase are we?
-COMMENT $04C3 length of phrase
-COMMENT $04C5 load the next byte of our phrase
-COMMENT $04C7 store that to current output
-COMMENT $04C9 check if we are at the end of the phrase
-COMMENT $04CB (in a is phrase len)
-COMMENT $04CD if phrase is not at end - continue
-COMMENT $04CF other wise we set place to zero
-COMMENT $04D1 and decrease out RLE counter
-COMMENT $04DA load current register
-COMMENT $04E2 if b part of phrase than 0xff, if single byte than 0x1f, indicator for envelope not changed
-COMMENT $04E4 store register select byte
-COMMENT $04E6 sound BDIR on, BC1 on, mux off _ LATCH
-COMMENT $04EA sound BDIR off, BC1 off, mux off - INACTIVE
-COMMENT $04EE read sound chip status (?)
-COMMENT $04F0 store data byte
-COMMENT $04F2 sound BDIR on, BC1 off, mux off - WRITE
-COMMENT $04F6 sound BDIR off, BC1 off, mux off - INACTIVE
-COMMENT $04FA go to next "register" of sound data
-COMMENT $04FD but only if we are not done yet, if counter is zero
-COMMENT $0500 we do not branch :-)
-COMMENT $0531 if bit is zero - jump
-COMMENT $0533 save stackpointer
-COMMENT $0537 load the starting position of the phrase mappings for this register
-COMMENT $053A and also the phrase definition address
-COMMENT $053D was _calc_bits, a contains the number of bits our current shannon code checkings
-COMMENT $053E starting with zero for coder also
-COMMENT $0541 prepare load of next coder bit - shift all previous codes one position
-COMMENT $0544 increase used bits
-COMMENT $0559 if bit is zero - jump
-COMMENT $055B otherwise set bit in current code
-COMMENT $055E check if it count of currently referenced phrase equals the current shannon bitcount
-COMMENT $0560 if lower, load next bit (and increase shannon bits)
-COMMENT $0562 if equal, than we must check if codes equal
-COMMENT $0564 load length of last phase and
-COMMENT $0566 add that to our future pointer to phrases
-COMMENT $0568 advance one phrase in out mapping (one mapping = 3 byte)
-COMMENT $056A and test the next such got phrase
-COMMENT $056C load coder-byte, from current phrase
-COMMENT $056E and compare with current loaded coder-byte from "bitstream"
-COMMENT $0571 if not the same, check next phrase in phrase mapping (jump)
-COMMENT $0573 otherwise we found the correct phrase, load length of current phrase
-COMMENT $0575 and remember that
-COMMENT $0577 restore stack
-COMMENT $057B pointer to current found phrase to X (will be resused in out)
-COMMENT $057D current position in phrase is at start 0
-COMMENT $057E store the phrase to the structure
-COMMENT $0580 also the position
-COMMENT $0582 and output the next phrase byte
-COMMENT $0596 number of relevant bits for reg
-COMMENT $066C load start address of ram buffer for YM play
-COMMENT $066F load length of buffer
-COMMENT $0672 clear buffer
-COMMENT $0675 count of registers that are used by the player - reset
-COMMENT $0678 first load start of all data to y
-COMMENT $067B load vbl_len to d
-COMMENT $067D and store it to len reset
-COMMENT $0680 and store it to current data pointer
-COMMENT $0683 load number of next register to work on
-COMMENT $0685 count the registers we actually use
-COMMENT $0688 and store the register of the current data
-COMMENT $068A load location of translation map to y
-COMMENT $068D and store it
-COMMENT $0690 load location of phrases
-COMMENT $0693 and store it
-COMMENT $0696 load location of RLE data
-COMMENT $0699 and store it
-COMMENT $069C add structure length to x
-COMMENT $069F load number of next register to work on
-COMMENT $06A1 if negative than we are done
+COMMENT $033D exitText.23, exitText
+COMMENT $0340 exitText.23
+COMMENT $0351 Vec_Buttons.24, Vec_Buttons
+COMMENT $0359 Vec_Buttons.26, Vec_Buttons
+COMMENT $0361 Vec_Buttons.27, Vec_Buttons
+COMMENT $0369 gameState
+COMMENT $036C exitText
+COMMENT $03B8 in y now our count of bits
+COMMENT $0496 assuming high byte is zero of counter
+COMMENT $049A LSL A
+COMMENT $049B LSL B
+COMMENT $049C if no carry, than exit
+COMMENT $049E otherwise overflow from B to 0bit of A
+COMMENT $04C0 assuming high byte is zero of counter
+COMMENT $04C4 load current VBL Counter
+COMMENT $04C7 if 0, than we are done
+COMMENT $04C9 otherwise remember we are doing one byte now
+COMMENT $04CC and store it
+COMMENT $04CF get the number of regs we are working on
+COMMENT $04D2 and remember them as current counter
+COMMENT $04D5 load RAM start address of our wokring structure
+COMMENT $04D8 if current RLE counter is zero, than we must get a new byte
+COMMENT $04DA jump to get new byte
+COMMENT $04DC otherwise, lets check if we are in a phrase (x = pointer to phrase or zero)
+COMMENT $04DE jump if not
+COMMENT $04E0 where in our phrase are we?
+COMMENT $04E2 length of phrase
+COMMENT $04E4 load the next byte of our phrase
+COMMENT $04E6 store that to current output
+COMMENT $04E8 check if we are at the end of the phrase
+COMMENT $04EA (in a is phrase len)
+COMMENT $04EC if phrase is not at end - continue
+COMMENT $04EE other wise we set place to zero
+COMMENT $04F0 and decrease out RLE counter
+COMMENT $04F9 load current register
+COMMENT $0501 if b part of phrase than 0xff, if single byte than 0x1f, indicator for envelope not changed
+COMMENT $0503 store register select byte
+COMMENT $0505 sound BDIR on, BC1 on, mux off _ LATCH
+COMMENT $0509 sound BDIR off, BC1 off, mux off - INACTIVE
+COMMENT $050D read sound chip status (?)
+COMMENT $050F store data byte
+COMMENT $0511 sound BDIR on, BC1 off, mux off - WRITE
+COMMENT $0515 sound BDIR off, BC1 off, mux off - INACTIVE
+COMMENT $0519 go to next "register" of sound data
+COMMENT $051C but only if we are not done yet, if counter is zero
+COMMENT $051F we do not branch :-)
+COMMENT $0550 if bit is zero - jump
+COMMENT $0552 save stackpointer
+COMMENT $0556 load the starting position of the phrase mappings for this register
+COMMENT $0559 and also the phrase definition address
+COMMENT $055C was _calc_bits, a contains the number of bits our current shannon code checkings
+COMMENT $055D starting with zero for coder also
+COMMENT $0560 prepare load of next coder bit - shift all previous codes one position
+COMMENT $0563 increase used bits
+COMMENT $0578 if bit is zero - jump
+COMMENT $057A otherwise set bit in current code
+COMMENT $057D check if it count of currently referenced phrase equals the current shannon bitcount
+COMMENT $057F if lower, load next bit (and increase shannon bits)
+COMMENT $0581 if equal, than we must check if codes equal
+COMMENT $0583 load length of last phase and
+COMMENT $0585 add that to our future pointer to phrases
+COMMENT $0587 advance one phrase in out mapping (one mapping = 3 byte)
+COMMENT $0589 and test the next such got phrase
+COMMENT $058B load coder-byte, from current phrase
+COMMENT $058D and compare with current loaded coder-byte from "bitstream"
+COMMENT $0590 if not the same, check next phrase in phrase mapping (jump)
+COMMENT $0592 otherwise we found the correct phrase, load length of current phrase
+COMMENT $0594 and remember that
+COMMENT $0596 restore stack
+COMMENT $059A pointer to current found phrase to X (will be resused in out)
+COMMENT $059C current position in phrase is at start 0
+COMMENT $059D store the phrase to the structure
+COMMENT $059F also the position
+COMMENT $05A1 and output the next phrase byte
+COMMENT $05B5 number of relevant bits for reg
+COMMENT $068B load start address of ram buffer for YM play
+COMMENT $068E load length of buffer
+COMMENT $0691 clear buffer
+COMMENT $0694 count of registers that are used by the player - reset
+COMMENT $0697 first load start of all data to y
+COMMENT $069A load vbl_len to d
+COMMENT $069C and store it to len reset
+COMMENT $069F and store it to current data pointer
+COMMENT $06A2 load number of next register to work on
+COMMENT $06A4 count the registers we actually use
+COMMENT $06A7 and store the register of the current data
+COMMENT $06A9 load location of translation map to y
+COMMENT $06AC and store it
+COMMENT $06AF load location of phrases
+COMMENT $06B2 and store it
+COMMENT $06B5 load location of RLE data
+COMMENT $06B8 and store it
+COMMENT $06BB add structure length to x
+COMMENT $06BE load number of next register to work on
+COMMENT $06C0 if negative than we are done
 C_INFO_BLOCK $0069 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 65 "enable_controller_1_x(); " BKPOINT=0
 C_INFO_BLOCK $006C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 66 "enable_controller_1_y(); " BKPOINT=0
 C_INFO_BLOCK $006F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 67 "disable_controller_2_x(); " BKPOINT=0
@@ -320,10 +326,10 @@ C_INFO_BLOCK $0245 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\m
 C_INFO_BLOCK $024D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 120 "if (joystick_1_y()>0) " BKPOINT=0
 C_INFO_BLOCK $0253 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 122 "cursor_x += 5; " BKPOINT=0
 C_INFO_BLOCK $0263 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 126 "cursor_x -= 5; " BKPOINT=0
-C_INFO_BLOCK $026B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 128 "if (cursor_x>=100) cursor_x = 100; " BKPOINT=0
-C_INFO_BLOCK $0277 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 129 "if (cursor_x<=-100) cursor_x = -100; " BKPOINT=0
-C_INFO_BLOCK $0283 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 130 "if (cursor_y>=100) cursor_y = 100; " BKPOINT=0
-C_INFO_BLOCK $028F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 131 "if (cursor_y<=-100) cursor_y = -100; " BKPOINT=0
+C_INFO_BLOCK $026B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 128 "if (cursor_x>=120) cursor_x = 120; " BKPOINT=0
+C_INFO_BLOCK $0277 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 129 "if (cursor_x<=-120) cursor_x = -120; " BKPOINT=0
+C_INFO_BLOCK $0283 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 130 "if (cursor_y>=120) cursor_y = 120; " BKPOINT=0
+C_INFO_BLOCK $028F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 131 "if (cursor_y<=-120) cursor_y = -120; " BKPOINT=0
 C_INFO_BLOCK $029B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 132 "joy_digital(); " BKPOINT=0
 C_INFO_BLOCK $02C1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 140 "cursor_x = 0; " BKPOINT=0
 C_INFO_BLOCK $02C4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 141 "cursor_y = 0; " BKPOINT=0
@@ -341,13 +347,16 @@ C_INFO_BLOCK $0316 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\m
 C_INFO_BLOCK $0324 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 162 "break; " BKPOINT=0
 C_INFO_BLOCK $0327 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 164 "if (vec_buttons & 4 && !exittext){ " BKPOINT=0
 C_INFO_BLOCK $0335 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 165 "exittext = true; " BKPOINT=0
-C_INFO_BLOCK $0342 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 169 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0352 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 173 "repairidentitygame(); " BKPOINT=0
-C_INFO_BLOCK $0355 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 175 "break; " BKPOINT=0
-C_INFO_BLOCK $0358 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 178 "print_str_d(-70, -120, ); " BKPOINT=0
-C_INFO_BLOCK $0366 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 179 "break; " BKPOINT=0
-C_INFO_BLOCK $0369 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 181 "mainmenu(); " BKPOINT=0
-C_INFO_BLOCK $036C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 182 "break; " BKPOINT=0
+C_INFO_BLOCK $0343 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 169 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0351 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 170 "if(vec_buttons & 1 || vec_buttons & 2 || vec_buttons & 8) " BKPOINT=0
+C_INFO_BLOCK $0369 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 172 "gamestate = mainmenu; " BKPOINT=0
+C_INFO_BLOCK $036C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 173 "exittext = false; " BKPOINT=0
+C_INFO_BLOCK $0371 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 178 "repairidentitygame(); " BKPOINT=0
+C_INFO_BLOCK $0374 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 180 "break; " BKPOINT=0
+C_INFO_BLOCK $0377 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 183 "print_str_d(-70, -120, ); " BKPOINT=0
+C_INFO_BLOCK $0385 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 184 "break; " BKPOINT=0
+C_INFO_BLOCK $0388 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 186 "mainmenu(); " BKPOINT=0
+C_INFO_BLOCK $038B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 187 "break; " BKPOINT=0
 RANGE $0000-$0001 DB_DATA 8
 RANGE $0008-$0009 DB_DATA 8
 RANGE $000B-$000D DW_DATA 4
@@ -388,7 +397,7 @@ RANGE $02B1-$02B2 DB_DATA 8
 RANGE $02B9-$02BA DB_DATA 8
 RANGE $02BD-$02FB CODE
 RANGE $02FB-$0305 DW_DATA 4
-RANGE $0305-$036F CODE
-RANGE $036F-$0370 DB_DATA 8
-RANGE $037F-$06A7 CODE
+RANGE $0305-$038E CODE
+RANGE $038E-$038F DB_DATA 8
+RANGE $039E-$06C6 CODE
 

@@ -158,7 +158,7 @@
    0147 E7 E2         [ 6]  137 	stb	,-s	;,
    0149 8E 00 90      [ 3]  138 	ldx	#LC0	;,
    014C C6 A6         [ 2]  139 	ldb	#-90	;,
-   014E BD 06 AC      [ 8]  140 	jsr	__Print_Str_d
+   014E BD 06 CB      [ 8]  140 	jsr	__Print_Str_d
    0151 32 61         [ 5]  141 	leas	1,s	;,,
                             142 ;----- asm -----
                             143 ; 87 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
@@ -168,7 +168,7 @@
    0155 E7 E2         [ 6]  147 	stb	,-s	;,
    0157 8E 00 A3      [ 3]  148 	ldx	#LC1	;,
    015A C6 88         [ 2]  149 	ldb	#-120	;,
-   015C BD 06 AC      [ 8]  150 	jsr	__Print_Str_d
+   015C BD 06 CB      [ 8]  150 	jsr	__Print_Str_d
    015F 32 61         [ 5]  151 	leas	1,s	;,,
                             152 ;----- asm -----
                             153 ; 89 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
@@ -178,7 +178,7 @@
    0163 E7 E2         [ 6]  157 	stb	,-s	;,
    0165 8E 00 BB      [ 3]  158 	ldx	#LC2	;,
    0168 C6 88         [ 2]  159 	ldb	#-120	;,
-   016A BD 06 AC      [ 8]  160 	jsr	__Print_Str_d
+   016A BD 06 CB      [ 8]  160 	jsr	__Print_Str_d
    016D 32 61         [ 5]  161 	leas	1,s	;,,
                             162 ;----- asm -----
                             163 ; 91 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
@@ -188,7 +188,7 @@
    0171 E7 E2         [ 6]  167 	stb	,-s	;,
    0173 8E 00 D1      [ 3]  168 	ldx	#LC3	;,
    0176 C6 88         [ 2]  169 	ldb	#-120	;,
-   0178 BD 06 AC      [ 8]  170 	jsr	__Print_Str_d
+   0178 BD 06 CB      [ 8]  170 	jsr	__Print_Str_d
    017B 32 61         [ 5]  171 	leas	1,s	;,,
                             172 ;----- asm -----
                             173 ; 93 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
@@ -198,7 +198,7 @@
    017F E7 E2         [ 6]  177 	stb	,-s	;,
    0181 8E 00 E9      [ 3]  178 	ldx	#LC4	;,
    0184 C6 88         [ 2]  179 	ldb	#-120	;,
-   0186 BD 06 AC      [ 8]  180 	jsr	__Print_Str_d
+   0186 BD 06 CB      [ 8]  180 	jsr	__Print_Str_d
    0189 32 61         [ 5]  181 	leas	1,s	;,,
                             182 ;----- asm -----
                             183 ; 96 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
@@ -222,7 +222,7 @@
    019A E7 E2         [ 6]  201 	stb	,-s	;,
    019C 8E 01 01      [ 3]  202 	ldx	#LC5	;,
    019F C6 88         [ 2]  203 	ldb	#-120	;,
-   01A1 BD 06 AC      [ 8]  204 	jsr	__Print_Str_d
+   01A1 BD 06 CB      [ 8]  204 	jsr	__Print_Str_d
    01A4 32 61         [ 5]  205 	leas	1,s	;,,
    01A6 16 00 56      [ 5]  206 	lbra	L16	;
    01A9                     207 L12:
@@ -244,7 +244,7 @@
    01B8 E7 E2         [ 6]  223 	stb	,-s	;,
    01BA 8E 01 15      [ 3]  224 	ldx	#LC6	;,
    01BD C6 88         [ 2]  225 	ldb	#-120	;,
-   01BF BD 06 AC      [ 8]  226 	jsr	__Print_Str_d
+   01BF BD 06 CB      [ 8]  226 	jsr	__Print_Str_d
    01C2 32 61         [ 5]  227 	leas	1,s	;,,
    01C4 16 00 38      [ 5]  228 	lbra	L16	;
    01C7                     229 L14:
@@ -266,7 +266,7 @@
    01D6 E7 E2         [ 6]  245 	stb	,-s	;,
    01D8 8E 01 25      [ 3]  246 	ldx	#LC7	;,
    01DB C6 88         [ 2]  247 	ldb	#-120	;,
-   01DD BD 06 AC      [ 8]  248 	jsr	__Print_Str_d
+   01DD BD 06 CB      [ 8]  248 	jsr	__Print_Str_d
    01E0 32 61         [ 5]  249 	leas	1,s	;,,
    01E2 20 1B         [ 3]  250 	bra	L16	;
    01E4                     251 L15:
@@ -288,7 +288,7 @@
    01F3 E7 E2         [ 6]  267 	stb	,-s	;,
    01F5 8E 01 34      [ 3]  268 	ldx	#LC8	;,
    01F8 C6 88         [ 2]  269 	ldb	#-120	;,
-   01FA BD 06 AC      [ 8]  270 	jsr	__Print_Str_d
+   01FA BD 06 CB      [ 8]  270 	jsr	__Print_Str_d
    01FD 32 61         [ 5]  271 	leas	1,s	;,,
    01FF                     272 L16:
    01FF 39            [ 5]  273 	rts
@@ -316,7 +316,7 @@
    0219 E6 63         [ 5]  295 	ldb	3,s	;, a
    021B E7 E2         [ 6]  296 	stb	,-s	;,
    021D E6 63         [ 5]  297 	ldb	3,s	;, b
-   021F BD 06 BF      [ 8]  298 	jsr	__Moveto_d
+   021F BD 06 DE      [ 8]  298 	jsr	__Moveto_d
    0222 32 61         [ 5]  299 	leas	1,s	;,,
                             300 ;----- asm -----
                             301 ; 131 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
@@ -386,42 +386,42 @@
    026B                     365 L21:
                             366 ;----- asm -----
                             367 ; 159 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            368 	; #ENR#[128]if (cursor_x>=100) cursor_x = 100;
+                            368 	; #ENR#[128]if (cursor_x>=120) cursor_x = 120;
                             369 ;--- end asm ---
    026B F6 C8 81      [ 5]  370 	ldb	_cursor_x	; cursor_x.16, cursor_x
-   026E C1 63         [ 2]  371 	cmpb	#99	;cmpqi:	; cursor_x.16,
+   026E C1 77         [ 2]  371 	cmpb	#119	;cmpqi:	; cursor_x.16,
    0270 2F 05         [ 3]  372 	ble	L22	;
-   0272 C6 64         [ 2]  373 	ldb	#100	;,
+   0272 C6 78         [ 2]  373 	ldb	#120	;,
    0274 F7 C8 81      [ 5]  374 	stb	_cursor_x	;, cursor_x
    0277                     375 L22:
                             376 ;----- asm -----
                             377 ; 161 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            378 	; #ENR#[129]if (cursor_x<=-100) cursor_x = -100;
+                            378 	; #ENR#[129]if (cursor_x<=-120) cursor_x = -120;
                             379 ;--- end asm ---
    0277 F6 C8 81      [ 5]  380 	ldb	_cursor_x	; cursor_x.17, cursor_x
-   027A C1 9C         [ 2]  381 	cmpb	#-100	;cmpqi:	; cursor_x.17,
+   027A C1 88         [ 2]  381 	cmpb	#-120	;cmpqi:	; cursor_x.17,
    027C 2E 05         [ 3]  382 	bgt	L23	;
-   027E C6 9C         [ 2]  383 	ldb	#-100	;,
+   027E C6 88         [ 2]  383 	ldb	#-120	;,
    0280 F7 C8 81      [ 5]  384 	stb	_cursor_x	;, cursor_x
    0283                     385 L23:
                             386 ;----- asm -----
                             387 ; 163 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            388 	; #ENR#[130]if (cursor_y>=100) cursor_y = 100;
+                            388 	; #ENR#[130]if (cursor_y>=120) cursor_y = 120;
                             389 ;--- end asm ---
    0283 F6 C8 82      [ 5]  390 	ldb	_cursor_y	; cursor_y.18, cursor_y
-   0286 C1 63         [ 2]  391 	cmpb	#99	;cmpqi:	; cursor_y.18,
+   0286 C1 77         [ 2]  391 	cmpb	#119	;cmpqi:	; cursor_y.18,
    0288 2F 05         [ 3]  392 	ble	L24	;
-   028A C6 64         [ 2]  393 	ldb	#100	;,
+   028A C6 78         [ 2]  393 	ldb	#120	;,
    028C F7 C8 82      [ 5]  394 	stb	_cursor_y	;, cursor_y
    028F                     395 L24:
                             396 ;----- asm -----
                             397 ; 165 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            398 	; #ENR#[131]if (cursor_y<=-100) cursor_y = -100;
+                            398 	; #ENR#[131]if (cursor_y<=-120) cursor_y = -120;
                             399 ;--- end asm ---
    028F F6 C8 82      [ 5]  400 	ldb	_cursor_y	; cursor_y.19, cursor_y
-   0292 C1 9C         [ 2]  401 	cmpb	#-100	;cmpqi:	; cursor_y.19,
+   0292 C1 88         [ 2]  401 	cmpb	#-120	;cmpqi:	; cursor_y.19,
    0294 2E 05         [ 3]  402 	bgt	L25	;
-   0296 C6 9C         [ 2]  403 	ldb	#-100	;,
+   0296 C6 88         [ 2]  403 	ldb	#-120	;,
    0298 F7 C8 82      [ 5]  404 	stb	_cursor_y	;, cursor_y
    029B                     405 L25:
                             406 ;----- asm -----
@@ -438,11 +438,11 @@
    02A5 F6 C8 1B      [ 5]  417 	ldb	_Vec_Joy_1_X	; D.3035, Vec_Joy_1_X
    02A8 39            [ 5]  418 	rts
    02A9                     419 LC9:
-   02A9 53 54 41 52 54 49   420 	.byte	83,84,65,82,84,73,78,71
-        4E 47
-   02B1 20 52 4F 55 54 49   421 	.byte	32,82,79,85,84,73,78,69
-        4E 45
-   02B9 20 33 80 00         422 	.byte	32,51,-128,0
+   02A9 43 4F 4E 46 49 52   420 	.byte	67,79,78,70,73,82,77,32
+        4D 20
+   02B1 52 4F 55 54 49 4E   421 	.byte	82,79,85,84,73,78,69,32
+        45 20
+   02B9 33 3F 80 00         422 	.byte	51,63,-128,0
                             423 	.globl	_main
    02BD                     424 _main:
    02BD 34 40         [ 6]  425 	pshs	u	;
@@ -476,7 +476,7 @@
                             453 ; 187 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
                             454 	; #ENR#[146]while(1)
                             455 ;--- end asm ---
-   02D0                     456 L42:
+   02D0                     456 L44:
                             457 ;----- asm -----
                             458 ; 190 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
                             459 	; #ENR#[148]read_btns();
@@ -497,7 +497,7 @@
                             474 	; #ENR#[153]intensity_a(0x5f);
                             475 ;--- end asm ---
    02D9 C6 5F         [ 2]  476 	ldb	#95	;,
-   02DB BD 06 A7      [ 8]  477 	jsr	__Intensity_a
+   02DB BD 06 C6      [ 8]  477 	jsr	__Intensity_a
                             478 ;----- asm -----
                             479 ; 201 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
                             480 	; #ENR#[155]switch(gamestate)
@@ -506,23 +506,23 @@
    02E1 E7 62         [ 5]  483 	stb	2,s	;, gameState.20
    02E3 E6 62         [ 5]  484 	ldb	2,s	;, gameState.20
    02E5 C1 04         [ 2]  485 	cmpb	#4	;cmpqi:	;,
-   02E7 22 E7         [ 3]  486 	bhi	L42	;
+   02E7 22 E7         [ 3]  486 	bhi	L44	;
    02E9 E6 62         [ 5]  487 	ldb	2,s	;, gameState.20
    02EB 4F            [ 2]  488 	clra		;zero_extendqihi: R:b -> R:d	;,
    02EC ED E4         [ 5]  489 	std	,s	;,
-   02EE EC E4         [ 5]  490 	ldd	,s	; tmp35,
+   02EE EC E4         [ 5]  490 	ldd	,s	; tmp43,
    02F0 58            [ 2]  491 	aslb	;
    02F1 49            [ 2]  492 	rola	;
    02F2 CE 02 FB      [ 3]  493 	ldu	#L38	;,
-   02F5 30 CB         [ 8]  494 	leax	d,u	; tmp36, tmp35,
-   02F7 AE 84         [ 5]  495 	ldx	,x	; tmp37,
-   02F9 6E 84         [ 3]  496 	jmp	,x	; tmp37
+   02F5 30 CB         [ 8]  494 	leax	d,u	; tmp44, tmp43,
+   02F7 AE 84         [ 5]  495 	ldx	,x	; tmp45,
+   02F9 6E 84         [ 3]  496 	jmp	,x	; tmp45
    02FB                     497 L38:
-   02FB 03 69               498 	.word	L33
+   02FB 03 88               498 	.word	L33
    02FD 03 05               499 	.word	L34
    02FF 03 16               500 	.word	L35
    0301 03 27               501 	.word	L36
-   0303 03 58               502 	.word	L37
+   0303 03 77               502 	.word	L37
    0305                     503 L34:
                             504 ;----- asm -----
                             505 ; 206 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
@@ -532,13 +532,13 @@
    0307 E7 E2         [ 6]  509 	stb	,-s	;,
    0309 8E 01 01      [ 3]  510 	ldx	#LC5	;,
    030C C6 88         [ 2]  511 	ldb	#-120	;,
-   030E BD 06 AC      [ 8]  512 	jsr	__Print_Str_d
+   030E BD 06 CB      [ 8]  512 	jsr	__Print_Str_d
    0311 32 61         [ 5]  513 	leas	1,s	;,,
                             514 ;----- asm -----
                             515 ; 208 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
                             516 	; #ENR#[159]break;
                             517 ;--- end asm ---
-   0313 16 FF BA      [ 5]  518 	lbra	L42	;
+   0313 16 FF BA      [ 5]  518 	lbra	L44	;
    0316                     519 L35:
                             520 ;----- asm -----
                             521 ; 212 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
@@ -548,13 +548,13 @@
    0318 E7 E2         [ 6]  525 	stb	,-s	;,
    031A 8E 01 15      [ 3]  526 	ldx	#LC6	;,
    031D C6 88         [ 2]  527 	ldb	#-120	;,
-   031F BD 06 AC      [ 8]  528 	jsr	__Print_Str_d
+   031F BD 06 CB      [ 8]  528 	jsr	__Print_Str_d
    0322 32 61         [ 5]  529 	leas	1,s	;,,
                             530 ;----- asm -----
                             531 ; 214 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
                             532 	; #ENR#[162]break;
                             533 ;--- end asm ---
-   0324 16 FF A9      [ 5]  534 	lbra	L42	;
+   0324 16 FF A9      [ 5]  534 	lbra	L44	;
    0327                     535 L36:
                             536 ;----- asm -----
                             537 ; 218 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
@@ -563,78 +563,105 @@
    0327 F6 C8 11      [ 5]  540 	ldb	_Vec_Buttons	; Vec_Buttons.21, Vec_Buttons
    032A C4 04         [ 2]  541 	andb	#4	; D.3180,
    032C 5D            [ 2]  542 	tstb	; D.3180
-   032D 27 0D         [ 3]  543 	beq	L39	;
+   032D 27 0E         [ 3]  543 	beq	L39	;
    032F F6 C8 80      [ 5]  544 	ldb	_exitText	; exitText.22, exitText
    0332 5D            [ 2]  545 	tstb	; exitText.22
-   0333 26 07         [ 3]  546 	bne	L39	;
+   0333 26 08         [ 3]  546 	bne	L39	;
                             547 ;----- asm -----
                             548 ; 220 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
                             549 	; #ENR#[165]exittext = true;
                             550 ;--- end asm ---
    0335 C6 01         [ 2]  551 	ldb	#1	;,
    0337 F7 C8 80      [ 5]  552 	stb	_exitText	;, exitText
-   033A 20 19         [ 3]  553 	bra	L40	;
-   033C                     554 L39:
-   033C F6 C8 80      [ 5]  555 	ldb	_exitText	; exitText.23, exitText
-   033F 5D            [ 2]  556 	tstb	; exitText.23
-   0340 26 10         [ 3]  557 	bne	L41	;
+   033A 16 00 37      [ 5]  553 	lbra	L40	;
+   033D                     554 L39:
+   033D F6 C8 80      [ 5]  555 	ldb	_exitText	; exitText.23, exitText
+   0340 5D            [ 2]  556 	tstb	; exitText.23
+   0341 26 2E         [ 3]  557 	bne	L41	;
                             558 ;----- asm -----
                             559 ; 225 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
                             560 	; #ENR#[169]print_str_d(-70, -120, );
                             561 ;--- end asm ---
-   0342 C6 BA         [ 2]  562 	ldb	#-70	;,
-   0344 E7 E2         [ 6]  563 	stb	,-s	;,
-   0346 8E 02 A9      [ 3]  564 	ldx	#LC9	;,
-   0349 C6 88         [ 2]  565 	ldb	#-120	;,
-   034B BD 06 AC      [ 8]  566 	jsr	__Print_Str_d
-   034E 32 61         [ 5]  567 	leas	1,s	;,,
-   0350 20 03         [ 3]  568 	bra	L40	;
-   0352                     569 L41:
-                            570 ;----- asm -----
-                            571 ; 230 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            572 	; #ENR#[173]repairidentitygame();
-                            573 ;--- end asm ---
-   0352 BD 02 00      [ 8]  574 	jsr	_RepairIdentityGame
-   0355                     575 L40:
-                            576 ;----- asm -----
-                            577 ; 233 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            578 	; #ENR#[175]break;
-                            579 ;--- end asm ---
-   0355 16 FF 78      [ 5]  580 	lbra	L42	;
-   0358                     581 L37:
-                            582 ;----- asm -----
-                            583 ; 238 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            584 	; #ENR#[178]print_str_d(-70, -120, );
-                            585 ;--- end asm ---
-   0358 C6 BA         [ 2]  586 	ldb	#-70	;,
-   035A E7 E2         [ 6]  587 	stb	,-s	;,
-   035C 8E 01 34      [ 3]  588 	ldx	#LC8	;,
-   035F C6 88         [ 2]  589 	ldb	#-120	;,
-   0361 BD 06 AC      [ 8]  590 	jsr	__Print_Str_d
-   0364 32 61         [ 5]  591 	leas	1,s	;,,
-                            592 ;----- asm -----
-                            593 ; 240 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            594 	; #ENR#[179]break;
-                            595 ;--- end asm ---
-   0366 16 FF 67      [ 5]  596 	lbra	L42	;
-   0369                     597 L33:
-                            598 ;----- asm -----
-                            599 ; 244 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            600 	; #ENR#[181]mainmenu();
-                            601 ;--- end asm ---
-   0369 BD 01 45      [ 8]  602 	jsr	_mainMenu
+   0343 C6 BA         [ 2]  562 	ldb	#-70	;,
+   0345 E7 E2         [ 6]  563 	stb	,-s	;,
+   0347 8E 02 A9      [ 3]  564 	ldx	#LC9	;,
+   034A C6 88         [ 2]  565 	ldb	#-120	;,
+   034C BD 06 CB      [ 8]  566 	jsr	__Print_Str_d
+   034F 32 61         [ 5]  567 	leas	1,s	;,,
+                            568 ;----- asm -----
+                            569 ; 227 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+                            570 	; #ENR#[170]if(vec_buttons & 1 || vec_buttons & 2 || vec_buttons & 8)
+                            571 ;--- end asm ---
+   0351 F6 C8 11      [ 5]  572 	ldb	_Vec_Buttons	; Vec_Buttons.24, Vec_Buttons
+   0354 C4 01         [ 2]  573 	andb	#1	; D.3187,
+   0356 5D            [ 2]  574 	tstb	; D.3188
+   0357 26 10         [ 3]  575 	bne	L42	;
+   0359 F6 C8 11      [ 5]  576 	ldb	_Vec_Buttons	; Vec_Buttons.26, Vec_Buttons
+   035C C4 02         [ 2]  577 	andb	#2	; D.3190,
+   035E 5D            [ 2]  578 	tstb	; D.3190
+   035F 26 08         [ 3]  579 	bne	L42	;
+   0361 F6 C8 11      [ 5]  580 	ldb	_Vec_Buttons	; Vec_Buttons.27, Vec_Buttons
+   0364 C4 08         [ 2]  581 	andb	#8	; D.3192,
+   0366 5D            [ 2]  582 	tstb	; D.3192
+   0367 27 0B         [ 3]  583 	beq	L40	;
+   0369                     584 L42:
+                            585 ;----- asm -----
+                            586 ; 230 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+                            587 	; #ENR#[172]gamestate = mainmenu;
+                            588 ;--- end asm ---
+   0369 7F C8 83      [ 7]  589 	clr	_gameState	; gameState
+                            590 ;----- asm -----
+                            591 ; 232 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+                            592 	; #ENR#[173]exittext = false;
+                            593 ;--- end asm ---
+   036C 7F C8 80      [ 7]  594 	clr	_exitText	; exitText
+   036F 20 03         [ 3]  595 	bra	L40	;
+   0371                     596 L41:
+                            597 ;----- asm -----
+                            598 ; 238 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+                            599 	; #ENR#[178]repairidentitygame();
+                            600 ;--- end asm ---
+   0371 BD 02 00      [ 8]  601 	jsr	_RepairIdentityGame
+   0374                     602 L40:
                             603 ;----- asm -----
-                            604 ; 246 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
-                            605 	; #ENR#[182]break;
+                            604 ; 241 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+                            605 	; #ENR#[180]break;
                             606 ;--- end asm ---
-   036C 16 FF 61      [ 5]  607 	lbra	L42	;
-                            608 	.area	.bss
-                            609 	.globl	_cursor_x
-   C881                     610 _cursor_x:	.blkb	1
-                            611 	.globl	_cursor_y
-   C882                     612 _cursor_y:	.blkb	1
-                            613 	.globl	_gameState
-   C883                     614 _gameState:	.blkb	1
+   0374 16 FF 59      [ 5]  607 	lbra	L44	;
+   0377                     608 L37:
+                            609 ;----- asm -----
+                            610 ; 246 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+                            611 	; #ENR#[183]print_str_d(-70, -120, );
+                            612 ;--- end asm ---
+   0377 C6 BA         [ 2]  613 	ldb	#-70	;,
+   0379 E7 E2         [ 6]  614 	stb	,-s	;,
+   037B 8E 01 34      [ 3]  615 	ldx	#LC8	;,
+   037E C6 88         [ 2]  616 	ldb	#-120	;,
+   0380 BD 06 CB      [ 8]  617 	jsr	__Print_Str_d
+   0383 32 61         [ 5]  618 	leas	1,s	;,,
+                            619 ;----- asm -----
+                            620 ; 248 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+                            621 	; #ENR#[184]break;
+                            622 ;--- end asm ---
+   0385 16 FF 48      [ 5]  623 	lbra	L44	;
+   0388                     624 L33:
+                            625 ;----- asm -----
+                            626 ; 252 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+                            627 	; #ENR#[186]mainmenu();
+                            628 ;--- end asm ---
+   0388 BD 01 45      [ 8]  629 	jsr	_mainMenu
+                            630 ;----- asm -----
+                            631 ; 254 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.enr.c" 1
+                            632 	; #ENR#[187]break;
+                            633 ;--- end asm ---
+   038B 16 FF 42      [ 5]  634 	lbra	L44	;
+                            635 	.area	.bss
+                            636 	.globl	_cursor_x
+   C881                     637 _cursor_x:	.blkb	1
+                            638 	.globl	_cursor_y
+   C882                     639 _cursor_y:	.blkb	1
+                            640 	.globl	_gameState
+   C883                     641 _gameState:	.blkb	1
 ASxxxx Assembler V05.00  (Motorola 6809), page 1.
 Hexidecimal [16-Bits]
 
@@ -745,18 +772,25 @@ Symbol Table
   2 A$main$544         02D1 GR  |   2 A$main$545         02D4 GR
   2 A$main$546         02D5 GR  |   2 A$main$55          000B GR
   2 A$main$551         02D7 GR  |   2 A$main$552         02D9 GR
-  2 A$main$553         02DC GR  |   2 A$main$555         02DE GR
-  2 A$main$556         02E1 GR  |   2 A$main$557         02E2 GR
-  2 A$main$562         02E4 GR  |   2 A$main$563         02E6 GR
-  2 A$main$564         02E8 GR  |   2 A$main$565         02EB GR
-  2 A$main$566         02ED GR  |   2 A$main$567         02F0 GR
-  2 A$main$568         02F2 GR  |   2 A$main$574         02F4 GR
-  2 A$main$580         02F7 GR  |   2 A$main$586         02FA GR
-  2 A$main$587         02FC GR  |   2 A$main$588         02FE GR
-  2 A$main$589         0301 GR  |   2 A$main$590         0303 GR
-  2 A$main$591         0306 GR  |   2 A$main$596         0308 GR
-  2 A$main$60          000E GR  |   2 A$main$602         030B GR
-  2 A$main$607         030E GR  |   2 A$main$65          0011 GR
+  2 A$main$553         02DC GR  |   2 A$main$555         02DF GR
+  2 A$main$556         02E2 GR  |   2 A$main$557         02E3 GR
+  2 A$main$562         02E5 GR  |   2 A$main$563         02E7 GR
+  2 A$main$564         02E9 GR  |   2 A$main$565         02EC GR
+  2 A$main$566         02EE GR  |   2 A$main$567         02F1 GR
+  2 A$main$572         02F3 GR  |   2 A$main$573         02F6 GR
+  2 A$main$574         02F8 GR  |   2 A$main$575         02F9 GR
+  2 A$main$576         02FB GR  |   2 A$main$577         02FE GR
+  2 A$main$578         0300 GR  |   2 A$main$579         0301 GR
+  2 A$main$580         0303 GR  |   2 A$main$581         0306 GR
+  2 A$main$582         0308 GR  |   2 A$main$583         0309 GR
+  2 A$main$589         030B GR  |   2 A$main$594         030E GR
+  2 A$main$595         0311 GR  |   2 A$main$60          000E GR
+  2 A$main$601         0313 GR  |   2 A$main$607         0316 GR
+  2 A$main$613         0319 GR  |   2 A$main$614         031B GR
+  2 A$main$615         031D GR  |   2 A$main$616         0320 GR
+  2 A$main$617         0322 GR  |   2 A$main$618         0325 GR
+  2 A$main$623         0327 GR  |   2 A$main$629         032A GR
+  2 A$main$634         032D GR  |   2 A$main$65          0011 GR
   2 A$main$70          0014 GR  |   2 A$main$75          0017 GR
   2 A$main$80          001A GR  |   2 A$main$81          001D GR
   2 A$main$83          001E GR  |   2 A$main$84          0021 GR
@@ -770,31 +804,32 @@ Symbol Table
   2 L20                01FF R   |   2 L21                020D R
   2 L22                0219 R   |   2 L23                0225 R
   2 L24                0231 R   |   2 L25                023D R
-  2 L33                030B R   |   2 L34                02A7 R
+  2 L33                032A R   |   2 L34                02A7 R
   2 L35                02B8 R   |   2 L36                02C9 R
-  2 L37                02FA R   |   2 L38                029D R
-  2 L39                02DE R   |   2 L40                02F7 R
-  2 L41                02F4 R   |   2 L42                0272 R
-  2 LC0                0032 R   |   2 LC1                0045 R
-  2 LC2                005D R   |   2 LC3                0073 R
-  2 LC4                008B R   |   2 LC5                00A3 R
-  2 LC6                00B7 R   |   2 LC7                00C7 R
-  2 LC8                00D6 R   |   2 LC9                024B R
-  2 _MousePointer      0000 GR  |   2 _RepairIdentit     01A2 GR
-    _VIA_t1_cnt_lo     **** GX  |     _Vec_Buttons       **** GX
-    _Vec_Joy_1_X       **** GX  |     _Vec_Joy_1_Y       **** GX
-    _Vec_Joy_Mux_1     **** GX  |     _Vec_Joy_Mux_1     **** GX
-    _Vec_Joy_Mux_2     **** GX  |     _Vec_Joy_Mux_2     **** GX
-    __Intensity_a      **** GX  |     __Moveto_d         **** GX
-    __Print_Str_d      **** GX  |     ___Draw_VLc        **** GX
-    ___Joy_Digital     **** GX  |     ___Read_Btns       **** GX
-    ___Wait_Recal      **** GX  |   4 _cursor_x          0000 GR
-  4 _cursor_y          0001 GR  |   2 _disable_contr     0022 R
-  2 _disable_contr     001E R   |   2 _enable_contro     002C R
-  2 _enable_contro     0026 R   |   3 _exitText          0000 GR
-  4 _gameState         0002 GR  |   2 _joystick_1_x      0247 R
-  2 _joystick_1_y      0243 R   |   2 _main              025F GR
-  2 _mainMenu          00E7 GR  |   2 _setup             000B GR
+  2 L37                0319 R   |   2 L38                029D R
+  2 L39                02DF R   |   2 L40                0316 R
+  2 L41                0313 R   |   2 L42                030B R
+  2 L44                0272 R   |   2 LC0                0032 R
+  2 LC1                0045 R   |   2 LC2                005D R
+  2 LC3                0073 R   |   2 LC4                008B R
+  2 LC5                00A3 R   |   2 LC6                00B7 R
+  2 LC7                00C7 R   |   2 LC8                00D6 R
+  2 LC9                024B R   |   2 _MousePointer      0000 GR
+  2 _RepairIdentit     01A2 GR  |     _VIA_t1_cnt_lo     **** GX
+    _Vec_Buttons       **** GX  |     _Vec_Joy_1_X       **** GX
+    _Vec_Joy_1_Y       **** GX  |     _Vec_Joy_Mux_1     **** GX
+    _Vec_Joy_Mux_1     **** GX  |     _Vec_Joy_Mux_2     **** GX
+    _Vec_Joy_Mux_2     **** GX  |     __Intensity_a      **** GX
+    __Moveto_d         **** GX  |     __Print_Str_d      **** GX
+    ___Draw_VLc        **** GX  |     ___Joy_Digital     **** GX
+    ___Read_Btns       **** GX  |     ___Wait_Recal      **** GX
+  4 _cursor_x          0000 GR  |   4 _cursor_y          0001 GR
+  2 _disable_contr     0022 R   |   2 _disable_contr     001E R
+  2 _enable_contro     002C R   |   2 _enable_contro     0026 R
+  3 _exitText          0000 GR  |   4 _gameState         0002 GR
+  2 _joystick_1_x      0247 R   |   2 _joystick_1_y      0243 R
+  2 _main              025F GR  |   2 _mainMenu          00E7 GR
+  2 _setup             000B GR
 
 ASxxxx Assembler V05.00  (Motorola 6809), page 2.
 Hexidecimal [16-Bits]
@@ -803,7 +838,7 @@ Area Table
 
 [_CSEG]
    0 _CODE            size    0   flags C080
-   2 .text            size  311   flags  100
+   2 .text            size  330   flags  100
    3 .data            size    1   flags  100
    4 .bss             size    3   flags    0
 [_DSEG]

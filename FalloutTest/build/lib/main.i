@@ -2002,10 +2002,10 @@ void RepairIdentityGame()
     {
   cursor_x -= 5;
     }
-    if (cursor_x>=100) cursor_x = 100;
-    if (cursor_x<=-100) cursor_x = -100;
-    if (cursor_y>=100) cursor_y = 100;
-    if (cursor_y<=-100) cursor_y = -100;
+    if (cursor_x>=120) cursor_x = 120;
+    if (cursor_x<=-120) cursor_x = -120;
+    if (cursor_y>=120) cursor_y = 120;
+    if (cursor_y<=-120) cursor_y = -120;
     Joy_Digital();
 
 
@@ -2043,7 +2043,12 @@ int main(void)
     }
     else if(exitText == false)
     {
-     Print_Str_d(-70, -120, "STARTING ROUTINE 3\x80");
+     Print_Str_d(-70, -120, "CONFIRM ROUTINE 3?\x80");
+                        if(Vec_Buttons & 1 || Vec_Buttons & 2 || Vec_Buttons & 8)
+                        {
+                            gameState = MainMenu;
+                            exitText = false;
+                        }
     }
     else
     {
