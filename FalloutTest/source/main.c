@@ -19,6 +19,8 @@
 // to disable do a
 // "#define NDEBUG"
 // or set the gcc option "-D NDEBUG" (Vide project file)
+#define intens Intensity_a
+#define frwait Wait_Recal
 
 
 // ---------------------------------------------------------------------------
@@ -30,13 +32,85 @@
 // ---------------------------------------------------------------------------
 // after each reset, the cartridge title is shown and then main() is called
 // ---------------------------------------------------------------------------
+enum GameState_t {
+	MainMenu,
+	Game_DataTransfer,
+	Game_ReconstructBin,
+	Game_RepairIdentity,
+	Game_CompileInt
+} gameState;
+
+
+void mainMenu()
+{
+	//Vec_Text_Width = 90;
+    
+
+	
+    Print_Str_d(120, -90, "ROBOT REPAIR V0.1\x80");
+    Print_Str_d(70, -120, "1 DATA TRANSFER UPLOAD\x80");
+	Print_Str_d(40, -120, "2 RECONSTRUCT BINARY\x80");
+    Print_Str_d(10, -120, "3 REPAIR IDENTITY CORE\x80");
+	Print_Str_d(-20, -120, "4 COMPILE INTELLIGENCE\x80");
+
+	if (Vec_Buttons & 1) {
+     	gameState = Game_DataTransfer;
+		Print_Str_d(-70, -120, "STARTING ROUTINE 1\x80");
+	}
+	else if (Vec_Buttons & 2) {
+		gameState = Game_ReconstructBin;
+		Print_Str_d(-70, -120, "THEN ROUTINE 2\x80");
+	}
+    else if (Vec_Buttons & 4) {
+		gameState = Game_RepairIdentity;
+        Print_Str_d(-70, -120, "NOW ROUTINE 3\x80");
+    }
+	else if (Vec_Buttons & 8) {
+		gameState = Game_CompileInt;
+		Print_Str_d(-70, -120, "FINAL ROUTINE 4\x80");
+	}
+
+	switch(gameState)
+	{
+		case Game_DataTransfer:
+			Print_Str_d(-70, -120, "STARTING ROUTINE 1\x80");
+			break;
+		case Game_ReconstructBin:
+			Print_Str_d(-70, -120, "THEN ROUTINE 2\x80");
+			break;
+		case Game_RepairIdentity:
+	        Print_Str_d(-70, -120, "NOW ROUTINE 3\x80");
+			break;
+		case Game_CompileInt:
+			Print_Str_d(-70, -120, "FINAL ROUTINE 4\x80");
+			break;
+         case MainMenu:
+              break;
+	}
+
+
+}
 
 int main(void)
 {
+    gameState = MainMenu;
 	while(1)
 	{
 		Wait_Recal();
-		Print_Str_d(0, -70, "FALLOUT HACK CONSOLE\x80");
+		//Print_Str_d(0, -70, "FALLOUT HACK CONSOLE\x80");
+         // wait for frame boundary (one frame = 30,000 cyles = 50 Hz)
+		frwait();
+		Intensity_a(0x5f);
+		Read_Btns();
+
+         
+            
+		//switch (gameState) {
+		//	case MainMenu:
+				mainMenu();
+		//		break;
+		//	}
+
 	};
 
 	// if return value is <= 0, then a warm reset will be performed,

@@ -7,7 +7,6 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0000  l_.bss                          
           0000  l__DATA                         
           0000  l__CODE                         
           0000  s__DATA                         
@@ -21,6 +20,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           0000  s_.cartridge                    
           0000  l_.text.hot                     
           0000  s_.direct                       
+          0001  l_.bss                          
           0001  l_.0xffx                        
           0001  l_.0xf0                         
           0002  l_.0xe9                         
@@ -31,7 +31,6 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           001D  l_.cartridge                    
           001E  l_.0xe7                         
           0021  l_.dpfc                         
-          003A  l_.text                         
           003B  l_.bootloader                   
           0058  s_.text                         
           0058  s_.bankswitch.data              
@@ -39,10 +38,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           0068  l_.0xf7                         
           007A  l_.dpff                         
           0080  l_.dpc8                         
-          0092  s_.text.unlikely                
-          0092  s_.text.last                    
           0092  l_.0xf6                         
-          0092  s_.text.hot                     
           0095  l_.0xf4                         
           009D  l_.0xf9                         
           00A7  l_.0xf2                         
@@ -54,6 +50,10 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           00D8  l_.0xf3                         
           00EF  l_.0xf5                         
           0100  l_.direct                       
+          020F  l_.text                         
+          0267  s_.text.unlikely                
+          0267  s_.text.last                    
+          0267  s_.text.hot                     
           C800  s_.dpc8                         
           C880  s_.bss                          
           C880  s_.data                         
@@ -139,21 +139,183 @@ Hexidecimal  [16-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0058        003A =          58. bytes (REL,CON,CSEG)
+.text                      0058        020F =         527. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          006E  _main                              main.enr.c
-          006E  A$main$45                          main.enr.c
-          0071  A$main$50                          main.enr.c
-          0073  A$main$51                          main.enr.c
-          0076  A$main$52                          main.enr.c
-          0078  A$main$53                          main.enr.c
-          007B  A$main$54                          main.enr.c
-          007D  A$main$55                          main.enr.c
-          007F  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
-
+          010D  _mainMenu                          main.enr.c
+          010D  A$main$67                          main.enr.c
+          010F  A$main$68                          main.enr.c
+          0111  A$main$73                          main.enr.c
+          0113  A$main$74                          main.enr.c
+          0115  A$main$75                          main.enr.c
+          0118  A$main$76                          main.enr.c
+          011A  A$main$77                          main.enr.c
+          011D  A$main$78                          main.enr.c
+          011F  A$main$83                          main.enr.c
+          0121  A$main$84                          main.enr.c
+          0123  A$main$85                          main.enr.c
+          0126  A$main$86                          main.enr.c
+          0128  A$main$87                          main.enr.c
+          012B  A$main$88                          main.enr.c
+          012D  A$main$93                          main.enr.c
+          012F  A$main$94                          main.enr.c
+          0131  A$main$95                          main.enr.c
+          0134  A$main$96                          main.enr.c
+          0136  A$main$97                          main.enr.c
+          0139  A$main$98                          main.enr.c
+          013B  A$main$103                         main.enr.c
+          013D  A$main$104                         main.enr.c
+          013F  A$main$105                         main.enr.c
+          0142  A$main$106                         main.enr.c
+          0144  A$main$107                         main.enr.c
+          0147  A$main$108                         main.enr.c
+          0149  A$main$113                         main.enr.c
+          014B  A$main$114                         main.enr.c
+          014D  A$main$115                         main.enr.c
+          0150  A$main$116                         main.enr.c
+          0152  A$main$117                         main.enr.c
+          0155  A$main$118                         main.enr.c
+          0157  A$main$123                         main.enr.c
+          015A  A$main$124                         main.enr.c
+          015C  A$main$125                         main.enr.c
+          015D  A$main$126                         main.enr.c
+          015F  A$main$131                         main.enr.c
+          0161  A$main$132                         main.enr.c
+          0164  A$main$137                         main.enr.c
+          0166  A$main$138                         main.enr.c
+          0168  A$main$139                         main.enr.c
+          016B  A$main$140                         main.enr.c
+          016D  A$main$141                         main.enr.c
+          0170  A$main$142                         main.enr.c
+          0172  A$main$143                         main.enr.c
+          0175  A$main$145                         main.enr.c
+          0178  A$main$146                         main.enr.c
+          017A  A$main$147                         main.enr.c
 ASxxxx Linker V05.00,  page 6.
+Hexidecimal  [16-Bits]
+[ Bank == rom ]
+
+Area                       Addr        Size        Decimal Bytes (Attributes)
+--------------------       ----        ----        ------- ----- ------------
+.text                      0058        020F =         527. bytes (REL,CON,CSEG)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+          017B  A$main$148                         main.enr.c
+          017D  A$main$153                         main.enr.c
+          017F  A$main$154                         main.enr.c
+          0182  A$main$159                         main.enr.c
+          0184  A$main$160                         main.enr.c
+          0186  A$main$161                         main.enr.c
+          0189  A$main$162                         main.enr.c
+          018B  A$main$163                         main.enr.c
+          018E  A$main$164                         main.enr.c
+          0190  A$main$165                         main.enr.c
+          0193  A$main$167                         main.enr.c
+          0196  A$main$168                         main.enr.c
+          0198  A$main$169                         main.enr.c
+          0199  A$main$170                         main.enr.c
+          019B  A$main$175                         main.enr.c
+          019D  A$main$176                         main.enr.c
+          01A0  A$main$181                         main.enr.c
+          01A2  A$main$182                         main.enr.c
+          01A4  A$main$183                         main.enr.c
+          01A7  A$main$184                         main.enr.c
+          01A9  A$main$185                         main.enr.c
+          01AC  A$main$186                         main.enr.c
+          01AE  A$main$187                         main.enr.c
+          01B0  A$main$189                         main.enr.c
+          01B3  A$main$190                         main.enr.c
+          01B5  A$main$191                         main.enr.c
+          01B6  A$main$192                         main.enr.c
+          01B8  A$main$197                         main.enr.c
+          01BA  A$main$198                         main.enr.c
+          01BD  A$main$203                         main.enr.c
+          01BF  A$main$204                         main.enr.c
+          01C1  A$main$205                         main.enr.c
+          01C4  A$main$206                         main.enr.c
+          01C6  A$main$207                         main.enr.c
+          01C9  A$main$208                         main.enr.c
+          01CB  A$main$214                         main.enr.c
+          01CE  A$main$215                         main.enr.c
+          01D0  A$main$216                         main.enr.c
+          01D2  A$main$217                         main.enr.c
+          01D4  A$main$218                         main.enr.c
+          01D8  A$main$219                         main.enr.c
+          01DA  A$main$220                         main.enr.c
+          01DB  A$main$221                         main.enr.c
+          01DD  A$main$222                         main.enr.c
+          01DF  A$main$223                         main.enr.c
+          01E0  A$main$224                         main.enr.c
+          01E1  A$main$225                         main.enr.c
+          01E4  A$main$226                         main.enr.c
+          01E6  A$main$227                         main.enr.c
+          01E8  A$main$228                         main.enr.c
+ASxxxx Linker V05.00,  page 7.
+Hexidecimal  [16-Bits]
+[ Bank == rom ]
+
+Area                       Addr        Size        Decimal Bytes (Attributes)
+--------------------       ----        ----        ------- ----- ------------
+.text                      0058        020F =         527. bytes (REL,CON,CSEG)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+          01F4  A$main$240                         main.enr.c
+          01F6  A$main$241                         main.enr.c
+          01F8  A$main$242                         main.enr.c
+          01FB  A$main$243                         main.enr.c
+          01FD  A$main$244                         main.enr.c
+          0200  A$main$245                         main.enr.c
+          0202  A$main$250                         main.enr.c
+          0205  A$main$256                         main.enr.c
+          0207  A$main$257                         main.enr.c
+          0209  A$main$258                         main.enr.c
+          020C  A$main$259                         main.enr.c
+          020E  A$main$260                         main.enr.c
+          0211  A$main$261                         main.enr.c
+          0213  A$main$266                         main.enr.c
+          0215  A$main$272                         main.enr.c
+          0217  A$main$273                         main.enr.c
+          0219  A$main$274                         main.enr.c
+          021C  A$main$275                         main.enr.c
+          021E  A$main$276                         main.enr.c
+          0221  A$main$277                         main.enr.c
+          0223  A$main$282                         main.enr.c
+          0225  A$main$288                         main.enr.c
+          0227  A$main$289                         main.enr.c
+          0229  A$main$290                         main.enr.c
+          022C  A$main$291                         main.enr.c
+          022E  A$main$292                         main.enr.c
+          0231  A$main$293                         main.enr.c
+          0233  A$main$298                         main.enr.c
+          0235  A$main$305                         main.enr.c
+          0237  A$main$306                         main.enr.c
+          0239  _main                              main.enr.c
+          0239  A$main$313                         main.enr.c
+          023C  A$main$323                         main.enr.c
+          023F  A$main$328                         main.enr.c
+          0242  A$main$333                         main.enr.c
+          0244  A$main$334                         main.enr.c
+          0247  A$main$339                         main.enr.c
+          024A  A$main$344                         main.enr.c
+          024D  A$main$345                         main.enr.c
+          024F  __Intensity_a                      vec_rum_14_05_Intensity_a.c
+          0254  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
+ASxxxx Linker V05.00,  page 8.
+Hexidecimal  [16-Bits]
+[ Bank == ram ]
+
+Area                       Addr        Size        Decimal Bytes (Attributes)
+--------------------       ----        ----        ------- ----- ------------
+.bss                       C880        0001 =           1. bytes (REL,CON,CSEG)
+
+         Value  Global                             Global Defined In Module
+         -----  --------------------------------   ------------------------
+          C880  _gameState                         main.enr.c
+
+ASxxxx Linker V05.00,  page 9.
 Hexidecimal  [16-Bits]
 [ Bank == page_c8 ]
 
@@ -212,7 +374,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C837  _Vec_Run_Index                     vec_ram_0xc8_0.c
           C839  _Vec_Rise_Index                    vec_ram_0xc8_0.c
           C839  _Vec_XXX_00                        vec_ram_0xc8_1.c
-ASxxxx Linker V05.00,  page 7.
+ASxxxx Linker V05.00,  page 10.
 Hexidecimal  [16-Bits]
 [ Bank == page_c8 ]
 
@@ -272,7 +434,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C86D  _Vec_XXX_15                        vec_ram_0xc8_0.c
           C86E  _Vec_XXX_16                        vec_ram_0xc8_0.c
           C86F  _Vec_XXX_17                        vec_ram_0xc8_0.c
-ASxxxx Linker V05.00,  page 8.
+ASxxxx Linker V05.00,  page 11.
 Hexidecimal  [16-Bits]
 [ Bank == page_c8 ]
 
@@ -299,7 +461,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C87E  _Vec_Random_Seed1                  vec_ram_0xc8_0.c
           C87F  _Vec_Random_Seed2                  vec_ram_0xc8_0.c
 
-ASxxxx Linker V05.00,  page 9.
+ASxxxx Linker V05.00,  page 12.
 Hexidecimal  [16-Bits]
 [ Bank == page_cb ]
 
@@ -325,7 +487,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           CBFB  _Vec_NWI_Vector                    vec_ram_0xcb_2.c
           CBFB  _Vec_NWI_vector                    vec_ram_0xcb_3.c
           CBFE  _Vec_Cold_Flag                     vec_ram_0xcb_0.c
-ASxxxx Linker V05.00,  page 10.
+ASxxxx Linker V05.00,  page 13.
 Hexidecimal  [16-Bits]
 [ Bank == page_d0 ]
 
@@ -359,7 +521,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           D00E  _VIA_int_enable                    vec_ram_0xd0_0.c
           D00F  _VIA_port_a_nohs                   vec_ram_0xd0_0.c
 
-ASxxxx Linker V05.00,  page 11.
+ASxxxx Linker V05.00,  page 14.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -418,7 +580,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           001F  _dp_Vec_Joy_Mux                    vec_ram_dpc8_2.c
           0020  _dp_Vec_Joy_Mux_1_Y                vec_ram_dpc8_1.c
           0021  _dp_Vec_Joy_Mux_2_X                vec_ram_dpc8_1.c
-ASxxxx Linker V05.00,  page 12.
+ASxxxx Linker V05.00,  page 15.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -478,7 +640,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           004C  _dp_Vec_XXX_08                     vec_ram_dpc8_0.c
           004D  _dp_Vec_Freq_Table                 vec_ram_dpc8_0.c
           004F  _dp_Vec_ADSR_Table                 vec_ram_dpc8_0.c
-ASxxxx Linker V05.00,  page 13.
+ASxxxx Linker V05.00,  page 16.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -538,7 +700,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           007A  _dp_Vec_Num_Game                   vec_ram_dpc8_0.c
           007A  _dp_Vec_Music_c                    vec_rom_dpff_0.c
           007B  _dp_Vec_Seed_Ptr                   vec_ram_dpc8_0.c
-ASxxxx Linker V05.00,  page 14.
+ASxxxx Linker V05.00,  page 17.
 Hexidecimal  [16-Bits]
 [ Bank == page_00 ]
 
@@ -582,7 +744,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           00FB  _dp_Vec_NWI_vector                 vec_ram_dpcb_3.c
           00FE  _dp_Vec_Cold_Flag                  vec_ram_dpcb_0.c
 
-ASxxxx Linker V05.00,  page 15.
+ASxxxx Linker V05.00,  page 18.
 Hexidecimal  [16-Bits]
 [ Bank == page_ed ]
 
@@ -595,7 +757,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           ED77  _Vec_Music_0                       vec_rom_0xed_0.c
           ED8F  _Vec_ADSR_FADE66                   vec_rom_0xed_0.c
 
-ASxxxx Linker V05.00,  page 16.
+ASxxxx Linker V05.00,  page 19.
 Hexidecimal  [16-Bits]
 [ Bank == page_fc ]
 
@@ -609,7 +771,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FC7D  _Vec_Cosine_Table                  vec_rom_0xfc_0.c
           FC8D  _Vec_Note_Table                    vec_rom_0xfc_0.c
 
-ASxxxx Linker V05.00,  page 17.
+ASxxxx Linker V05.00,  page 20.
 Hexidecimal  [16-Bits]
 [ Bank == page_fd ]
 
@@ -627,7 +789,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FDC3  _Vec_ADSR_FADE12                   vec_rom_0xfd_0.c
           FDD3  _Vec_Music_4                       vec_rom_0xfd_0.c
 
-ASxxxx Linker V05.00,  page 18.
+ASxxxx Linker V05.00,  page 21.
 Hexidecimal  [16-Bits]
 [ Bank == page_fe ]
 
@@ -648,7 +810,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FEE8  _Vec_ADSR_FADE4                    vec_rom_0xfe_0.c
           FEF8  _Vec_Music_8                       vec_rom_0xfe_0.c
 
-ASxxxx Linker V05.00,  page 19.
+ASxxxx Linker V05.00,  page 22.
 Hexidecimal  [16-Bits]
 [ Bank == page_ff ]
 
@@ -665,7 +827,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           FF7A  _Vec_Music_c                       vec_rom_0xff_0.c
           FF8F  _Vec_Music_d                       vec_rom_0xff_0.c
 
-ASxxxx Linker V05.00,  page 20.
+ASxxxx Linker V05.00,  page 23.
 Hexidecimal  [16-Bits]
 [ Bank == page_e7 ]
 
@@ -678,7 +840,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           E7B5  ___Displ8_xy                       vec_rum_0xe7.c
           E7D2  ___Displ16_xy                      vec_rum_0xe7.c
 
-ASxxxx Linker V05.00,  page 21.
+ASxxxx Linker V05.00,  page 24.
 Hexidecimal  [16-Bits]
 [ Bank == page_e9 ]
 
@@ -690,7 +852,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           E98A  ___Ranpos                          vec_rum_0xe9.c
 
-ASxxxx Linker V05.00,  page 22.
+ASxxxx Linker V05.00,  page 25.
 Hexidecimal  [16-Bits]
 [ Bank == page_ea ]
 
@@ -710,7 +872,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           EACF  ___Draw_Scores                     vec_rum_0xea.c
           EAF0  ___Wait_Bound                      vec_rum_0xea.c
 
-ASxxxx Linker V05.00,  page 23.
+ASxxxx Linker V05.00,  page 26.
 Hexidecimal  [16-Bits]
 [ Bank == page_f0 ]
 
@@ -722,7 +884,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           F000  ___Reset                           vec_rum_0xf0.c
 
-ASxxxx Linker V05.00,  page 24.
+ASxxxx Linker V05.00,  page 27.
 Hexidecimal  [16-Bits]
 [ Bank == page_f1 ]
 
@@ -743,7 +905,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F1F5  ___Joy_Analog                      vec_rum_0xf1.c
           F1F8  ___Joy_Digital                     vec_rum_0xf1.c
 
-ASxxxx Linker V05.00,  page 25.
+ASxxxx Linker V05.00,  page 28.
 Hexidecimal  [16-Bits]
 [ Bank == page_f2 ]
 
@@ -775,7 +937,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F2F2  ___Moveto_x_7F                     vec_rum_0xf2.c
           F2FC  ___Moveto_d_7F                     vec_rum_0xf2.c
 
-ASxxxx Linker V05.00,  page 26.
+ASxxxx Linker V05.00,  page 29.
 Hexidecimal  [16-Bits]
 [ Bank == page_f3 ]
 
@@ -817,7 +979,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F3DA  ___Draw_VL_a                       vec_rum_0xf3.c
           F3DD  ___Draw_VL                         vec_rum_0xf3.c
           F3DF  ___Draw_Line_d                     vec_rum_0xf3.c
-ASxxxx Linker V05.00,  page 27.
+ASxxxx Linker V05.00,  page 30.
 Hexidecimal  [16-Bits]
 [ Bank == page_f4 ]
 
@@ -839,7 +1001,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F46E  ___Draw_VL_mode                    vec_rum_0xf4.c
           F495  ___Print_Str                       vec_rum_0xf4.c
           F498  ___Print_MRast                     vec_rum_0xf4.c
-ASxxxx Linker V05.00,  page 28.
+ASxxxx Linker V05.00,  page 31.
 Hexidecimal  [16-Bits]
 [ Bank == page_f5 ]
 
@@ -876,7 +1038,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F5EF  ___Get_Rise_Run                    vec_rum_0xf5.c
           F5FF  ___Rise_Run_X                      vec_rum_0xf5.c
 
-ASxxxx Linker V05.00,  page 29.
+ASxxxx Linker V05.00,  page 32.
 Hexidecimal  [16-Bits]
 [ Bank == page_f6 ]
 
@@ -905,7 +1067,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F690  ___Init_Music_a                    vec_rum_0xf6.c
           F692  ___Init_Music_x                    vec_rum_0xf6.c
 
-ASxxxx Linker V05.00,  page 30.
+ASxxxx Linker V05.00,  page 33.
 Hexidecimal  [16-Bits]
 [ Bank == page_f7 ]
 
@@ -918,7 +1080,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F742  ___Stop_Sound                      vec_rum_0xf7.c
           F7A9  ___Select_Game                     vec_rum_0xf7.c
 
-ASxxxx Linker V05.00,  page 31.
+ASxxxx Linker V05.00,  page 34.
 Hexidecimal  [16-Bits]
 [ Bank == page_f8 ]
 
@@ -939,7 +1101,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F8F3  ___Obj_Will_Hit                    vec_rum_0xf8.c
           F8FF  ___Obj_Hit                         vec_rum_0xf8.c
 
-ASxxxx Linker V05.00,  page 32.
+ASxxxx Linker V05.00,  page 35.
 Hexidecimal  [16-Bits]
 [ Bank == page_f9 ]
 
@@ -952,7 +1114,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           F92E  ___Explosion_Snd                   vec_rum_0xf9.c
           F9CA  ___Set_Amp                         vec_rum_0xf9.c
 
-ASxxxx Linker V05.00,  page 33.
+ASxxxx Linker V05.00,  page 36.
 Hexidecimal  [16-Bits]
 [ Bank == page_ffx ]
 
@@ -964,62 +1126,63 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
          -----  --------------------------------   ------------------------
           FF9F  ___Draw_Grid_VL                    vec_rum_0xff.c
 
-ASxxxx Linker V05.00,  page 34.
+ASxxxx Linker V05.00,  page 37.
 
 Files Linked                              [ module(s) ]
 
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ crt0.c ]
-C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ cartridge.enr.c ]
-C:\Vectrex\WorkFolder\VectrexTest\Fallou  [ main.enr.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xc8_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xc8_1.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xc8_2.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_1.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_2.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xcb_3.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xd0_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_0xd0_1.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpc8_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpc8_1.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpc8_2.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_1.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_2.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpcb_3.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpd0_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_ram_dpd0_1.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xed_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfc_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfd_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfe_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xfe_1.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_0xff_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dped_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfc_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfd_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfe_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpfe_1.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rom_dpff_0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xe7.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xe9.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xea.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf0.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf1.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf2.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf3.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf4.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf5.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf6.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf7.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf8.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xf9.c ]
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ vec_rum_0xff.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ crt0.c ]
+C:\Users\tsuok\FalloutTTRPG\VectrexTest\  [ cartridge.enr.c ]
+C:\Users\tsuok\FalloutTTRPG\VectrexTest\  [ main.enr.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xc8_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xc8_1.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xc8_2.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_1.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_2.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xcb_3.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xd0_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_0xd0_1.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpc8_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpc8_1.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpc8_2.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_1.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_2.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpcb_3.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpd0_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_ram_dpd0_1.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xed_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfc_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfd_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfe_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xfe_1.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_0xff_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dped_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfc_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfd_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfe_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpfe_1.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rom_dpff_0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xe7.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xe9.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xea.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf0.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf1.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf2.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf3.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf4.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf5.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf6.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf7.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf8.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xf9.c ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ vec_rum_0xff.c ]
 
 
 Libraries Linked                          [ object file ]
 
-C:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\P  [ ./rum/vec_rum_05_02_03_Print_Str ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ ./rum/vec_rum_14_05_Intensity_a. ]
+C:\Users\tsuok\Downloads\Vide2.6_RC03.w3  [ ./rum/vec_rum_05_02_03_Print_Str ]
 
 
 

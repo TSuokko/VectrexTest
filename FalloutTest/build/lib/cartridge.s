@@ -10,9 +10,10 @@
 ; -Wall -Wextra -Wconversion -Werror -fomit-frame-pointer
 ; -fno-toplevel-reorder -mint8 -msoft-reg-count=0 -std=gnu99
 ; -fno-time-report
-; -IC:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\PeerC\vectrex\include
+; -IC:\Users\tsuok\Downloads\Vide2.6_RC03.w32\Vide.w32\C\PeerC\vectrex\include
 ; -D__RUM_FUNCTION=1 -DOMMIT_FRAMEPOINTER=1
-; C:\Vectrex\WorkFolder\VectrexTest\FalloutTest\source\cartridge.enr.c
+; -IC:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\include
+; C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\cartridge.enr.c
 ; options enabled:  -falign-loops -fargument-alias -fauto-inc-dec
 ; -fbranch-count-reg -fcommon -fearly-inlining
 ; -feliminate-unused-debug-types -ffunction-cse -fgcse-lm -fident -fivopts
