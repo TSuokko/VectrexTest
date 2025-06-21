@@ -163,7 +163,7 @@ int main(void)
 	}
 	while(1)
 	{
-		ym_sound();
+		//ym_sound(); //not implemented correctly, fix it
          Read_Btns();   
 		//DP_to_C8();                        /* vectrex internal... dp must point */
 		Wait_Recal();                       /* sets this up allright... */         
@@ -173,7 +173,7 @@ int main(void)
 
 
 		//Wait_Recal();
-		Do_Sound();
+		//Do_Sound();
 		
 
         switch(gameState)

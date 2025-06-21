@@ -2052,8 +2052,8 @@ int main(void)
  }
  while(1)
  {
-  ym_sound();
-        Read_Btns();
+
+         Read_Btns();
 
   Wait_Recal();
 
@@ -2062,7 +2062,7 @@ int main(void)
 
 
 
-  Do_Sound();
+
 
 
         switch(gameState)
