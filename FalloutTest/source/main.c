@@ -22,6 +22,15 @@
 #define intens Intensity_a
 #define frwait Wait_Recal
 
+const signed char MousePointer[]=
+{	+0x04,
+	+0x00, +0x06, // draw to y, x
+	-0x04, +0x00, // draw to y, x
+	-0x04, -0x03, // draw to y, x
+	+0x04, -0x03, // draw to y, x
+	+0x04, +0x00, // draw to y, x
+};
+
 
 // ---------------------------------------------------------------------------
 // cold reset: the vectrex logo is shown, all ram data is cleared
@@ -52,6 +61,14 @@ void mainMenu()
 	Print_Str_d(40, -120, "2 RECONSTRUCT BINARY\x80");
     Print_Str_d(10, -120, "3 REPAIR IDENTITY CORE\x80");
 	Print_Str_d(-20, -120, "4 COMPILE INTELLIGENCE\x80");
+
+    VIA_t1_cnt_lo = 0x40;
+    Moveto_d(40, 0);
+    VIA_t1_cnt_lo = 0x80;
+    Draw_VLc((void*) MousePointer);
+
+   
+
 
 	if (Vec_Buttons & 1) {
      	gameState = Game_DataTransfer;
