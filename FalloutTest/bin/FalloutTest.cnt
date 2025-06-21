@@ -128,141 +128,109 @@ LABEL $3EAF _Drooling_pd_10
 LABEL $3EEB _Drooling_reg_10_data
 LABEL $40EF _Drooling_data
 LABEL $413F _Drooling_name
-LABEL $4148 _Wolfchild_start
-LABEL $414A _Wolfchild_reg_0
-LABEL $417D _Wolfchild_pd_0
-LABEL $4214 _Wolfchild_reg_0_data
-LABEL $4746 _Wolfchild_reg_1_data:Wolfchild_pd_1:Wolfchild_reg_1
-LABEL $48EB _Wolfchild_reg_2
-LABEL $48FD _Wolfchild_pd_2
-LABEL $493D _Wolfchild_reg_2_data
-LABEL $501F _Wolfchild_reg_3
-LABEL $5028 _Wolfchild_pd_3
-LABEL $5050 _Wolfchild_reg_3_data
-LABEL $5199 _Wolfchild_reg_4
-LABEL $5202 _Wolfchild_pd_4
-LABEL $53C5 _Wolfchild_reg_4_data
-LABEL $57A5 _Wolfchild_reg_5
-LABEL $57A8 _Wolfchild_pd_5
-LABEL $57AF _Wolfchild_reg_5_data
-LABEL $58B5 _Wolfchild_reg_6_data:Wolfchild_pd_6:Wolfchild_reg_6
-LABEL $58B9 _Wolfchild_reg_7
-LABEL $58C2 _Wolfchild_pd_7
-LABEL $58E4 _Wolfchild_reg_7_data
-LABEL $5A5D _Wolfchild_reg_8
-LABEL $5A6C _Wolfchild_pd_8
-LABEL $5A9E _Wolfchild_reg_8_data
-LABEL $5D54 _Wolfchild_reg_9
-LABEL $5D5D _Wolfchild_pd_9
-LABEL $5D85 _Wolfchild_reg_9_data
-LABEL $5E52 _Wolfchild_reg_10
-LABEL $5E5E _Wolfchild_pd_10
-LABEL $5E8F _Wolfchild_reg_10_data
-LABEL $60E0 _Wolfchild_data
-LABEL $6130 _Wolfchild_name
-LABEL $613A sfx_endofeffect_1
-LABEL $6149 noay1
-LABEL $614A sfx_doframe_intern_1
-LABEL $615E sfx_checktonefreq_1
-LABEL $6169 sfx_checknoisefreq_1
-LABEL $6172 sfx_checkvolume_1
-LABEL $6179 sfx_checktonedisable_1
-LABEL $6180 sfx_disabletone_1
-LABEL $618F sfx_enabletone_1
-LABEL $6191 sfx_checknoisedisable_1
-LABEL $6195 sfx_disablenoise_1
-LABEL $619E sfx_enablenoise_1
-LABEL $61A7 sfx_endofeffect_2
-LABEL $61B6 noay2
-LABEL $61B7 sfx_doframe_intern_2
-LABEL $61CB sfx_checktonefreq_2
-LABEL $61D6 sfx_checknoisefreq_2
-LABEL $61DF sfx_checkvolume_2
-LABEL $61E6 sfx_checktonedisable_2
-LABEL $61ED sfx_disabletone_2
-LABEL $61FC sfx_enabletone_2
-LABEL $61FE sfx_checknoisedisable_2
-LABEL $6202 sfx_disablenoise_2
-LABEL $620B sfx_enablenoise_2
-LABEL $6214 sfx_endofeffect_3
-LABEL $6223 noay3
-LABEL $6224 sfx_doframe_intern_3
-LABEL $6238 sfx_checktonefreq_3
-LABEL $6243 sfx_checknoisefreq_3
-LABEL $624C sfx_checkvolume_3
-LABEL $6253 sfx_checktonedisable_3
-LABEL $625A sfx_disabletone_3
-LABEL $6269 sfx_enabletone_3
-LABEL $626B sfx_checknoisedisable_3
-LABEL $626F sfx_disablenoise_3
-LABEL $6278 sfx_enablenoise_3
-LABEL $6281 _reg_max_data
-LABEL $6291 rleEncodedData
-LABEL $6292 moreBits
-LABEL $62A3 bit_is_ready1
-LABEL $62BE bit_is_ready2
-LABEL $62C5 rleCounterBit0NotSet
-LABEL $62D6 bit_is_ready3
-LABEL $62DD rleCounterBit1NotSet
-LABEL $62EE bit_is_ready4
-LABEL $62F5 rleCounterBit2NotSet
-LABEL $630C bit_is_ready5
-LABEL $6313 rleCounterBit3NotSet
-LABEL $632A bit_is_ready6
-LABEL $6331 rleCounterBit4NotSet
-LABEL $6346 bit_is_ready7
-LABEL $634D rleCounterBit5NotSet
-LABEL $6362 bit_is_ready8
-LABEL $6369 rleCounterBit6NotSet
-LABEL $637E bit_is_ready9
-LABEL $6385 rleCounterBit7NotSet
-LABEL $638B read16bitContinue
-LABEL $6393 no_carry
-LABEL $63A5 bit_is_ready10
-LABEL $63AD rleCounterBitXNotSet
-LABEL $63B1 rle16bitdone
-LABEL $63B3 rle8bitdone
-LABEL $63B7 do_ym_sound
-LABEL $63CB getCurrentRegByte:next_reg
-LABEL $63D7 inPhraseOut
-LABEL $63E5 not_in_phrase
-LABEL $63EA done:currentPharseNotEnded
-LABEL $63F6 no13
-LABEL $640C doNotWriteReg13
-LABEL $6414 ymsodone
-LABEL $6415 noValidByte
-LABEL $6425 bit_is_ready12
-LABEL $642F dechifer
-LABEL $643F bit_is_ready13
-LABEL $6453 getNextCodeBit
-LABEL $6467 bit_is_ready14
-LABEL $6470 testNextPhrase:code_bit_notset
-LABEL $6476 increaseCodeBits
-LABEL $647E bitLenFound
-LABEL $6497 directByte
-LABEL $64BA reg8Bits
-LABEL $64CA bit_is_ready15
-LABEL $64D1 noBit1
-LABEL $64E2 bit_is_ready16
-LABEL $64E9 noBit2
-LABEL $64EA reg6Bits
-LABEL $64FA bit_is_ready17
-LABEL $6501 noBit3
-LABEL $6502 reg5Bits
-LABEL $6512 bit_is_ready18
-LABEL $6519 noBit4
-LABEL $651A reg4Bits
-LABEL $652A bit_is_ready19
-LABEL $6531 noBit5
-LABEL $6542 bit_is_ready20
-LABEL $6549 noBit6
-LABEL $655A bit_is_ready21
-LABEL $6561 noBit7
-LABEL $6572 bit_is_ready22
-LABEL $6579 noBit8
-LABEL $657E init_ym_sound
-LABEL $6597 nreg_init
-LABEL $65B5 regInitDone
+LABEL $4148 sfx_endofeffect_1
+LABEL $4157 noay1
+LABEL $4158 sfx_doframe_intern_1
+LABEL $416C sfx_checktonefreq_1
+LABEL $4177 sfx_checknoisefreq_1
+LABEL $4180 sfx_checkvolume_1
+LABEL $4187 sfx_checktonedisable_1
+LABEL $418E sfx_disabletone_1
+LABEL $419D sfx_enabletone_1
+LABEL $419F sfx_checknoisedisable_1
+LABEL $41A3 sfx_disablenoise_1
+LABEL $41AC sfx_enablenoise_1
+LABEL $41B5 sfx_endofeffect_2
+LABEL $41C4 noay2
+LABEL $41C5 sfx_doframe_intern_2
+LABEL $41D9 sfx_checktonefreq_2
+LABEL $41E4 sfx_checknoisefreq_2
+LABEL $41ED sfx_checkvolume_2
+LABEL $41F4 sfx_checktonedisable_2
+LABEL $41FB sfx_disabletone_2
+LABEL $420A sfx_enabletone_2
+LABEL $420C sfx_checknoisedisable_2
+LABEL $4210 sfx_disablenoise_2
+LABEL $4219 sfx_enablenoise_2
+LABEL $4222 sfx_endofeffect_3
+LABEL $4231 noay3
+LABEL $4232 sfx_doframe_intern_3
+LABEL $4246 sfx_checktonefreq_3
+LABEL $4251 sfx_checknoisefreq_3
+LABEL $425A sfx_checkvolume_3
+LABEL $4261 sfx_checktonedisable_3
+LABEL $4268 sfx_disabletone_3
+LABEL $4277 sfx_enabletone_3
+LABEL $4279 sfx_checknoisedisable_3
+LABEL $427D sfx_disablenoise_3
+LABEL $4286 sfx_enablenoise_3
+LABEL $428F _reg_max_data
+LABEL $429F rleEncodedData
+LABEL $42A0 moreBits
+LABEL $42B1 bit_is_ready1
+LABEL $42CC bit_is_ready2
+LABEL $42D3 rleCounterBit0NotSet
+LABEL $42E4 bit_is_ready3
+LABEL $42EB rleCounterBit1NotSet
+LABEL $42FC bit_is_ready4
+LABEL $4303 rleCounterBit2NotSet
+LABEL $431A bit_is_ready5
+LABEL $4321 rleCounterBit3NotSet
+LABEL $4338 bit_is_ready6
+LABEL $433F rleCounterBit4NotSet
+LABEL $4354 bit_is_ready7
+LABEL $435B rleCounterBit5NotSet
+LABEL $4370 bit_is_ready8
+LABEL $4377 rleCounterBit6NotSet
+LABEL $438C bit_is_ready9
+LABEL $4393 rleCounterBit7NotSet
+LABEL $4399 read16bitContinue
+LABEL $43A1 no_carry
+LABEL $43B3 bit_is_ready10
+LABEL $43BB rleCounterBitXNotSet
+LABEL $43BF rle16bitdone
+LABEL $43C1 rle8bitdone
+LABEL $43C5 do_ym_sound
+LABEL $43D9 getCurrentRegByte:next_reg
+LABEL $43E5 inPhraseOut
+LABEL $43F3 not_in_phrase
+LABEL $43F8 done:currentPharseNotEnded
+LABEL $4404 no13
+LABEL $441A doNotWriteReg13
+LABEL $4422 ymsodone
+LABEL $4423 noValidByte
+LABEL $4433 bit_is_ready12
+LABEL $443D dechifer
+LABEL $444D bit_is_ready13
+LABEL $4461 getNextCodeBit
+LABEL $4475 bit_is_ready14
+LABEL $447E testNextPhrase:code_bit_notset
+LABEL $4484 increaseCodeBits
+LABEL $448C bitLenFound
+LABEL $44A5 directByte
+LABEL $44C8 reg8Bits
+LABEL $44D8 bit_is_ready15
+LABEL $44DF noBit1
+LABEL $44F0 bit_is_ready16
+LABEL $44F7 noBit2
+LABEL $44F8 reg6Bits
+LABEL $4508 bit_is_ready17
+LABEL $450F noBit3
+LABEL $4510 reg5Bits
+LABEL $4520 bit_is_ready18
+LABEL $4527 noBit4
+LABEL $4528 reg4Bits
+LABEL $4538 bit_is_ready19
+LABEL $453F noBit5
+LABEL $4550 bit_is_ready20
+LABEL $4557 noBit6
+LABEL $4568 bit_is_ready21
+LABEL $456F noBit7
+LABEL $4580 bit_is_ready22
+LABEL $4587 noBit8
+LABEL $458C init_ym_sound
+LABEL $45A5 nreg_init
+LABEL $45C3 regInitDone
 LABEL $C880 _exitText
 LABEL $C881 _cursor_x
 LABEL $C882 _cursor_y
@@ -366,178 +334,178 @@ COMMENT $1C13 Vec_Buttons.27, Vec_Buttons
 COMMENT $1C1B Vec_Buttons.28, Vec_Buttons
 COMMENT $1C23 gameState
 COMMENT $1C26 exitText
-COMMENT $613A reset sfx
-COMMENT $614A check if sfx to play
-COMMENT $614F get current frame pointer
-COMMENT $6154 check first flag byte D0
-COMMENT $6156 no match - continue to process frame
-COMMENT $615A check second flag byte 20
-COMMENT $615C match - end of effect found so stop playing
-COMMENT $615E if bit 5 of B is set
-COMMENT $6160 skip as no tone freq data
-COMMENT $6162 alternative to destroying d load any 2 byte reg
-COMMENT $6164 here I destroy d
-COMMENT $6167 and load b anew - one instruction to many
-COMMENT $6169 if bit 6 of B is only set
-COMMENT $616B skip as no noise freq data
-COMMENT $616D get next data byte and copy to noise freq reg
-COMMENT $616F set noise freq
-COMMENT $6174 get volume from bits 0-3
-COMMENT $6176 set tone freq
-COMMENT $6179 in the following reg 7 will be altered - load once
-COMMENT $617C if bit 4 of B is set disable the tone
-COMMENT $6182 if bit7 of B is set disable noise
-COMMENT $6188 set tone freq
-COMMENT $618B update frame pointer to next flag byte in Y
-COMMENT $6191 if bit7 of B is set disable noise
-COMMENT $6197 set tone freq
-COMMENT $619A update frame pointer to next flag byte in Y
-COMMENT $61A0 set tone freq
-COMMENT $61A3 update frame pointer to next flag byte in Y
-COMMENT $61A7 reset sfx
-COMMENT $61B7 check if sfx to play
-COMMENT $61BC get current frame pointer
-COMMENT $61C1 check first flag byte D0
-COMMENT $61C3 no match - continue to process frame
-COMMENT $61C7 check second flag byte 20
-COMMENT $61C9 match - end of effect found so stop playing
-COMMENT $61CB if bit 5 of B is set
-COMMENT $61CD skip as no tone freq data
-COMMENT $61CF alternative to destroying d load any 2 byte reg
-COMMENT $61D1 here I destroy d
-COMMENT $61D4 and load b anew - one instruction to many
-COMMENT $61D6 if bit 6 of B is only set
-COMMENT $61D8 skip as no noise freq data
-COMMENT $61DA get next data byte and copy to noise freq reg
-COMMENT $61DC set noise freq
-COMMENT $61E1 get volume from bits 0-3
-COMMENT $61E3 set tone freq
-COMMENT $61E6 in the following reg 7 will be altered - load once
-COMMENT $61E9 if bit 4 of B is set disable the tone
-COMMENT $61EF if bit7 of B is set disable noise
-COMMENT $61F5 set tone freq
-COMMENT $61F8 update frame pointer to next flag byte in Y
-COMMENT $61FE if bit7 of B is set disable noise
-COMMENT $6204 set tone freq
-COMMENT $6207 update frame pointer to next flag byte in Y
-COMMENT $620D set tone freq
-COMMENT $6210 update frame pointer to next flag byte in Y
-COMMENT $6214 reset sfx
-COMMENT $6224 check if sfx to play
-COMMENT $6229 get current frame pointer
-COMMENT $622E check first flag byte D0
-COMMENT $6230 no match - continue to process frame
-COMMENT $6234 check second flag byte 20
-COMMENT $6236 match - end of effect found so stop playing
-COMMENT $6238 if bit 5 of B is set
-COMMENT $623A skip as no tone freq data
-COMMENT $623C alternative to destroying d load any 2 byte reg
-COMMENT $623E here I destroy d
-COMMENT $6241 and load b anew - one instruction to many
-COMMENT $6243 if bit 6 of B is only set
-COMMENT $6245 skip as no noise freq data
-COMMENT $6247 get next data byte and copy to noise freq reg
-COMMENT $6249 set tone freq
-COMMENT $624E get volume from bits 0-3
-COMMENT $6250 set tone freq
-COMMENT $6253 in the following reg 7 will be altered - load once
-COMMENT $6256 if bit 4 of B is set disable the tone
-COMMENT $625C if bit7 of B is set disable noise
-COMMENT $6262 set tone freq
-COMMENT $6265 update frame pointer to next flag byte in Y
-COMMENT $626B if bit7 of B is set disable noise
-COMMENT $6271 set tone freq
-COMMENT $6274 update frame pointer to next flag byte in Y
-COMMENT $627A set tone freq
-COMMENT $627D update frame pointer to next flag byte in Y
-COMMENT $62AB in y now our count of bits
-COMMENT $6389 assuming high byte is zero of counter
-COMMENT $638D LSL A
-COMMENT $638E LSL B
-COMMENT $638F if no carry, than exit
-COMMENT $6391 otherwise overflow from B to 0bit of A
-COMMENT $63B3 assuming high byte is zero of counter
-COMMENT $63B7 load current VBL Counter
-COMMENT $63BA if 0, than we are done
-COMMENT $63BC otherwise remember we are doing one byte now
-COMMENT $63BF and store it
-COMMENT $63C2 get the number of regs we are working on
-COMMENT $63C5 and remember them as current counter
-COMMENT $63C8 load RAM start address of our wokring structure
-COMMENT $63CB if current RLE counter is zero, than we must get a new byte
-COMMENT $63CD jump to get new byte
-COMMENT $63CF otherwise, lets check if we are in a phrase (x = pointer to phrase or zero)
-COMMENT $63D1 jump if not
-COMMENT $63D3 where in our phrase are we?
-COMMENT $63D5 length of phrase
-COMMENT $63D7 load the next byte of our phrase
-COMMENT $63D9 store that to current output
-COMMENT $63DB check if we are at the end of the phrase
-COMMENT $63DD (in a is phrase len)
-COMMENT $63DF if phrase is not at end - continue
-COMMENT $63E1 other wise we set place to zero
-COMMENT $63E3 and decrease out RLE counter
-COMMENT $63EC load current register
-COMMENT $63F4 if b part of phrase than 0xff, if single byte than 0x1f, indicator for envelope not changed
-COMMENT $63F6 store register select byte
-COMMENT $63F8 sound BDIR on, BC1 on, mux off _ LATCH
-COMMENT $63FC sound BDIR off, BC1 off, mux off - INACTIVE
-COMMENT $6400 read sound chip status (?)
-COMMENT $6402 store data byte
-COMMENT $6404 sound BDIR on, BC1 off, mux off - WRITE
-COMMENT $6408 sound BDIR off, BC1 off, mux off - INACTIVE
-COMMENT $640C go to next "register" of sound data
-COMMENT $640F but only if we are not done yet, if counter is zero
-COMMENT $6412 we do not branch :-)
-COMMENT $6443 if bit is zero - jump
-COMMENT $6445 save stackpointer
-COMMENT $6449 load the starting position of the phrase mappings for this register
-COMMENT $644C and also the phrase definition address
-COMMENT $644F was _calc_bits, a contains the number of bits our current shannon code checkings
-COMMENT $6450 starting with zero for coder also
-COMMENT $6453 prepare load of next coder bit - shift all previous codes one position
-COMMENT $6456 increase used bits
-COMMENT $646B if bit is zero - jump
-COMMENT $646D otherwise set bit in current code
-COMMENT $6470 check if it count of currently referenced phrase equals the current shannon bitcount
-COMMENT $6472 if lower, load next bit (and increase shannon bits)
-COMMENT $6474 if equal, than we must check if codes equal
-COMMENT $6476 load length of last phase and
-COMMENT $6478 add that to our future pointer to phrases
-COMMENT $647A advance one phrase in out mapping (one mapping = 3 byte)
-COMMENT $647C and test the next such got phrase
-COMMENT $647E load coder-byte, from current phrase
-COMMENT $6480 and compare with current loaded coder-byte from "bitstream"
-COMMENT $6483 if not the same, check next phrase in phrase mapping (jump)
-COMMENT $6485 otherwise we found the correct phrase, load length of current phrase
-COMMENT $6487 and remember that
-COMMENT $6489 restore stack
-COMMENT $648D pointer to current found phrase to X (will be resused in out)
-COMMENT $648F current position in phrase is at start 0
-COMMENT $6490 store the phrase to the structure
-COMMENT $6492 also the position
-COMMENT $6494 and output the next phrase byte
-COMMENT $64A8 number of relevant bits for reg
-COMMENT $657E load start address of ram buffer for YM play
-COMMENT $6581 load length of buffer
-COMMENT $6584 clear buffer
-COMMENT $6587 count of registers that are used by the player - reset
-COMMENT $658A first load start of all data to y
-COMMENT $658D load vbl_len to d
-COMMENT $658F and store it to len reset
-COMMENT $6592 and store it to current data pointer
-COMMENT $6595 load number of next register to work on
-COMMENT $6597 count the registers we actually use
-COMMENT $659A and store the register of the current data
-COMMENT $659C load location of translation map to y
-COMMENT $659F and store it
-COMMENT $65A2 load location of phrases
-COMMENT $65A5 and store it
-COMMENT $65A8 load location of RLE data
-COMMENT $65AB and store it
-COMMENT $65AE add structure length to x
-COMMENT $65B1 load number of next register to work on
-COMMENT $65B3 if negative than we are done
+COMMENT $4148 reset sfx
+COMMENT $4158 check if sfx to play
+COMMENT $415D get current frame pointer
+COMMENT $4162 check first flag byte D0
+COMMENT $4164 no match - continue to process frame
+COMMENT $4168 check second flag byte 20
+COMMENT $416A match - end of effect found so stop playing
+COMMENT $416C if bit 5 of B is set
+COMMENT $416E skip as no tone freq data
+COMMENT $4170 alternative to destroying d load any 2 byte reg
+COMMENT $4172 here I destroy d
+COMMENT $4175 and load b anew - one instruction to many
+COMMENT $4177 if bit 6 of B is only set
+COMMENT $4179 skip as no noise freq data
+COMMENT $417B get next data byte and copy to noise freq reg
+COMMENT $417D set noise freq
+COMMENT $4182 get volume from bits 0-3
+COMMENT $4184 set tone freq
+COMMENT $4187 in the following reg 7 will be altered - load once
+COMMENT $418A if bit 4 of B is set disable the tone
+COMMENT $4190 if bit7 of B is set disable noise
+COMMENT $4196 set tone freq
+COMMENT $4199 update frame pointer to next flag byte in Y
+COMMENT $419F if bit7 of B is set disable noise
+COMMENT $41A5 set tone freq
+COMMENT $41A8 update frame pointer to next flag byte in Y
+COMMENT $41AE set tone freq
+COMMENT $41B1 update frame pointer to next flag byte in Y
+COMMENT $41B5 reset sfx
+COMMENT $41C5 check if sfx to play
+COMMENT $41CA get current frame pointer
+COMMENT $41CF check first flag byte D0
+COMMENT $41D1 no match - continue to process frame
+COMMENT $41D5 check second flag byte 20
+COMMENT $41D7 match - end of effect found so stop playing
+COMMENT $41D9 if bit 5 of B is set
+COMMENT $41DB skip as no tone freq data
+COMMENT $41DD alternative to destroying d load any 2 byte reg
+COMMENT $41DF here I destroy d
+COMMENT $41E2 and load b anew - one instruction to many
+COMMENT $41E4 if bit 6 of B is only set
+COMMENT $41E6 skip as no noise freq data
+COMMENT $41E8 get next data byte and copy to noise freq reg
+COMMENT $41EA set noise freq
+COMMENT $41EF get volume from bits 0-3
+COMMENT $41F1 set tone freq
+COMMENT $41F4 in the following reg 7 will be altered - load once
+COMMENT $41F7 if bit 4 of B is set disable the tone
+COMMENT $41FD if bit7 of B is set disable noise
+COMMENT $4203 set tone freq
+COMMENT $4206 update frame pointer to next flag byte in Y
+COMMENT $420C if bit7 of B is set disable noise
+COMMENT $4212 set tone freq
+COMMENT $4215 update frame pointer to next flag byte in Y
+COMMENT $421B set tone freq
+COMMENT $421E update frame pointer to next flag byte in Y
+COMMENT $4222 reset sfx
+COMMENT $4232 check if sfx to play
+COMMENT $4237 get current frame pointer
+COMMENT $423C check first flag byte D0
+COMMENT $423E no match - continue to process frame
+COMMENT $4242 check second flag byte 20
+COMMENT $4244 match - end of effect found so stop playing
+COMMENT $4246 if bit 5 of B is set
+COMMENT $4248 skip as no tone freq data
+COMMENT $424A alternative to destroying d load any 2 byte reg
+COMMENT $424C here I destroy d
+COMMENT $424F and load b anew - one instruction to many
+COMMENT $4251 if bit 6 of B is only set
+COMMENT $4253 skip as no noise freq data
+COMMENT $4255 get next data byte and copy to noise freq reg
+COMMENT $4257 set tone freq
+COMMENT $425C get volume from bits 0-3
+COMMENT $425E set tone freq
+COMMENT $4261 in the following reg 7 will be altered - load once
+COMMENT $4264 if bit 4 of B is set disable the tone
+COMMENT $426A if bit7 of B is set disable noise
+COMMENT $4270 set tone freq
+COMMENT $4273 update frame pointer to next flag byte in Y
+COMMENT $4279 if bit7 of B is set disable noise
+COMMENT $427F set tone freq
+COMMENT $4282 update frame pointer to next flag byte in Y
+COMMENT $4288 set tone freq
+COMMENT $428B update frame pointer to next flag byte in Y
+COMMENT $42B9 in y now our count of bits
+COMMENT $4397 assuming high byte is zero of counter
+COMMENT $439B LSL A
+COMMENT $439C LSL B
+COMMENT $439D if no carry, than exit
+COMMENT $439F otherwise overflow from B to 0bit of A
+COMMENT $43C1 assuming high byte is zero of counter
+COMMENT $43C5 load current VBL Counter
+COMMENT $43C8 if 0, than we are done
+COMMENT $43CA otherwise remember we are doing one byte now
+COMMENT $43CD and store it
+COMMENT $43D0 get the number of regs we are working on
+COMMENT $43D3 and remember them as current counter
+COMMENT $43D6 load RAM start address of our wokring structure
+COMMENT $43D9 if current RLE counter is zero, than we must get a new byte
+COMMENT $43DB jump to get new byte
+COMMENT $43DD otherwise, lets check if we are in a phrase (x = pointer to phrase or zero)
+COMMENT $43DF jump if not
+COMMENT $43E1 where in our phrase are we?
+COMMENT $43E3 length of phrase
+COMMENT $43E5 load the next byte of our phrase
+COMMENT $43E7 store that to current output
+COMMENT $43E9 check if we are at the end of the phrase
+COMMENT $43EB (in a is phrase len)
+COMMENT $43ED if phrase is not at end - continue
+COMMENT $43EF other wise we set place to zero
+COMMENT $43F1 and decrease out RLE counter
+COMMENT $43FA load current register
+COMMENT $4402 if b part of phrase than 0xff, if single byte than 0x1f, indicator for envelope not changed
+COMMENT $4404 store register select byte
+COMMENT $4406 sound BDIR on, BC1 on, mux off _ LATCH
+COMMENT $440A sound BDIR off, BC1 off, mux off - INACTIVE
+COMMENT $440E read sound chip status (?)
+COMMENT $4410 store data byte
+COMMENT $4412 sound BDIR on, BC1 off, mux off - WRITE
+COMMENT $4416 sound BDIR off, BC1 off, mux off - INACTIVE
+COMMENT $441A go to next "register" of sound data
+COMMENT $441D but only if we are not done yet, if counter is zero
+COMMENT $4420 we do not branch :-)
+COMMENT $4451 if bit is zero - jump
+COMMENT $4453 save stackpointer
+COMMENT $4457 load the starting position of the phrase mappings for this register
+COMMENT $445A and also the phrase definition address
+COMMENT $445D was _calc_bits, a contains the number of bits our current shannon code checkings
+COMMENT $445E starting with zero for coder also
+COMMENT $4461 prepare load of next coder bit - shift all previous codes one position
+COMMENT $4464 increase used bits
+COMMENT $4479 if bit is zero - jump
+COMMENT $447B otherwise set bit in current code
+COMMENT $447E check if it count of currently referenced phrase equals the current shannon bitcount
+COMMENT $4480 if lower, load next bit (and increase shannon bits)
+COMMENT $4482 if equal, than we must check if codes equal
+COMMENT $4484 load length of last phase and
+COMMENT $4486 add that to our future pointer to phrases
+COMMENT $4488 advance one phrase in out mapping (one mapping = 3 byte)
+COMMENT $448A and test the next such got phrase
+COMMENT $448C load coder-byte, from current phrase
+COMMENT $448E and compare with current loaded coder-byte from "bitstream"
+COMMENT $4491 if not the same, check next phrase in phrase mapping (jump)
+COMMENT $4493 otherwise we found the correct phrase, load length of current phrase
+COMMENT $4495 and remember that
+COMMENT $4497 restore stack
+COMMENT $449B pointer to current found phrase to X (will be resused in out)
+COMMENT $449D current position in phrase is at start 0
+COMMENT $449E store the phrase to the structure
+COMMENT $44A0 also the position
+COMMENT $44A2 and output the next phrase byte
+COMMENT $44B6 number of relevant bits for reg
+COMMENT $458C load start address of ram buffer for YM play
+COMMENT $458F load length of buffer
+COMMENT $4592 clear buffer
+COMMENT $4595 count of registers that are used by the player - reset
+COMMENT $4598 first load start of all data to y
+COMMENT $459B load vbl_len to d
+COMMENT $459D and store it to len reset
+COMMENT $45A0 and store it to current data pointer
+COMMENT $45A3 load number of next register to work on
+COMMENT $45A5 count the registers we actually use
+COMMENT $45A8 and store the register of the current data
+COMMENT $45AA load location of translation map to y
+COMMENT $45AD and store it
+COMMENT $45B0 load location of phrases
+COMMENT $45B3 and store it
+COMMENT $45B6 load location of RLE data
+COMMENT $45B9 and store it
+COMMENT $45BC add structure length to x
+COMMENT $45BF load number of next register to work on
+COMMENT $45C1 if negative than we are done
 C_INFO_BLOCK $18B9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 68 "enable_controller_1_x(); " BKPOINT=0
 C_INFO_BLOCK $18BC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 69 "enable_controller_1_y(); " BKPOINT=0
 C_INFO_BLOCK $18BF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FalloutTest\source\main.c "FN_END 70 "disable_controller_2_x(); " BKPOINT=0
@@ -2456,888 +2424,7 @@ RANGE $4131-$4133 DW_DATA 4
 RANGE $4137-$4138 DB_DATA 8
 RANGE $4138-$413A DW_DATA 4
 RANGE $413E-$4140 DB_DATA 8
-RANGE $4148-$414A DW_DATA 4
-RANGE $414A-$414B DB_DATA 8
-RANGE $414D-$414E DB_DATA 8
-RANGE $4150-$4151 DB_DATA 8
-RANGE $4153-$4154 DB_DATA 8
-RANGE $4156-$4157 DB_DATA 8
-RANGE $4159-$415A DB_DATA 8
-RANGE $415C-$415D DB_DATA 8
-RANGE $415F-$4160 DB_DATA 8
-RANGE $4162-$4163 DB_DATA 8
-RANGE $4165-$4166 DB_DATA 8
-RANGE $4168-$4169 DB_DATA 8
-RANGE $416B-$416C DB_DATA 8
-RANGE $416E-$416F DB_DATA 8
-RANGE $4171-$4172 DB_DATA 8
-RANGE $4174-$4175 DB_DATA 8
-RANGE $4177-$4178 DB_DATA 8
-RANGE $417A-$417B DB_DATA 8
-RANGE $417D-$417E DB_DATA 8
-RANGE $4187-$4188 DB_DATA 8
-RANGE $4194-$4195 DB_DATA 8
-RANGE $41A3-$41A4 DB_DATA 8
-RANGE $41AD-$41AE DB_DATA 8
-RANGE $41B7-$41B8 DB_DATA 8
-RANGE $41BF-$41C0 DB_DATA 8
-RANGE $41C9-$41CA DB_DATA 8
-RANGE $41D3-$41D4 DB_DATA 8
-RANGE $41DD-$41DE DB_DATA 8
-RANGE $41E5-$41E6 DB_DATA 8
-RANGE $41EF-$41F0 DB_DATA 8
-RANGE $41F9-$41FA DB_DATA 8
-RANGE $41FB-$41FC DB_DATA 8
-RANGE $41FF-$4200 DB_DATA 8
-RANGE $4204-$4205 DB_DATA 8
-RANGE $420C-$420D DB_DATA 8
-RANGE $4214-$4215 DB_DATA 8
-RANGE $421E-$421F DB_DATA 8
-RANGE $4228-$4229 DB_DATA 8
-RANGE $4232-$4233 DB_DATA 8
-RANGE $423C-$423D DB_DATA 8
-RANGE $4246-$4247 DB_DATA 8
-RANGE $4250-$4251 DB_DATA 8
-RANGE $425A-$425B DB_DATA 8
-RANGE $4264-$4265 DB_DATA 8
-RANGE $426E-$426F DB_DATA 8
-RANGE $4278-$4279 DB_DATA 8
-RANGE $4282-$4283 DB_DATA 8
-RANGE $428C-$428D DB_DATA 8
-RANGE $4296-$4297 DB_DATA 8
-RANGE $42A0-$42A1 DB_DATA 8
-RANGE $42AA-$42AB DB_DATA 8
-RANGE $42B4-$42B5 DB_DATA 8
-RANGE $42BE-$42BF DB_DATA 8
-RANGE $42C8-$42C9 DB_DATA 8
-RANGE $42D2-$42D3 DB_DATA 8
-RANGE $42DC-$42DD DB_DATA 8
-RANGE $42E6-$42E7 DB_DATA 8
-RANGE $42F0-$42F1 DB_DATA 8
-RANGE $42FA-$42FB DB_DATA 8
-RANGE $4304-$4305 DB_DATA 8
-RANGE $430E-$430F DB_DATA 8
-RANGE $4318-$4319 DB_DATA 8
-RANGE $4322-$4323 DB_DATA 8
-RANGE $432C-$432D DB_DATA 8
-RANGE $4336-$4337 DB_DATA 8
-RANGE $4340-$4341 DB_DATA 8
-RANGE $434A-$434B DB_DATA 8
-RANGE $4354-$4355 DB_DATA 8
-RANGE $435E-$435F DB_DATA 8
-RANGE $4368-$4369 DB_DATA 8
-RANGE $4372-$4373 DB_DATA 8
-RANGE $437C-$437D DB_DATA 8
-RANGE $4386-$4387 DB_DATA 8
-RANGE $4390-$4391 DB_DATA 8
-RANGE $439A-$439B DB_DATA 8
-RANGE $43A4-$43A5 DB_DATA 8
-RANGE $43AE-$43AF DB_DATA 8
-RANGE $43B8-$43B9 DB_DATA 8
-RANGE $43C2-$43C3 DB_DATA 8
-RANGE $43CC-$43CD DB_DATA 8
-RANGE $43D6-$43D7 DB_DATA 8
-RANGE $43E0-$43E1 DB_DATA 8
-RANGE $43EA-$43EB DB_DATA 8
-RANGE $43F4-$43F5 DB_DATA 8
-RANGE $43FE-$43FF DB_DATA 8
-RANGE $4408-$4409 DB_DATA 8
-RANGE $4412-$4413 DB_DATA 8
-RANGE $441C-$441D DB_DATA 8
-RANGE $4426-$4427 DB_DATA 8
-RANGE $4430-$4431 DB_DATA 8
-RANGE $443A-$443B DB_DATA 8
-RANGE $4444-$4445 DB_DATA 8
-RANGE $444E-$444F DB_DATA 8
-RANGE $4458-$4459 DB_DATA 8
-RANGE $4462-$4463 DB_DATA 8
-RANGE $446C-$446D DB_DATA 8
-RANGE $4476-$4477 DB_DATA 8
-RANGE $4480-$4481 DB_DATA 8
-RANGE $448A-$448B DB_DATA 8
-RANGE $4494-$4495 DB_DATA 8
-RANGE $449E-$449F DB_DATA 8
-RANGE $44A8-$44A9 DB_DATA 8
-RANGE $44B2-$44B3 DB_DATA 8
-RANGE $44BC-$44BD DB_DATA 8
-RANGE $44C6-$44C7 DB_DATA 8
-RANGE $44D0-$44D1 DB_DATA 8
-RANGE $44DA-$44DB DB_DATA 8
-RANGE $44E4-$44E5 DB_DATA 8
-RANGE $44EE-$44EF DB_DATA 8
-RANGE $44F8-$44F9 DB_DATA 8
-RANGE $4502-$4503 DB_DATA 8
-RANGE $450C-$450D DB_DATA 8
-RANGE $4516-$4517 DB_DATA 8
-RANGE $4520-$4521 DB_DATA 8
-RANGE $452A-$452B DB_DATA 8
-RANGE $4534-$4535 DB_DATA 8
-RANGE $453E-$453F DB_DATA 8
-RANGE $4548-$4549 DB_DATA 8
-RANGE $4552-$4553 DB_DATA 8
-RANGE $455C-$455D DB_DATA 8
-RANGE $4566-$4567 DB_DATA 8
-RANGE $4570-$4571 DB_DATA 8
-RANGE $457A-$457B DB_DATA 8
-RANGE $4584-$4585 DB_DATA 8
-RANGE $458E-$458F DB_DATA 8
-RANGE $4598-$4599 DB_DATA 8
-RANGE $45A2-$45A3 DB_DATA 8
-RANGE $45AC-$45AD DB_DATA 8
-RANGE $45B6-$45B7 DB_DATA 8
-RANGE $45C0-$45C1 DB_DATA 8
-RANGE $45CA-$45CB DB_DATA 8
-RANGE $45D4-$45D5 DB_DATA 8
-RANGE $45DE-$45DF DB_DATA 8
-RANGE $45E8-$45E9 DB_DATA 8
-RANGE $45F2-$45F3 DB_DATA 8
-RANGE $45FC-$45FD DB_DATA 8
-RANGE $4606-$4607 DB_DATA 8
-RANGE $4610-$4611 DB_DATA 8
-RANGE $461A-$461B DB_DATA 8
-RANGE $4624-$4625 DB_DATA 8
-RANGE $462E-$462F DB_DATA 8
-RANGE $4638-$4639 DB_DATA 8
-RANGE $4642-$4643 DB_DATA 8
-RANGE $464C-$464D DB_DATA 8
-RANGE $4656-$4657 DB_DATA 8
-RANGE $4660-$4661 DB_DATA 8
-RANGE $466A-$466B DB_DATA 8
-RANGE $4674-$4675 DB_DATA 8
-RANGE $467E-$467F DB_DATA 8
-RANGE $4688-$4689 DB_DATA 8
-RANGE $4692-$4693 DB_DATA 8
-RANGE $469C-$469D DB_DATA 8
-RANGE $46A6-$46A7 DB_DATA 8
-RANGE $46B0-$46B1 DB_DATA 8
-RANGE $46BA-$46BB DB_DATA 8
-RANGE $46C4-$46C5 DB_DATA 8
-RANGE $46CE-$46CF DB_DATA 8
-RANGE $46D8-$46D9 DB_DATA 8
-RANGE $46E2-$46E3 DB_DATA 8
-RANGE $46EC-$46ED DB_DATA 8
-RANGE $46F6-$46F7 DB_DATA 8
-RANGE $4700-$4701 DB_DATA 8
-RANGE $470A-$470B DB_DATA 8
-RANGE $4714-$4715 DB_DATA 8
-RANGE $471E-$471F DB_DATA 8
-RANGE $4728-$4729 DB_DATA 8
-RANGE $4732-$4733 DB_DATA 8
-RANGE $473C-$473D DB_DATA 8
-RANGE $4746-$4747 DB_DATA 8
-RANGE $4750-$4751 DB_DATA 8
-RANGE $475A-$475B DB_DATA 8
-RANGE $4764-$4765 DB_DATA 8
-RANGE $476E-$476F DB_DATA 8
-RANGE $4778-$4779 DB_DATA 8
-RANGE $4782-$4783 DB_DATA 8
-RANGE $478C-$478D DB_DATA 8
-RANGE $4796-$4797 DB_DATA 8
-RANGE $47A0-$47A1 DB_DATA 8
-RANGE $47AA-$47AB DB_DATA 8
-RANGE $47B4-$47B5 DB_DATA 8
-RANGE $47BE-$47BF DB_DATA 8
-RANGE $47C8-$47C9 DB_DATA 8
-RANGE $47D2-$47D3 DB_DATA 8
-RANGE $47DC-$47DD DB_DATA 8
-RANGE $47E6-$47E7 DB_DATA 8
-RANGE $47F0-$47F1 DB_DATA 8
-RANGE $47FA-$47FB DB_DATA 8
-RANGE $4804-$4805 DB_DATA 8
-RANGE $480E-$480F DB_DATA 8
-RANGE $4818-$4819 DB_DATA 8
-RANGE $4822-$4823 DB_DATA 8
-RANGE $482C-$482D DB_DATA 8
-RANGE $4836-$4837 DB_DATA 8
-RANGE $4840-$4841 DB_DATA 8
-RANGE $484A-$484B DB_DATA 8
-RANGE $4854-$4855 DB_DATA 8
-RANGE $485E-$485F DB_DATA 8
-RANGE $4868-$4869 DB_DATA 8
-RANGE $4872-$4873 DB_DATA 8
-RANGE $487C-$487D DB_DATA 8
-RANGE $4886-$4887 DB_DATA 8
-RANGE $4890-$4891 DB_DATA 8
-RANGE $489A-$489B DB_DATA 8
-RANGE $48A4-$48A5 DB_DATA 8
-RANGE $48AE-$48AF DB_DATA 8
-RANGE $48B8-$48B9 DB_DATA 8
-RANGE $48C2-$48C3 DB_DATA 8
-RANGE $48CC-$48CD DB_DATA 8
-RANGE $48D6-$48D7 DB_DATA 8
-RANGE $48E0-$48E1 DB_DATA 8
-RANGE $48EA-$48EC DB_DATA 8
-RANGE $48EE-$48EF DB_DATA 8
-RANGE $48F1-$48F2 DB_DATA 8
-RANGE $48F4-$48F5 DB_DATA 8
-RANGE $48F7-$48F8 DB_DATA 8
-RANGE $48FA-$48FB DB_DATA 8
-RANGE $48FD-$48FE DB_DATA 8
-RANGE $490C-$490D DB_DATA 8
-RANGE $4916-$4917 DB_DATA 8
-RANGE $491A-$491B DB_DATA 8
-RANGE $4920-$4921 DB_DATA 8
-RANGE $492F-$4930 DB_DATA 8
-RANGE $493D-$493E DB_DATA 8
-RANGE $4947-$4948 DB_DATA 8
-RANGE $4951-$4952 DB_DATA 8
-RANGE $495B-$495C DB_DATA 8
-RANGE $4965-$4966 DB_DATA 8
-RANGE $496F-$4970 DB_DATA 8
-RANGE $4979-$497A DB_DATA 8
-RANGE $4983-$4984 DB_DATA 8
-RANGE $498D-$498E DB_DATA 8
-RANGE $4997-$4998 DB_DATA 8
-RANGE $49A1-$49A2 DB_DATA 8
-RANGE $49AB-$49AC DB_DATA 8
-RANGE $49B5-$49B6 DB_DATA 8
-RANGE $49BF-$49C0 DB_DATA 8
-RANGE $49C9-$49CA DB_DATA 8
-RANGE $49D3-$49D4 DB_DATA 8
-RANGE $49DD-$49DE DB_DATA 8
-RANGE $49E7-$49E8 DB_DATA 8
-RANGE $49F1-$49F2 DB_DATA 8
-RANGE $49FB-$49FC DB_DATA 8
-RANGE $4A05-$4A06 DB_DATA 8
-RANGE $4A0F-$4A10 DB_DATA 8
-RANGE $4A19-$4A1A DB_DATA 8
-RANGE $4A23-$4A24 DB_DATA 8
-RANGE $4A2D-$4A2E DB_DATA 8
-RANGE $4A37-$4A38 DB_DATA 8
-RANGE $4A41-$4A42 DB_DATA 8
-RANGE $4A4B-$4A4C DB_DATA 8
-RANGE $4A55-$4A56 DB_DATA 8
-RANGE $4A5F-$4A60 DB_DATA 8
-RANGE $4A69-$4A6A DB_DATA 8
-RANGE $4A73-$4A74 DB_DATA 8
-RANGE $4A7D-$4A7E DB_DATA 8
-RANGE $4A87-$4A88 DB_DATA 8
-RANGE $4A91-$4A92 DB_DATA 8
-RANGE $4A9B-$4A9C DB_DATA 8
-RANGE $4AA5-$4AA6 DB_DATA 8
-RANGE $4AAF-$4AB0 DB_DATA 8
-RANGE $4AB9-$4ABA DB_DATA 8
-RANGE $4AC3-$4AC4 DB_DATA 8
-RANGE $4ACD-$4ACE DB_DATA 8
-RANGE $4AD7-$4AD8 DB_DATA 8
-RANGE $4AE1-$4AE2 DB_DATA 8
-RANGE $4AEB-$4AEC DB_DATA 8
-RANGE $4AF5-$4AF6 DB_DATA 8
-RANGE $4AFF-$4B00 DB_DATA 8
-RANGE $4B09-$4B0A DB_DATA 8
-RANGE $4B13-$4B14 DB_DATA 8
-RANGE $4B1D-$4B1E DB_DATA 8
-RANGE $4B27-$4B28 DB_DATA 8
-RANGE $4B31-$4B32 DB_DATA 8
-RANGE $4B3B-$4B3C DB_DATA 8
-RANGE $4B45-$4B46 DB_DATA 8
-RANGE $4B4F-$4B50 DB_DATA 8
-RANGE $4B59-$4B5A DB_DATA 8
-RANGE $4B63-$4B64 DB_DATA 8
-RANGE $4B6D-$4B6E DB_DATA 8
-RANGE $4B77-$4B78 DB_DATA 8
-RANGE $4B81-$4B82 DB_DATA 8
-RANGE $4B8B-$4B8C DB_DATA 8
-RANGE $4B95-$4B96 DB_DATA 8
-RANGE $4B9F-$4BA0 DB_DATA 8
-RANGE $4BA9-$4BAA DB_DATA 8
-RANGE $4BB3-$4BB4 DB_DATA 8
-RANGE $4BBD-$4BBE DB_DATA 8
-RANGE $4BC7-$4BC8 DB_DATA 8
-RANGE $4BD1-$4BD2 DB_DATA 8
-RANGE $4BDB-$4BDC DB_DATA 8
-RANGE $4BE5-$4BE6 DB_DATA 8
-RANGE $4BEF-$4BF0 DB_DATA 8
-RANGE $4BF9-$4BFA DB_DATA 8
-RANGE $4C03-$4C04 DB_DATA 8
-RANGE $4C0D-$4C0E DB_DATA 8
-RANGE $4C17-$4C18 DB_DATA 8
-RANGE $4C21-$4C22 DB_DATA 8
-RANGE $4C2B-$4C2C DB_DATA 8
-RANGE $4C35-$4C36 DB_DATA 8
-RANGE $4C3F-$4C40 DB_DATA 8
-RANGE $4C49-$4C4A DB_DATA 8
-RANGE $4C53-$4C54 DB_DATA 8
-RANGE $4C5D-$4C5E DB_DATA 8
-RANGE $4C67-$4C68 DB_DATA 8
-RANGE $4C71-$4C72 DB_DATA 8
-RANGE $4C7B-$4C7C DB_DATA 8
-RANGE $4C85-$4C86 DB_DATA 8
-RANGE $4C8F-$4C90 DB_DATA 8
-RANGE $4C99-$4C9A DB_DATA 8
-RANGE $4CA3-$4CA4 DB_DATA 8
-RANGE $4CAD-$4CAE DB_DATA 8
-RANGE $4CB7-$4CB8 DB_DATA 8
-RANGE $4CC1-$4CC2 DB_DATA 8
-RANGE $4CCB-$4CCC DB_DATA 8
-RANGE $4CD5-$4CD6 DB_DATA 8
-RANGE $4CDF-$4CE0 DB_DATA 8
-RANGE $4CE9-$4CEA DB_DATA 8
-RANGE $4CF3-$4CF4 DB_DATA 8
-RANGE $4CFD-$4CFE DB_DATA 8
-RANGE $4D07-$4D08 DB_DATA 8
-RANGE $4D11-$4D12 DB_DATA 8
-RANGE $4D1B-$4D1C DB_DATA 8
-RANGE $4D25-$4D26 DB_DATA 8
-RANGE $4D2F-$4D30 DB_DATA 8
-RANGE $4D39-$4D3A DB_DATA 8
-RANGE $4D43-$4D44 DB_DATA 8
-RANGE $4D4D-$4D4E DB_DATA 8
-RANGE $4D57-$4D58 DB_DATA 8
-RANGE $4D61-$4D62 DB_DATA 8
-RANGE $4D6B-$4D6C DB_DATA 8
-RANGE $4D75-$4D76 DB_DATA 8
-RANGE $4D7F-$4D80 DB_DATA 8
-RANGE $4D89-$4D8A DB_DATA 8
-RANGE $4D93-$4D94 DB_DATA 8
-RANGE $4D9D-$4D9E DB_DATA 8
-RANGE $4DA7-$4DA8 DB_DATA 8
-RANGE $4DB1-$4DB2 DB_DATA 8
-RANGE $4DBB-$4DBC DB_DATA 8
-RANGE $4DC5-$4DC6 DB_DATA 8
-RANGE $4DCF-$4DD0 DB_DATA 8
-RANGE $4DD9-$4DDA DB_DATA 8
-RANGE $4DE3-$4DE4 DB_DATA 8
-RANGE $4DED-$4DEE DB_DATA 8
-RANGE $4DF7-$4DF8 DB_DATA 8
-RANGE $4E01-$4E02 DB_DATA 8
-RANGE $4E0B-$4E0C DB_DATA 8
-RANGE $4E15-$4E16 DB_DATA 8
-RANGE $4E1F-$4E20 DB_DATA 8
-RANGE $4E29-$4E2A DB_DATA 8
-RANGE $4E33-$4E34 DB_DATA 8
-RANGE $4E3D-$4E3E DB_DATA 8
-RANGE $4E47-$4E48 DB_DATA 8
-RANGE $4E51-$4E52 DB_DATA 8
-RANGE $4E5B-$4E5C DB_DATA 8
-RANGE $4E65-$4E66 DB_DATA 8
-RANGE $4E6F-$4E70 DB_DATA 8
-RANGE $4E79-$4E7A DB_DATA 8
-RANGE $4E83-$4E84 DB_DATA 8
-RANGE $4E8D-$4E8E DB_DATA 8
-RANGE $4E97-$4E98 DB_DATA 8
-RANGE $4EA1-$4EA2 DB_DATA 8
-RANGE $4EAB-$4EAC DB_DATA 8
-RANGE $4EB5-$4EB6 DB_DATA 8
-RANGE $4EBF-$4EC0 DB_DATA 8
-RANGE $4EC9-$4ECA DB_DATA 8
-RANGE $4ED3-$4ED4 DB_DATA 8
-RANGE $4EDD-$4EDE DB_DATA 8
-RANGE $4EE7-$4EE8 DB_DATA 8
-RANGE $4EF1-$4EF2 DB_DATA 8
-RANGE $4EFB-$4EFC DB_DATA 8
-RANGE $4F05-$4F06 DB_DATA 8
-RANGE $4F0F-$4F10 DB_DATA 8
-RANGE $4F19-$4F1A DB_DATA 8
-RANGE $4F23-$4F24 DB_DATA 8
-RANGE $4F2D-$4F2E DB_DATA 8
-RANGE $4F37-$4F38 DB_DATA 8
-RANGE $4F41-$4F42 DB_DATA 8
-RANGE $4F4B-$4F4C DB_DATA 8
-RANGE $4F55-$4F56 DB_DATA 8
-RANGE $4F5F-$4F60 DB_DATA 8
-RANGE $4F69-$4F6A DB_DATA 8
-RANGE $4F73-$4F74 DB_DATA 8
-RANGE $4F7D-$4F7E DB_DATA 8
-RANGE $4F87-$4F88 DB_DATA 8
-RANGE $4F91-$4F92 DB_DATA 8
-RANGE $4F9B-$4F9C DB_DATA 8
-RANGE $4FA5-$4FA6 DB_DATA 8
-RANGE $4FAF-$4FB0 DB_DATA 8
-RANGE $4FB9-$4FBA DB_DATA 8
-RANGE $4FC3-$4FC4 DB_DATA 8
-RANGE $4FCD-$4FCE DB_DATA 8
-RANGE $4FD7-$4FD8 DB_DATA 8
-RANGE $4FE1-$4FE2 DB_DATA 8
-RANGE $4FEB-$4FEC DB_DATA 8
-RANGE $4FF5-$4FF6 DB_DATA 8
-RANGE $4FFF-$5000 DB_DATA 8
-RANGE $5009-$500A DB_DATA 8
-RANGE $5013-$5014 DB_DATA 8
-RANGE $501D-$501E DB_DATA 8
-RANGE $501F-$5020 DB_DATA 8
-RANGE $5022-$5023 DB_DATA 8
-RANGE $5025-$5026 DB_DATA 8
-RANGE $5028-$5029 DB_DATA 8
-RANGE $5032-$5033 DB_DATA 8
-RANGE $5041-$5042 DB_DATA 8
-RANGE $5050-$5051 DB_DATA 8
-RANGE $505A-$505B DB_DATA 8
-RANGE $5064-$5065 DB_DATA 8
-RANGE $506E-$506F DB_DATA 8
-RANGE $5078-$5079 DB_DATA 8
-RANGE $5082-$5083 DB_DATA 8
-RANGE $508C-$508D DB_DATA 8
-RANGE $5096-$5097 DB_DATA 8
-RANGE $50A0-$50A1 DB_DATA 8
-RANGE $50AA-$50AB DB_DATA 8
-RANGE $50B4-$50B5 DB_DATA 8
-RANGE $50BE-$50BF DB_DATA 8
-RANGE $50C8-$50C9 DB_DATA 8
-RANGE $50D2-$50D3 DB_DATA 8
-RANGE $50DC-$50DD DB_DATA 8
-RANGE $50E6-$50E7 DB_DATA 8
-RANGE $50F0-$50F1 DB_DATA 8
-RANGE $50FA-$50FB DB_DATA 8
-RANGE $5104-$5105 DB_DATA 8
-RANGE $510E-$510F DB_DATA 8
-RANGE $5118-$5119 DB_DATA 8
-RANGE $5122-$5123 DB_DATA 8
-RANGE $512C-$512D DB_DATA 8
-RANGE $5136-$5137 DB_DATA 8
-RANGE $5140-$5141 DB_DATA 8
-RANGE $514A-$514B DB_DATA 8
-RANGE $5154-$5155 DB_DATA 8
-RANGE $515E-$515F DB_DATA 8
-RANGE $5168-$5169 DB_DATA 8
-RANGE $5172-$5173 DB_DATA 8
-RANGE $517C-$517D DB_DATA 8
-RANGE $5186-$5187 DB_DATA 8
-RANGE $5190-$5191 DB_DATA 8
-RANGE $5199-$519A DB_DATA 8
-RANGE $519C-$519D DB_DATA 8
-RANGE $519F-$51A0 DB_DATA 8
-RANGE $51A2-$51A3 DB_DATA 8
-RANGE $51A5-$51A6 DB_DATA 8
-RANGE $51A8-$51A9 DB_DATA 8
-RANGE $51AB-$51AC DB_DATA 8
-RANGE $51AE-$51AF DB_DATA 8
-RANGE $51B1-$51B2 DB_DATA 8
-RANGE $51B4-$51B5 DB_DATA 8
-RANGE $51B7-$51B8 DB_DATA 8
-RANGE $51BA-$51BB DB_DATA 8
-RANGE $51BD-$51BE DB_DATA 8
-RANGE $51C0-$51C1 DB_DATA 8
-RANGE $51C3-$51C4 DB_DATA 8
-RANGE $51C6-$51C7 DB_DATA 8
-RANGE $51C9-$51CA DB_DATA 8
-RANGE $51CC-$51CD DB_DATA 8
-RANGE $51CF-$51D0 DB_DATA 8
-RANGE $51D2-$51D3 DB_DATA 8
-RANGE $51D5-$51D6 DB_DATA 8
-RANGE $51D8-$51D9 DB_DATA 8
-RANGE $51DB-$51DC DB_DATA 8
-RANGE $51DE-$51DF DB_DATA 8
-RANGE $51E1-$51E2 DB_DATA 8
-RANGE $51E4-$51E5 DB_DATA 8
-RANGE $51E7-$51E8 DB_DATA 8
-RANGE $51EA-$51EB DB_DATA 8
-RANGE $51ED-$51EE DB_DATA 8
-RANGE $51F0-$51F1 DB_DATA 8
-RANGE $51F3-$51F4 DB_DATA 8
-RANGE $51F6-$51F7 DB_DATA 8
-RANGE $51F9-$51FA DB_DATA 8
-RANGE $51FC-$51FD DB_DATA 8
-RANGE $51FF-$5200 DB_DATA 8
-RANGE $5202-$5203 DB_DATA 8
-RANGE $5211-$5212 DB_DATA 8
-RANGE $5220-$5221 DB_DATA 8
-RANGE $522E-$522F DB_DATA 8
-RANGE $523D-$523E DB_DATA 8
-RANGE $524C-$524D DB_DATA 8
-RANGE $5259-$525A DB_DATA 8
-RANGE $5266-$5267 DB_DATA 8
-RANGE $5275-$5276 DB_DATA 8
-RANGE $5284-$5285 DB_DATA 8
-RANGE $528E-$528F DB_DATA 8
-RANGE $529D-$529E DB_DATA 8
-RANGE $52AC-$52AD DB_DATA 8
-RANGE $52B6-$52B7 DB_DATA 8
-RANGE $52C1-$52C2 DB_DATA 8
-RANGE $52C7-$52C8 DB_DATA 8
-RANGE $52D3-$52D4 DB_DATA 8
-RANGE $52E1-$52E2 DB_DATA 8
-RANGE $52EF-$52F0 DB_DATA 8
-RANGE $52FD-$52FE DB_DATA 8
-RANGE $530C-$530D DB_DATA 8
-RANGE $531B-$531C DB_DATA 8
-RANGE $532A-$532B DB_DATA 8
-RANGE $5339-$533A DB_DATA 8
-RANGE $5343-$5344 DB_DATA 8
-RANGE $5352-$5353 DB_DATA 8
-RANGE $535B-$535C DB_DATA 8
-RANGE $536A-$536B DB_DATA 8
-RANGE $5372-$5373 DB_DATA 8
-RANGE $537F-$5380 DB_DATA 8
-RANGE $538A-$538B DB_DATA 8
-RANGE $5395-$5396 DB_DATA 8
-RANGE $539A-$539B DB_DATA 8
-RANGE $53A7-$53A8 DB_DATA 8
-RANGE $53B6-$53B7 DB_DATA 8
-RANGE $53C5-$53C6 DB_DATA 8
-RANGE $53CF-$53D0 DB_DATA 8
-RANGE $53D9-$53DA DB_DATA 8
-RANGE $53E3-$53E4 DB_DATA 8
-RANGE $53ED-$53EE DB_DATA 8
-RANGE $53F7-$53F8 DB_DATA 8
-RANGE $5401-$5402 DB_DATA 8
-RANGE $540B-$540C DB_DATA 8
-RANGE $5415-$5416 DB_DATA 8
-RANGE $541F-$5420 DB_DATA 8
-RANGE $5429-$542A DB_DATA 8
-RANGE $5433-$5434 DB_DATA 8
-RANGE $543D-$543E DB_DATA 8
-RANGE $5447-$5448 DB_DATA 8
-RANGE $5451-$5452 DB_DATA 8
-RANGE $545B-$545C DB_DATA 8
-RANGE $5465-$5466 DB_DATA 8
-RANGE $546F-$5470 DB_DATA 8
-RANGE $5479-$547A DB_DATA 8
-RANGE $5483-$5484 DB_DATA 8
-RANGE $548D-$548E DB_DATA 8
-RANGE $5497-$5498 DB_DATA 8
-RANGE $54A1-$54A2 DB_DATA 8
-RANGE $54AB-$54AC DB_DATA 8
-RANGE $54B5-$54B6 DB_DATA 8
-RANGE $54BF-$54C0 DB_DATA 8
-RANGE $54C9-$54CA DB_DATA 8
-RANGE $54D3-$54D4 DB_DATA 8
-RANGE $54DD-$54DE DB_DATA 8
-RANGE $54E7-$54E8 DB_DATA 8
-RANGE $54F1-$54F2 DB_DATA 8
-RANGE $54FB-$54FC DB_DATA 8
-RANGE $5505-$5506 DB_DATA 8
-RANGE $550F-$5510 DB_DATA 8
-RANGE $5519-$551A DB_DATA 8
-RANGE $5523-$5524 DB_DATA 8
-RANGE $552D-$552E DB_DATA 8
-RANGE $5537-$5538 DB_DATA 8
-RANGE $5541-$5542 DB_DATA 8
-RANGE $554B-$554C DB_DATA 8
-RANGE $5555-$5556 DB_DATA 8
-RANGE $555F-$5560 DB_DATA 8
-RANGE $5569-$556A DB_DATA 8
-RANGE $5573-$5574 DB_DATA 8
-RANGE $557D-$557E DB_DATA 8
-RANGE $5587-$5588 DB_DATA 8
-RANGE $5591-$5592 DB_DATA 8
-RANGE $559B-$559C DB_DATA 8
-RANGE $55A5-$55A6 DB_DATA 8
-RANGE $55AF-$55B0 DB_DATA 8
-RANGE $55B9-$55BA DB_DATA 8
-RANGE $55C3-$55C4 DB_DATA 8
-RANGE $55CD-$55CE DB_DATA 8
-RANGE $55D7-$55D8 DB_DATA 8
-RANGE $55E1-$55E2 DB_DATA 8
-RANGE $55EB-$55EC DB_DATA 8
-RANGE $55F5-$55F6 DB_DATA 8
-RANGE $55FF-$5600 DB_DATA 8
-RANGE $5609-$560A DB_DATA 8
-RANGE $5613-$5614 DB_DATA 8
-RANGE $561D-$561E DB_DATA 8
-RANGE $5627-$5628 DB_DATA 8
-RANGE $5631-$5632 DB_DATA 8
-RANGE $563B-$563C DB_DATA 8
-RANGE $5645-$5646 DB_DATA 8
-RANGE $564F-$5650 DB_DATA 8
-RANGE $5659-$565A DB_DATA 8
-RANGE $5663-$5664 DB_DATA 8
-RANGE $566D-$566E DB_DATA 8
-RANGE $5677-$5678 DB_DATA 8
-RANGE $5681-$5682 DB_DATA 8
-RANGE $568B-$568C DB_DATA 8
-RANGE $5695-$5696 DB_DATA 8
-RANGE $569F-$56A0 DB_DATA 8
-RANGE $56A9-$56AA DB_DATA 8
-RANGE $56B3-$56B4 DB_DATA 8
-RANGE $56BD-$56BE DB_DATA 8
-RANGE $56C7-$56C8 DB_DATA 8
-RANGE $56D1-$56D2 DB_DATA 8
-RANGE $56DB-$56DC DB_DATA 8
-RANGE $56E5-$56E6 DB_DATA 8
-RANGE $56EF-$56F0 DB_DATA 8
-RANGE $56F9-$56FA DB_DATA 8
-RANGE $5703-$5704 DB_DATA 8
-RANGE $570D-$570E DB_DATA 8
-RANGE $5717-$5718 DB_DATA 8
-RANGE $5721-$5722 DB_DATA 8
-RANGE $572B-$572C DB_DATA 8
-RANGE $5735-$5736 DB_DATA 8
-RANGE $573F-$5740 DB_DATA 8
-RANGE $5749-$574A DB_DATA 8
-RANGE $5753-$5754 DB_DATA 8
-RANGE $575D-$575E DB_DATA 8
-RANGE $5767-$5768 DB_DATA 8
-RANGE $5771-$5772 DB_DATA 8
-RANGE $577B-$577C DB_DATA 8
-RANGE $5785-$5786 DB_DATA 8
-RANGE $578F-$5790 DB_DATA 8
-RANGE $5799-$579A DB_DATA 8
-RANGE $57A3-$57A4 DB_DATA 8
-RANGE $57A5-$57A6 DB_DATA 8
-RANGE $57A8-$57A9 DB_DATA 8
-RANGE $57AF-$57B0 DB_DATA 8
-RANGE $57B9-$57BA DB_DATA 8
-RANGE $57C3-$57C4 DB_DATA 8
-RANGE $57CD-$57CE DB_DATA 8
-RANGE $57D7-$57D8 DB_DATA 8
-RANGE $57E1-$57E2 DB_DATA 8
-RANGE $57EB-$57EC DB_DATA 8
-RANGE $57F5-$57F6 DB_DATA 8
-RANGE $57FF-$5800 DB_DATA 8
-RANGE $5809-$580A DB_DATA 8
-RANGE $5813-$5814 DB_DATA 8
-RANGE $581D-$581E DB_DATA 8
-RANGE $5827-$5828 DB_DATA 8
-RANGE $5831-$5832 DB_DATA 8
-RANGE $583B-$583C DB_DATA 8
-RANGE $5845-$5846 DB_DATA 8
-RANGE $584F-$5850 DB_DATA 8
-RANGE $5859-$585A DB_DATA 8
-RANGE $5863-$5864 DB_DATA 8
-RANGE $586D-$586E DB_DATA 8
-RANGE $5877-$5878 DB_DATA 8
-RANGE $5881-$5882 DB_DATA 8
-RANGE $588B-$588C DB_DATA 8
-RANGE $5895-$5896 DB_DATA 8
-RANGE $589F-$58A0 DB_DATA 8
-RANGE $58A9-$58AA DB_DATA 8
-RANGE $58B3-$58B4 DB_DATA 8
-RANGE $58B5-$58B6 DB_DATA 8
-RANGE $58B9-$58BA DB_DATA 8
-RANGE $58BC-$58BD DB_DATA 8
-RANGE $58BF-$58C0 DB_DATA 8
-RANGE $58C2-$58C3 DB_DATA 8
-RANGE $58CB-$58CC DB_DATA 8
-RANGE $58D5-$58D6 DB_DATA 8
-RANGE $58E4-$58E5 DB_DATA 8
-RANGE $58EE-$58EF DB_DATA 8
-RANGE $58F8-$58F9 DB_DATA 8
-RANGE $5902-$5903 DB_DATA 8
-RANGE $590C-$590D DB_DATA 8
-RANGE $5916-$5917 DB_DATA 8
-RANGE $5920-$5921 DB_DATA 8
-RANGE $592A-$592B DB_DATA 8
-RANGE $5934-$5935 DB_DATA 8
-RANGE $593E-$593F DB_DATA 8
-RANGE $5948-$5949 DB_DATA 8
-RANGE $5952-$5953 DB_DATA 8
-RANGE $595C-$595D DB_DATA 8
-RANGE $5966-$5967 DB_DATA 8
-RANGE $5970-$5971 DB_DATA 8
-RANGE $597A-$597B DB_DATA 8
-RANGE $5984-$5985 DB_DATA 8
-RANGE $598E-$598F DB_DATA 8
-RANGE $5998-$5999 DB_DATA 8
-RANGE $59A2-$59A3 DB_DATA 8
-RANGE $59AC-$59AD DB_DATA 8
-RANGE $59B6-$59B7 DB_DATA 8
-RANGE $59C0-$59C1 DB_DATA 8
-RANGE $59CA-$59CB DB_DATA 8
-RANGE $59D4-$59D5 DB_DATA 8
-RANGE $59DE-$59DF DB_DATA 8
-RANGE $59E8-$59E9 DB_DATA 8
-RANGE $59F2-$59F3 DB_DATA 8
-RANGE $59FC-$59FD DB_DATA 8
-RANGE $5A06-$5A07 DB_DATA 8
-RANGE $5A10-$5A11 DB_DATA 8
-RANGE $5A1A-$5A1B DB_DATA 8
-RANGE $5A24-$5A25 DB_DATA 8
-RANGE $5A2E-$5A2F DB_DATA 8
-RANGE $5A38-$5A39 DB_DATA 8
-RANGE $5A42-$5A43 DB_DATA 8
-RANGE $5A4C-$5A4D DB_DATA 8
-RANGE $5A56-$5A57 DB_DATA 8
-RANGE $5A5D-$5A5E DB_DATA 8
-RANGE $5A60-$5A61 DB_DATA 8
-RANGE $5A63-$5A64 DB_DATA 8
-RANGE $5A66-$5A67 DB_DATA 8
-RANGE $5A69-$5A6A DB_DATA 8
-RANGE $5A6C-$5A6D DB_DATA 8
-RANGE $5A7B-$5A7C DB_DATA 8
-RANGE $5A85-$5A86 DB_DATA 8
-RANGE $5A8A-$5A8B DB_DATA 8
-RANGE $5A99-$5A9A DB_DATA 8
-RANGE $5A9E-$5A9F DB_DATA 8
-RANGE $5AA8-$5AA9 DB_DATA 8
-RANGE $5AB2-$5AB3 DB_DATA 8
-RANGE $5ABC-$5ABD DB_DATA 8
-RANGE $5AC6-$5AC7 DB_DATA 8
-RANGE $5AD0-$5AD1 DB_DATA 8
-RANGE $5ADA-$5ADB DB_DATA 8
-RANGE $5AE4-$5AE5 DB_DATA 8
-RANGE $5AEE-$5AEF DB_DATA 8
-RANGE $5AF8-$5AF9 DB_DATA 8
-RANGE $5B02-$5B03 DB_DATA 8
-RANGE $5B0C-$5B0D DB_DATA 8
-RANGE $5B16-$5B17 DB_DATA 8
-RANGE $5B20-$5B21 DB_DATA 8
-RANGE $5B2A-$5B2B DB_DATA 8
-RANGE $5B34-$5B35 DB_DATA 8
-RANGE $5B3E-$5B3F DB_DATA 8
-RANGE $5B48-$5B49 DB_DATA 8
-RANGE $5B52-$5B53 DB_DATA 8
-RANGE $5B5C-$5B5D DB_DATA 8
-RANGE $5B66-$5B67 DB_DATA 8
-RANGE $5B70-$5B71 DB_DATA 8
-RANGE $5B7A-$5B7B DB_DATA 8
-RANGE $5B84-$5B85 DB_DATA 8
-RANGE $5B8E-$5B8F DB_DATA 8
-RANGE $5B98-$5B99 DB_DATA 8
-RANGE $5BA2-$5BA3 DB_DATA 8
-RANGE $5BAC-$5BAD DB_DATA 8
-RANGE $5BB6-$5BB7 DB_DATA 8
-RANGE $5BC0-$5BC1 DB_DATA 8
-RANGE $5BCA-$5BCB DB_DATA 8
-RANGE $5BD4-$5BD5 DB_DATA 8
-RANGE $5BDE-$5BDF DB_DATA 8
-RANGE $5BE8-$5BE9 DB_DATA 8
-RANGE $5BF2-$5BF3 DB_DATA 8
-RANGE $5BFC-$5BFD DB_DATA 8
-RANGE $5C06-$5C07 DB_DATA 8
-RANGE $5C10-$5C11 DB_DATA 8
-RANGE $5C1A-$5C1B DB_DATA 8
-RANGE $5C24-$5C25 DB_DATA 8
-RANGE $5C2E-$5C2F DB_DATA 8
-RANGE $5C38-$5C39 DB_DATA 8
-RANGE $5C42-$5C43 DB_DATA 8
-RANGE $5C4C-$5C4D DB_DATA 8
-RANGE $5C56-$5C57 DB_DATA 8
-RANGE $5C60-$5C61 DB_DATA 8
-RANGE $5C6A-$5C6B DB_DATA 8
-RANGE $5C74-$5C75 DB_DATA 8
-RANGE $5C7E-$5C7F DB_DATA 8
-RANGE $5C88-$5C89 DB_DATA 8
-RANGE $5C92-$5C93 DB_DATA 8
-RANGE $5C9C-$5C9D DB_DATA 8
-RANGE $5CA6-$5CA7 DB_DATA 8
-RANGE $5CB0-$5CB1 DB_DATA 8
-RANGE $5CBA-$5CBB DB_DATA 8
-RANGE $5CC4-$5CC5 DB_DATA 8
-RANGE $5CCE-$5CCF DB_DATA 8
-RANGE $5CD8-$5CD9 DB_DATA 8
-RANGE $5CE2-$5CE3 DB_DATA 8
-RANGE $5CEC-$5CED DB_DATA 8
-RANGE $5CF6-$5CF7 DB_DATA 8
-RANGE $5D00-$5D01 DB_DATA 8
-RANGE $5D0A-$5D0B DB_DATA 8
-RANGE $5D14-$5D15 DB_DATA 8
-RANGE $5D1E-$5D1F DB_DATA 8
-RANGE $5D28-$5D29 DB_DATA 8
-RANGE $5D32-$5D33 DB_DATA 8
-RANGE $5D3C-$5D3D DB_DATA 8
-RANGE $5D46-$5D47 DB_DATA 8
-RANGE $5D50-$5D51 DB_DATA 8
-RANGE $5D54-$5D55 DB_DATA 8
-RANGE $5D57-$5D58 DB_DATA 8
-RANGE $5D5A-$5D5B DB_DATA 8
-RANGE $5D5D-$5D5E DB_DATA 8
-RANGE $5D67-$5D68 DB_DATA 8
-RANGE $5D76-$5D77 DB_DATA 8
-RANGE $5D85-$5D86 DB_DATA 8
-RANGE $5D8F-$5D90 DB_DATA 8
-RANGE $5D99-$5D9A DB_DATA 8
-RANGE $5DA3-$5DA4 DB_DATA 8
-RANGE $5DAD-$5DAE DB_DATA 8
-RANGE $5DB7-$5DB8 DB_DATA 8
-RANGE $5DC1-$5DC2 DB_DATA 8
-RANGE $5DCB-$5DCC DB_DATA 8
-RANGE $5DD5-$5DD6 DB_DATA 8
-RANGE $5DDF-$5DE0 DB_DATA 8
-RANGE $5DE9-$5DEA DB_DATA 8
-RANGE $5DF3-$5DF4 DB_DATA 8
-RANGE $5DFD-$5DFE DB_DATA 8
-RANGE $5E07-$5E08 DB_DATA 8
-RANGE $5E11-$5E12 DB_DATA 8
-RANGE $5E1B-$5E1C DB_DATA 8
-RANGE $5E25-$5E26 DB_DATA 8
-RANGE $5E2F-$5E30 DB_DATA 8
-RANGE $5E39-$5E3A DB_DATA 8
-RANGE $5E43-$5E44 DB_DATA 8
-RANGE $5E4D-$5E4E DB_DATA 8
-RANGE $5E52-$5E53 DB_DATA 8
-RANGE $5E55-$5E56 DB_DATA 8
-RANGE $5E58-$5E59 DB_DATA 8
-RANGE $5E5B-$5E5C DB_DATA 8
-RANGE $5E5E-$5E5F DB_DATA 8
-RANGE $5E6C-$5E6D DB_DATA 8
-RANGE $5E7B-$5E7C DB_DATA 8
-RANGE $5E8A-$5E8B DB_DATA 8
-RANGE $5E8F-$5E90 DB_DATA 8
-RANGE $5E99-$5E9A DB_DATA 8
-RANGE $5EA3-$5EA4 DB_DATA 8
-RANGE $5EAD-$5EAE DB_DATA 8
-RANGE $5EB7-$5EB8 DB_DATA 8
-RANGE $5EC1-$5EC2 DB_DATA 8
-RANGE $5ECB-$5ECC DB_DATA 8
-RANGE $5ED5-$5ED6 DB_DATA 8
-RANGE $5EDF-$5EE0 DB_DATA 8
-RANGE $5EE9-$5EEA DB_DATA 8
-RANGE $5EF3-$5EF4 DB_DATA 8
-RANGE $5EFD-$5EFE DB_DATA 8
-RANGE $5F07-$5F08 DB_DATA 8
-RANGE $5F11-$5F12 DB_DATA 8
-RANGE $5F1B-$5F1C DB_DATA 8
-RANGE $5F25-$5F26 DB_DATA 8
-RANGE $5F2F-$5F30 DB_DATA 8
-RANGE $5F39-$5F3A DB_DATA 8
-RANGE $5F43-$5F44 DB_DATA 8
-RANGE $5F4D-$5F4E DB_DATA 8
-RANGE $5F57-$5F58 DB_DATA 8
-RANGE $5F61-$5F62 DB_DATA 8
-RANGE $5F6B-$5F6C DB_DATA 8
-RANGE $5F75-$5F76 DB_DATA 8
-RANGE $5F7F-$5F80 DB_DATA 8
-RANGE $5F89-$5F8A DB_DATA 8
-RANGE $5F93-$5F94 DB_DATA 8
-RANGE $5F9D-$5F9E DB_DATA 8
-RANGE $5FA7-$5FA8 DB_DATA 8
-RANGE $5FB1-$5FB2 DB_DATA 8
-RANGE $5FBB-$5FBC DB_DATA 8
-RANGE $5FC5-$5FC6 DB_DATA 8
-RANGE $5FCF-$5FD0 DB_DATA 8
-RANGE $5FD9-$5FDA DB_DATA 8
-RANGE $5FE3-$5FE4 DB_DATA 8
-RANGE $5FED-$5FEE DB_DATA 8
-RANGE $5FF7-$5FF8 DB_DATA 8
-RANGE $6001-$6002 DB_DATA 8
-RANGE $600B-$600C DB_DATA 8
-RANGE $6015-$6016 DB_DATA 8
-RANGE $601F-$6020 DB_DATA 8
-RANGE $6029-$602A DB_DATA 8
-RANGE $6033-$6034 DB_DATA 8
-RANGE $603D-$603E DB_DATA 8
-RANGE $6047-$6048 DB_DATA 8
-RANGE $6051-$6052 DB_DATA 8
-RANGE $605B-$605C DB_DATA 8
-RANGE $6065-$6066 DB_DATA 8
-RANGE $606F-$6070 DB_DATA 8
-RANGE $6079-$607A DB_DATA 8
-RANGE $6083-$6084 DB_DATA 8
-RANGE $608D-$608E DB_DATA 8
-RANGE $6097-$6098 DB_DATA 8
-RANGE $60A1-$60A2 DB_DATA 8
-RANGE $60AB-$60AC DB_DATA 8
-RANGE $60B5-$60B6 DB_DATA 8
-RANGE $60BF-$60C0 DB_DATA 8
-RANGE $60C9-$60CA DB_DATA 8
-RANGE $60D3-$60D4 DB_DATA 8
-RANGE $60DD-$60DE DB_DATA 8
-RANGE $60E0-$60E2 DW_DATA 4
-RANGE $60E2-$60E3 DB_DATA 8
-RANGE $60E3-$60E5 DW_DATA 4
-RANGE $60E9-$60EA DB_DATA 8
-RANGE $60EA-$60EC DW_DATA 4
-RANGE $60F0-$60F1 DB_DATA 8
-RANGE $60F1-$60F3 DW_DATA 4
-RANGE $60F7-$60F8 DB_DATA 8
-RANGE $60F8-$60FA DW_DATA 4
-RANGE $60FE-$60FF DB_DATA 8
-RANGE $60FF-$6101 DW_DATA 4
-RANGE $6105-$6106 DB_DATA 8
-RANGE $6106-$6108 DW_DATA 4
-RANGE $610C-$610D DB_DATA 8
-RANGE $610D-$610F DW_DATA 4
-RANGE $6113-$6114 DB_DATA 8
-RANGE $6114-$6116 DW_DATA 4
-RANGE $611A-$611B DB_DATA 8
-RANGE $611B-$611D DW_DATA 4
-RANGE $6121-$6122 DB_DATA 8
-RANGE $6122-$6124 DW_DATA 4
-RANGE $6128-$6129 DB_DATA 8
-RANGE $6129-$612B DW_DATA 4
-RANGE $612F-$6131 DB_DATA 8
-RANGE $613A-$6281 CODE
-RANGE $6281-$6282 DB_DATA 8
-RANGE $6291-$65B9 CODE
+RANGE $4148-$428F CODE
+RANGE $428F-$4290 DB_DATA 8
+RANGE $429F-$45C7 CODE
 

@@ -41,250 +41,250 @@
                              41 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                              42 
                              43  .globl sfx_endofeffect_1
-   613A                      44 sfx_endofeffect_1:
+   4148                      44 sfx_endofeffect_1:
                              45                                                           ; set volume off channel 3
                              46                                                           ; set reg1sf0
                              47                                                           ; Set volume
-   613A CC 00 00      [ 3]   48                     LDD      #0x0000                       ; reset sfx
-   613D B7 C8 44      [ 5]   49                     sta      SHADOW_BASE-0x08
-   6140 FD C8 8D      [ 6]   50                     STD      _sfx_pointer_1
-   6143 B7 C8 8A      [ 5]   51                     STA      _sfx_status_1
-   6146 FD C8 84      [ 6]   52                     std      _currentSFX_1
+   4148 CC 00 00      [ 3]   48                     LDD      #0x0000                       ; reset sfx
+   414B B7 C8 44      [ 5]   49                     sta      SHADOW_BASE-0x08
+   414E FD C8 8D      [ 6]   50                     STD      _sfx_pointer_1
+   4151 B7 C8 8A      [ 5]   51                     STA      _sfx_status_1
+   4154 FD C8 84      [ 6]   52                     std      _currentSFX_1
                              53  .globl noay1
-   6149                      54 noay1:
-   6149 39            [ 5]   55                     RTS
+   4157                      54 noay1:
+   4157 39            [ 5]   55                     RTS
                              56 
                              57  .globl sfx_doframe_intern_1
-   614A                      58 sfx_doframe_intern_1:                                     ;#isfunction
-   614A B6 C8 8A      [ 5]   59                     LDA      _sfx_status_1                 ; check if sfx to play
-   614D 27 FA         [ 3]   60                     BEQ      noay1
-   614F FE C8 8D      [ 6]   61                     LDU      _sfx_pointer_1                ; get current frame pointer
-   6152 E6 C0         [ 6]   62                     LDB      ,U+
-   6154 C1 D0         [ 2]   63                     CMPB     #0xD0                         ; check first flag byte D0
-   6156 26 06         [ 3]   64                     BNE      sfx_checktonefreq_1          ; no match - continue to process frame
-   6158 A6 C4         [ 4]   65                     LDA      ,U
-   615A 81 20         [ 2]   66                     CMPA     #0x20                         ; check second flag byte 20
-   615C 27 DC         [ 3]   67                     BEQ      sfx_endofeffect_1            ; match - end of effect found so stop playing
+   4158                      58 sfx_doframe_intern_1:                                     ;#isfunction
+   4158 B6 C8 8A      [ 5]   59                     LDA      _sfx_status_1                 ; check if sfx to play
+   415B 27 FA         [ 3]   60                     BEQ      noay1
+   415D FE C8 8D      [ 6]   61                     LDU      _sfx_pointer_1                ; get current frame pointer
+   4160 E6 C0         [ 6]   62                     LDB      ,U+
+   4162 C1 D0         [ 2]   63                     CMPB     #0xD0                         ; check first flag byte D0
+   4164 26 06         [ 3]   64                     BNE      sfx_checktonefreq_1          ; no match - continue to process frame
+   4166 A6 C4         [ 4]   65                     LDA      ,U
+   4168 81 20         [ 2]   66                     CMPA     #0x20                         ; check second flag byte 20
+   416A 27 DC         [ 3]   67                     BEQ      sfx_endofeffect_1            ; match - end of effect found so stop playing
                              68  .globl sfx_checktonefreq_1
-   615E                      69 sfx_checktonefreq_1:
-   615E C5 20         [ 2]   70                     BITB     #0b00100000                   ; if bit 5 of B is set
-   6160 27 07         [ 3]   71                     BEQ      sfx_checknoisefreq_1         ; skip as no tone freq data
-   6162 EC C1         [ 8]   72                     ldd      ,u++ ; alternative to destroying d load any 2 byte reg,
-   6164 FD C8 4C      [ 6]   73                     std      SHADOW_BASE-00 ; here I destroy d
-   6167 E6 5D         [ 5]   74                     ldb      -3,u ; and load b anew - one instruction to many,
+   416C                      69 sfx_checktonefreq_1:
+   416C C5 20         [ 2]   70                     BITB     #0b00100000                   ; if bit 5 of B is set
+   416E 27 07         [ 3]   71                     BEQ      sfx_checknoisefreq_1         ; skip as no tone freq data
+   4170 EC C1         [ 8]   72                     ldd      ,u++ ; alternative to destroying d load any 2 byte reg,
+   4172 FD C8 4C      [ 6]   73                     std      SHADOW_BASE-00 ; here I destroy d
+   4175 E6 5D         [ 5]   74                     ldb      -3,u ; and load b anew - one instruction to many,
                              75  .globl sfx_checknoisefreq_1
-   6169                      76 sfx_checknoisefreq_1:
-   6169 C5 40         [ 2]   77                     BITB     #0b01000000                   ; if bit 6 of B is only set
-   616B 27 05         [ 3]   78                     BEQ      sfx_checkvolume_1            ; skip as no noise freq data
-   616D A6 C0         [ 6]   79                     LDA      ,U+                          ; get next data byte and copy to noise freq reg
-   616F B7 C8 46      [ 5]   80                     STA      SHADOW_BASE-06               ; set noise freq
+   4177                      76 sfx_checknoisefreq_1:
+   4177 C5 40         [ 2]   77                     BITB     #0b01000000                   ; if bit 6 of B is only set
+   4179 27 05         [ 3]   78                     BEQ      sfx_checkvolume_1            ; skip as no noise freq data
+   417B A6 C0         [ 6]   79                     LDA      ,U+                          ; get next data byte and copy to noise freq reg
+   417D B7 C8 46      [ 5]   80                     STA      SHADOW_BASE-06               ; set noise freq
                              81  .globl sfx_checkvolume_1
-   6172                      82 sfx_checkvolume_1:
-   6172 1F 98         [ 6]   83                     tfr      b,a
-   6174 84 0F         [ 2]   84                     ANDA     #0b00001111                   ; get volume from bits 0-3
-   6176 B7 C8 44      [ 5]   85                     STA      SHADOW_BASE-0x08              ; set tone freq
+   4180                      82 sfx_checkvolume_1:
+   4180 1F 98         [ 6]   83                     tfr      b,a
+   4182 84 0F         [ 2]   84                     ANDA     #0b00001111                   ; get volume from bits 0-3
+   4184 B7 C8 44      [ 5]   85                     STA      SHADOW_BASE-0x08              ; set tone freq
                              86  .globl sfx_checktonedisable_1
-   6179                      87 sfx_checktonedisable_1:
-   6179 B6 C8 45      [ 5]   88                     LDA      SHADOW_BASE-0x07              ; in the following reg 7 will be altered - load once
-   617C C5 10         [ 2]   89                     BITB     #0b00010000                   ; if bit 4 of B is set disable the tone
-   617E 27 0F         [ 3]   90                     BEQ      sfx_enabletone_1
+   4187                      87 sfx_checktonedisable_1:
+   4187 B6 C8 45      [ 5]   88                     LDA      SHADOW_BASE-0x07              ; in the following reg 7 will be altered - load once
+   418A C5 10         [ 2]   89                     BITB     #0b00010000                   ; if bit 4 of B is set disable the tone
+   418C 27 0F         [ 3]   90                     BEQ      sfx_enabletone_1
                              91  .globl sfx_disabletone_1
-   6180                      92 sfx_disabletone_1:
-   6180 8A 01         [ 2]   93                     ORA      #0b00000001
-   6182 C5 80         [ 2]   94                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
-   6184 27 18         [ 3]   95                     BEQ      sfx_enablenoise_1
-   6186 8A 08         [ 2]   96                     ORA      #0b00001000
-   6188 B7 C8 45      [ 5]   97                     STA      SHADOW_BASE-0x07              ; set tone freq
-   618B FF C8 8D      [ 6]   98                     STU      _sfx_pointer_1                ; update frame pointer to next flag byte in Y
-   618E 39            [ 5]   99                     RTS
+   418E                      92 sfx_disabletone_1:
+   418E 8A 01         [ 2]   93                     ORA      #0b00000001
+   4190 C5 80         [ 2]   94                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
+   4192 27 18         [ 3]   95                     BEQ      sfx_enablenoise_1
+   4194 8A 08         [ 2]   96                     ORA      #0b00001000
+   4196 B7 C8 45      [ 5]   97                     STA      SHADOW_BASE-0x07              ; set tone freq
+   4199 FF C8 8D      [ 6]   98                     STU      _sfx_pointer_1                ; update frame pointer to next flag byte in Y
+   419C 39            [ 5]   99                     RTS
                             100 
                             101  .globl sfx_enabletone_1
-   618F                     102 sfx_enabletone_1:
-   618F 84 FE         [ 2]  103                     ANDA     #0b11111110
+   419D                     102 sfx_enabletone_1:
+   419D 84 FE         [ 2]  103                     ANDA     #0b11111110
                             104  .globl sfx_checknoisedisable_1
-   6191                     105 sfx_checknoisedisable_1:
-   6191 C5 80         [ 2]  106                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
-   6193 27 09         [ 3]  107                     BEQ      sfx_enablenoise_1
+   419F                     105 sfx_checknoisedisable_1:
+   419F C5 80         [ 2]  106                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
+   41A1 27 09         [ 3]  107                     BEQ      sfx_enablenoise_1
                             108  .globl sfx_disablenoise_1
-   6195                     109 sfx_disablenoise_1:
-   6195 8A 08         [ 2]  110                     ORA      #0b00001000
-   6197 B7 C8 45      [ 5]  111                     STA      SHADOW_BASE-0x07              ; set tone freq
-   619A FF C8 8D      [ 6]  112                     STU      _sfx_pointer_1                ; update frame pointer to next flag byte in Y
-   619D 39            [ 5]  113                     RTS
+   41A3                     109 sfx_disablenoise_1:
+   41A3 8A 08         [ 2]  110                     ORA      #0b00001000
+   41A5 B7 C8 45      [ 5]  111                     STA      SHADOW_BASE-0x07              ; set tone freq
+   41A8 FF C8 8D      [ 6]  112                     STU      _sfx_pointer_1                ; update frame pointer to next flag byte in Y
+   41AB 39            [ 5]  113                     RTS
                             114 
                             115  .globl sfx_enablenoise_1
-   619E                     116 sfx_enablenoise_1:
-   619E 84 F7         [ 2]  117                     ANDA     #0b11110111
-   61A0 B7 C8 45      [ 5]  118                     STA      SHADOW_BASE-0x07              ; set tone freq
-   61A3 FF C8 8D      [ 6]  119                     STU      _sfx_pointer_1                ; update frame pointer to next flag byte in Y
-   61A6 39            [ 5]  120                     RTS
+   41AC                     116 sfx_enablenoise_1:
+   41AC 84 F7         [ 2]  117                     ANDA     #0b11110111
+   41AE B7 C8 45      [ 5]  118                     STA      SHADOW_BASE-0x07              ; set tone freq
+   41B1 FF C8 8D      [ 6]  119                     STU      _sfx_pointer_1                ; update frame pointer to next flag byte in Y
+   41B4 39            [ 5]  120                     RTS
                             121 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                             122 
                             123  .globl sfx_endofeffect_2
-   61A7                     124 sfx_endofeffect_2:
+   41B5                     124 sfx_endofeffect_2:
                             125                                                           ; set volume off channel 3
                             126                                                           ; set reg1sf0
                             127                                                           ; Set volume
-   61A7 CC 00 00      [ 3]  128                     LDD      #0x0000                       ; reset sfx
-   61AA B7 C8 43      [ 5]  129                     sta      SHADOW_BASE-0x09
-   61AD FD C8 8F      [ 6]  130                     STD      _sfx_pointer_2
-   61B0 B7 C8 8B      [ 5]  131                     STA      _sfx_status_2
-   61B3 FD C8 86      [ 6]  132                     std      _currentSFX_2
+   41B5 CC 00 00      [ 3]  128                     LDD      #0x0000                       ; reset sfx
+   41B8 B7 C8 43      [ 5]  129                     sta      SHADOW_BASE-0x09
+   41BB FD C8 8F      [ 6]  130                     STD      _sfx_pointer_2
+   41BE B7 C8 8B      [ 5]  131                     STA      _sfx_status_2
+   41C1 FD C8 86      [ 6]  132                     std      _currentSFX_2
                             133 
                             134  .globl noay2
-   61B6                     135 noay2:
-   61B6 39            [ 5]  136                     RTS
+   41C4                     135 noay2:
+   41C4 39            [ 5]  136                     RTS
                             137 
                             138  .globl sfx_doframe_intern_2
-   61B7                     139 sfx_doframe_intern_2:  ;#isfunction
+   41C5                     139 sfx_doframe_intern_2:  ;#isfunction
                             140 
                             141 
-   61B7 B6 C8 8B      [ 5]  142                     LDA      _sfx_status_2                ; check if sfx to play
-   61BA 27 FA         [ 3]  143                     BEQ      noay2
+   41C5 B6 C8 8B      [ 5]  142                     LDA      _sfx_status_2                ; check if sfx to play
+   41C8 27 FA         [ 3]  143                     BEQ      noay2
                             144 
-   61BC FE C8 8F      [ 6]  145                     LDU      _sfx_pointer_2                ; get current frame pointer
-   61BF E6 C0         [ 6]  146                     LDB      ,U+
-   61C1 C1 D0         [ 2]  147                     CMPB     #0xD0                         ; check first flag byte D0
-   61C3 26 06         [ 3]  148                     BNE      sfx_checktonefreq_2          ; no match - continue to process frame
-   61C5 A6 C4         [ 4]  149                     LDA      ,U
-   61C7 81 20         [ 2]  150                     CMPA     #0x20                         ; check second flag byte 20
-   61C9 27 DC         [ 3]  151                     BEQ      sfx_endofeffect_2            ; match - end of effect found so stop playing
+   41CA FE C8 8F      [ 6]  145                     LDU      _sfx_pointer_2                ; get current frame pointer
+   41CD E6 C0         [ 6]  146                     LDB      ,U+
+   41CF C1 D0         [ 2]  147                     CMPB     #0xD0                         ; check first flag byte D0
+   41D1 26 06         [ 3]  148                     BNE      sfx_checktonefreq_2          ; no match - continue to process frame
+   41D3 A6 C4         [ 4]  149                     LDA      ,U
+   41D5 81 20         [ 2]  150                     CMPA     #0x20                         ; check second flag byte 20
+   41D7 27 DC         [ 3]  151                     BEQ      sfx_endofeffect_2            ; match - end of effect found so stop playing
                             152  .globl sfx_checktonefreq_2
-   61CB                     153 sfx_checktonefreq_2:
-   61CB C5 20         [ 2]  154                     BITB     #0b00100000                   ; if bit 5 of B is set
-   61CD 27 07         [ 3]  155                     BEQ      sfx_checknoisefreq_2         ; skip as no tone freq data
-   61CF EC C1         [ 8]  156                     ldd      ,u++ ; alternative to destroying d load any 2 byte reg,
-   61D1 FD C8 4A      [ 6]  157                     std      SHADOW_BASE-02 ; here I destroy d
-   61D4 E6 5D         [ 5]  158                     ldb -3,u ; and load b anew - one instruction to many,
+   41D9                     153 sfx_checktonefreq_2:
+   41D9 C5 20         [ 2]  154                     BITB     #0b00100000                   ; if bit 5 of B is set
+   41DB 27 07         [ 3]  155                     BEQ      sfx_checknoisefreq_2         ; skip as no tone freq data
+   41DD EC C1         [ 8]  156                     ldd      ,u++ ; alternative to destroying d load any 2 byte reg,
+   41DF FD C8 4A      [ 6]  157                     std      SHADOW_BASE-02 ; here I destroy d
+   41E2 E6 5D         [ 5]  158                     ldb -3,u ; and load b anew - one instruction to many,
                             159  .globl sfx_checknoisefreq_2
-   61D6                     160 sfx_checknoisefreq_2:
-   61D6 C5 40         [ 2]  161                     BITB     #0b01000000                   ; if bit 6 of B is only set
-   61D8 27 05         [ 3]  162                     BEQ      sfx_checkvolume_2            ; skip as no noise freq data
-   61DA A6 C0         [ 6]  163                     LDA      ,U+                          ; get next data byte and copy to noise freq reg
-   61DC B7 C8 46      [ 5]  164                     STA      SHADOW_BASE-06               ; set noise freq
+   41E4                     160 sfx_checknoisefreq_2:
+   41E4 C5 40         [ 2]  161                     BITB     #0b01000000                   ; if bit 6 of B is only set
+   41E6 27 05         [ 3]  162                     BEQ      sfx_checkvolume_2            ; skip as no noise freq data
+   41E8 A6 C0         [ 6]  163                     LDA      ,U+                          ; get next data byte and copy to noise freq reg
+   41EA B7 C8 46      [ 5]  164                     STA      SHADOW_BASE-06               ; set noise freq
                             165  .globl sfx_checkvolume_2
-   61DF                     166 sfx_checkvolume_2:
-   61DF 1F 98         [ 6]  167                     tfr      b,a
-   61E1 84 0F         [ 2]  168                     ANDA     #0b00001111                   ; get volume from bits 0-3
-   61E3 B7 C8 43      [ 5]  169                     STA      SHADOW_BASE-0x09              ; set tone freq
+   41ED                     166 sfx_checkvolume_2:
+   41ED 1F 98         [ 6]  167                     tfr      b,a
+   41EF 84 0F         [ 2]  168                     ANDA     #0b00001111                   ; get volume from bits 0-3
+   41F1 B7 C8 43      [ 5]  169                     STA      SHADOW_BASE-0x09              ; set tone freq
                             170  .globl sfx_checktonedisable_2
-   61E6                     171 sfx_checktonedisable_2:
-   61E6 B6 C8 45      [ 5]  172                     LDA      SHADOW_BASE-0x07              ; in the following reg 7 will be altered - load once
-   61E9 C5 10         [ 2]  173                     BITB     #0b00010000                   ; if bit 4 of B is set disable the tone
-   61EB 27 0F         [ 3]  174                     BEQ      sfx_enabletone_2
+   41F4                     171 sfx_checktonedisable_2:
+   41F4 B6 C8 45      [ 5]  172                     LDA      SHADOW_BASE-0x07              ; in the following reg 7 will be altered - load once
+   41F7 C5 10         [ 2]  173                     BITB     #0b00010000                   ; if bit 4 of B is set disable the tone
+   41F9 27 0F         [ 3]  174                     BEQ      sfx_enabletone_2
                             175  .globl sfx_disabletone_2
-   61ED                     176 sfx_disabletone_2:
-   61ED 8A 02         [ 2]  177                     ORA      #0b00000010
-   61EF C5 80         [ 2]  178                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
-   61F1 27 18         [ 3]  179                     BEQ      sfx_enablenoise_2
-   61F3 8A 10         [ 2]  180                     ORA      #0b00010000
-   61F5 B7 C8 45      [ 5]  181                     STA      SHADOW_BASE-0x07              ; set tone freq
-   61F8 FF C8 8F      [ 6]  182                     STU      _sfx_pointer_2                ; update frame pointer to next flag byte in Y
-   61FB 39            [ 5]  183                     RTS
+   41FB                     176 sfx_disabletone_2:
+   41FB 8A 02         [ 2]  177                     ORA      #0b00000010
+   41FD C5 80         [ 2]  178                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
+   41FF 27 18         [ 3]  179                     BEQ      sfx_enablenoise_2
+   4201 8A 10         [ 2]  180                     ORA      #0b00010000
+   4203 B7 C8 45      [ 5]  181                     STA      SHADOW_BASE-0x07              ; set tone freq
+   4206 FF C8 8F      [ 6]  182                     STU      _sfx_pointer_2                ; update frame pointer to next flag byte in Y
+   4209 39            [ 5]  183                     RTS
                             184 
                             185  .globl sfx_enabletone_2
-   61FC                     186 sfx_enabletone_2:
-   61FC 84 FD         [ 2]  187                     ANDA     #0b11111101
+   420A                     186 sfx_enabletone_2:
+   420A 84 FD         [ 2]  187                     ANDA     #0b11111101
                             188  .globl sfx_checknoisedisable_2
-   61FE                     189 sfx_checknoisedisable_2:
-   61FE C5 80         [ 2]  190                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
-   6200 27 09         [ 3]  191                     BEQ      sfx_enablenoise_2
+   420C                     189 sfx_checknoisedisable_2:
+   420C C5 80         [ 2]  190                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
+   420E 27 09         [ 3]  191                     BEQ      sfx_enablenoise_2
                             192  .globl sfx_disablenoise_2
-   6202                     193 sfx_disablenoise_2:
-   6202 8A 10         [ 2]  194                     ORA      #0b00010000
-   6204 B7 C8 45      [ 5]  195                     STA      SHADOW_BASE-0x07              ; set tone freq
-   6207 FF C8 8F      [ 6]  196                     STU      _sfx_pointer_2                ; update frame pointer to next flag byte in Y
-   620A 39            [ 5]  197                     RTS
+   4210                     193 sfx_disablenoise_2:
+   4210 8A 10         [ 2]  194                     ORA      #0b00010000
+   4212 B7 C8 45      [ 5]  195                     STA      SHADOW_BASE-0x07              ; set tone freq
+   4215 FF C8 8F      [ 6]  196                     STU      _sfx_pointer_2                ; update frame pointer to next flag byte in Y
+   4218 39            [ 5]  197                     RTS
                             198 
                             199  .globl sfx_enablenoise_2
-   620B                     200 sfx_enablenoise_2:
-   620B 84 EF         [ 2]  201                     ANDA     #0b11101111
-   620D B7 C8 45      [ 5]  202                     STA      SHADOW_BASE-0x07              ; set tone freq
-   6210 FF C8 8F      [ 6]  203                     STU      _sfx_pointer_2                ; update frame pointer to next flag byte in Y
-   6213 39            [ 5]  204                     RTS
+   4219                     200 sfx_enablenoise_2:
+   4219 84 EF         [ 2]  201                     ANDA     #0b11101111
+   421B B7 C8 45      [ 5]  202                     STA      SHADOW_BASE-0x07              ; set tone freq
+   421E FF C8 8F      [ 6]  203                     STU      _sfx_pointer_2                ; update frame pointer to next flag byte in Y
+   4221 39            [ 5]  204                     RTS
                             205 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
                             206  .globl sfx_endofeffect_3
-   6214                     207 sfx_endofeffect_3:
+   4222                     207 sfx_endofeffect_3:
                             208                                                           ; set volume off channel 3
                             209                                                           ; set reg1sf0
                             210                                                           ; Set volume
-   6214 CC 00 00      [ 3]  211                     LDD      #0x0000                       ; reset sfx
-   6217 B7 C8 42      [ 5]  212                     sta      SHADOW_BASE-0x0a
-   621A FD C8 91      [ 6]  213                     STD      _sfx_pointer_3
-   621D B7 C8 8C      [ 5]  214                     STA      _sfx_status_3
-   6220 FD C8 88      [ 6]  215                     std      _currentSFX_3
+   4222 CC 00 00      [ 3]  211                     LDD      #0x0000                       ; reset sfx
+   4225 B7 C8 42      [ 5]  212                     sta      SHADOW_BASE-0x0a
+   4228 FD C8 91      [ 6]  213                     STD      _sfx_pointer_3
+   422B B7 C8 8C      [ 5]  214                     STA      _sfx_status_3
+   422E FD C8 88      [ 6]  215                     std      _currentSFX_3
                             216 
                             217  .globl noay3
-   6223                     218 noay3:
-   6223 39            [ 5]  219                     RTS
+   4231                     218 noay3:
+   4231 39            [ 5]  219                     RTS
                             220 
                             221  .globl sfx_doframe_intern_3
-   6224                     222 sfx_doframe_intern_3:  ;#isfunction
+   4232                     222 sfx_doframe_intern_3:  ;#isfunction
                             223 
                             224 
-   6224 B6 C8 8C      [ 5]  225                     LDA      _sfx_status_3                ; check if sfx to play
-   6227 27 FA         [ 3]  226                     BEQ      noay3
+   4232 B6 C8 8C      [ 5]  225                     LDA      _sfx_status_3                ; check if sfx to play
+   4235 27 FA         [ 3]  226                     BEQ      noay3
                             227 
-   6229 FE C8 91      [ 6]  228                     LDU      _sfx_pointer_3                ; get current frame pointer
-   622C E6 C0         [ 6]  229                     LDB      ,U+
-   622E C1 D0         [ 2]  230                     CMPB     #0xD0                         ; check first flag byte D0
-   6230 26 06         [ 3]  231                     BNE      sfx_checktonefreq_3          ; no match - continue to process frame
-   6232 A6 C4         [ 4]  232                     LDA      ,U
-   6234 81 20         [ 2]  233                     CMPA     #0x20                         ; check second flag byte 20
-   6236 27 DC         [ 3]  234                     BEQ      sfx_endofeffect_3            ; match - end of effect found so stop playing
+   4237 FE C8 91      [ 6]  228                     LDU      _sfx_pointer_3                ; get current frame pointer
+   423A E6 C0         [ 6]  229                     LDB      ,U+
+   423C C1 D0         [ 2]  230                     CMPB     #0xD0                         ; check first flag byte D0
+   423E 26 06         [ 3]  231                     BNE      sfx_checktonefreq_3          ; no match - continue to process frame
+   4240 A6 C4         [ 4]  232                     LDA      ,U
+   4242 81 20         [ 2]  233                     CMPA     #0x20                         ; check second flag byte 20
+   4244 27 DC         [ 3]  234                     BEQ      sfx_endofeffect_3            ; match - end of effect found so stop playing
                             235  .globl sfx_checktonefreq_3
-   6238                     236 sfx_checktonefreq_3:
-   6238 C5 20         [ 2]  237                     BITB     #0b00100000                   ; if bit 5 of B is set
-   623A 27 07         [ 3]  238                     BEQ      sfx_checknoisefreq_3         ; skip as no tone freq data
-   623C EC C1         [ 8]  239                     ldd      ,u++ ; alternative to destroying d load any 2 byte reg,
-   623E FD C8 48      [ 6]  240                     std      SHADOW_BASE-04 ; here I destroy d
-   6241 E6 5D         [ 5]  241                     ldb -3,u ; and load b anew - one instruction to many,
+   4246                     236 sfx_checktonefreq_3:
+   4246 C5 20         [ 2]  237                     BITB     #0b00100000                   ; if bit 5 of B is set
+   4248 27 07         [ 3]  238                     BEQ      sfx_checknoisefreq_3         ; skip as no tone freq data
+   424A EC C1         [ 8]  239                     ldd      ,u++ ; alternative to destroying d load any 2 byte reg,
+   424C FD C8 48      [ 6]  240                     std      SHADOW_BASE-04 ; here I destroy d
+   424F E6 5D         [ 5]  241                     ldb -3,u ; and load b anew - one instruction to many,
                             242  .globl sfx_checknoisefreq_3
-   6243                     243 sfx_checknoisefreq_3:
-   6243 C5 40         [ 2]  244                     BITB     #0b01000000                   ; if bit 6 of B is only set
-   6245 27 05         [ 3]  245                     BEQ      sfx_checkvolume_3            ; skip as no noise freq data
-   6247 A6 C0         [ 6]  246                     LDA      ,U+                          ; get next data byte and copy to noise freq reg
-   6249 B7 C8 46      [ 5]  247                     STA      SHADOW_BASE-06               ; set tone freq
+   4251                     243 sfx_checknoisefreq_3:
+   4251 C5 40         [ 2]  244                     BITB     #0b01000000                   ; if bit 6 of B is only set
+   4253 27 05         [ 3]  245                     BEQ      sfx_checkvolume_3            ; skip as no noise freq data
+   4255 A6 C0         [ 6]  246                     LDA      ,U+                          ; get next data byte and copy to noise freq reg
+   4257 B7 C8 46      [ 5]  247                     STA      SHADOW_BASE-06               ; set tone freq
                             248  .globl sfx_checkvolume_3
-   624C                     249 sfx_checkvolume_3:
-   624C 1F 98         [ 6]  250                     tfr      b,a
-   624E 84 0F         [ 2]  251                     ANDA     #0b00001111                   ; get volume from bits 0-3
-   6250 B7 C8 42      [ 5]  252                     STA      SHADOW_BASE-0x0A              ; set tone freq
+   425A                     249 sfx_checkvolume_3:
+   425A 1F 98         [ 6]  250                     tfr      b,a
+   425C 84 0F         [ 2]  251                     ANDA     #0b00001111                   ; get volume from bits 0-3
+   425E B7 C8 42      [ 5]  252                     STA      SHADOW_BASE-0x0A              ; set tone freq
                             253  .globl sfx_checktonedisable_3
-   6253                     254 sfx_checktonedisable_3:
-   6253 B6 C8 45      [ 5]  255                     LDA      SHADOW_BASE-0x07              ; in the following reg 7 will be altered - load once
-   6256 C5 10         [ 2]  256                     BITB     #0b00010000                   ; if bit 4 of B is set disable the tone
-   6258 27 0F         [ 3]  257                     BEQ      sfx_enabletone_3
+   4261                     254 sfx_checktonedisable_3:
+   4261 B6 C8 45      [ 5]  255                     LDA      SHADOW_BASE-0x07              ; in the following reg 7 will be altered - load once
+   4264 C5 10         [ 2]  256                     BITB     #0b00010000                   ; if bit 4 of B is set disable the tone
+   4266 27 0F         [ 3]  257                     BEQ      sfx_enabletone_3
                             258  .globl sfx_disabletone_3
-   625A                     259 sfx_disabletone_3:
-   625A 8A 04         [ 2]  260                     ORA      #0b00000100
-   625C C5 80         [ 2]  261                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
-   625E 27 18         [ 3]  262                     BEQ      sfx_enablenoise_3
-   6260 8A 20         [ 2]  263                     ORA      #0b00100000
-   6262 B7 C8 45      [ 5]  264                     STA      SHADOW_BASE-0x07              ; set tone freq
-   6265 FF C8 91      [ 6]  265                     STU      _sfx_pointer_3                ; update frame pointer to next flag byte in Y
-   6268 39            [ 5]  266                     RTS
+   4268                     259 sfx_disabletone_3:
+   4268 8A 04         [ 2]  260                     ORA      #0b00000100
+   426A C5 80         [ 2]  261                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
+   426C 27 18         [ 3]  262                     BEQ      sfx_enablenoise_3
+   426E 8A 20         [ 2]  263                     ORA      #0b00100000
+   4270 B7 C8 45      [ 5]  264                     STA      SHADOW_BASE-0x07              ; set tone freq
+   4273 FF C8 91      [ 6]  265                     STU      _sfx_pointer_3                ; update frame pointer to next flag byte in Y
+   4276 39            [ 5]  266                     RTS
                             267 
                             268  .globl sfx_enabletone_3
-   6269                     269 sfx_enabletone_3:
-   6269 84 FB         [ 2]  270                     ANDA     #0b11111011
+   4277                     269 sfx_enabletone_3:
+   4277 84 FB         [ 2]  270                     ANDA     #0b11111011
                             271  .globl sfx_checknoisedisable_3
-   626B                     272 sfx_checknoisedisable_3:
-   626B C5 80         [ 2]  273                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
-   626D 27 09         [ 3]  274                     BEQ      sfx_enablenoise_3
+   4279                     272 sfx_checknoisedisable_3:
+   4279 C5 80         [ 2]  273                     BITB     #0b10000000                   ; if bit7 of B is set disable noise
+   427B 27 09         [ 3]  274                     BEQ      sfx_enablenoise_3
                             275  .globl sfx_disablenoise_3
-   626F                     276 sfx_disablenoise_3:
-   626F 8A 20         [ 2]  277                     ORA      #0b00100000
-   6271 B7 C8 45      [ 5]  278                     STA      SHADOW_BASE-0x07              ; set tone freq
-   6274 FF C8 91      [ 6]  279                     STU      _sfx_pointer_3                ; update frame pointer to next flag byte in Y
-   6277 39            [ 5]  280                     RTS
+   427D                     276 sfx_disablenoise_3:
+   427D 8A 20         [ 2]  277                     ORA      #0b00100000
+   427F B7 C8 45      [ 5]  278                     STA      SHADOW_BASE-0x07              ; set tone freq
+   4282 FF C8 91      [ 6]  279                     STU      _sfx_pointer_3                ; update frame pointer to next flag byte in Y
+   4285 39            [ 5]  280                     RTS
                             281 
                             282  .globl sfx_enablenoise_3
-   6278                     283 sfx_enablenoise_3:
-   6278 84 DF         [ 2]  284                     ANDA     #0b11011111
-   627A B7 C8 45      [ 5]  285                     STA      SHADOW_BASE-0x07              ; set tone freq
-   627D FF C8 91      [ 6]  286                     STU      _sfx_pointer_3                ; update frame pointer to next flag byte in Y
-   6280 39            [ 5]  287                     RTS
+   4286                     283 sfx_enablenoise_3:
+   4286 84 DF         [ 2]  284                     ANDA     #0b11011111
+   4288 B7 C8 45      [ 5]  285                     STA      SHADOW_BASE-0x07              ; set tone freq
+   428B FF C8 91      [ 6]  286                     STU      _sfx_pointer_3                ; update frame pointer to next flag byte in Y
+   428E 39            [ 5]  287                     RTS
 ASxxxx Assembler V05.00  (Motorola 6809), page 1.
 Hexidecimal [16-Bits]
 
