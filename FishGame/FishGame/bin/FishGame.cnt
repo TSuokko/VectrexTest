@@ -8,91 +8,96 @@ LABEL $0045 _crt0_zero_bss
 LABEL $004B _crt0_startup
 LABEL $0054 _crt0_restart
 LABEL $0057 _drawScaleScreen
-LABEL $0058 _MousePointer
-LABEL $0073 _AnotherWave
-LABEL $009B _paddleHeight
-LABEL $009C _paddleWidth
-LABEL $009D _screenMaxFromCentre
-LABEL $009E _courtMaxWidthFromCentre
-LABEL $009F _setup
-LABEL $00B2 _disable_controller_2_y
-LABEL $00B6 _disable_controller_2_x
-LABEL $00BA _enable_controller_1_y
-LABEL $00C0 _enable_controller_1_x
-LABEL $00C6 _drawSpriteWithScaleAtPos
-LABEL $00F9 _movehook
-LABEL $0109 L14
-LABEL $0117 L15
-LABEL $0127 L16
-LABEL $0135 L17
-LABEL $0141 L18
-LABEL $014D L19
-LABEL $0159 L20
-LABEL $0165 L21
-LABEL $0169 _joystick_1_y
-LABEL $016D _joystick_1_x
-LABEL $0171 _FishGame
-LABEL $01AC L29
-LABEL $01AF _drawWater
-LABEL $01C2 _drawCourt
-LABEL $0202 _PressButtonsToReelIn
-LABEL $021A L35
-LABEL $022A L37
-LABEL $022B LC0
-LABEL $0244 LC1
-LABEL $024B LC2
-LABEL $0266 _catchingMinigame
-LABEL $028E L40
-LABEL $0297 L39
-LABEL $02C4 L44
-LABEL $02EA L43
-LABEL $0311 L46
-LABEL $031B L47
-LABEL $031C _resetGame
-LABEL $0331 LC3
-LABEL $034A _main
-LABEL $0355 L57
-LABEL $0396 L51
-LABEL $03A3 L56
-LABEL $03E9 L55
-LABEL $03F4 L54
-LABEL $03FA _fishCollision
-LABEL $046C L60
-LABEL $046F _do_fish
-LABEL $0493 L64
-LABEL $0496 L63
-LABEL $04B7 L75
-LABEL $04C7 L67
-LABEL $04D9 L76
-LABEL $04E1 L77
-LABEL $050A L68
-LABEL $051B L79
-LABEL $0531 L69
-LABEL $0543 L80
-LABEL $054B L81
-LABEL $0575 L70
-LABEL $0586 L82
-LABEL $059D L71
-LABEL $05AF L83
-LABEL $05B7 L84
-LABEL $05E2 L72
-LABEL $05F3 L85
-LABEL $060A L73
-LABEL $061C L86
-LABEL $0624 L87
-LABEL $064E L74
-LABEL $065F L88
-LABEL $0674 L66
-LABEL $067B L78
-LABEL $06A6 L89
-LABEL $06AB _init_fish
-LABEL $06E5 L91
-LABEL $06F7 L92
-LABEL $0709 L93
-LABEL $071B L95
-LABEL $071E _init_new_game
-LABEL $0726 L98
-LABEL $074B L97
+LABEL $0058 _HookPlayer
+LABEL $0073 _LifeSymbol
+LABEL $007E _AnotherWave
+LABEL $009D _paddleHeight
+LABEL $009E _paddleWidth
+LABEL $009F _screenMaxFromCentre
+LABEL $00A0 _courtMaxWidthFromCentre
+LABEL $00A1 _setup
+LABEL $00B4 _disable_controller_2_y
+LABEL $00B8 _disable_controller_2_x
+LABEL $00BC _enable_controller_1_y
+LABEL $00C2 _enable_controller_1_x
+LABEL $00C8 _drawSpriteWithScaleAtPos
+LABEL $00FB _movehook
+LABEL $010B L14
+LABEL $0119 L15
+LABEL $0129 L16
+LABEL $0137 L17
+LABEL $0143 L18
+LABEL $014F L19
+LABEL $015B L20
+LABEL $0167 L21
+LABEL $016B _joystick_1_y
+LABEL $016F _joystick_1_x
+LABEL $0173 _FishGame
+LABEL $01AE L29
+LABEL $01B1 _drawWater
+LABEL $01C4 _drawLives
+LABEL $01ED _renderLives
+LABEL $01F5 L36
+LABEL $0203 L35
+LABEL $020E _drawBottom
+LABEL $024E _PressButtonsToReelIn
+LABEL $0266 L41
+LABEL $0276 L43
+LABEL $0277 LC0
+LABEL $0290 LC1
+LABEL $0297 LC2
+LABEL $02B2 _catchingMinigame
+LABEL $02DC L46
+LABEL $02EB L45
+LABEL $0318 L50
+LABEL $033E L49
+LABEL $0365 L52
+LABEL $036F L53
+LABEL $0370 _resetGame
+LABEL $0385 LC3
+LABEL $039E _main
+LABEL $03A9 L63
+LABEL $03ED L57
+LABEL $03FA L62
+LABEL $0440 L61
+LABEL $044B L60
+LABEL $0451 _fishCollision
+LABEL $04C3 L66
+LABEL $04C6 _do_fish
+LABEL $04EA L70
+LABEL $04ED L69
+LABEL $050E L81
+LABEL $051E L73
+LABEL $0530 L82
+LABEL $0538 L83
+LABEL $0561 L74
+LABEL $0572 L85
+LABEL $0588 L75
+LABEL $059A L86
+LABEL $05A2 L87
+LABEL $05CC L76
+LABEL $05DD L88
+LABEL $05F4 L77
+LABEL $0606 L89
+LABEL $060E L90
+LABEL $0639 L78
+LABEL $064A L91
+LABEL $0661 L79
+LABEL $0673 L92
+LABEL $067B L93
+LABEL $06A5 L80
+LABEL $06B6 L94
+LABEL $06CB L72
+LABEL $06D2 L84
+LABEL $06FD L95
+LABEL $0702 _init_fish
+LABEL $0766 L97
+LABEL $0778 L98
+LABEL $078A L99
+LABEL $079C L101
+LABEL $079F _init_new_game
+LABEL $07A7 L104
+LABEL $07CC L103
 LABEL $C880 _waitTimer
 LABEL $C881 _GameState
 LABEL $C882 _hook_yPos
@@ -100,561 +105,596 @@ LABEL $C883 _hook_xPos
 LABEL $C884 _lives
 LABEL $C885 _fishIsCaught
 LABEL $C886 _current_fishes
-COMMENT $00B2 Vec_Joy_Mux_2_Y
-COMMENT $00B6 Vec_Joy_Mux_2_X
-COMMENT $00BC Vec_Joy_Mux_1_Y
-COMMENT $00C2 Vec_Joy_Mux_1_X
-COMMENT $00C8 sprite, sprite
-COMMENT $00CA drawScale, drawScale
-COMMENT $00CF drawScaleScreen.1, drawScaleScreen
-COMMENT $00D2 drawScaleScreen.1, VIA_t1_cnt_lo
-COMMENT $00D5 yPos
-COMMENT $00D7 a
-COMMENT $00D9 xPos
-COMMENT $00DB b
-COMMENT $00DD a
-COMMENT $00E1 b
-COMMENT $00E8 drawScale
-COMMENT $00EA VIA_t1_cnt_lo
-COMMENT $00ED tmp28, sprite
-COMMENT $00EF tmp28, x
-COMMENT $00F1 x
-COMMENT $00FF hook_xPos.12, hook_xPos
-COMMENT $0102 hook_xPos.13
-COMMENT $0104 hook_xPos.13, hook_xPos
-COMMENT $010F hook_xPos.14, hook_xPos
-COMMENT $0112 hook_xPos.15
-COMMENT $0114 hook_xPos.15, hook_xPos
-COMMENT $011D hook_yPos.16, hook_yPos
-COMMENT $0120 hook_yPos.17
-COMMENT $0122 hook_yPos.17, hook_yPos
-COMMENT $012D hook_yPos.18, hook_yPos
-COMMENT $0130 hook_yPos.19
-COMMENT $0132 hook_yPos.19, hook_yPos
-COMMENT $0135 hook_yPos.20, hook_yPos
-COMMENT $0138 : ; hook_yPos.20
-COMMENT $013E hook_yPos
-COMMENT $0141 hook_yPos.21, hook_yPos
-COMMENT $0144 : ; hook_yPos.21
-COMMENT $014A hook_yPos
-COMMENT $014D hook_xPos.22, hook_xPos
-COMMENT $0150 : ; hook_xPos.22
-COMMENT $0156 hook_xPos
-COMMENT $0159 hook_xPos.23, hook_xPos
-COMMENT $015C : ; hook_xPos.23
-COMMENT $0162 hook_xPos
-COMMENT $0169 D.3035, Vec_Joy_1_Y
-COMMENT $016D D.3031, Vec_Joy_1_X
-COMMENT $0178 VIA_t1_cnt_lo
-COMMENT $017B hook_xPos
-COMMENT $017E hook_xPos.24
-COMMENT $0180 hook_yPos
-COMMENT $0183 hook_yPos.25
+COMMENT $00B4 Vec_Joy_Mux_2_Y
+COMMENT $00B8 Vec_Joy_Mux_2_X
+COMMENT $00BE Vec_Joy_Mux_1_Y
+COMMENT $00C4 Vec_Joy_Mux_1_X
+COMMENT $00CA sprite, sprite
+COMMENT $00CC drawScale, drawScale
+COMMENT $00D1 drawScaleScreen.1, drawScaleScreen
+COMMENT $00D4 drawScaleScreen.1, VIA_t1_cnt_lo
+COMMENT $00D7 yPos
+COMMENT $00D9 a
+COMMENT $00DB xPos
+COMMENT $00DD b
+COMMENT $00DF a
+COMMENT $00E3 b
+COMMENT $00EA drawScale
+COMMENT $00EC VIA_t1_cnt_lo
+COMMENT $00EF tmp28, sprite
+COMMENT $00F1 tmp28, x
+COMMENT $00F3 x
+COMMENT $0101 hook_xPos.12, hook_xPos
+COMMENT $0104 hook_xPos.13
+COMMENT $0106 hook_xPos.13, hook_xPos
+COMMENT $0111 hook_xPos.14, hook_xPos
+COMMENT $0114 hook_xPos.15
+COMMENT $0116 hook_xPos.15, hook_xPos
+COMMENT $011F hook_yPos.16, hook_yPos
+COMMENT $0122 hook_yPos.17
+COMMENT $0124 hook_yPos.17, hook_yPos
+COMMENT $012F hook_yPos.18, hook_yPos
+COMMENT $0132 hook_yPos.19
+COMMENT $0134 hook_yPos.19, hook_yPos
+COMMENT $0137 hook_yPos.20, hook_yPos
+COMMENT $013A : ; hook_yPos.20
+COMMENT $0140 hook_yPos
+COMMENT $0143 hook_yPos.21, hook_yPos
+COMMENT $0146 : ; hook_yPos.21
+COMMENT $014C hook_yPos
+COMMENT $014F hook_xPos.22, hook_xPos
+COMMENT $0152 : ; hook_xPos.22
+COMMENT $0158 hook_xPos
+COMMENT $015B hook_xPos.23, hook_xPos
+COMMENT $015E : ; hook_xPos.23
+COMMENT $0164 hook_xPos
+COMMENT $016B D.3035, Vec_Joy_1_Y
+COMMENT $016F D.3031, Vec_Joy_1_X
+COMMENT $017A VIA_t1_cnt_lo
+COMMENT $017D hook_xPos
+COMMENT $0180 hook_xPos.24
+COMMENT $0182 hook_yPos
 COMMENT $0185 hook_yPos.25
-COMMENT $0187 a
-COMMENT $0189 hook_xPos.24
-COMMENT $018B b
-COMMENT $018D a
-COMMENT $0191 b
-COMMENT $019A VIA_t1_cnt_lo
-COMMENT $01A3 fishIsCaught.26, fishIsCaught
-COMMENT $01A6 fishIsCaught.26
-COMMENT $01C4 drawScaleScreen.27, drawScaleScreen
-COMMENT $01C7 drawScaleScreen.27, VIA_t1_cnt_lo
-COMMENT $01CD courtMaxWidthFromCentre
-COMMENT $01D0 courtMaxWidthFromCentre.28
-COMMENT $01D2 screenMaxFromCentre.29, screenMaxFromCentre
-COMMENT $01D6 D.3331, a
-COMMENT $01D8 courtMaxWidthFromCentre.28
-COMMENT $01DA b
-COMMENT $01DC a
-COMMENT $01E0 b
-COMMENT $01E7 courtMaxWidthFromCentre.30, courtMaxWidthFromCentre
-COMMENT $01EA courtMaxWidthFromCentre.30
-COMMENT $01EC tmp34
-COMMENT $01EE tmp34
-COMMENT $01EF tmp34
-COMMENT $01F4 D.3333, b
-COMMENT $01F8 b
-COMMENT $0202 hook_yPos.31, hook_yPos
-COMMENT $0205 : ; hook_yPos.31
-COMMENT $020B hook_yPos
-COMMENT $0210 GameState
-COMMENT $0215 waitTimer
-COMMENT $021A Vec_Buttons.32, Vec_Buttons
-COMMENT $0222 hook_yPos.34, hook_yPos
-COMMENT $0225 hook_yPos.35
-COMMENT $0227 hook_yPos.35, hook_yPos
-COMMENT $0266 GameState.36, GameState
-COMMENT $0269 : ; GameState.36
-COMMENT $027E waitTimer.37, waitTimer
-COMMENT $0281 waitTimer.37
-COMMENT $0284 waitTimer.38, waitTimer
-COMMENT $0287 waitTimer.39
-COMMENT $0288 waitTimer.39, waitTimer
-COMMENT $028E GameState
-COMMENT $0291 fishIsCaught
-COMMENT $0297 GameState.40, GameState
-COMMENT $029A : ; GameState.40
-COMMENT $02B1 waitTimer.41, waitTimer
-COMMENT $02B4 waitTimer.41
-COMMENT $02BA waitTimer.42, waitTimer
-COMMENT $02BD waitTimer.43
-COMMENT $02BE waitTimer.43, waitTimer
-COMMENT $02C4 GameState.44, GameState
-COMMENT $02C7 : ; GameState.44
-COMMENT $02CD GameState
-COMMENT $02D0 fishIsCaught
-COMMENT $02D3 lives.45, lives
-COMMENT $02D6 lives.46
-COMMENT $02D7 lives.46, lives
-COMMENT $02DA lives.47, lives
-COMMENT $02DD lives.47
-COMMENT $02E4 GameState
-COMMENT $02EA waitTimer.48, waitTimer
-COMMENT $02ED waitTimer.48
-COMMENT $02F0 GameState.49, GameState
-COMMENT $02F3 : ; GameState.49
-COMMENT $0308 waitTimer.50, waitTimer
-COMMENT $030B waitTimer.51
-COMMENT $030C waitTimer.51, waitTimer
-COMMENT $0313 GameState
-COMMENT $0318 waitTimer
-COMMENT $031C hook_yPos
-COMMENT $031F hook_xPos
-COMMENT $0322 fishIsCaught
-COMMENT $0325 waitTimer
-COMMENT $0328 GameState
-COMMENT $032D lives
-COMMENT $0357 VIA_t1_cnt_lo
-COMMENT $036E GameState.52, GameState
-COMMENT $0371 : ; GameState.52
-COMMENT $0386 Vec_Buttons.53, Vec_Buttons
-COMMENT $0396 fishIsCaught.54, fishIsCaught
-COMMENT $0399 fishIsCaught.54
-COMMENT $03A5 zero_extendqihi: R:b -> R:d
-COMMENT $03AA tmp40
-COMMENT $03AE tmp40
-COMMENT $03B6 tmp41
-COMMENT $03BA tmp41
-COMMENT $03C7 zero_extendqihi: R:b -> R:d
-COMMENT $03CC tmp43
-COMMENT $03D0 tmp43
-COMMENT $03D8 tmp44
-COMMENT $03DC tmp44
-COMMENT $03FC current_fish, current_fish
-COMMENT $03FE tmp45, current_fish
-COMMENT $0400 <variable>.y
-COMMENT $0404 hook_yPos
-COMMENT $0407 hook_yPos.2
-COMMENT $0409 paddleHeight.3, paddleHeight
-COMMENT $040C D.3152, hook_yPos.2
-COMMENT $040F  ; D.3152, D.3149
-COMMENT $0415 tmp46, current_fish
-COMMENT $0417 <variable>.y
-COMMENT $041B hook_yPos
-COMMENT $041E hook_yPos.4
-COMMENT $0420 paddleHeight.5, paddleHeight
-COMMENT $0423 D.3156, hook_yPos.4
-COMMENT $0428  ; D.3157, D.3153
-COMMENT $042E tmp47, current_fish
-COMMENT $0430 <variable>.x
-COMMENT $0434 hook_xPos
-COMMENT $0437 hook_xPos.6
-COMMENT $0439 paddleWidth.7, paddleWidth
-COMMENT $043C D.3161, hook_xPos.6
-COMMENT $043E  ; D.3161, D.3158
-COMMENT $0442 tmp48, current_fish
-COMMENT $0444 <variable>.x
-COMMENT $0448 hook_xPos
-COMMENT $044B hook_xPos.8
-COMMENT $044D paddleWidth.9, paddleWidth
-COMMENT $0450 D.3165, hook_xPos.8
-COMMENT $0453  ; D.3165, D.3162
-COMMENT $0457 fishIsCaught.10, fishIsCaught
-COMMENT $045A fishIsCaught.10
-COMMENT $045F fishIsCaught
-COMMENT $0464 GameState
-COMMENT $0469 waitTimer
-COMMENT $0474 current_fish, current_fish
-COMMENT $047A D.3191, <variable>.fish_counter
-COMMENT $0480 D.3192, <variable>.fish_counter
-COMMENT $0484 D.3193, <variable>.fish_counter
-COMMENT $0487 D.3194, <variable>.fish_counter
-COMMENT $048D current_fish
-COMMENT $0496 tmp82, current_fish
-COMMENT $0499 <variable>.direction
-COMMENT $04A7 zero_extendqihi: R:b -> R:d
-COMMENT $04AA tmp84
-COMMENT $04B1 tmp85, tmp84
-COMMENT $04B3 tmp86
-COMMENT $04B5 tmp86
-COMMENT $04C7 tmp87, current_fish
-COMMENT $04CA D.3198, <variable>.x
-COMMENT $04CC : ; D.3198
-COMMENT $04D0 tmp88, current_fish
-COMMENT $04D3 D.3199, <variable>.y
-COMMENT $04D5 : ; D.3199
-COMMENT $04DB <variable>.fish_counter
-COMMENT $04E1 tmp89, current_fish
-COMMENT $04E4 <variable>.x
-COMMENT $04E8 tmp90, current_fish
-COMMENT $04EB D.3201, <variable>.speed
-COMMENT $04EF tmp91, current_fish
-COMMENT $04F2 D.3202, <variable>.x
-COMMENT $04F4 tmp92, current_fish
-COMMENT $04F7 <variable>.y
-COMMENT $04FB tmp93, current_fish
-COMMENT $04FE D.3204, <variable>.speed
-COMMENT $0502 tmp94, current_fish
-COMMENT $0505 D.3205, <variable>.y
-COMMENT $050A tmp95, current_fish
-COMMENT $050D D.3206, <variable>.x
-COMMENT $050F : ; D.3206
-COMMENT $0515 <variable>.fish_counter
-COMMENT $051B tmp96, current_fish
-COMMENT $051E <variable>.x
-COMMENT $0522 tmp97, current_fish
-COMMENT $0525 D.3208, <variable>.speed
-COMMENT $0529 tmp98, current_fish
-COMMENT $052C D.3209, <variable>.x
-COMMENT $0531 tmp99, current_fish
-COMMENT $0534 D.3212, <variable>.x
-COMMENT $0536 : ; D.3212
-COMMENT $053A tmp100, current_fish
-COMMENT $053D D.3213, <variable>.y
-COMMENT $053F : ; D.3213
-COMMENT $0545 <variable>.fish_counter
-COMMENT $054B tmp101, current_fish
-COMMENT $054E <variable>.x
-COMMENT $0552 tmp102, current_fish
-COMMENT $0555 D.3215, <variable>.speed
-COMMENT $0559 tmp103, current_fish
-COMMENT $055C D.3216, <variable>.x
-COMMENT $055E tmp104, current_fish
-COMMENT $0561 <variable>.y
-COMMENT $0565 tmp105, current_fish
-COMMENT $0568 D.3218, <variable>.speed
-COMMENT $056D tmp106, current_fish
-COMMENT $0570 D.3219, <variable>.y
-COMMENT $0575 tmp107, current_fish
-COMMENT $0578 D.3220, <variable>.y
-COMMENT $057A : ; D.3220
-COMMENT $0580 <variable>.fish_counter
-COMMENT $0586 tmp108, current_fish
-COMMENT $0589 <variable>.y
-COMMENT $058D tmp109, current_fish
-COMMENT $0590 D.3222, <variable>.speed
-COMMENT $0595 tmp110, current_fish
-COMMENT $0598 D.3223, <variable>.y
-COMMENT $059D tmp111, current_fish
-COMMENT $05A0 D.3226, <variable>.x
-COMMENT $05A2 : ; D.3226
-COMMENT $05A6 tmp112, current_fish
-COMMENT $05A9 D.3227, <variable>.y
-COMMENT $05AB : ; D.3227
-COMMENT $05B1 <variable>.fish_counter
-COMMENT $05B7 tmp113, current_fish
-COMMENT $05BA <variable>.x
-COMMENT $05BE tmp114, current_fish
-COMMENT $05C1 D.3229, <variable>.speed
-COMMENT $05C6 tmp115, current_fish
-COMMENT $05C9 D.3230, <variable>.x
-COMMENT $05CB tmp116, current_fish
-COMMENT $05CE <variable>.y
-COMMENT $05D2 tmp117, current_fish
-COMMENT $05D5 D.3232, <variable>.speed
-COMMENT $05DA tmp118, current_fish
-COMMENT $05DD D.3233, <variable>.y
-COMMENT $05E2 tmp119, current_fish
-COMMENT $05E5 D.3234, <variable>.x
-COMMENT $05E7 : ; D.3234
-COMMENT $05ED <variable>.fish_counter
-COMMENT $05F3 tmp120, current_fish
-COMMENT $05F6 <variable>.x
-COMMENT $05FA tmp121, current_fish
-COMMENT $05FD D.3236, <variable>.speed
-COMMENT $0602 tmp122, current_fish
-COMMENT $0605 D.3237, <variable>.x
-COMMENT $060A tmp123, current_fish
-COMMENT $060D D.3240, <variable>.x
-COMMENT $060F : ; D.3240
-COMMENT $0613 tmp124, current_fish
-COMMENT $0616 D.3241, <variable>.y
-COMMENT $0618 : ; D.3241
-COMMENT $061E <variable>.fish_counter
-COMMENT $0624 tmp125, current_fish
-COMMENT $0627 <variable>.x
-COMMENT $062B tmp126, current_fish
-COMMENT $062E D.3243, <variable>.speed
-COMMENT $0633 tmp127, current_fish
-COMMENT $0636 D.3244, <variable>.x
-COMMENT $0638 tmp128, current_fish
-COMMENT $063B <variable>.y
-COMMENT $063F tmp129, current_fish
-COMMENT $0642 D.3246, <variable>.speed
-COMMENT $0646 tmp130, current_fish
-COMMENT $0649 D.3247, <variable>.y
-COMMENT $064E tmp131, current_fish
-COMMENT $0651 D.3248, <variable>.y
-COMMENT $0653 : ; D.3248
-COMMENT $0659 <variable>.fish_counter
-COMMENT $065F tmp132, current_fish
-COMMENT $0662 <variable>.y
-COMMENT $0666 tmp133, current_fish
-COMMENT $0669 D.3250, <variable>.speed
-COMMENT $066D tmp134, current_fish
-COMMENT $0670 D.3251, <variable>.y
-COMMENT $0676 <variable>.fish_counter
-COMMENT $067D Vec_Dot_Dwell
-COMMENT $0682 VIA_t1_cnt_lo
-COMMENT $0685 tmp135, current_fish
-COMMENT $0688 <variable>.x
-COMMENT $068C tmp136, current_fish
-COMMENT $068F D.3253, <variable>.y
-COMMENT $0691 D.3253, a
-COMMENT $0696 b
-COMMENT $0699 a
-COMMENT $069E b
-COMMENT $06AD current_fish, current_fish
-COMMENT $06B2 tmp41
-COMMENT $06B4 tmp41, choice
-COMMENT $06B8 start
-COMMENT $06BC <variable>.fish_counter
-COMMENT $06C3 tmp42, current_fish
-COMMENT $06C5 D.3133, <variable>.direction
-COMMENT $06CD tmp43, current_fish
-COMMENT $06CF D.3137, <variable>.speed
-COMMENT $06D1 tmp44, current_fish
-COMMENT $06D3 <variable>.hunting
-COMMENT $06D5 choice
-COMMENT $06D9 tmp45, current_fish
-COMMENT $06DD <variable>.y
-COMMENT $06DF tmp46, current_fish
-COMMENT $06E1 start
-COMMENT $06E3 <variable>.x
-COMMENT $06E5 choice
-COMMENT $06EB tmp47, current_fish
-COMMENT $06EF <variable>.y
-COMMENT $06F1 tmp48, current_fish
-COMMENT $06F3 start
-COMMENT $06F5 <variable>.x
-COMMENT $06F7 choice
-COMMENT $06FD tmp49, current_fish
-COMMENT $06FF start
-COMMENT $0701 <variable>.y
-COMMENT $0703 tmp50, current_fish
-COMMENT $0707 <variable>.x
-COMMENT $0709 choice
-COMMENT $070F tmp51, current_fish
-COMMENT $0711 start
-COMMENT $0713 <variable>.y
-COMMENT $0715 tmp52, current_fish
-COMMENT $0719 <variable>.x
-COMMENT $0728 zero_extendqihi: R:b -> R:d ; i.11
-COMMENT $0729 tmp28
-COMMENT $072B tmp28
-COMMENT $072D tmp30
-COMMENT $0731 tmp30
-COMMENT $0735 tmp28
-COMMENT $0739 tmp31
-COMMENT $073D tmp31
-COMMENT $0741 tmp32
-COMMENT $0747 <variable>.fish_counter
-C_INFO_BLOCK $009F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 158 "enable_controller_1_x(); " BKPOINT=0
-C_INFO_BLOCK $00A2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 159 "enable_controller_1_y(); " BKPOINT=0
-C_INFO_BLOCK $00A5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 160 "disable_controller_2_x(); " BKPOINT=0
-C_INFO_BLOCK $00A8 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 161 "disable_controller_2_y(); " BKPOINT=0
-C_INFO_BLOCK $00AB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 162 "joy_digital(); " BKPOINT=0
-C_INFO_BLOCK $00AE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 164 "wait_recal(); " BKPOINT=0
-C_INFO_BLOCK $00CC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 171 "reset0ref(); " BKPOINT=0
-C_INFO_BLOCK $00CF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 173 "via_t1_cnt_lo = drawscalescreen; " BKPOINT=0
-C_INFO_BLOCK $00D5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 174 "moveto_d(ypos, xpos); " BKPOINT=0
-C_INFO_BLOCK $00E8 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 176 "via_t1_cnt_lo = drawscale; " BKPOINT=0
-C_INFO_BLOCK $00ED "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 178 "draw_vlp((void*) sprite); " BKPOINT=0
-C_INFO_BLOCK $00F9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 392 "if (joystick_1_x()>0) " BKPOINT=0
-C_INFO_BLOCK $00FF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 394 "hook_xpos += 5; " BKPOINT=0
-C_INFO_BLOCK $010F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 398 "hook_xpos -= 5; " BKPOINT=0
-C_INFO_BLOCK $0117 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 400 "if (joystick_1_y()>0) " BKPOINT=0
-C_INFO_BLOCK $011D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 402 "hook_ypos += 5; " BKPOINT=0
-C_INFO_BLOCK $012D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 406 "hook_ypos -= 5; " BKPOINT=0
-C_INFO_BLOCK $0135 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 408 "if (hook_ypos>=120) hook_ypos = 120; " BKPOINT=0
-C_INFO_BLOCK $0141 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 409 "if (hook_ypos<=-80) hook_ypos = -80; " BKPOINT=0
-C_INFO_BLOCK $014D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 410 "if (hook_xpos>=120) hook_xpos = 120; " BKPOINT=0
-C_INFO_BLOCK $0159 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 411 "if (hook_xpos<=-120) hook_xpos = -120; " BKPOINT=0
-C_INFO_BLOCK $0165 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 412 "joy_digital(); " BKPOINT=0
-C_INFO_BLOCK $0173 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 420 "reset0ref(); " BKPOINT=0
-C_INFO_BLOCK $0176 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 423 "via_t1_cnt_lo = 0x80; " BKPOINT=0
-C_INFO_BLOCK $017B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 424 "moveto_d(hook_ypos, hook_xpos); " BKPOINT=0
-C_INFO_BLOCK $0198 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 426 "via_t1_cnt_lo= (unsigned int)120; " BKPOINT=0
-C_INFO_BLOCK $019D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 429 "draw_vlc((void*) mousepointer); " BKPOINT=0
-C_INFO_BLOCK $01A3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 434 "if(fishiscaught == 0) " BKPOINT=0
-C_INFO_BLOCK $01A9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 436 "movehook(); " BKPOINT=0
-C_INFO_BLOCK $01AF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 444 "drawspritewithscaleatpos(anotherwave, (unsigned int)0x40, -50,50); " BKPOINT=0
-C_INFO_BLOCK $01C4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 453 "via_t1_cnt_lo = drawscalescreen; " BKPOINT=0
-C_INFO_BLOCK $01CA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 459 "reset0ref(); " BKPOINT=0
-C_INFO_BLOCK $01CD "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 460 "moveto_d(-screenmaxfromcentre, courtmaxwidthfromcentre); " BKPOINT=0
-C_INFO_BLOCK $01E7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 461 "draw_line_d(0, -2 * courtmaxwidthfromcentre); " BKPOINT=0
-C_INFO_BLOCK $0202 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 474 "if (hook_ypos>=120) " BKPOINT=0
-C_INFO_BLOCK $0209 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 476 "hook_ypos = 120; " BKPOINT=0
-C_INFO_BLOCK $020E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 477 "gamestate = success; " BKPOINT=0
-C_INFO_BLOCK $0213 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 478 "wait(127); " BKPOINT=0
-C_INFO_BLOCK $0218 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 479 "return; " BKPOINT=0
-C_INFO_BLOCK $021A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 482 "if (vec_buttons & 1) " BKPOINT=0
-C_INFO_BLOCK $0222 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 484 "hook_ypos += 5; " BKPOINT=0
-C_INFO_BLOCK $0266 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 493 "if(gamestate == success) " BKPOINT=0
-C_INFO_BLOCK $026D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 495 "reset0ref(); " BKPOINT=0
-C_INFO_BLOCK $0270 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 496 "print_str_d(texty,textx, ); " BKPOINT=0
-C_INFO_BLOCK $027E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 497 "if(waittimer > 0) " BKPOINT=0
-C_INFO_BLOCK $0284 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 499 "waittimer--; " BKPOINT=0
-C_INFO_BLOCK $028E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 503 "gamestate = hunting; " BKPOINT=0
-C_INFO_BLOCK $0291 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 504 "fishiscaught = 0; " BKPOINT=0
-C_INFO_BLOCK $02A0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 510 "reset0ref(); " BKPOINT=0
-C_INFO_BLOCK $02A3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 511 "print_str_d(texty,textx, ); " BKPOINT=0
-C_INFO_BLOCK $02B1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 512 "if(waittimer > 0) " BKPOINT=0
-C_INFO_BLOCK $02B7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 514 "pressbuttonstoreelin(); " BKPOINT=0
-C_INFO_BLOCK $02BA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 515 "waittimer--; " BKPOINT=0
-C_INFO_BLOCK $02CD "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 519 "gamestate = hunting; " BKPOINT=0
-C_INFO_BLOCK $02D0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 520 "fishiscaught = 0; " BKPOINT=0
-C_INFO_BLOCK $02D3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 521 "lives--; " BKPOINT=0
-C_INFO_BLOCK $02DA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 522 "if(lives <= 0) " BKPOINT=0
-C_INFO_BLOCK $02E2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 524 "gamestate = lose; " BKPOINT=0
-C_INFO_BLOCK $02EA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 531 "if (waittimer > 0 && gamestate == waiting) " BKPOINT=0
-C_INFO_BLOCK $02F7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 533 "reset0ref(); " BKPOINT=0
-C_INFO_BLOCK $02FA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 534 "print_str_d(texty,textx, ); " BKPOINT=0
-C_INFO_BLOCK $0308 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 535 "waittimer--; " BKPOINT=0
-C_INFO_BLOCK $0311 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 541 "gamestate = reeling; " BKPOINT=0
-C_INFO_BLOCK $0316 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 542 "wait(127); " BKPOINT=0
-C_INFO_BLOCK $031C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 556 "hook_ypos = 0; " BKPOINT=0
-C_INFO_BLOCK $031F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 557 "hook_xpos = 0; " BKPOINT=0
-C_INFO_BLOCK $0322 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 558 "fishiscaught = 0; " BKPOINT=0
-C_INFO_BLOCK $0325 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 559 "waittimer = 0; " BKPOINT=0
-C_INFO_BLOCK $0328 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 560 "gamestate = hunting; " BKPOINT=0
-C_INFO_BLOCK $032B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 561 "lives = 3; " BKPOINT=0
-C_INFO_BLOCK $034C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 567 "unsigned char i;, resetgame(); " BKPOINT=0
-C_INFO_BLOCK $034F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 569 "setup(); " BKPOINT=0
-C_INFO_BLOCK $0352 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 570 "init_new_game(); " BKPOINT=0
-C_INFO_BLOCK $0355 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 572 "while(1)via_t1_cnt_lo = max_scale; " BKPOINT=0
-C_INFO_BLOCK $035A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 576 "read_btns(); " BKPOINT=0
-C_INFO_BLOCK $035D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 578 "wait_recal(); " BKPOINT=0
-C_INFO_BLOCK $0360 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 579 "intensity_a(0x5f); " BKPOINT=0
-C_INFO_BLOCK $0365 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 581 "fishgame(); " BKPOINT=0
-C_INFO_BLOCK $0368 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 582 "drawwater(); " BKPOINT=0
-C_INFO_BLOCK $036B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 583 "drawcourt(); " BKPOINT=0
-C_INFO_BLOCK $036E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 585 "if(gamestate == lose) " BKPOINT=0
-C_INFO_BLOCK $0375 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 587 "reset0ref(); " BKPOINT=0
-C_INFO_BLOCK $0378 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 588 "print_str_d(texty,textx, ); " BKPOINT=0
-C_INFO_BLOCK $0386 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 589 "if (vec_buttons & 8) " BKPOINT=0
-C_INFO_BLOCK $0390 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 591 "resetgame(); " BKPOINT=0
-C_INFO_BLOCK $0396 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 597 "if(fishiscaught == 0){ " BKPOINT=0
-C_INFO_BLOCK $039E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 598 "for (i=0; i < fishes; i++) " BKPOINT=0
-C_INFO_BLOCK $03A3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 600 "do_fish(&current_fishes[i]); " BKPOINT=0
-C_INFO_BLOCK $03C5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 601 "fishcollision(&current_fishes[i]); " BKPOINT=0
-C_INFO_BLOCK $03F4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 605 "catchingminigame(); " BKPOINT=0
-C_INFO_BLOCK $03FE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 214 "if(current_fish->y >= (hook_ypos - paddleheight) && current_fish->y <= (hook_ypos - paddleheight + 4) " BKPOINT=0
-C_INFO_BLOCK $0457 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 218 "if(fishiscaught == 0) " BKPOINT=0
-C_INFO_BLOCK $045D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 220 "fishiscaught = 1; " BKPOINT=0
-C_INFO_BLOCK $0462 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 221 "gamestate = waiting; " BKPOINT=0
-C_INFO_BLOCK $0467 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 222 "wait(127); " BKPOINT=0
-C_INFO_BLOCK $046C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 225 "return; " BKPOINT=0
-C_INFO_BLOCK $0477 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 236 "reset0ref(); " BKPOINT=0
-C_INFO_BLOCK $047A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 237 "if (current_fish->fish_counter > 0) " BKPOINT=0
-C_INFO_BLOCK $0480 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 239 "current_fish->fish_counter--; " BKPOINT=0
-C_INFO_BLOCK $0487 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 240 "if (current_fish->fish_counter == 0) " BKPOINT=0
-C_INFO_BLOCK $048D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 242 "init_fish(current_fish); " BKPOINT=0
-C_INFO_BLOCK $0493 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 244 "return; " BKPOINT=0
-C_INFO_BLOCK $0496 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 248 "switch (current_fish->direction) " BKPOINT=0
-C_INFO_BLOCK $04C7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 253 "if ((current_fish->x > 120) || (current_fish->y > 100) ) " BKPOINT=0
-C_INFO_BLOCK $04D9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 256 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
-C_INFO_BLOCK $04DE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 258 "return; " BKPOINT=0
-C_INFO_BLOCK $04E1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 260 "current_fish->x += current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $04F4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 261 "current_fish->y += current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $0507 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 262 "break; " BKPOINT=0
-C_INFO_BLOCK $050A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 267 "if (current_fish->x > 120) " BKPOINT=0
-C_INFO_BLOCK $0513 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 270 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
-C_INFO_BLOCK $0518 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 272 "return; " BKPOINT=0
-C_INFO_BLOCK $051B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 275 "current_fish->x += current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $052E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 276 "break; " BKPOINT=0
-C_INFO_BLOCK $0531 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 281 "if ((current_fish->x > 120) || (current_fish->y < -120) ) " BKPOINT=0
-C_INFO_BLOCK $0543 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 284 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
-C_INFO_BLOCK $0548 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 286 "return; " BKPOINT=0
-C_INFO_BLOCK $054B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 289 "current_fish->x += current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $055E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 290 "current_fish->y -= current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $0572 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 291 "break; " BKPOINT=0
-C_INFO_BLOCK $0575 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 296 "if (current_fish->y < -120) " BKPOINT=0
-C_INFO_BLOCK $057E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 299 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
-C_INFO_BLOCK $0583 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 301 "return; " BKPOINT=0
-C_INFO_BLOCK $0586 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 304 "current_fish->y -= current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $059A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 305 "break; " BKPOINT=0
-C_INFO_BLOCK $059D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 310 "if ((current_fish->x < -120) || (current_fish->y < -120) ) " BKPOINT=0
-C_INFO_BLOCK $05AF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 313 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
-C_INFO_BLOCK $05B4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 315 "return; " BKPOINT=0
-C_INFO_BLOCK $05B7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 318 "current_fish->x -= current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $05CB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 319 "current_fish->y -= current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $05DF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 320 "break; " BKPOINT=0
-C_INFO_BLOCK $05E2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 325 "if (current_fish->x < -120) " BKPOINT=0
-C_INFO_BLOCK $05EB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 328 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
-C_INFO_BLOCK $05F0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 330 "return; " BKPOINT=0
-C_INFO_BLOCK $05F3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 333 "current_fish->x -= current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $0607 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 334 "break; " BKPOINT=0
-C_INFO_BLOCK $060A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 339 "if ((current_fish->x < -120) || (current_fish->y > 100) ) " BKPOINT=0
-C_INFO_BLOCK $061C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 342 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
-C_INFO_BLOCK $0621 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 344 "return; " BKPOINT=0
-C_INFO_BLOCK $0624 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 347 "current_fish->x -= current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $0638 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 348 "current_fish->y += current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $064B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 349 "break; " BKPOINT=0
-C_INFO_BLOCK $064E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 354 "if (current_fish->y > 100) " BKPOINT=0
-C_INFO_BLOCK $0657 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 357 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
-C_INFO_BLOCK $065C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 359 "return; " BKPOINT=0
-C_INFO_BLOCK $065F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 362 "current_fish->y += current_fish->speed; " BKPOINT=0
-C_INFO_BLOCK $0672 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 363 "break; " BKPOINT=0
-C_INFO_BLOCK $0674 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 368 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
-C_INFO_BLOCK $0679 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 369 "return; " BKPOINT=0
-C_INFO_BLOCK $067B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 376 "vec_dot_dwell = dot_brightness; " BKPOINT=0
-C_INFO_BLOCK $0680 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 377 "via_t1_cnt_lo= (unsigned int)120; " BKPOINT=0
-C_INFO_BLOCK $0685 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 378 "dot_d(current_fish->y, current_fish->x); " BKPOINT=0
-C_INFO_BLOCK $06AF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 183 "unsigned int choice = random() % 4; " BKPOINT=0
-C_INFO_BLOCK $06B6 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 184 "signed int start = 30; " BKPOINT=0
-C_INFO_BLOCK $06BA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 185 "current_fish->fish_counter = -1; " BKPOINT=0
-C_INFO_BLOCK $06BE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 186 "current_fish->direction = (signed int) (random() % highest_direction); " BKPOINT=0
-C_INFO_BLOCK $06C7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 187 "current_fish->speed = ((signed int) (random()) & 3) + 1; " BKPOINT=0
-C_INFO_BLOCK $06D1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 188 "current_fish->hunting = 0; " BKPOINT=0
-C_INFO_BLOCK $06D5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 189 "if (choice == 0) " BKPOINT=0
-C_INFO_BLOCK $06D9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 191 "current_fish->y = -100; " BKPOINT=0
-C_INFO_BLOCK $06DF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 192 "current_fish->x = start; " BKPOINT=0
-C_INFO_BLOCK $06E5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 194 "if (choice == 1) " BKPOINT=0
-C_INFO_BLOCK $06EB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 196 "current_fish->y = 100; " BKPOINT=0
-C_INFO_BLOCK $06F1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 197 "current_fish->x = start; " BKPOINT=0
-C_INFO_BLOCK $06F7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 199 "if (choice == 2) " BKPOINT=0
-C_INFO_BLOCK $06FD "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 201 "current_fish->y = start; " BKPOINT=0
-C_INFO_BLOCK $0703 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 202 "current_fish->x = -100; " BKPOINT=0
-C_INFO_BLOCK $0709 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 204 "if (choice == 3) " BKPOINT=0
-C_INFO_BLOCK $070F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 206 "current_fish->y = start; " BKPOINT=0
-C_INFO_BLOCK $0715 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 207 "current_fish->x = 100; " BKPOINT=0
-C_INFO_BLOCK $0722 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 384 "unsigned char i;, for (i=0; i<fishes; i++) " BKPOINT=0
-C_INFO_BLOCK $0726 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 386 "current_fishes[i].fish_counter = 10; " BKPOINT=0
+COMMENT $0187 hook_yPos.25
+COMMENT $0189 a
+COMMENT $018B hook_xPos.24
+COMMENT $018D b
+COMMENT $018F a
+COMMENT $0193 b
+COMMENT $019C VIA_t1_cnt_lo
+COMMENT $01A5 fishIsCaught.26, fishIsCaught
+COMMENT $01A8 fishIsCaught.26
+COMMENT $01C6 yPos, yPos
+COMMENT $01CD VIA_t1_cnt_lo
+COMMENT $01D0 yPos
+COMMENT $01D2 a
+COMMENT $01D4 a
+COMMENT $01E1 VIA_t1_cnt_lo
+COMMENT $01F7 mulqihi3
+COMMENT $01FC movlsbqihi: msb:,s -> R:b ; D.3339
+COMMENT $0203 lives.27, lives
+COMMENT $0207 : ; D.3341, i
+COMMENT $0210 drawScaleScreen.28, drawScaleScreen
+COMMENT $0213 drawScaleScreen.28, VIA_t1_cnt_lo
+COMMENT $0219 courtMaxWidthFromCentre
+COMMENT $021C courtMaxWidthFromCentre.29
+COMMENT $021E screenMaxFromCentre.30, screenMaxFromCentre
+COMMENT $0222 D.3347, a
+COMMENT $0224 courtMaxWidthFromCentre.29
+COMMENT $0226 b
+COMMENT $0228 a
+COMMENT $022C b
+COMMENT $0233 courtMaxWidthFromCentre.31, courtMaxWidthFromCentre
+COMMENT $0236 courtMaxWidthFromCentre.31
+COMMENT $0238 tmp34
+COMMENT $023A tmp34
+COMMENT $023B tmp34
+COMMENT $0240 D.3349, b
+COMMENT $0244 b
+COMMENT $024E hook_yPos.32, hook_yPos
+COMMENT $0251 : ; hook_yPos.32
+COMMENT $0257 hook_yPos
+COMMENT $025C GameState
+COMMENT $0261 waitTimer
+COMMENT $0266 Vec_Buttons.33, Vec_Buttons
+COMMENT $026E hook_yPos.35, hook_yPos
+COMMENT $0271 hook_yPos.36
+COMMENT $0273 hook_yPos.36, hook_yPos
+COMMENT $02B2 GameState.37, GameState
+COMMENT $02B5 : ; GameState.37
+COMMENT $02CC waitTimer.38, waitTimer
+COMMENT $02CF waitTimer.38
+COMMENT $02D2 waitTimer.39, waitTimer
+COMMENT $02D5 waitTimer.40
+COMMENT $02D6 waitTimer.40, waitTimer
+COMMENT $02DC GameState
+COMMENT $02DF fishIsCaught
+COMMENT $02E2 hook_yPos
+COMMENT $02E5 hook_xPos
+COMMENT $02EB GameState.41, GameState
+COMMENT $02EE : ; GameState.41
+COMMENT $0305 waitTimer.42, waitTimer
+COMMENT $0308 waitTimer.42
+COMMENT $030E waitTimer.43, waitTimer
+COMMENT $0311 waitTimer.44
+COMMENT $0312 waitTimer.44, waitTimer
+COMMENT $0318 GameState.45, GameState
+COMMENT $031B : ; GameState.45
+COMMENT $0321 GameState
+COMMENT $0324 fishIsCaught
+COMMENT $0327 lives.46, lives
+COMMENT $032A lives.47
+COMMENT $032B lives.47, lives
+COMMENT $032E lives.48, lives
+COMMENT $0331 lives.48
+COMMENT $0338 GameState
+COMMENT $033E waitTimer.49, waitTimer
+COMMENT $0341 waitTimer.49
+COMMENT $0344 GameState.50, GameState
+COMMENT $0347 : ; GameState.50
+COMMENT $035C waitTimer.51, waitTimer
+COMMENT $035F waitTimer.52
+COMMENT $0360 waitTimer.52, waitTimer
+COMMENT $0367 GameState
+COMMENT $036C waitTimer
+COMMENT $0370 hook_yPos
+COMMENT $0373 hook_xPos
+COMMENT $0376 fishIsCaught
+COMMENT $0379 waitTimer
+COMMENT $037C GameState
+COMMENT $0381 lives
+COMMENT $03AB VIA_t1_cnt_lo
+COMMENT $03C5 GameState.53, GameState
+COMMENT $03C8 : ; GameState.53
+COMMENT $03DD Vec_Buttons.54, Vec_Buttons
+COMMENT $03ED fishIsCaught.55, fishIsCaught
+COMMENT $03F0 fishIsCaught.55
+COMMENT $03FC zero_extendqihi: R:b -> R:d
+COMMENT $0401 tmp40
+COMMENT $0405 tmp40
+COMMENT $040D tmp41
+COMMENT $0411 tmp41
+COMMENT $041E zero_extendqihi: R:b -> R:d
+COMMENT $0423 tmp43
+COMMENT $0427 tmp43
+COMMENT $042F tmp44
+COMMENT $0433 tmp44
+COMMENT $0453 current_fish, current_fish
+COMMENT $0455 tmp45, current_fish
+COMMENT $0457 <variable>.y
+COMMENT $045B hook_yPos
+COMMENT $045E hook_yPos.2
+COMMENT $0460 paddleHeight.3, paddleHeight
+COMMENT $0463 D.3155, hook_yPos.2
+COMMENT $0466  ; D.3155, D.3152
+COMMENT $046C tmp46, current_fish
+COMMENT $046E <variable>.y
+COMMENT $0472 hook_yPos
+COMMENT $0475 hook_yPos.4
+COMMENT $0477 paddleHeight.5, paddleHeight
+COMMENT $047A D.3159, hook_yPos.4
+COMMENT $047F  ; D.3160, D.3156
+COMMENT $0485 tmp47, current_fish
+COMMENT $0487 <variable>.x
+COMMENT $048B hook_xPos
+COMMENT $048E hook_xPos.6
+COMMENT $0490 paddleWidth.7, paddleWidth
+COMMENT $0493 D.3164, hook_xPos.6
+COMMENT $0495  ; D.3164, D.3161
+COMMENT $0499 tmp48, current_fish
+COMMENT $049B <variable>.x
+COMMENT $049F hook_xPos
+COMMENT $04A2 hook_xPos.8
+COMMENT $04A4 paddleWidth.9, paddleWidth
+COMMENT $04A7 D.3168, hook_xPos.8
+COMMENT $04AA  ; D.3168, D.3165
+COMMENT $04AE fishIsCaught.10, fishIsCaught
+COMMENT $04B1 fishIsCaught.10
+COMMENT $04B6 fishIsCaught
+COMMENT $04BB GameState
+COMMENT $04C0 waitTimer
+COMMENT $04CB current_fish, current_fish
+COMMENT $04D1 D.3194, <variable>.fish_counter
+COMMENT $04D7 D.3195, <variable>.fish_counter
+COMMENT $04DB D.3196, <variable>.fish_counter
+COMMENT $04DE D.3197, <variable>.fish_counter
+COMMENT $04E4 current_fish
+COMMENT $04ED tmp82, current_fish
+COMMENT $04F0 <variable>.direction
+COMMENT $04FE zero_extendqihi: R:b -> R:d
+COMMENT $0501 tmp84
+COMMENT $0508 tmp85, tmp84
+COMMENT $050A tmp86
+COMMENT $050C tmp86
+COMMENT $051E tmp87, current_fish
+COMMENT $0521 D.3201, <variable>.x
+COMMENT $0523 : ; D.3201
+COMMENT $0527 tmp88, current_fish
+COMMENT $052A D.3202, <variable>.y
+COMMENT $052C : ; D.3202
+COMMENT $0532 <variable>.fish_counter
+COMMENT $0538 tmp89, current_fish
+COMMENT $053B <variable>.x
+COMMENT $053F tmp90, current_fish
+COMMENT $0542 D.3204, <variable>.speed
+COMMENT $0546 tmp91, current_fish
+COMMENT $0549 D.3205, <variable>.x
+COMMENT $054B tmp92, current_fish
+COMMENT $054E <variable>.y
+COMMENT $0552 tmp93, current_fish
+COMMENT $0555 D.3207, <variable>.speed
+COMMENT $0559 tmp94, current_fish
+COMMENT $055C D.3208, <variable>.y
+COMMENT $0561 tmp95, current_fish
+COMMENT $0564 D.3209, <variable>.x
+COMMENT $0566 : ; D.3209
+COMMENT $056C <variable>.fish_counter
+COMMENT $0572 tmp96, current_fish
+COMMENT $0575 <variable>.x
+COMMENT $0579 tmp97, current_fish
+COMMENT $057C D.3211, <variable>.speed
+COMMENT $0580 tmp98, current_fish
+COMMENT $0583 D.3212, <variable>.x
+COMMENT $0588 tmp99, current_fish
+COMMENT $058B D.3215, <variable>.x
+COMMENT $058D : ; D.3215
+COMMENT $0591 tmp100, current_fish
+COMMENT $0594 D.3216, <variable>.y
+COMMENT $0596 : ; D.3216
+COMMENT $059C <variable>.fish_counter
+COMMENT $05A2 tmp101, current_fish
+COMMENT $05A5 <variable>.x
+COMMENT $05A9 tmp102, current_fish
+COMMENT $05AC D.3218, <variable>.speed
+COMMENT $05B0 tmp103, current_fish
+COMMENT $05B3 D.3219, <variable>.x
+COMMENT $05B5 tmp104, current_fish
+COMMENT $05B8 <variable>.y
+COMMENT $05BC tmp105, current_fish
+COMMENT $05BF D.3221, <variable>.speed
+COMMENT $05C4 tmp106, current_fish
+COMMENT $05C7 D.3222, <variable>.y
+COMMENT $05CC tmp107, current_fish
+COMMENT $05CF D.3223, <variable>.y
+COMMENT $05D1 : ; D.3223
+COMMENT $05D7 <variable>.fish_counter
+COMMENT $05DD tmp108, current_fish
+COMMENT $05E0 <variable>.y
+COMMENT $05E4 tmp109, current_fish
+COMMENT $05E7 D.3225, <variable>.speed
+COMMENT $05EC tmp110, current_fish
+COMMENT $05EF D.3226, <variable>.y
+COMMENT $05F4 tmp111, current_fish
+COMMENT $05F7 D.3229, <variable>.x
+COMMENT $05F9 : ; D.3229
+COMMENT $05FD tmp112, current_fish
+COMMENT $0600 D.3230, <variable>.y
+COMMENT $0602 : ; D.3230
+COMMENT $0608 <variable>.fish_counter
+COMMENT $060E tmp113, current_fish
+COMMENT $0611 <variable>.x
+COMMENT $0615 tmp114, current_fish
+COMMENT $0618 D.3232, <variable>.speed
+COMMENT $061D tmp115, current_fish
+COMMENT $0620 D.3233, <variable>.x
+COMMENT $0622 tmp116, current_fish
+COMMENT $0625 <variable>.y
+COMMENT $0629 tmp117, current_fish
+COMMENT $062C D.3235, <variable>.speed
+COMMENT $0631 tmp118, current_fish
+COMMENT $0634 D.3236, <variable>.y
+COMMENT $0639 tmp119, current_fish
+COMMENT $063C D.3237, <variable>.x
+COMMENT $063E : ; D.3237
+COMMENT $0644 <variable>.fish_counter
+COMMENT $064A tmp120, current_fish
+COMMENT $064D <variable>.x
+COMMENT $0651 tmp121, current_fish
+COMMENT $0654 D.3239, <variable>.speed
+COMMENT $0659 tmp122, current_fish
+COMMENT $065C D.3240, <variable>.x
+COMMENT $0661 tmp123, current_fish
+COMMENT $0664 D.3243, <variable>.x
+COMMENT $0666 : ; D.3243
+COMMENT $066A tmp124, current_fish
+COMMENT $066D D.3244, <variable>.y
+COMMENT $066F : ; D.3244
+COMMENT $0675 <variable>.fish_counter
+COMMENT $067B tmp125, current_fish
+COMMENT $067E <variable>.x
+COMMENT $0682 tmp126, current_fish
+COMMENT $0685 D.3246, <variable>.speed
+COMMENT $068A tmp127, current_fish
+COMMENT $068D D.3247, <variable>.x
+COMMENT $068F tmp128, current_fish
+COMMENT $0692 <variable>.y
+COMMENT $0696 tmp129, current_fish
+COMMENT $0699 D.3249, <variable>.speed
+COMMENT $069D tmp130, current_fish
+COMMENT $06A0 D.3250, <variable>.y
+COMMENT $06A5 tmp131, current_fish
+COMMENT $06A8 D.3251, <variable>.y
+COMMENT $06AA : ; D.3251
+COMMENT $06B0 <variable>.fish_counter
+COMMENT $06B6 tmp132, current_fish
+COMMENT $06B9 <variable>.y
+COMMENT $06BD tmp133, current_fish
+COMMENT $06C0 D.3253, <variable>.speed
+COMMENT $06C4 tmp134, current_fish
+COMMENT $06C7 D.3254, <variable>.y
+COMMENT $06CD <variable>.fish_counter
+COMMENT $06D4 Vec_Dot_Dwell
+COMMENT $06D9 VIA_t1_cnt_lo
+COMMENT $06DC tmp135, current_fish
+COMMENT $06DF <variable>.x
+COMMENT $06E3 tmp136, current_fish
+COMMENT $06E6 D.3256, <variable>.y
+COMMENT $06E8 D.3256, a
+COMMENT $06ED b
+COMMENT $06F0 a
+COMMENT $06F5 b
+COMMENT $0704 current_fish, current_fish
+COMMENT $0709 tmp45
+COMMENT $070B tmp45, choice
+COMMENT $0714 mulqihi3
+COMMENT $071D zero_extendqihi: R:b -> R:d
+COMMENT $0720 movlsbqihi: msb:,s -> R:b
+COMMENT $0728 tmp49, D.3133
+COMMENT $072A tmp49
+COMMENT $072B tmp49
+COMMENT $072C tmp49
+COMMENT $072E tmp49
+COMMENT $072F tmp50
+COMMENT $0731 tmp50
+COMMENT $0732 mulqihi3
+COMMENT $0735 tmp53, D.3133
+COMMENT $0737 tmp53
+COMMENT $0738 tmp53, start
+COMMENT $073C <variable>.fish_counter
+COMMENT $0744 tmp54, current_fish
+COMMENT $0746 D.3136, <variable>.direction
+COMMENT $074E tmp55, current_fish
+COMMENT $0750 D.3140, <variable>.speed
+COMMENT $0752 tmp56, current_fish
+COMMENT $0754 <variable>.hunting
+COMMENT $0756 choice
+COMMENT $075A tmp57, current_fish
+COMMENT $075E <variable>.y
+COMMENT $0760 tmp58, current_fish
+COMMENT $0762 start
+COMMENT $0764 <variable>.x
+COMMENT $0766 choice
+COMMENT $076C tmp59, current_fish
+COMMENT $0770 <variable>.y
+COMMENT $0772 tmp60, current_fish
+COMMENT $0774 start
+COMMENT $0776 <variable>.x
+COMMENT $0778 choice
+COMMENT $077E tmp61, current_fish
+COMMENT $0780 start
+COMMENT $0782 <variable>.y
+COMMENT $0784 tmp62, current_fish
+COMMENT $0788 <variable>.x
+COMMENT $078A choice
+COMMENT $0790 tmp63, current_fish
+COMMENT $0792 start
+COMMENT $0794 <variable>.y
+COMMENT $0796 tmp64, current_fish
+COMMENT $079A <variable>.x
+COMMENT $07A9 zero_extendqihi: R:b -> R:d ; i.11
+COMMENT $07AA tmp28
+COMMENT $07AC tmp28
+COMMENT $07AE tmp30
+COMMENT $07B2 tmp30
+COMMENT $07B6 tmp28
+COMMENT $07BA tmp31
+COMMENT $07BE tmp31
+COMMENT $07C2 tmp32
+COMMENT $07C8 <variable>.fish_counter
+C_INFO_BLOCK $00A1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 173 "enable_controller_1_x(); " BKPOINT=0
+C_INFO_BLOCK $00A4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 174 "enable_controller_1_y(); " BKPOINT=0
+C_INFO_BLOCK $00A7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 175 "disable_controller_2_x(); " BKPOINT=0
+C_INFO_BLOCK $00AA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 176 "disable_controller_2_y(); " BKPOINT=0
+C_INFO_BLOCK $00AD "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 177 "joy_digital(); " BKPOINT=0
+C_INFO_BLOCK $00B0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 179 "wait_recal(); " BKPOINT=0
+C_INFO_BLOCK $00CE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 186 "reset0ref(); " BKPOINT=0
+C_INFO_BLOCK $00D1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 188 "via_t1_cnt_lo = drawscalescreen; " BKPOINT=0
+C_INFO_BLOCK $00D7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 189 "moveto_d(ypos, xpos); " BKPOINT=0
+C_INFO_BLOCK $00EA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 191 "via_t1_cnt_lo = drawscale; " BKPOINT=0
+C_INFO_BLOCK $00EF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 193 "draw_vlp((void*) sprite); " BKPOINT=0
+C_INFO_BLOCK $00FB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 410 "if (joystick_1_x()>0) " BKPOINT=0
+C_INFO_BLOCK $0101 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 412 "hook_xpos += 5; " BKPOINT=0
+C_INFO_BLOCK $0111 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 416 "hook_xpos -= 5; " BKPOINT=0
+C_INFO_BLOCK $0119 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 418 "if (joystick_1_y()>0) " BKPOINT=0
+C_INFO_BLOCK $011F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 420 "hook_ypos += 5; " BKPOINT=0
+C_INFO_BLOCK $012F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 424 "hook_ypos -= 5; " BKPOINT=0
+C_INFO_BLOCK $0137 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 426 "if (hook_ypos>=120) hook_ypos = 120; " BKPOINT=0
+C_INFO_BLOCK $0143 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 427 "if (hook_ypos<=-80) hook_ypos = -80; " BKPOINT=0
+C_INFO_BLOCK $014F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 428 "if (hook_xpos>=120) hook_xpos = 120; " BKPOINT=0
+C_INFO_BLOCK $015B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 429 "if (hook_xpos<=-120) hook_xpos = -120; " BKPOINT=0
+C_INFO_BLOCK $0167 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 430 "joy_digital(); " BKPOINT=0
+C_INFO_BLOCK $0175 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 438 "reset0ref(); " BKPOINT=0
+C_INFO_BLOCK $0178 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 441 "via_t1_cnt_lo = 0x80; " BKPOINT=0
+C_INFO_BLOCK $017D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 442 "moveto_d(hook_ypos, hook_xpos); " BKPOINT=0
+C_INFO_BLOCK $019A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 444 "via_t1_cnt_lo= (unsigned int)120; " BKPOINT=0
+C_INFO_BLOCK $019F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 447 "draw_vlc((void*) hookplayer); " BKPOINT=0
+C_INFO_BLOCK $01A5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 452 "if(fishiscaught == 0) " BKPOINT=0
+C_INFO_BLOCK $01AB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 454 "movehook(); " BKPOINT=0
+C_INFO_BLOCK $01B1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 462 "drawspritewithscaleatpos(anotherwave, (unsigned int)0x40, -50,50); " BKPOINT=0
+C_INFO_BLOCK $01C8 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 470 "reset0ref(); " BKPOINT=0
+C_INFO_BLOCK $01CB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 472 "via_t1_cnt_lo = 0xff; " BKPOINT=0
+C_INFO_BLOCK $01D0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 473 "moveto_d(ypos, 70); " BKPOINT=0
+C_INFO_BLOCK $01DF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 474 "via_t1_cnt_lo = 0x40; " BKPOINT=0
+C_INFO_BLOCK $01E4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 475 "draw_vlc((void*) hookplayer); " BKPOINT=0
+C_INFO_BLOCK $01EF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 480 "for(int i = -1; i < (lives - 1); i++) " BKPOINT=0
+C_INFO_BLOCK $01F5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 482 "drawlives(i * 20); " BKPOINT=0
+C_INFO_BLOCK $0210 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 489 "via_t1_cnt_lo = drawscalescreen; " BKPOINT=0
+C_INFO_BLOCK $0216 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 490 "reset0ref(); " BKPOINT=0
+C_INFO_BLOCK $0219 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 491 "moveto_d(-screenmaxfromcentre, courtmaxwidthfromcentre); " BKPOINT=0
+C_INFO_BLOCK $0233 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 492 "draw_line_d(0, -2 * courtmaxwidthfromcentre); " BKPOINT=0
+C_INFO_BLOCK $024E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 497 "if (hook_ypos>=120) " BKPOINT=0
+C_INFO_BLOCK $0255 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 499 "hook_ypos = 120; " BKPOINT=0
+C_INFO_BLOCK $025A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 500 "gamestate = success; " BKPOINT=0
+C_INFO_BLOCK $025F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 501 "wait(127); " BKPOINT=0
+C_INFO_BLOCK $0264 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 502 "return; " BKPOINT=0
+C_INFO_BLOCK $0266 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 505 "if (vec_buttons & 1) " BKPOINT=0
+C_INFO_BLOCK $026E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 507 "hook_ypos += 5; " BKPOINT=0
+C_INFO_BLOCK $02B2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 516 "if(gamestate == success) " BKPOINT=0
+C_INFO_BLOCK $02BB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 518 "reset0ref(); " BKPOINT=0
+C_INFO_BLOCK $02BE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 519 "print_str_d(texty,textx, ); " BKPOINT=0
+C_INFO_BLOCK $02CC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 520 "if(waittimer > 0) " BKPOINT=0
+C_INFO_BLOCK $02D2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 522 "waittimer--; " BKPOINT=0
+C_INFO_BLOCK $02DC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 526 "gamestate = hunting; " BKPOINT=0
+C_INFO_BLOCK $02DF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 527 "fishiscaught = 0; " BKPOINT=0
+C_INFO_BLOCK $02E2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 528 "hook_ypos = 0; " BKPOINT=0
+C_INFO_BLOCK $02E5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 529 "hook_xpos = 0; " BKPOINT=0
+C_INFO_BLOCK $02F4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 535 "reset0ref(); " BKPOINT=0
+C_INFO_BLOCK $02F7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 536 "print_str_d(texty,textx, ); " BKPOINT=0
+C_INFO_BLOCK $0305 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 537 "if(waittimer > 0) " BKPOINT=0
+C_INFO_BLOCK $030B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 539 "pressbuttonstoreelin(); " BKPOINT=0
+C_INFO_BLOCK $030E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 540 "waittimer--; " BKPOINT=0
+C_INFO_BLOCK $0321 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 544 "gamestate = hunting; " BKPOINT=0
+C_INFO_BLOCK $0324 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 545 "fishiscaught = 0; " BKPOINT=0
+C_INFO_BLOCK $0327 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 546 "lives--; " BKPOINT=0
+C_INFO_BLOCK $032E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 547 "if(lives <= 0) " BKPOINT=0
+C_INFO_BLOCK $0336 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 549 "gamestate = lose; " BKPOINT=0
+C_INFO_BLOCK $033E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 556 "if (waittimer > 0 && gamestate == waiting) " BKPOINT=0
+C_INFO_BLOCK $034B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 558 "reset0ref(); " BKPOINT=0
+C_INFO_BLOCK $034E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 559 "print_str_d(texty,textx, ); " BKPOINT=0
+C_INFO_BLOCK $035C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 560 "waittimer--; " BKPOINT=0
+C_INFO_BLOCK $0365 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 566 "gamestate = reeling; " BKPOINT=0
+C_INFO_BLOCK $036A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 567 "wait(127); " BKPOINT=0
+C_INFO_BLOCK $0370 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 581 "hook_ypos = 0; " BKPOINT=0
+C_INFO_BLOCK $0373 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 582 "hook_xpos = 0; " BKPOINT=0
+C_INFO_BLOCK $0376 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 583 "fishiscaught = 0; " BKPOINT=0
+C_INFO_BLOCK $0379 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 584 "waittimer = 0; " BKPOINT=0
+C_INFO_BLOCK $037C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 585 "gamestate = hunting; " BKPOINT=0
+C_INFO_BLOCK $037F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 586 "lives = 3; " BKPOINT=0
+C_INFO_BLOCK $03A0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 592 "unsigned char i;, resetgame(); " BKPOINT=0
+C_INFO_BLOCK $03A3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 594 "setup(); " BKPOINT=0
+C_INFO_BLOCK $03A6 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 595 "init_new_game(); " BKPOINT=0
+C_INFO_BLOCK $03A9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 597 "while(1)via_t1_cnt_lo = max_scale; " BKPOINT=0
+C_INFO_BLOCK $03AE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 601 "read_btns(); " BKPOINT=0
+C_INFO_BLOCK $03B1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 603 "wait_recal(); " BKPOINT=0
+C_INFO_BLOCK $03B4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 604 "intensity_a(0x5f); " BKPOINT=0
+C_INFO_BLOCK $03B9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 606 "fishgame(); " BKPOINT=0
+C_INFO_BLOCK $03BC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 607 "drawwater(); " BKPOINT=0
+C_INFO_BLOCK $03BF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 608 "drawbottom(); " BKPOINT=0
+C_INFO_BLOCK $03C2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 609 "renderlives(); " BKPOINT=0
+C_INFO_BLOCK $03C5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 611 "if(gamestate == lose) " BKPOINT=0
+C_INFO_BLOCK $03CC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 613 "reset0ref(); " BKPOINT=0
+C_INFO_BLOCK $03CF "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 614 "print_str_d(texty,textx, ); " BKPOINT=0
+C_INFO_BLOCK $03DD "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 615 "if (vec_buttons & 8) " BKPOINT=0
+C_INFO_BLOCK $03E7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 617 "resetgame(); " BKPOINT=0
+C_INFO_BLOCK $03ED "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 623 "if(fishiscaught == 0){ " BKPOINT=0
+C_INFO_BLOCK $03F5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 624 "for (i=0; i < fishes; i++) " BKPOINT=0
+C_INFO_BLOCK $03FA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 626 "do_fish(&current_fishes[i]); " BKPOINT=0
+C_INFO_BLOCK $041C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 627 "fishcollision(&current_fishes[i]); " BKPOINT=0
+C_INFO_BLOCK $044B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 631 "catchingminigame(); " BKPOINT=0
+C_INFO_BLOCK $0455 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 232 "if(current_fish->y >= (hook_ypos - paddleheight) && current_fish->y <= (hook_ypos - paddleheight + 4) " BKPOINT=0
+C_INFO_BLOCK $04AE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 236 "if(fishiscaught == 0) " BKPOINT=0
+C_INFO_BLOCK $04B4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 238 "fishiscaught = 1; " BKPOINT=0
+C_INFO_BLOCK $04B9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 239 "gamestate = waiting; " BKPOINT=0
+C_INFO_BLOCK $04BE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 240 "wait(127); " BKPOINT=0
+C_INFO_BLOCK $04C3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 243 "return; " BKPOINT=0
+C_INFO_BLOCK $04CE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 254 "reset0ref(); " BKPOINT=0
+C_INFO_BLOCK $04D1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 255 "if (current_fish->fish_counter > 0) " BKPOINT=0
+C_INFO_BLOCK $04D7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 257 "current_fish->fish_counter--; " BKPOINT=0
+C_INFO_BLOCK $04DE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 258 "if (current_fish->fish_counter == 0) " BKPOINT=0
+C_INFO_BLOCK $04E4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 260 "init_fish(current_fish); " BKPOINT=0
+C_INFO_BLOCK $04EA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 262 "return; " BKPOINT=0
+C_INFO_BLOCK $04ED "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 266 "switch (current_fish->direction) " BKPOINT=0
+C_INFO_BLOCK $051E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 271 "if ((current_fish->x > 120) || (current_fish->y > 100) ) " BKPOINT=0
+C_INFO_BLOCK $0530 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 274 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
+C_INFO_BLOCK $0535 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 276 "return; " BKPOINT=0
+C_INFO_BLOCK $0538 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 278 "current_fish->x += current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $054B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 279 "current_fish->y += current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $055E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 280 "break; " BKPOINT=0
+C_INFO_BLOCK $0561 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 285 "if (current_fish->x > 120) " BKPOINT=0
+C_INFO_BLOCK $056A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 288 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
+C_INFO_BLOCK $056F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 290 "return; " BKPOINT=0
+C_INFO_BLOCK $0572 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 293 "current_fish->x += current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $0585 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 294 "break; " BKPOINT=0
+C_INFO_BLOCK $0588 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 299 "if ((current_fish->x > 120) || (current_fish->y < -120) ) " BKPOINT=0
+C_INFO_BLOCK $059A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 302 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
+C_INFO_BLOCK $059F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 304 "return; " BKPOINT=0
+C_INFO_BLOCK $05A2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 307 "current_fish->x += current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $05B5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 308 "current_fish->y -= current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $05C9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 309 "break; " BKPOINT=0
+C_INFO_BLOCK $05CC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 314 "if (current_fish->y < -120) " BKPOINT=0
+C_INFO_BLOCK $05D5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 317 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
+C_INFO_BLOCK $05DA "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 319 "return; " BKPOINT=0
+C_INFO_BLOCK $05DD "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 322 "current_fish->y -= current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $05F1 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 323 "break; " BKPOINT=0
+C_INFO_BLOCK $05F4 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 328 "if ((current_fish->x < -120) || (current_fish->y < -120) ) " BKPOINT=0
+C_INFO_BLOCK $0606 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 331 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
+C_INFO_BLOCK $060B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 333 "return; " BKPOINT=0
+C_INFO_BLOCK $060E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 336 "current_fish->x -= current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $0622 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 337 "current_fish->y -= current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $0636 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 338 "break; " BKPOINT=0
+C_INFO_BLOCK $0639 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 343 "if (current_fish->x < -120) " BKPOINT=0
+C_INFO_BLOCK $0642 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 346 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
+C_INFO_BLOCK $0647 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 348 "return; " BKPOINT=0
+C_INFO_BLOCK $064A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 351 "current_fish->x -= current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $065E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 352 "break; " BKPOINT=0
+C_INFO_BLOCK $0661 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 357 "if ((current_fish->x < -120) || (current_fish->y > 100) ) " BKPOINT=0
+C_INFO_BLOCK $0673 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 360 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
+C_INFO_BLOCK $0678 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 362 "return; " BKPOINT=0
+C_INFO_BLOCK $067B "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 365 "current_fish->x -= current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $068F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 366 "current_fish->y += current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $06A2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 367 "break; " BKPOINT=0
+C_INFO_BLOCK $06A5 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 372 "if (current_fish->y > 100) " BKPOINT=0
+C_INFO_BLOCK $06AE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 375 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
+C_INFO_BLOCK $06B3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 377 "return; " BKPOINT=0
+C_INFO_BLOCK $06B6 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 380 "current_fish->y += current_fish->speed; " BKPOINT=0
+C_INFO_BLOCK $06C9 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 381 "break; " BKPOINT=0
+C_INFO_BLOCK $06CB "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 386 "current_fish->fish_counter = fish_intervall; " BKPOINT=0
+C_INFO_BLOCK $06D0 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 387 "return; " BKPOINT=0
+C_INFO_BLOCK $06D2 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 394 "vec_dot_dwell = dot_brightness; " BKPOINT=0
+C_INFO_BLOCK $06D7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 395 "via_t1_cnt_lo= (unsigned int)120; " BKPOINT=0
+C_INFO_BLOCK $06DC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 396 "dot_d(current_fish->y, current_fish->x); " BKPOINT=0
+C_INFO_BLOCK $0706 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 198 "unsigned int choice = random() % 4; " BKPOINT=0
+C_INFO_BLOCK $070D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 199 "signed int start = (signed int)random() % 100; " BKPOINT=0
+C_INFO_BLOCK $073A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 200 "current_fish->fish_counter = -1; " BKPOINT=0
+C_INFO_BLOCK $073F "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 201 "current_fish->direction = (signed int) (random() % highest_direction); " BKPOINT=0
+C_INFO_BLOCK $0748 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 202 "current_fish->speed = ((signed int) (random()) & 3) + 1; " BKPOINT=0
+C_INFO_BLOCK $0752 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 203 "current_fish->hunting = 0; " BKPOINT=0
+C_INFO_BLOCK $0756 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 207 "if (choice == 0) " BKPOINT=0
+C_INFO_BLOCK $075A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 209 "current_fish->y = -100; " BKPOINT=0
+C_INFO_BLOCK $0760 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 210 "current_fish->x = start; " BKPOINT=0
+C_INFO_BLOCK $0766 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 212 "if (choice == 1) " BKPOINT=0
+C_INFO_BLOCK $076C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 214 "current_fish->y = 100; " BKPOINT=0
+C_INFO_BLOCK $0772 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 215 "current_fish->x = start; " BKPOINT=0
+C_INFO_BLOCK $0778 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 217 "if (choice == 2) " BKPOINT=0
+C_INFO_BLOCK $077E "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 219 "current_fish->y = start; " BKPOINT=0
+C_INFO_BLOCK $0784 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 220 "current_fish->x = -100; " BKPOINT=0
+C_INFO_BLOCK $078A "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 222 "if (choice == 3) " BKPOINT=0
+C_INFO_BLOCK $0790 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 224 "current_fish->y = start; " BKPOINT=0
+C_INFO_BLOCK $0796 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 225 "current_fish->x = 100; " BKPOINT=0
+C_INFO_BLOCK $07A3 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 402 "unsigned char i;, for (i=0; i<fishes; i++) " BKPOINT=0
+C_INFO_BLOCK $07A7 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 404 "current_fishes[i].fish_counter = 10; " BKPOINT=0
 RANGE $0000-$0001 DB_DATA 8
 RANGE $0008-$0009 DB_DATA 8
 RANGE $000B-$000D DW_DATA 4
 RANGE $000D-$0012 DB_DATA 8
 RANGE $0019-$001A DB_DATA 8
 RANGE $001C-$0057 CODE
-RANGE $0057-$009F DB_DATA 8
-RANGE $009F-$022B CODE
-RANGE $022B-$022C DB_DATA 8
-RANGE $0233-$0234 DB_DATA 8
-RANGE $023B-$023C DB_DATA 8
-RANGE $0243-$0245 DB_DATA 8
-RANGE $024B-$024C DB_DATA 8
-RANGE $0253-$0254 DB_DATA 8
-RANGE $025B-$025C DB_DATA 8
-RANGE $0263-$0264 DB_DATA 8
-RANGE $0266-$0331 CODE
-RANGE $0331-$0332 DB_DATA 8
-RANGE $0339-$033A DB_DATA 8
-RANGE $0341-$0342 DB_DATA 8
-RANGE $0349-$034A DB_DATA 8
-RANGE $034A-$04B7 CODE
-RANGE $04B7-$04C7 DW_DATA 4
-RANGE $04C7-$0755 CODE
+RANGE $0057-$00A1 DB_DATA 8
+RANGE $00A1-$0277 CODE
+RANGE $0277-$0278 DB_DATA 8
+RANGE $027F-$0280 DB_DATA 8
+RANGE $0287-$0288 DB_DATA 8
+RANGE $028F-$0291 DB_DATA 8
+RANGE $0297-$0298 DB_DATA 8
+RANGE $029F-$02A0 DB_DATA 8
+RANGE $02A7-$02A8 DB_DATA 8
+RANGE $02AF-$02B0 DB_DATA 8
+RANGE $02B2-$0385 CODE
+RANGE $0385-$0386 DB_DATA 8
+RANGE $038D-$038E DB_DATA 8
+RANGE $0395-$0396 DB_DATA 8
+RANGE $039D-$039E DB_DATA 8
+RANGE $039E-$050E CODE
+RANGE $050E-$051E DW_DATA 4
+RANGE $051E-$07D6 CODE
 

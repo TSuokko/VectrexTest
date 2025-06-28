@@ -1905,7 +1905,12 @@ static inline int joystick_2_up()
 # 19 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c" 2
 # 54 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 unsigned int waitTimer;
-# 65 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+
+
+
+
+
+
 const unsigned int drawScaleScreen = (unsigned int)0xFF;
 
 
@@ -1917,7 +1922,7 @@ enum GameState_t {
  Lose
 } GameState;
 
-const signed char MousePointer[]=
+const signed char HookPlayer[]=
 {
  +0x0C,
     -0x07, +0x08,
@@ -1935,23 +1940,30 @@ const signed char MousePointer[]=
     +0x0D, +0x00,
 };
 
+const signed char LifeSymbol[]=
+{ +0x04,
+ +0x00, +0x06,
+ -0x04, +0x00,
+ -0x04, -0x03,
+ +0x04, -0x03,
+ +0x04, +0x00,
+};
+
 
 const signed char AnotherWave[]=
-{ (signed char) 0xFF, +0x3D, +0x3D,
- (signed char) 0xFF, +0x00, +0x3A,
- (signed char) 0xFF, -0x3D, +0x3D,
- (signed char) 0xFF, +0x00, +0x3A,
- (signed char) 0xFF, +0x3D, +0x3D,
- (signed char) 0xFF, +0x00, +0x3A,
- (signed char) 0xFF, -0x3D, +0x3D,
- (signed char) 0xFF, +0x00, +0x50,
- (signed char) 0xFF, +0x3D, +0x3A,
- (signed char) 0xFF, +0x00, +0x3D,
- (signed char) 0xFF, -0x3D, +0x3B,
- (signed char) 0xFF, -0x28, +0x00,
- (signed char) 0xFF, +0x3C, -0x3C,
-# 122 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
- (signed char) 0x01
+{
+ (signed char) 0xFF, +0x28, +0x14,
+    (signed char) 0xFF, -0x28, +0x14,
+    (signed char) 0xFF, +0x28, +0x14,
+    (signed char) 0xFF, -0x28, +0x14,
+    (signed char) 0xFF, +0x28, +0x14,
+    (signed char) 0xFF, -0x28, +0x14,
+    (signed char) 0xFF, +0x28, +0x14,
+    (signed char) 0xFF, -0x28, +0x14,
+    (signed char) 0xFF, +0x28, +0x14,
+    (signed char) 0xFF, -0x28, +0x14,
+    (signed char) 0x01
+# 138 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 };
 
 signed hook_yPos;
@@ -1976,7 +1988,7 @@ struct fish current_fishes[3];
 
 const int screenMaxFromCentre = 45;
 const int courtMaxWidthFromCentre = 64;
-# 157 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 172 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 void setup(void)
 {
   enable_controller_1_x();
@@ -2005,11 +2017,14 @@ void drawSpriteWithScaleAtPos(const signed char sprite[], unsigned int drawScale
 static inline void init_fish(struct fish *current_fish)
 {
   unsigned int choice = Random() % 4;
-  signed int start = 30;
+  signed int start = (signed int)Random() % 100;
   current_fish->fish_counter = -1;
     current_fish->direction = (signed int) (Random() % (7 + 1));
   current_fish->speed = ((signed int) (Random()) & 3) + 1;
   current_fish->hunting = 0;
+
+
+
   if (choice == 0)
   {
     current_fish->y = -100;
@@ -2077,7 +2092,7 @@ static inline void do_fish(struct fish *current_fish)
     if ((current_fish->x > 120) || (current_fish->y > 100) )
     {
 
-     current_fish->fish_counter = 4;
+     current_fish->fish_counter = 7;
 
      return;
     }
@@ -2091,7 +2106,7 @@ static inline void do_fish(struct fish *current_fish)
     if (current_fish->x > 120)
     {
 
-     current_fish->fish_counter = 4;
+     current_fish->fish_counter = 7;
 
      return;
     }
@@ -2105,7 +2120,7 @@ static inline void do_fish(struct fish *current_fish)
     if ((current_fish->x > 120) || (current_fish->y < -120) )
     {
 
-     current_fish->fish_counter = 4;
+     current_fish->fish_counter = 7;
 
      return;
     }
@@ -2120,7 +2135,7 @@ static inline void do_fish(struct fish *current_fish)
     if (current_fish->y < -120)
     {
 
-     current_fish->fish_counter = 4;
+     current_fish->fish_counter = 7;
 
      return;
     }
@@ -2134,7 +2149,7 @@ static inline void do_fish(struct fish *current_fish)
     if ((current_fish->x < -120) || (current_fish->y < -120) )
     {
 
-     current_fish->fish_counter = 4;
+     current_fish->fish_counter = 7;
 
      return;
     }
@@ -2149,7 +2164,7 @@ static inline void do_fish(struct fish *current_fish)
     if (current_fish->x < -120)
     {
 
-     current_fish->fish_counter = 4;
+     current_fish->fish_counter = 7;
 
      return;
     }
@@ -2163,7 +2178,7 @@ static inline void do_fish(struct fish *current_fish)
     if ((current_fish->x < -120) || (current_fish->y > 100) )
     {
 
-     current_fish->fish_counter = 4;
+     current_fish->fish_counter = 7;
 
      return;
     }
@@ -2178,7 +2193,7 @@ static inline void do_fish(struct fish *current_fish)
     if (current_fish->y > 100)
     {
 
-     current_fish->fish_counter = 4;
+     current_fish->fish_counter = 7;
 
      return;
     }
@@ -2189,7 +2204,7 @@ static inline void do_fish(struct fish *current_fish)
    default:
    {
 
-    current_fish->fish_counter = 4;
+    current_fish->fish_counter = 7;
     return;
    }
   }
@@ -2250,7 +2265,7 @@ void FishGame()
    VIA_t1_cnt_lo= (unsigned int)120;
 
 
- Draw_VLc((void*) MousePointer);
+ Draw_VLc((void*) HookPlayer);
 
 
 
@@ -2271,19 +2286,31 @@ void drawWater()
 
 }
 
-void drawCourt()
+void drawLives(int yPos)
 {
+ Reset0Ref();
 
+ VIA_t1_cnt_lo = 0xFF;
+ Moveto_d(yPos, 70);
+ VIA_t1_cnt_lo = 0x40;
+ Draw_VLc((void*) HookPlayer);
+}
+
+void renderLives()
+{
+ for(int i = -1; i < (lives - 1); i++)
+ {
+  drawLives(i * 20);
+ }
+}
+
+
+void drawBottom()
+{
     VIA_t1_cnt_lo = drawScaleScreen;
-
-
-
-
-
     Reset0Ref();
     Moveto_d(-screenMaxFromCentre, courtMaxWidthFromCentre);
     Draw_Line_d(0, -2 * courtMaxWidthFromCentre);
-# 471 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 }
 
 void PressButtonsToReelIn()
@@ -2319,6 +2346,8 @@ void catchingMinigame()
   {
    GameState = Hunting;
    fishIsCaught = 0;
+   hook_yPos = 0;
+   hook_xPos = 0;
 
   }
  }
@@ -2397,7 +2426,8 @@ int main(void)
 
   FishGame();
   drawWater();
-  drawCourt();
+  drawBottom();
+  renderLives();
 
   if(GameState == Lose)
   {

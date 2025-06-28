@@ -47,7 +47,7 @@
 #define FISH_SCALE 120                  /* for positioning the dots on the screen */
 #define FISHES 3                        /* how many dots at one time? */
 #define DOT_BRIGHTNESS 5                /* dot dwell time... */
-#define FISH_INTERVALL 4                /* how much time between reapearing at a */
+#define FISH_INTERVALL 7                /* how much time between reapearing at a */
                                         /* new location? */
 #define BLOW_UP 3
 
@@ -69,7 +69,7 @@ enum GameState_t {
 	Lose
 } GameState;
 
-const signed char MousePointer[]=
+const signed char HookPlayer[]=
 {
 	+0x0C,
     -0x07, +0x08, // draw to y, x
@@ -87,9 +87,30 @@ const signed char MousePointer[]=
     +0x0D, +0x00, // draw to y, x
 };
 
+const signed char LifeSymbol[]=
+{	+0x04,
+	+0x00, +0x06, // draw to y, x
+	-0x04, +0x00, // draw to y, x
+	-0x04, -0x03, // draw to y, x
+	+0x04, -0x03, // draw to y, x
+	+0x04, +0x00, // draw to y, x
+};
+
 
 const signed char AnotherWave[]=
-{  (signed char) 0xFF, +0x3D, +0x3D,  // pattern, y, x
+{  
+	(signed char) 0xFF, +0x28, +0x14,  // pattern, y, x
+    (signed char) 0xFF, -0x28, +0x14,  // pattern, y, x
+    (signed char) 0xFF, +0x28, +0x14,  // pattern, y, x
+    (signed char) 0xFF, -0x28, +0x14,  // pattern, y, x
+    (signed char) 0xFF, +0x28, +0x14,  // pattern, y, x
+    (signed char) 0xFF, -0x28, +0x14,  // pattern, y, x
+    (signed char) 0xFF, +0x28, +0x14,  // pattern, y, x
+    (signed char) 0xFF, -0x28, +0x14,  // pattern, y, x
+    (signed char) 0xFF, +0x28, +0x14,  // pattern, y, x
+    (signed char) 0xFF, -0x28, +0x14,  // pattern, y, x
+    (signed char) 0x01 // endmarker (high bit in pattern not set)
+	/*(signed char) 0xFF, +0x3D, +0x3D,  // pattern, y, x
 	(signed char) 0xFF, +0x00, +0x3A,  // pattern, y, x
 	(signed char) 0xFF, -0x3D, +0x3D,  // pattern, y, x
 	(signed char) 0xFF, +0x00, +0x3A,  // pattern, y, x
@@ -101,8 +122,7 @@ const signed char AnotherWave[]=
 	(signed char) 0xFF, +0x00, +0x3D,  // pattern, y, x
 	(signed char) 0xFF, -0x3D, +0x3B,  // pattern, y, x
 	(signed char) 0xFF, -0x28, +0x00,  // pattern, y, x
-	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x
-/*	
+	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x	
     (signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
 	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
 	(signed char) 0xFF, +0x00, -0x50,  // pattern, y, x
@@ -114,8 +134,7 @@ const signed char AnotherWave[]=
 	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
 	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
 	(signed char) 0xFF, +0x28, +0x00,  // pattern, y, x
-*/
-	(signed char) 0x01 // endmarker (high bit in pattern not set)
+	(signed char) 0x01 // endmarker (high bit in pattern not set)*/
 };
 
 signed hook_yPos;               /* where is the hook? */
@@ -178,11 +197,14 @@ void drawSpriteWithScaleAtPos(const signed char sprite[], unsigned int drawScale
 static inline void init_fish(struct fish *current_fish)
 {
   unsigned int choice = Random() % 4;          /* start on which side? */
-  signed int start = 30;//(signed int)Random();               /* start on which position? */
+  signed int start = (signed int)Random() % 100;               /* start on which position? */
   current_fish->fish_counter = -1;              /* shotcounter negative -> active */
     current_fish->direction = (signed int) (Random() % HIGHEST_DIRECTION);  /* random direction of fish */
   current_fish->speed = ((signed int) (Random()) & 3) + 1;     /* random speed */
   current_fish->hunting = 0;                    /* still not used :-) */
+
+	//todo good starting positions for fish
+
   if (choice == 0)                              /* do the starting */
   {                                             /* coordinates... */
     current_fish->y = -100;
@@ -423,9 +445,9 @@ void FishGame()
   	VIA_t1_cnt_lo= (unsigned int)120; /* set scale for positioning */
 
 	
-	Draw_VLc((void*) MousePointer);
+	Draw_VLc((void*) HookPlayer);
 
-	//drawSpriteWithScaleAtPos(MousePointer,0x80, hook_yPos, hook_xPos)
+	//drawSpriteWithScaleAtPos(HookPlayer,0x80, hook_yPos, hook_xPos)
 	//drawSpriteWithScaleAtPos(drawPlayer1Sprite, 0x4F, gameVars->player1.xPos, player1YPos);
 	////////////////////////////////
 	if(fishIsCaught == 0)
@@ -444,26 +466,31 @@ void drawWater()
     //Draw_Line_d(-80,120);
 }
 
-void drawCourt()
+void drawLives(int yPos)
 {
-    //Intensity_a(0x3f);
+	Reset0Ref();
+
+	VIA_t1_cnt_lo = 0xFF;
+	Moveto_d(yPos, 70);
+	VIA_t1_cnt_lo = 0x40;
+	Draw_VLc((void*) HookPlayer);
+}
+
+void renderLives()
+{
+	for(int i = -1; i < (lives - 1); i++)
+	{
+		drawLives(i * 20);
+	}
+}
+
+
+void drawBottom()
+{
     VIA_t1_cnt_lo = drawScaleScreen;
-    
-    //Reset0Ref();//top-right down
-    //Moveto_d(screenMaxFromCentre, courtMaxWidthFromCentre);
-    //Draw_Line_d(-2 * screenMaxFromCentre, 0);
-    
     Reset0Ref();//bottom-right left
     Moveto_d(-screenMaxFromCentre, courtMaxWidthFromCentre);
     Draw_Line_d(0, -2 * courtMaxWidthFromCentre);
-    
-   // Reset0Ref(); //bottom-left up
-   // Moveto_d(-screenMaxFromCentre, -courtMaxWidthFromCentre);
-   // Draw_Line_d(2 * screenMaxFromCentre, 0);
-    
-   // Reset0Ref(); //top-left right
-   // Moveto_d(screenMaxFromCentre, -courtMaxWidthFromCentre);
-   // Draw_Line_d(0, 2 * courtMaxWidthFromCentre);
 }
 
 void PressButtonsToReelIn()
@@ -499,6 +526,8 @@ void catchingMinigame()
 		{
 			GameState = Hunting;
 			fishIsCaught = 0;
+			hook_yPos = 0;
+			hook_xPos = 0;
 
 		}
 	}
@@ -577,7 +606,8 @@ int main(void)
 		
 		FishGame();
 		drawWater();
-		drawCourt();
+		drawBottom();
+		renderLives();
 
 		if(GameState == Lose)
 		{
