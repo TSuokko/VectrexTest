@@ -51,6 +51,13 @@
                                         /* new location? */
 #define BLOW_UP 3
 
+unsigned int waitTimer;
+#define WAIT(a) do {waitTimer = a;} while (0)
+
+
+
+
+
 #define TextY -100
 #define TextX -128
 
@@ -107,8 +114,10 @@ const signed char AnotherWave[]=
 	(signed char) 0x01 // endmarker (high bit in pattern not set)
 };
 
-signed hook_x;               /* where is the hook? */
-signed hook_y;
+signed hook_yPos;               /* where is the hook? */
+signed hook_xPos;
+const int paddleHeight = 5;
+const int paddleWidth = 10;
 
 struct fish                             /* one fish... */
 {
@@ -120,7 +129,7 @@ struct fish                             /* one fish... */
   signed y;
 };
 
-signed visible;
+signed fishIsCaught;
 
 struct fish current_fishes[FISHES];       /* all dots bundled */
 
@@ -194,23 +203,16 @@ static inline void init_fish(struct fish *current_fish)
 
 static inline void fishCollision(struct fish *current_fish)
 {
-	//Print_Str_d(0, -70, "HELLO WORLD\x80");
-	if(visible == 1)
-	{
-		Reset0Ref();
-		Print_Str_d(TextY,TextX, "YOU KNOW WHAT THAT MEANS?\x80"); /* a message! */
-
-	}
-	else if(current_fish->y == hook_y || current_fish->x == hook_x)
+	if(current_fish->y >= (hook_yPos - paddleHeight) && current_fish->y <= (hook_yPos - paddleHeight + 4)
+    	&& current_fish->x <= (hook_xPos + paddleWidth) && current_fish->x >= (hook_xPos - paddleWidth))
 	{
 		//display text?
-		if(visible == 0)
+		if(fishIsCaught == 0)
 		{
-			visible = 1;
+			fishIsCaught = 1;
+			WAIT(127);
 		}
-
 	}
-	
 	return;
 }
 
@@ -380,24 +382,24 @@ void movehook()
 {
 	if (joystick_1_x()>0)                /* check the joystick and */
 	{                                 /* update position */
-		hook_y += 5;
+		hook_xPos += 5;
 	}
 	else if (joystick_1_x()<0)
 	{
-		hook_y -= 5;
+		hook_xPos -= 5;
 	}
 	if (joystick_1_y()>0)
 	{
-		hook_x += 5;
+		hook_yPos += 5;
 	}
 	else if (joystick_1_y()<0)
 	{
-		hook_x -= 5;
+		hook_yPos -= 5;
 	}
-	if (hook_x>=120) hook_x = 120;    /* make sure hook is not */
-	if (hook_x<=-80) hook_x = -80;  /* out of bounds */
-	if (hook_y>=120) hook_y = 120;
-	if (hook_y<=-120) hook_y = -120;
+	if (hook_yPos>=120) hook_yPos = 120;    /* make sure hook is not */
+	if (hook_yPos<=-80) hook_yPos = -80;  /* out of bounds */
+	if (hook_xPos>=120) hook_xPos = 120;
+	if (hook_xPos<=-120) hook_xPos = -120;
 	Joy_Digital();                        /* call once per round, to insure */
 }
 
@@ -410,17 +412,20 @@ void FishGame()
 
 	//draw hook middle of screen 
 	VIA_t1_cnt_lo = 0x80;
-	Moveto_d(hook_x, hook_y);
+	Moveto_d(hook_yPos, hook_xPos);
 	//VIA_t1_cnt_lo = 0x80;
   	VIA_t1_cnt_lo= (unsigned int)120; /* set scale for positioning */
 
 	
 	Draw_VLc((void*) MousePointer);
 
-	//drawSpriteWithScaleAtPos(MousePointer,0x80, hook_x, hook_y)
+	//drawSpriteWithScaleAtPos(MousePointer,0x80, hook_yPos, hook_xPos)
 	//drawSpriteWithScaleAtPos(drawPlayer1Sprite, 0x4F, gameVars->player1.xPos, player1YPos);
 	////////////////////////////////
-	movehook();
+	if(fishIsCaught == 0)
+	{
+		movehook();
+	}
 	
 
 }
@@ -455,12 +460,35 @@ void drawCourt()
    // Draw_Line_d(0, 2 * courtMaxWidthFromCentre);
 }
 
+void catchingMinigame()
+{
+	//Print_Str_d(0, -70, "HELLO WORLD\x80");
+	//if(fishIsCaught == 1)
+	//{
+		
+	if (waitTimer >0)
+	{
+		Reset0Ref();
+		Print_Str_d(TextY,TextX, "YOU KNOW WHAT THAT MEANS?\x80"); /* a message! */
+		waitTimer--;
+		return;
+	}
+	else
+	{
+		fishIsCaught = 0;
+	}
+	//}
+	//else if(current_fish->x == hook_xPos && current_fish->y == hook_yPos)
+}
+
 int main(void)
 {
 	unsigned char i;              /* a counter */
-	hook_x = 0;
-	hook_y = 0;
-	visible = 0;
+	hook_yPos = 0;
+	hook_xPos = 0;
+	fishIsCaught = 0;
+	waitTimer = 0;
+
 	setup();                            /* setup our program */
 	init_new_game();              /* initialize dots ... */
 
@@ -476,10 +504,16 @@ int main(void)
 		FishGame();
 		drawWater();
 		drawCourt();
-		for (i=0; i < FISHES; i++)   /* and process all dots */
-    	{
-			do_fish(&current_fishes[i]); /* with this function ... */
-			fishCollision(&current_fishes[i]);
+
+		if(fishIsCaught == 0){
+			for (i=0; i < FISHES; i++)   /* and process all dots */
+			{
+				do_fish(&current_fishes[i]); /* with this function ... */
+				fishCollision(&current_fishes[i]);
+			}
+		}
+		else{
+			catchingMinigame();
 		}
 	};
 

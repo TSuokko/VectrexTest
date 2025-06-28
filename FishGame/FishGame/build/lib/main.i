@@ -1903,7 +1903,9 @@ static inline int joystick_2_up()
  return (joystick_2_y() > 0);
 }
 # 19 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c" 2
-# 58 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 54 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+unsigned int waitTimer;
+# 65 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 const unsigned int drawScaleScreen = (unsigned int)0xFF;
 
 
@@ -1940,12 +1942,14 @@ const signed char AnotherWave[]=
  (signed char) 0xFF, -0x3D, +0x3B,
  (signed char) 0xFF, -0x28, +0x00,
  (signed char) 0xFF, +0x3C, -0x3C,
-# 107 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 114 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
  (signed char) 0x01
 };
 
-signed hook_x;
-signed hook_y;
+signed hook_yPos;
+signed hook_xPos;
+const int paddleHeight = 5;
+const int paddleWidth = 10;
 
 struct fish
 {
@@ -1957,13 +1961,13 @@ struct fish
   signed y;
 };
 
-signed visible;
+signed fishIsCaught;
 
 struct fish current_fishes[3];
 
 const int screenMaxFromCentre = 45;
 const int courtMaxWidthFromCentre = 64;
-# 139 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 148 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 void setup(void)
 {
   enable_controller_1_x();
@@ -2022,23 +2026,16 @@ static inline void init_fish(struct fish *current_fish)
 
 static inline void fishCollision(struct fish *current_fish)
 {
-
- if(visible == 1)
- {
-  Reset0Ref();
-  Print_Str_d(-100,-128, "YOU KNOW WHAT THAT MEANS?\x80");
-
- }
- else if(current_fish->y == hook_y || current_fish->x == hook_x)
+ if(current_fish->y >= (hook_yPos - paddleHeight) && current_fish->y <= (hook_yPos - paddleHeight + 4)
+     && current_fish->x <= (hook_xPos + paddleWidth) && current_fish->x >= (hook_xPos - paddleWidth))
  {
 
-  if(visible == 0)
+  if(fishIsCaught == 0)
   {
-   visible = 1;
+   fishIsCaught = 1;
+   do {waitTimer = 127;} while (0);
   }
-
  }
-
  return;
 }
 
@@ -2208,24 +2205,24 @@ void movehook()
 {
  if (joystick_1_x()>0)
  {
-  hook_y += 5;
+  hook_xPos += 5;
  }
  else if (joystick_1_x()<0)
  {
-  hook_y -= 5;
+  hook_xPos -= 5;
  }
  if (joystick_1_y()>0)
  {
-  hook_x += 5;
+  hook_yPos += 5;
  }
  else if (joystick_1_y()<0)
  {
-  hook_x -= 5;
+  hook_yPos -= 5;
  }
- if (hook_x>=120) hook_x = 120;
- if (hook_x<=-80) hook_x = -80;
- if (hook_y>=120) hook_y = 120;
- if (hook_y<=-120) hook_y = -120;
+ if (hook_yPos>=120) hook_yPos = 120;
+ if (hook_yPos<=-80) hook_yPos = -80;
+ if (hook_xPos>=120) hook_xPos = 120;
+ if (hook_xPos<=-120) hook_xPos = -120;
  Joy_Digital();
 }
 
@@ -2238,7 +2235,7 @@ void FishGame()
 
 
  VIA_t1_cnt_lo = 0x80;
- Moveto_d(hook_x, hook_y);
+ Moveto_d(hook_yPos, hook_xPos);
 
    VIA_t1_cnt_lo= (unsigned int)120;
 
@@ -2248,7 +2245,10 @@ void FishGame()
 
 
 
- movehook();
+ if(fishIsCaught == 0)
+ {
+  movehook();
+ }
 
 
 }
@@ -2273,15 +2273,38 @@ void drawCourt()
     Reset0Ref();
     Moveto_d(-screenMaxFromCentre, courtMaxWidthFromCentre);
     Draw_Line_d(0, -2 * courtMaxWidthFromCentre);
-# 456 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 461 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+}
+
+void catchingMinigame()
+{
+
+
+
+
+ if (waitTimer >0)
+ {
+  Reset0Ref();
+  Print_Str_d(-100,-128, "YOU KNOW WHAT THAT MEANS?\x80");
+  waitTimer--;
+  return;
+ }
+ else
+ {
+  fishIsCaught = 0;
+ }
+
+
 }
 
 int main(void)
 {
  unsigned char i;
- hook_x = 0;
- hook_y = 0;
- visible = 0;
+ hook_yPos = 0;
+ hook_xPos = 0;
+ fishIsCaught = 0;
+ waitTimer = 0;
+
  setup();
  init_new_game();
 
@@ -2297,10 +2320,16 @@ int main(void)
   FishGame();
   drawWater();
   drawCourt();
-  for (i=0; i < 3; i++)
-     {
-   do_fish(&current_fishes[i]);
-   fishCollision(&current_fishes[i]);
+
+  if(fishIsCaught == 0){
+   for (i=0; i < 3; i++)
+   {
+    do_fish(&current_fishes[i]);
+    fishCollision(&current_fishes[i]);
+   }
+  }
+  else{
+   catchingMinigame();
   }
  };
 
