@@ -76,6 +76,7 @@ const signed char MousePointer[]=
     +0x0D, +0x00, // draw to y, x
 };
 
+
 const signed char AnotherWave[]=
 {  (signed char) 0xFF, +0x3D, +0x3D,  // pattern, y, x
 	(signed char) 0xFF, +0x00, +0x3A,  // pattern, y, x
@@ -90,7 +91,8 @@ const signed char AnotherWave[]=
 	(signed char) 0xFF, -0x3D, +0x3B,  // pattern, y, x
 	(signed char) 0xFF, -0x28, +0x00,  // pattern, y, x
 	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
+/*	
+    (signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
 	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
 	(signed char) 0xFF, +0x00, -0x50,  // pattern, y, x
 	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x
@@ -101,6 +103,7 @@ const signed char AnotherWave[]=
 	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
 	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
 	(signed char) 0xFF, +0x28, +0x00,  // pattern, y, x
+*/
 	(signed char) 0x01 // endmarker (high bit in pattern not set)
 };
 
@@ -121,7 +124,8 @@ signed visible;
 
 struct fish current_fishes[FISHES];       /* all dots bundled */
 
-
+const int screenMaxFromCentre = 45;
+const int courtMaxWidthFromCentre = 64;
 // ---------------------------------------------------------------------------
 // cold reset: the vectrex logo is shown, all ram data is cleared
 // warm reset: skip vectrex logo and keep ram data
@@ -391,7 +395,7 @@ void movehook()
 		hook_x -= 5;
 	}
 	if (hook_x>=120) hook_x = 120;    /* make sure hook is not */
-	if (hook_x<=-120) hook_x = -120;  /* out of bounds */
+	if (hook_x<=-80) hook_x = -80;  /* out of bounds */
 	if (hook_y>=120) hook_y = 120;
 	if (hook_y<=-120) hook_y = -120;
 	Joy_Digital();                        /* call once per round, to insure */
@@ -405,9 +409,12 @@ void FishGame()
     Reset0Ref();
 
 	//draw hook middle of screen 
-	VIA_t1_cnt_lo = 0x40;
-	Moveto_d(hook_x, hook_y);
 	VIA_t1_cnt_lo = 0x80;
+	Moveto_d(hook_x, hook_y);
+	//VIA_t1_cnt_lo = 0x80;
+  	VIA_t1_cnt_lo= (unsigned int)120; /* set scale for positioning */
+
+	
 	Draw_VLc((void*) MousePointer);
 
 	//drawSpriteWithScaleAtPos(MousePointer,0x80, hook_x, hook_y)
@@ -420,7 +427,32 @@ void FishGame()
 
 void drawWater()
 {
-	drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x40, -50,25);
+	drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x40, -50,50);
+	//Reset0Ref();//bottom-right left
+    //Moveto_d(-screenMaxFromCentre, courtMaxWidthFromCentre);
+    //Draw_Line_d(-80,120);
+}
+
+void drawCourt()
+{
+    //Intensity_a(0x3f);
+    VIA_t1_cnt_lo = drawScaleScreen;
+    
+    //Reset0Ref();//top-right down
+    //Moveto_d(screenMaxFromCentre, courtMaxWidthFromCentre);
+    //Draw_Line_d(-2 * screenMaxFromCentre, 0);
+    
+    Reset0Ref();//bottom-right left
+    Moveto_d(-screenMaxFromCentre, courtMaxWidthFromCentre);
+    Draw_Line_d(0, -2 * courtMaxWidthFromCentre);
+    
+   // Reset0Ref(); //bottom-left up
+   // Moveto_d(-screenMaxFromCentre, -courtMaxWidthFromCentre);
+   // Draw_Line_d(2 * screenMaxFromCentre, 0);
+    
+   // Reset0Ref(); //top-left right
+   // Moveto_d(screenMaxFromCentre, -courtMaxWidthFromCentre);
+   // Draw_Line_d(0, 2 * courtMaxWidthFromCentre);
 }
 
 int main(void)
@@ -443,6 +475,7 @@ int main(void)
 		
 		FishGame();
 		drawWater();
+		drawCourt();
 		for (i=0; i < FISHES; i++)   /* and process all dots */
     	{
 			do_fish(&current_fishes[i]); /* with this function ... */

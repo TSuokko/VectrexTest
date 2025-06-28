@@ -12,8 +12,8 @@
                              12 ; -fno-time-report
                              13 ; -IC:\Users\tsuok\Downloads\Vide2.6_RC03.w32\Vide.w32\C\PeerC\vectrex\include
                              14 ; -D__RUM_FUNCTION=1 -DOMMIT_FRAMEPOINTER=1
-                             15 ; -IC:\Users\tsuok\FalloutTTRPG\FishGame\FishGame\include
-                             16 ; C:\Users\tsuok\FalloutTTRPG\FishGame\FishGame\source\cartridge.enr.c
+                             15 ; -IC:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\include
+                             16 ; C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\cartridge.enr.c
                              17 ; options enabled:  -falign-loops -fargument-alias -fauto-inc-dec
                              18 ; -fbranch-count-reg -fcommon -fearly-inlining
                              19 ; -feliminate-unused-debug-types -ffunction-cse -fgcse-lm -fident -fivopts
@@ -33,7 +33,7 @@
                              33 ; copyright:
    0000 67 20 47 43 45 20    34 	.byte	103,32,71,67,69,32,50,48
         32 30
-   0008 31 37 80             35 	.byte	49,55,-128
+   0008 32 35 80             35 	.byte	50,53,-128
                              36 ; music:
    000B FD 0D                37 	.word	_Vec_Music_1
                              38 ; title_height:
@@ -45,9 +45,9 @@
                              44 ; title_x:
    0010 B8                   45 	.byte	-72
                              46 ; title:
-   0011 47 41 4D 45 20 54    47 	.byte	71,65,77,69,32,84,73,84
-        49 54
-   0019 4C 45 80 00          48 	.byte	76,69,-128,0
+   0011 46 49 53 48 20 47    47 	.byte	70,73,83,72,32,71,65,77
+        41 4D
+   0019 45 80 00             48 	.byte	69,-128,0
 ASxxxx Assembler V05.00  (Motorola 6809), page 1.
 Hexidecimal [16-Bits]
 
@@ -64,7 +64,7 @@ Area Table
 
 [_CSEG]
    0 _CODE            size    0   flags C080
-   2 .cartridge       size   1D   flags  100
+   2 .cartridge       size   1C   flags  100
 [_DSEG]
    1 _DATA            size    0   flags C0C0
 

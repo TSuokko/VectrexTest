@@ -12,8 +12,8 @@
 ; -fno-time-report
 ; -IC:\Users\tsuok\Downloads\Vide2.6_RC03.w32\Vide.w32\C\PeerC\vectrex\include
 ; -D__RUM_FUNCTION=1 -DOMMIT_FRAMEPOINTER=1
-; -IC:\Users\tsuok\FalloutTTRPG\FishGame\FishGame\include
-; C:\Users\tsuok\FalloutTTRPG\FishGame\FishGame\source\cartridge.enr.c
+; -IC:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\include
+; C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\cartridge.enr.c
 ; options enabled:  -falign-loops -fargument-alias -fauto-inc-dec
 ; -fbranch-count-reg -fcommon -fearly-inlining
 ; -feliminate-unused-debug-types -ffunction-cse -fgcse-lm -fident -fivopts
@@ -32,7 +32,7 @@
 _game_header:
 ; copyright:
 	.byte	103,32,71,67,69,32,50,48
-	.byte	49,55,-128
+	.byte	50,53,-128
 ; music:
 	.word	_Vec_Music_1
 ; title_height:
@@ -44,5 +44,5 @@ _game_header:
 ; title_x:
 	.byte	-72
 ; title:
-	.byte	71,65,77,69,32,84,73,84
-	.byte	76,69,-128,0
+	.byte	70,73,83,72,32,71,65,77
+	.byte	69,-128,0

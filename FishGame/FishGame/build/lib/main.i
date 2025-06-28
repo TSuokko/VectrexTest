@@ -1,8 +1,8 @@
-# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\main.c"
+# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\main.c"
-# 16 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\main.c"
+# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 16 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 # 1 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vectrex.h" 1
 # 37 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vectrex.h"
        
@@ -1665,7 +1665,7 @@ static inline __attribute__((always_inline)) void Wait_Bound(void)
 # 41 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vec_rum_fct.h" 2
 # 48 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vec_rum.h" 2
 # 44 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vectrex.h" 2
-# 17 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\main.c" 2
+# 17 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c" 2
 # 1 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/assert.h" 1
 
 
@@ -1679,14 +1679,14 @@ static inline __attribute__((always_inline)) void Wait_Bound(void)
 
 
 void _f_assert_failed(char* file, unsigned int length, unsigned long int line, char* func, char* expr, unsigned int l_expr);
-# 18 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\main.c" 2
-# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\/controller.h" 1
+# 18 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c" 2
+# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\/controller.h" 1
 
 
 
 
        
-# 16 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\/controller.h"
+# 16 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\/controller.h"
 static inline void enable_controller_1_x()
 {
   Vec_Joy_Mux_1_X = 1;
@@ -1902,8 +1902,8 @@ static inline int joystick_2_up()
 {
  return (joystick_2_y() > 0);
 }
-# 19 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\main.c" 2
-# 58 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\main.c"
+# 19 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c" 2
+# 58 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 const unsigned int drawScaleScreen = (unsigned int)0xFF;
 
 
@@ -1925,22 +1925,23 @@ const signed char MousePointer[]=
     +0x0D, +0x00,
 };
 
+
 const signed char AnotherWave[]=
-{ +0x0D,
-    -0x1A, +0x18,
-    +0x30, +0x33,
-    -0x30, +0x30,
-    +0x30, +0x33,
-    -0x2E, +0x30,
-    +0x2E, +0x33,
-    -0x2E, +0x30,
-    +0x2E, +0x33,
-    -0x2E, +0x30,
-    +0x2E, +0x33,
-    -0x2E, +0x30,
-    +0x2E, +0x33,
-    -0x30, +0x30,
-    +0x18, +0x1A,
+{ (signed char) 0xFF, +0x3D, +0x3D,
+ (signed char) 0xFF, +0x00, +0x3A,
+ (signed char) 0xFF, -0x3D, +0x3D,
+ (signed char) 0xFF, +0x00, +0x3A,
+ (signed char) 0xFF, +0x3D, +0x3D,
+ (signed char) 0xFF, +0x00, +0x3A,
+ (signed char) 0xFF, -0x3D, +0x3D,
+ (signed char) 0xFF, +0x00, +0x50,
+ (signed char) 0xFF, +0x3D, +0x3A,
+ (signed char) 0xFF, +0x00, +0x3D,
+ (signed char) 0xFF, -0x3D, +0x3B,
+ (signed char) 0xFF, -0x28, +0x00,
+ (signed char) 0xFF, +0x3C, -0x3C,
+# 107 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+ (signed char) 0x01
 };
 
 signed hook_x;
@@ -1959,7 +1960,10 @@ struct fish
 signed visible;
 
 struct fish current_fishes[3];
-# 125 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\main.c"
+
+const int screenMaxFromCentre = 45;
+const int courtMaxWidthFromCentre = 64;
+# 139 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 void setup(void)
 {
   enable_controller_1_x();
@@ -2219,7 +2223,7 @@ void movehook()
   hook_x -= 5;
  }
  if (hook_x>=120) hook_x = 120;
- if (hook_x<=-120) hook_x = -120;
+ if (hook_x<=-80) hook_x = -80;
  if (hook_y>=120) hook_y = 120;
  if (hook_y<=-120) hook_y = -120;
  Joy_Digital();
@@ -2233,9 +2237,12 @@ void FishGame()
     Reset0Ref();
 
 
- VIA_t1_cnt_lo = 0x40;
- Moveto_d(hook_x, hook_y);
  VIA_t1_cnt_lo = 0x80;
+ Moveto_d(hook_x, hook_y);
+
+   VIA_t1_cnt_lo= (unsigned int)120;
+
+
  Draw_VLc((void*) MousePointer);
 
 
@@ -2248,7 +2255,25 @@ void FishGame()
 
 void drawWater()
 {
- drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x80, -50,75);
+ drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x40, -50,50);
+
+
+
+}
+
+void drawCourt()
+{
+
+    VIA_t1_cnt_lo = drawScaleScreen;
+
+
+
+
+
+    Reset0Ref();
+    Moveto_d(-screenMaxFromCentre, courtMaxWidthFromCentre);
+    Draw_Line_d(0, -2 * courtMaxWidthFromCentre);
+# 456 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 }
 
 int main(void)
@@ -2271,6 +2296,7 @@ int main(void)
 
   FishGame();
   drawWater();
+  drawCourt();
   for (i=0; i < 3; i++)
      {
    do_fish(&current_fishes[i]);

@@ -1,8 +1,8 @@
-# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\cartridge.c"
+# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\cartridge.c"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\cartridge.c"
-# 16 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\cartridge.c"
+# 1 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\cartridge.c"
+# 16 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\cartridge.c"
 # 1 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vectrex.h" 1
 # 37 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vectrex.h"
        
@@ -1665,7 +1665,7 @@ static inline __attribute__((always_inline)) void Wait_Bound(void)
 # 41 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vec_rum_fct.h" 2
 # 48 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vec_rum.h" 2
 # 44 "C:\\Users\\tsuok\\Downloads\\Vide2.6_RC03.w32\\Vide.w32\\C\\PeerC\\vectrex\\include/vectrex.h" 2
-# 17 "C:\\Users\\tsuok\\FalloutTTRPG\\FishGame\\FishGame\\source\\cartridge.c" 2
+# 17 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\cartridge.c" 2
 
 
 
@@ -1686,11 +1686,11 @@ struct cartridge_t
 
 const struct cartridge_t game_header __attribute__((section(".cartridge"), used)) =
 {
- .copyright = "g GCE 2017\x80",
+ .copyright = "g GCE 2025\x80",
  .music = &Vec_Music_1,
  .title_height = -8,
  .title_width = 80,
  .title_y = -16,
  .title_x = -72,
- .title = "GAME TITLE\x80"
+ .title = "FISH GAME\x80"
 };
