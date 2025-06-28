@@ -25,7 +25,7 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           0002  l_.0xe9                         
           0010  l_.dpd0                         
           0016  l_.dpcb                         
-          0017  l_.bss                          
+          0018  l_.bss                          
           0019  l_.dped                         
           001C  s_.bootloader                   
           001C  l_.cartridge                    
@@ -50,10 +50,10 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           00D8  l_.0xf3                         
           00EF  l_.0xf5                         
           0100  l_.direct                       
-          06D1  l_.text                         
-          0728  s_.text.unlikely                
-          0728  s_.text.last                    
-          0728  s_.text.hot                     
+          072F  l_.text                         
+          0786  s_.text.unlikely                
+          0786  s_.text.last                    
+          0786  s_.text.hot                     
           C800  s_.dpc8                         
           C880  s_.bss                          
           C880  s_.data                         
@@ -139,7 +139,7 @@ Hexidecimal  [16-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
@@ -198,7 +198,7 @@ Hexidecimal  [16-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
@@ -258,7 +258,7 @@ Hexidecimal  [16-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
@@ -318,7 +318,7 @@ Hexidecimal  [16-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
@@ -378,7 +378,7 @@ Hexidecimal  [16-Bits]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
@@ -417,583 +417,613 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           02C9  A$main$593                         main.enr.c
           02CD  A$main$598                         main.enr.c
           02D0  A$main$603                         main.enr.c
-          02D3  A$main$604                         main.enr.c
-          02D6  A$main$610                         main.enr.c
-          02D9  A$main$611                         main.enr.c
-          02DA  A$main$612                         main.enr.c
-          02DC  A$main$613                         main.enr.c
-          02DF  A$main$614                         main.enr.c
-          02E1  A$main$615                         main.enr.c
-          02E3  A$main$620                         main.enr.c
-          02E6  A$main$625                         main.enr.c
-          02E8  A$main$626                         main.enr.c
-          02EA  A$main$627                         main.enr.c
-          02ED  A$main$628                         main.enr.c
-          02EF  A$main$629                         main.enr.c
-          02F2  A$main$630                         main.enr.c
-          02F4  A$main$635                         main.enr.c
+          02D3  A$main$608                         main.enr.c
+          02D6  A$main$609                         main.enr.c
+          02D7  A$main$610                         main.enr.c
+          02DA  A$main$615                         main.enr.c
+          02DD  A$main$616                         main.enr.c
+          02DE  A$main$617                         main.enr.c
+          02E2  A$main$622                         main.enr.c
+          02E4  A$main$623                         main.enr.c
+          02E7  A$main$624                         main.enr.c
+          02EA  A$main$630                         main.enr.c
+          02ED  A$main$631                         main.enr.c
+          02EE  A$main$632                         main.enr.c
+          02F0  A$main$633                         main.enr.c
+          02F3  A$main$634                         main.enr.c
+          02F5  A$main$635                         main.enr.c
 ASxxxx Linker V05.00,  page 10.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          02F7  A$main$636                         main.enr.c
-          02F8  A$main$637                         main.enr.c
-          02FB  A$main$638                         main.enr.c
-          02FD  A$main$644                         main.enr.c
-          02FF  A$main$645                         main.enr.c
-          0302  A$main$650                         main.enr.c
-          0304  A$main$651                         main.enr.c
-          0307  A$main$653                         main.enr.c
-          0308  _main                              main.enr.c
-          0308  A$main$656                         main.enr.c
-          030A  A$main$663                         main.enr.c
-          030D  A$main$668                         main.enr.c
-          0310  A$main$673                         main.enr.c
-          0313  A$main$678                         main.enr.c
-          0316  A$main$683                         main.enr.c
-          0319  A$main$688                         main.enr.c
-          031C  A$main$693                         main.enr.c
-          031F  A$main$703                         main.enr.c
-          0321  A$main$704                         main.enr.c
-          0324  A$main$709                         main.enr.c
-          0327  A$main$714                         main.enr.c
-          032A  A$main$719                         main.enr.c
-          032C  A$main$720                         main.enr.c
-          032F  A$main$725                         main.enr.c
-          0332  A$main$730                         main.enr.c
-          0335  A$main$735                         main.enr.c
-          0338  A$main$740                         main.enr.c
-          033B  A$main$741                         main.enr.c
-          033C  A$main$742                         main.enr.c
-          0340  A$main$747                         main.enr.c
-          0342  A$main$748                         main.enr.c
-          0345  A$main$754                         main.enr.c
-          0347  A$main$755                         main.enr.c
-          0348  A$main$756                         main.enr.c
-          034A  A$main$757                         main.enr.c
-          034C  A$main$758                         main.enr.c
-          034E  A$main$759                         main.enr.c
-          034F  A$main$760                         main.enr.c
-          0350  A$main$761                         main.enr.c
-          0352  A$main$762                         main.enr.c
-          0354  A$main$763                         main.enr.c
-          0356  A$main$764                         main.enr.c
-          0358  A$main$765                         main.enr.c
-          035A  A$main$766                         main.enr.c
-          035B  A$main$767                         main.enr.c
-          035C  A$main$768                         main.enr.c
-          035E  A$main$769                         main.enr.c
-          0360  A$main$770                         main.enr.c
-          0364  A$main$771                         main.enr.c
-          0367  A$main$776                         main.enr.c
+          02F7  A$main$640                         main.enr.c
+          02FA  A$main$645                         main.enr.c
+          02FC  A$main$646                         main.enr.c
+          02FE  A$main$647                         main.enr.c
+          0301  A$main$648                         main.enr.c
+          0303  A$main$649                         main.enr.c
+          0306  A$main$650                         main.enr.c
+          0308  A$main$655                         main.enr.c
+          030B  A$main$656                         main.enr.c
+          030C  A$main$657                         main.enr.c
+          030F  A$main$658                         main.enr.c
+          0311  A$main$664                         main.enr.c
+          0313  A$main$665                         main.enr.c
+          0316  A$main$670                         main.enr.c
+          0318  A$main$671                         main.enr.c
+          031B  A$main$673                         main.enr.c
+          031C  A$main$680                         main.enr.c
+          031C  _resetGame                         main.enr.c
+          031F  A$main$685                         main.enr.c
+          0322  A$main$690                         main.enr.c
+          0325  A$main$695                         main.enr.c
+          0328  A$main$700                         main.enr.c
+          032B  A$main$705                         main.enr.c
+          032D  A$main$706                         main.enr.c
+          0330  A$main$707                         main.enr.c
+          034A  _main                              main.enr.c
+          034A  A$main$715                         main.enr.c
+          034C  A$main$722                         main.enr.c
+          034F  A$main$727                         main.enr.c
+          0352  A$main$732                         main.enr.c
+          0355  A$main$742                         main.enr.c
+          0357  A$main$743                         main.enr.c
+          035A  A$main$748                         main.enr.c
+          035D  A$main$753                         main.enr.c
+          0360  A$main$758                         main.enr.c
+          0362  A$main$759                         main.enr.c
+          0365  A$main$764                         main.enr.c
+          0368  A$main$769                         main.enr.c
+          036B  A$main$774                         main.enr.c
+          036E  A$main$779                         main.enr.c
+          0371  A$main$780                         main.enr.c
+          0373  A$main$781                         main.enr.c
+          0375  A$main$786                         main.enr.c
+          0378  A$main$791                         main.enr.c
+          037A  A$main$792                         main.enr.c
+          037C  A$main$793                         main.enr.c
+          037F  A$main$794                         main.enr.c
+          0381  A$main$795                         main.enr.c
+          0384  A$main$796                         main.enr.c
+          0386  A$main$801                         main.enr.c
 ASxxxx Linker V05.00,  page 11.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0369  A$main$777                         main.enr.c
-          036A  A$main$778                         main.enr.c
-          036C  A$main$779                         main.enr.c
-          036E  A$main$780                         main.enr.c
-          0370  A$main$781                         main.enr.c
-          0371  A$main$782                         main.enr.c
-          0372  A$main$783                         main.enr.c
-          0374  A$main$784                         main.enr.c
-          0376  A$main$785                         main.enr.c
-          0378  A$main$786                         main.enr.c
-          037A  A$main$787                         main.enr.c
-          037C  A$main$788                         main.enr.c
-          037D  A$main$789                         main.enr.c
-          037E  A$main$790                         main.enr.c
-          0380  A$main$791                         main.enr.c
-          0382  A$main$792                         main.enr.c
-          0386  A$main$793                         main.enr.c
-          0389  A$main$794                         main.enr.c
-          038B  A$main$796                         main.enr.c
-          038D  A$main$797                         main.enr.c
-          038F  A$main$798                         main.enr.c
-          0393  A$main$799                         main.enr.c
-          0396  A$main$805                         main.enr.c
-          0399  A$main$806                         main.enr.c
-          039C  A$main$808                         main.enr.c
-          039E  A$main$809                         main.enr.c
-          03A0  A$main$814                         main.enr.c
-          03A2  A$main$815                         main.enr.c
-          03A4  A$main$816                         main.enr.c
-          03A6  A$main$817                         main.enr.c
-          03A9  A$main$818                         main.enr.c
-          03AB  A$main$819                         main.enr.c
-          03AE  A$main$820                         main.enr.c
-          03B0  A$main$821                         main.enr.c
-          03B1  A$main$822                         main.enr.c
-          03B3  A$main$823                         main.enr.c
-          03B7  A$main$824                         main.enr.c
-          03B9  A$main$825                         main.enr.c
-          03BB  A$main$826                         main.enr.c
-          03BD  A$main$827                         main.enr.c
-          03C0  A$main$828                         main.enr.c
-          03C2  A$main$829                         main.enr.c
-          03C5  A$main$830                         main.enr.c
-          03C7  A$main$831                         main.enr.c
-          03C8  A$main$832                         main.enr.c
-          03CA  A$main$833                         main.enr.c
-          03CC  A$main$834                         main.enr.c
-          03D0  A$main$835                         main.enr.c
-          03D2  A$main$836                         main.enr.c
-          03D4  A$main$837                         main.enr.c
+          0389  A$main$802                         main.enr.c
+          038B  A$main$803                         main.enr.c
+          038C  A$main$804                         main.enr.c
+          0390  A$main$809                         main.enr.c
+          0393  A$main$810                         main.enr.c
+          0396  A$main$816                         main.enr.c
+          0399  A$main$817                         main.enr.c
+          039A  A$main$818                         main.enr.c
+          039E  A$main$823                         main.enr.c
+          03A0  A$main$824                         main.enr.c
+          03A3  A$main$830                         main.enr.c
+          03A5  A$main$831                         main.enr.c
+          03A6  A$main$832                         main.enr.c
+          03A8  A$main$833                         main.enr.c
+          03AA  A$main$834                         main.enr.c
+          03AC  A$main$835                         main.enr.c
+          03AD  A$main$836                         main.enr.c
+          03AE  A$main$837                         main.enr.c
+          03B0  A$main$838                         main.enr.c
+          03B2  A$main$839                         main.enr.c
+          03B4  A$main$840                         main.enr.c
+          03B6  A$main$841                         main.enr.c
+          03B8  A$main$842                         main.enr.c
+          03B9  A$main$843                         main.enr.c
+          03BA  A$main$844                         main.enr.c
+          03BC  A$main$845                         main.enr.c
+          03BE  A$main$846                         main.enr.c
+          03C2  A$main$847                         main.enr.c
+          03C5  A$main$852                         main.enr.c
+          03C7  A$main$853                         main.enr.c
+          03C8  A$main$854                         main.enr.c
+          03CA  A$main$855                         main.enr.c
+          03CC  A$main$856                         main.enr.c
+          03CE  A$main$857                         main.enr.c
+          03CF  A$main$858                         main.enr.c
+          03D0  A$main$859                         main.enr.c
+          03D2  A$main$860                         main.enr.c
+          03D4  A$main$861                         main.enr.c
+          03D6  A$main$862                         main.enr.c
+          03D8  A$main$863                         main.enr.c
+          03DA  A$main$864                         main.enr.c
+          03DB  A$main$865                         main.enr.c
+          03DC  A$main$866                         main.enr.c
+          03DE  A$main$867                         main.enr.c
+          03E0  A$main$868                         main.enr.c
+          03E4  A$main$869                         main.enr.c
+          03E7  A$main$870                         main.enr.c
+          03E9  A$main$872                         main.enr.c
+          03EB  A$main$873                         main.enr.c
+          03ED  A$main$874                         main.enr.c
 ASxxxx Linker V05.00,  page 12.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          03D6  A$main$838                         main.enr.c
-          03D9  A$main$839                         main.enr.c
-          03DB  A$main$840                         main.enr.c
-          03DE  A$main$841                         main.enr.c
-          03E0  A$main$842                         main.enr.c
-          03E2  A$main$843                         main.enr.c
-          03E4  A$main$844                         main.enr.c
-          03E6  A$main$845                         main.enr.c
-          03E8  A$main$846                         main.enr.c
-          03EA  A$main$847                         main.enr.c
-          03ED  A$main$848                         main.enr.c
-          03EF  A$main$849                         main.enr.c
-          03F2  A$main$850                         main.enr.c
-          03F4  A$main$851                         main.enr.c
-          03F5  A$main$852                         main.enr.c
-          03F7  A$main$853                         main.enr.c
-          03F9  A$main$858                         main.enr.c
-          03FC  A$main$859                         main.enr.c
-          03FD  A$main$860                         main.enr.c
-          03FF  A$main$865                         main.enr.c
-          0401  A$main$866                         main.enr.c
-          0404  A$main$871                         main.enr.c
-          0406  A$main$872                         main.enr.c
-          0409  A$main$877                         main.enr.c
-          040B  A$main$878                         main.enr.c
-          040E  A$main$884                         main.enr.c
-          0410  A$main$885                         main.enr.c
-          0411  A$main$887                         main.enr.c
-          0413  A$main$888                         main.enr.c
-          0416  A$main$889                         main.enr.c
-          0419  A$main$894                         main.enr.c
-          041C  A$main$899                         main.enr.c
-          041F  A$main$900                         main.enr.c
-          0420  A$main$901                         main.enr.c
-          0422  A$main$906                         main.enr.c
+          03F1  A$main$875                         main.enr.c
+          03F4  A$main$881                         main.enr.c
+          03F7  A$main$882                         main.enr.c
+          03FA  A$main$884                         main.enr.c
+          03FC  A$main$885                         main.enr.c
+          03FE  A$main$890                         main.enr.c
+          0400  A$main$891                         main.enr.c
+          0402  A$main$892                         main.enr.c
+          0404  A$main$893                         main.enr.c
+          0407  A$main$894                         main.enr.c
+          0409  A$main$895                         main.enr.c
+          040C  A$main$896                         main.enr.c
+          040E  A$main$897                         main.enr.c
+          040F  A$main$898                         main.enr.c
+          0411  A$main$899                         main.enr.c
+          0415  A$main$900                         main.enr.c
+          0417  A$main$901                         main.enr.c
+          0419  A$main$902                         main.enr.c
+          041B  A$main$903                         main.enr.c
+          041E  A$main$904                         main.enr.c
+          0420  A$main$905                         main.enr.c
+          0423  A$main$906                         main.enr.c
           0425  A$main$907                         main.enr.c
           0426  A$main$908                         main.enr.c
-          0429  A$main$913                         main.enr.c
-          042C  A$main$914                         main.enr.c
-          042D  A$main$915                         main.enr.c
-          042F  A$main$920                         main.enr.c
-          0432  A$main$921                         main.enr.c
-          0435  A$main$927                         main.enr.c
-          0438  A$main$933                         main.enr.c
-          043B  A$main$934                         main.enr.c
-          043D  A$main$935                         main.enr.c
-          043F  A$main$936                         main.enr.c
-          0441  A$main$937                         main.enr.c
-          0443  A$main$938                         main.enr.c
-          0447  A$main$939                         main.enr.c
+          0428  A$main$909                         main.enr.c
+          042A  A$main$910                         main.enr.c
+          042E  A$main$911                         main.enr.c
+          0430  A$main$912                         main.enr.c
+          0432  A$main$913                         main.enr.c
+          0434  A$main$914                         main.enr.c
+          0437  A$main$915                         main.enr.c
+          0439  A$main$916                         main.enr.c
+          043C  A$main$917                         main.enr.c
+          043E  A$main$918                         main.enr.c
+          0440  A$main$919                         main.enr.c
+          0442  A$main$920                         main.enr.c
+          0444  A$main$921                         main.enr.c
+          0446  A$main$922                         main.enr.c
+          0448  A$main$923                         main.enr.c
+          044B  A$main$924                         main.enr.c
+          044D  A$main$925                         main.enr.c
+          0450  A$main$926                         main.enr.c
+          0452  A$main$927                         main.enr.c
+          0453  A$main$928                         main.enr.c
+          0455  A$main$929                         main.enr.c
+          0457  A$main$934                         main.enr.c
+          045A  A$main$935                         main.enr.c
+          045B  A$main$936                         main.enr.c
+          045D  A$main$941                         main.enr.c
+          045F  A$main$942                         main.enr.c
 ASxxxx Linker V05.00,  page 13.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0449  A$main$940                         main.enr.c
-          044A  A$main$941                         main.enr.c
-          044C  A$main$942                         main.enr.c
-          044E  A$main$943                         main.enr.c
-          044F  A$main$944                         main.enr.c
-          0450  A$main$945                         main.enr.c
-          0453  A$main$946                         main.enr.c
-          0455  A$main$947                         main.enr.c
-          0457  A$main$948                         main.enr.c
-          0469  A$main$965                         main.enr.c
-          046C  A$main$966                         main.enr.c
-          046E  A$main$967                         main.enr.c
-          0470  A$main$968                         main.enr.c
-          0472  A$main$969                         main.enr.c
-          0475  A$main$970                         main.enr.c
-          0477  A$main$971                         main.enr.c
-          0479  A$main$972                         main.enr.c
-          047B  A$main$980                         main.enr.c
-          047D  A$main$981                         main.enr.c
-          0480  A$main$988                         main.enr.c
-          0483  A$main$994                         main.enr.c
-          0486  A$main$995                         main.enr.c
-          0488  A$main$996                         main.enr.c
-          048A  A$main$997                         main.enr.c
-          048D  A$main$998                         main.enr.c
-          048F  A$main$999                         main.enr.c
-          0491  A$main$1000                        main.enr.c
-          0494  A$main$1001                        main.enr.c
-          0496  A$main$1006                        main.enr.c
-          0499  A$main$1007                        main.enr.c
-          049B  A$main$1008                        main.enr.c
-          049D  A$main$1009                        main.enr.c
-          04A0  A$main$1010                        main.enr.c
-          04A2  A$main$1011                        main.enr.c
-          04A4  A$main$1012                        main.enr.c
-          04A7  A$main$1013                        main.enr.c
-          04A9  A$main$1018                        main.enr.c
-          04AC  A$main$1026                        main.enr.c
-          04AF  A$main$1027                        main.enr.c
-          04B1  A$main$1028                        main.enr.c
-          04B3  A$main$1029                        main.enr.c
-          04B5  A$main$1036                        main.enr.c
-          04B7  A$main$1037                        main.enr.c
-          04BA  A$main$1044                        main.enr.c
-          04BD  A$main$1052                        main.enr.c
-          04C0  A$main$1053                        main.enr.c
-          04C2  A$main$1054                        main.enr.c
-          04C4  A$main$1055                        main.enr.c
-          04C7  A$main$1056                        main.enr.c
-          04C9  A$main$1057                        main.enr.c
+          0462  A$main$947                         main.enr.c
+          0464  A$main$948                         main.enr.c
+          0467  A$main$953                         main.enr.c
+          0469  A$main$954                         main.enr.c
+          046C  A$main$960                         main.enr.c
+          046E  A$main$961                         main.enr.c
+          046F  A$main$963                         main.enr.c
+          0471  A$main$964                         main.enr.c
+          0474  A$main$965                         main.enr.c
+          0477  A$main$970                         main.enr.c
+          047A  A$main$975                         main.enr.c
+          047D  A$main$976                         main.enr.c
+          047E  A$main$977                         main.enr.c
+          0480  A$main$982                         main.enr.c
+          0483  A$main$983                         main.enr.c
+          0484  A$main$984                         main.enr.c
+          0487  A$main$989                         main.enr.c
+          048A  A$main$990                         main.enr.c
+          048B  A$main$991                         main.enr.c
+          048D  A$main$996                         main.enr.c
+          0490  A$main$997                         main.enr.c
+          0493  A$main$1003                        main.enr.c
+          0496  A$main$1009                        main.enr.c
+          0499  A$main$1010                        main.enr.c
+          049B  A$main$1011                        main.enr.c
+          049D  A$main$1012                        main.enr.c
+          049F  A$main$1013                        main.enr.c
+          04A1  A$main$1014                        main.enr.c
+          04A5  A$main$1015                        main.enr.c
+          04A7  A$main$1016                        main.enr.c
+          04A8  A$main$1017                        main.enr.c
+          04AA  A$main$1018                        main.enr.c
+          04AC  A$main$1019                        main.enr.c
+          04AD  A$main$1020                        main.enr.c
+          04AE  A$main$1021                        main.enr.c
+          04B1  A$main$1022                        main.enr.c
+          04B3  A$main$1023                        main.enr.c
+          04B5  A$main$1024                        main.enr.c
+          04C7  A$main$1041                        main.enr.c
+          04CA  A$main$1042                        main.enr.c
+          04CC  A$main$1043                        main.enr.c
+          04CE  A$main$1044                        main.enr.c
+          04D0  A$main$1045                        main.enr.c
+          04D3  A$main$1046                        main.enr.c
+          04D5  A$main$1047                        main.enr.c
+          04D7  A$main$1048                        main.enr.c
+          04D9  A$main$1056                        main.enr.c
+          04DB  A$main$1057                        main.enr.c
+          04DE  A$main$1064                        main.enr.c
+          04E1  A$main$1070                        main.enr.c
 ASxxxx Linker V05.00,  page 14.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          04CB  A$main$1058                        main.enr.c
-          04CE  A$main$1059                        main.enr.c
-          04D0  A$main$1064                        main.enr.c
-          04D3  A$main$1072                        main.enr.c
-          04D6  A$main$1073                        main.enr.c
-          04D8  A$main$1074                        main.enr.c
-          04DA  A$main$1075                        main.enr.c
-          04DC  A$main$1076                        main.enr.c
-          04DF  A$main$1077                        main.enr.c
-          04E1  A$main$1078                        main.enr.c
-          04E3  A$main$1079                        main.enr.c
-          04E5  A$main$1087                        main.enr.c
-          04E7  A$main$1088                        main.enr.c
-          04EA  A$main$1095                        main.enr.c
-          04ED  A$main$1103                        main.enr.c
-          04F0  A$main$1104                        main.enr.c
-          04F2  A$main$1105                        main.enr.c
-          04F4  A$main$1106                        main.enr.c
-          04F7  A$main$1107                        main.enr.c
-          04F9  A$main$1108                        main.enr.c
-          04FB  A$main$1109                        main.enr.c
-          04FE  A$main$1110                        main.enr.c
-          0500  A$main$1115                        main.enr.c
-          0503  A$main$1116                        main.enr.c
-          0505  A$main$1117                        main.enr.c
-          0507  A$main$1118                        main.enr.c
-          050A  A$main$1119                        main.enr.c
-          050C  A$main$1120                        main.enr.c
-          050E  A$main$1121                        main.enr.c
-          050F  A$main$1122                        main.enr.c
-          0512  A$main$1123                        main.enr.c
-          0514  A$main$1128                        main.enr.c
-          0517  A$main$1136                        main.enr.c
-          051A  A$main$1137                        main.enr.c
-          051C  A$main$1138                        main.enr.c
-          051E  A$main$1139                        main.enr.c
-          0520  A$main$1146                        main.enr.c
-          0522  A$main$1147                        main.enr.c
-          0525  A$main$1154                        main.enr.c
-          0528  A$main$1162                        main.enr.c
-          052B  A$main$1163                        main.enr.c
-          052D  A$main$1164                        main.enr.c
-          052F  A$main$1165                        main.enr.c
-          0532  A$main$1166                        main.enr.c
-          0534  A$main$1167                        main.enr.c
-          0536  A$main$1168                        main.enr.c
-          0537  A$main$1169                        main.enr.c
-          053A  A$main$1170                        main.enr.c
-          053C  A$main$1175                        main.enr.c
-          053F  A$main$1183                        main.enr.c
+          04E4  A$main$1071                        main.enr.c
+          04E6  A$main$1072                        main.enr.c
+          04E8  A$main$1073                        main.enr.c
+          04EB  A$main$1074                        main.enr.c
+          04ED  A$main$1075                        main.enr.c
+          04EF  A$main$1076                        main.enr.c
+          04F2  A$main$1077                        main.enr.c
+          04F4  A$main$1082                        main.enr.c
+          04F7  A$main$1083                        main.enr.c
+          04F9  A$main$1084                        main.enr.c
+          04FB  A$main$1085                        main.enr.c
+          04FE  A$main$1086                        main.enr.c
+          0500  A$main$1087                        main.enr.c
+          0502  A$main$1088                        main.enr.c
+          0505  A$main$1089                        main.enr.c
+          0507  A$main$1094                        main.enr.c
+          050A  A$main$1102                        main.enr.c
+          050D  A$main$1103                        main.enr.c
+          050F  A$main$1104                        main.enr.c
+          0511  A$main$1105                        main.enr.c
+          0513  A$main$1112                        main.enr.c
+          0515  A$main$1113                        main.enr.c
+          0518  A$main$1120                        main.enr.c
+          051B  A$main$1128                        main.enr.c
+          051E  A$main$1129                        main.enr.c
+          0520  A$main$1130                        main.enr.c
+          0522  A$main$1131                        main.enr.c
+          0525  A$main$1132                        main.enr.c
+          0527  A$main$1133                        main.enr.c
+          0529  A$main$1134                        main.enr.c
+          052C  A$main$1135                        main.enr.c
+          052E  A$main$1140                        main.enr.c
+          0531  A$main$1148                        main.enr.c
+          0534  A$main$1149                        main.enr.c
+          0536  A$main$1150                        main.enr.c
+          0538  A$main$1151                        main.enr.c
+          053A  A$main$1152                        main.enr.c
+          053D  A$main$1153                        main.enr.c
+          053F  A$main$1154                        main.enr.c
+          0541  A$main$1155                        main.enr.c
+          0543  A$main$1163                        main.enr.c
+          0545  A$main$1164                        main.enr.c
+          0548  A$main$1171                        main.enr.c
+          054B  A$main$1179                        main.enr.c
+          054E  A$main$1180                        main.enr.c
+          0550  A$main$1181                        main.enr.c
+          0552  A$main$1182                        main.enr.c
+          0555  A$main$1183                        main.enr.c
+          0557  A$main$1184                        main.enr.c
+          0559  A$main$1185                        main.enr.c
 ASxxxx Linker V05.00,  page 15.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0542  A$main$1184                        main.enr.c
-          0544  A$main$1185                        main.enr.c
-          0546  A$main$1186                        main.enr.c
-          0548  A$main$1187                        main.enr.c
-          054B  A$main$1188                        main.enr.c
-          054D  A$main$1189                        main.enr.c
-          054F  A$main$1190                        main.enr.c
-          0551  A$main$1198                        main.enr.c
-          0553  A$main$1199                        main.enr.c
-          0556  A$main$1206                        main.enr.c
-          0559  A$main$1214                        main.enr.c
-          055C  A$main$1215                        main.enr.c
-          055E  A$main$1216                        main.enr.c
-          0560  A$main$1217                        main.enr.c
-          0563  A$main$1218                        main.enr.c
-          0565  A$main$1219                        main.enr.c
-          0567  A$main$1220                        main.enr.c
-          0568  A$main$1221                        main.enr.c
-          056B  A$main$1222                        main.enr.c
-          056D  A$main$1227                        main.enr.c
-          0570  A$main$1228                        main.enr.c
-          0572  A$main$1229                        main.enr.c
-          0574  A$main$1230                        main.enr.c
-          0577  A$main$1231                        main.enr.c
-          0579  A$main$1232                        main.enr.c
-          057B  A$main$1233                        main.enr.c
-          057C  A$main$1234                        main.enr.c
-          057F  A$main$1235                        main.enr.c
-          0581  A$main$1240                        main.enr.c
-          0584  A$main$1248                        main.enr.c
-          0587  A$main$1249                        main.enr.c
-          0589  A$main$1250                        main.enr.c
-          058B  A$main$1251                        main.enr.c
-          058D  A$main$1258                        main.enr.c
-          058F  A$main$1259                        main.enr.c
-          0592  A$main$1266                        main.enr.c
-          0595  A$main$1274                        main.enr.c
-          0598  A$main$1275                        main.enr.c
-          059A  A$main$1276                        main.enr.c
-          059C  A$main$1277                        main.enr.c
-          059F  A$main$1278                        main.enr.c
-          05A1  A$main$1279                        main.enr.c
-          05A3  A$main$1280                        main.enr.c
-          05A4  A$main$1281                        main.enr.c
-          05A7  A$main$1282                        main.enr.c
-          05A9  A$main$1287                        main.enr.c
-          05AC  A$main$1295                        main.enr.c
-          05AF  A$main$1296                        main.enr.c
-          05B1  A$main$1297                        main.enr.c
-          05B3  A$main$1298                        main.enr.c
+          055C  A$main$1186                        main.enr.c
+          055E  A$main$1191                        main.enr.c
+          0561  A$main$1192                        main.enr.c
+          0563  A$main$1193                        main.enr.c
+          0565  A$main$1194                        main.enr.c
+          0568  A$main$1195                        main.enr.c
+          056A  A$main$1196                        main.enr.c
+          056C  A$main$1197                        main.enr.c
+          056D  A$main$1198                        main.enr.c
+          0570  A$main$1199                        main.enr.c
+          0572  A$main$1204                        main.enr.c
+          0575  A$main$1212                        main.enr.c
+          0578  A$main$1213                        main.enr.c
+          057A  A$main$1214                        main.enr.c
+          057C  A$main$1215                        main.enr.c
+          057E  A$main$1222                        main.enr.c
+          0580  A$main$1223                        main.enr.c
+          0583  A$main$1230                        main.enr.c
+          0586  A$main$1238                        main.enr.c
+          0589  A$main$1239                        main.enr.c
+          058B  A$main$1240                        main.enr.c
+          058D  A$main$1241                        main.enr.c
+          0590  A$main$1242                        main.enr.c
+          0592  A$main$1243                        main.enr.c
+          0594  A$main$1244                        main.enr.c
+          0595  A$main$1245                        main.enr.c
+          0598  A$main$1246                        main.enr.c
+          059A  A$main$1251                        main.enr.c
+          059D  A$main$1259                        main.enr.c
+          05A0  A$main$1260                        main.enr.c
+          05A2  A$main$1261                        main.enr.c
+          05A4  A$main$1262                        main.enr.c
+          05A6  A$main$1263                        main.enr.c
+          05A9  A$main$1264                        main.enr.c
+          05AB  A$main$1265                        main.enr.c
+          05AD  A$main$1266                        main.enr.c
+          05AF  A$main$1274                        main.enr.c
+          05B1  A$main$1275                        main.enr.c
+          05B4  A$main$1282                        main.enr.c
+          05B7  A$main$1290                        main.enr.c
+          05BA  A$main$1291                        main.enr.c
+          05BC  A$main$1292                        main.enr.c
+          05BE  A$main$1293                        main.enr.c
+          05C1  A$main$1294                        main.enr.c
+          05C3  A$main$1295                        main.enr.c
+          05C5  A$main$1296                        main.enr.c
+          05C6  A$main$1297                        main.enr.c
+          05C9  A$main$1298                        main.enr.c
+          05CB  A$main$1303                        main.enr.c
+          05CE  A$main$1304                        main.enr.c
 ASxxxx Linker V05.00,  page 16.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          05B5  A$main$1299                        main.enr.c
-          05B8  A$main$1300                        main.enr.c
-          05BA  A$main$1301                        main.enr.c
-          05BC  A$main$1302                        main.enr.c
-          05BE  A$main$1310                        main.enr.c
-          05C0  A$main$1311                        main.enr.c
-          05C3  A$main$1318                        main.enr.c
-          05C6  A$main$1326                        main.enr.c
-          05C9  A$main$1327                        main.enr.c
-          05CB  A$main$1328                        main.enr.c
-          05CD  A$main$1329                        main.enr.c
-          05D0  A$main$1330                        main.enr.c
-          05D2  A$main$1331                        main.enr.c
-          05D4  A$main$1332                        main.enr.c
-          05D5  A$main$1333                        main.enr.c
-          05D8  A$main$1334                        main.enr.c
-          05DA  A$main$1339                        main.enr.c
-          05DD  A$main$1340                        main.enr.c
-          05DF  A$main$1341                        main.enr.c
-          05E1  A$main$1342                        main.enr.c
-          05E4  A$main$1343                        main.enr.c
-          05E6  A$main$1344                        main.enr.c
-          05E8  A$main$1345                        main.enr.c
-          05EB  A$main$1346                        main.enr.c
-          05ED  A$main$1351                        main.enr.c
-          05F0  A$main$1359                        main.enr.c
-          05F3  A$main$1360                        main.enr.c
-          05F5  A$main$1361                        main.enr.c
-          05F7  A$main$1362                        main.enr.c
-          05F9  A$main$1369                        main.enr.c
-          05FB  A$main$1370                        main.enr.c
-          05FE  A$main$1377                        main.enr.c
-          0601  A$main$1385                        main.enr.c
-          0604  A$main$1386                        main.enr.c
-          0606  A$main$1387                        main.enr.c
-          0608  A$main$1388                        main.enr.c
-          060B  A$main$1389                        main.enr.c
-          060D  A$main$1390                        main.enr.c
-          060F  A$main$1391                        main.enr.c
-          0612  A$main$1392                        main.enr.c
-          0614  A$main$1397                        main.enr.c
-          0616  A$main$1405                        main.enr.c
-          0618  A$main$1406                        main.enr.c
-          061B  A$main$1411                        main.enr.c
-          061D  A$main$1419                        main.enr.c
-          061F  A$main$1420                        main.enr.c
-          0622  A$main$1425                        main.enr.c
-          0624  A$main$1426                        main.enr.c
-          0627  A$main$1431                        main.enr.c
-          062A  A$main$1432                        main.enr.c
+          05D0  A$main$1305                        main.enr.c
+          05D2  A$main$1306                        main.enr.c
+          05D5  A$main$1307                        main.enr.c
+          05D7  A$main$1308                        main.enr.c
+          05D9  A$main$1309                        main.enr.c
+          05DA  A$main$1310                        main.enr.c
+          05DD  A$main$1311                        main.enr.c
+          05DF  A$main$1316                        main.enr.c
+          05E2  A$main$1324                        main.enr.c
+          05E5  A$main$1325                        main.enr.c
+          05E7  A$main$1326                        main.enr.c
+          05E9  A$main$1327                        main.enr.c
+          05EB  A$main$1334                        main.enr.c
+          05ED  A$main$1335                        main.enr.c
+          05F0  A$main$1342                        main.enr.c
+          05F3  A$main$1350                        main.enr.c
+          05F6  A$main$1351                        main.enr.c
+          05F8  A$main$1352                        main.enr.c
+          05FA  A$main$1353                        main.enr.c
+          05FD  A$main$1354                        main.enr.c
+          05FF  A$main$1355                        main.enr.c
+          0601  A$main$1356                        main.enr.c
+          0602  A$main$1357                        main.enr.c
+          0605  A$main$1358                        main.enr.c
+          0607  A$main$1363                        main.enr.c
+          060A  A$main$1371                        main.enr.c
+          060D  A$main$1372                        main.enr.c
+          060F  A$main$1373                        main.enr.c
+          0611  A$main$1374                        main.enr.c
+          0613  A$main$1375                        main.enr.c
+          0616  A$main$1376                        main.enr.c
+          0618  A$main$1377                        main.enr.c
+          061A  A$main$1378                        main.enr.c
+          061C  A$main$1386                        main.enr.c
+          061E  A$main$1387                        main.enr.c
+          0621  A$main$1394                        main.enr.c
+          0624  A$main$1402                        main.enr.c
+          0627  A$main$1403                        main.enr.c
+          0629  A$main$1404                        main.enr.c
+          062B  A$main$1405                        main.enr.c
+          062E  A$main$1406                        main.enr.c
+          0630  A$main$1407                        main.enr.c
+          0632  A$main$1408                        main.enr.c
+          0633  A$main$1409                        main.enr.c
+          0636  A$main$1410                        main.enr.c
+          0638  A$main$1415                        main.enr.c
+          063B  A$main$1416                        main.enr.c
+          063D  A$main$1417                        main.enr.c
+          063F  A$main$1418                        main.enr.c
+          0642  A$main$1419                        main.enr.c
 ASxxxx Linker V05.00,  page 17.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          062C  A$main$1433                        main.enr.c
-          062E  A$main$1434                        main.enr.c
-          0631  A$main$1435                        main.enr.c
-          0633  A$main$1436                        main.enr.c
-          0636  A$main$1437                        main.enr.c
-          0638  A$main$1438                        main.enr.c
-          063B  A$main$1439                        main.enr.c
-          063E  A$main$1440                        main.enr.c
-          0640  A$main$1441                        main.enr.c
-          0643  A$main$1442                        main.enr.c
-          0646  A$main$1443                        main.enr.c
-          0648  A$main$1445                        main.enr.c
-          064B  A$main$1446                        main.enr.c
-          064D  A$main$1448                        main.enr.c
-          064F  A$main$1449                        main.enr.c
-          0651  A$main$1454                        main.enr.c
-          0654  A$main$1455                        main.enr.c
-          0656  A$main$1456                        main.enr.c
-          0658  A$main$1461                        main.enr.c
-          065A  A$main$1462                        main.enr.c
-          065C  A$main$1467                        main.enr.c
-          065E  A$main$1468                        main.enr.c
-          0660  A$main$1473                        main.enr.c
-          0663  A$main$1474                        main.enr.c
-          0665  A$main$1475                        main.enr.c
-          0667  A$main$1476                        main.enr.c
-          0669  A$main$1481                        main.enr.c
-          066C  A$main$1482                        main.enr.c
-          066E  A$main$1483                        main.enr.c
-          066F  A$main$1484                        main.enr.c
-          0671  A$main$1485                        main.enr.c
-          0673  A$main$1490                        main.enr.c
-          0675  A$main$1491                        main.enr.c
-          0677  A$main$1496                        main.enr.c
-          0679  A$main$1497                        main.enr.c
-          067B  A$main$1502                        main.enr.c
-          067D  A$main$1503                        main.enr.c
-          067F  A$main$1504                        main.enr.c
-          0681  A$main$1509                        main.enr.c
-          0683  A$main$1510                        main.enr.c
-          0685  A$main$1511                        main.enr.c
-          0687  A$main$1517                        main.enr.c
-          0689  A$main$1518                        main.enr.c
-          068B  A$main$1519                        main.enr.c
-          068D  A$main$1524                        main.enr.c
-          068F  A$main$1525                        main.enr.c
-          0691  A$main$1526                        main.enr.c
-          0693  A$main$1531                        main.enr.c
-          0695  A$main$1532                        main.enr.c
-          0697  A$main$1533                        main.enr.c
+          0644  A$main$1420                        main.enr.c
+          0646  A$main$1421                        main.enr.c
+          0649  A$main$1422                        main.enr.c
+          064B  A$main$1427                        main.enr.c
+          064E  A$main$1435                        main.enr.c
+          0651  A$main$1436                        main.enr.c
+          0653  A$main$1437                        main.enr.c
+          0655  A$main$1438                        main.enr.c
+          0657  A$main$1445                        main.enr.c
+          0659  A$main$1446                        main.enr.c
+          065C  A$main$1453                        main.enr.c
+          065F  A$main$1461                        main.enr.c
+          0662  A$main$1462                        main.enr.c
+          0664  A$main$1463                        main.enr.c
+          0666  A$main$1464                        main.enr.c
+          0669  A$main$1465                        main.enr.c
+          066B  A$main$1466                        main.enr.c
+          066D  A$main$1467                        main.enr.c
+          0670  A$main$1468                        main.enr.c
+          0672  A$main$1473                        main.enr.c
+          0674  A$main$1481                        main.enr.c
+          0676  A$main$1482                        main.enr.c
+          0679  A$main$1487                        main.enr.c
+          067B  A$main$1495                        main.enr.c
+          067D  A$main$1496                        main.enr.c
+          0680  A$main$1501                        main.enr.c
+          0682  A$main$1502                        main.enr.c
+          0685  A$main$1507                        main.enr.c
+          0688  A$main$1508                        main.enr.c
+          068A  A$main$1509                        main.enr.c
+          068C  A$main$1510                        main.enr.c
+          068F  A$main$1511                        main.enr.c
+          0691  A$main$1512                        main.enr.c
+          0694  A$main$1513                        main.enr.c
+          0696  A$main$1514                        main.enr.c
+          0699  A$main$1515                        main.enr.c
+          069C  A$main$1516                        main.enr.c
+          069E  A$main$1517                        main.enr.c
+          06A1  A$main$1518                        main.enr.c
+          06A4  A$main$1519                        main.enr.c
+          06A6  A$main$1521                        main.enr.c
+          06A9  A$main$1522                        main.enr.c
+          06AB  A$main$1524                        main.enr.c
+          06AD  A$main$1525                        main.enr.c
+          06AF  A$main$1530                        main.enr.c
+          06B2  A$main$1531                        main.enr.c
+          06B4  A$main$1532                        main.enr.c
+          06B6  A$main$1537                        main.enr.c
+          06B8  A$main$1538                        main.enr.c
+          06BA  A$main$1543                        main.enr.c
 ASxxxx Linker V05.00,  page 18.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          0699  A$main$1539                        main.enr.c
-          069B  A$main$1540                        main.enr.c
-          069D  A$main$1541                        main.enr.c
-          069F  A$main$1546                        main.enr.c
-          06A1  A$main$1547                        main.enr.c
-          06A3  A$main$1548                        main.enr.c
-          06A5  A$main$1553                        main.enr.c
-          06A7  A$main$1554                        main.enr.c
-          06A9  A$main$1555                        main.enr.c
-          06AB  A$main$1561                        main.enr.c
-          06AD  A$main$1562                        main.enr.c
-          06AF  A$main$1563                        main.enr.c
-          06B1  A$main$1568                        main.enr.c
-          06B3  A$main$1569                        main.enr.c
-          06B5  A$main$1570                        main.enr.c
-          06B7  A$main$1575                        main.enr.c
-          06B9  A$main$1576                        main.enr.c
-          06BB  A$main$1577                        main.enr.c
-          06BD  A$main$1579                        main.enr.c
-          06BF  A$main$1580                        main.enr.c
-          06C0  A$main$1582                        main.enr.c
-          06C2  A$main$1583                        main.enr.c
-          06C4  A$main$1590                        main.enr.c
-          06C6  A$main$1591                        main.enr.c
-          06C8  A$main$1597                        main.enr.c
-          06CA  A$main$1598                        main.enr.c
-          06CB  A$main$1599                        main.enr.c
-          06CD  A$main$1600                        main.enr.c
-          06CF  A$main$1601                        main.enr.c
-          06D1  A$main$1602                        main.enr.c
-          06D2  A$main$1603                        main.enr.c
-          06D3  A$main$1604                        main.enr.c
-          06D5  A$main$1605                        main.enr.c
-          06D7  A$main$1606                        main.enr.c
-          06D9  A$main$1607                        main.enr.c
-          06DB  A$main$1608                        main.enr.c
-          06DD  A$main$1609                        main.enr.c
-          06DE  A$main$1610                        main.enr.c
-          06DF  A$main$1611                        main.enr.c
-          06E1  A$main$1612                        main.enr.c
-          06E3  A$main$1613                        main.enr.c
-          06E7  A$main$1614                        main.enr.c
-          06E9  A$main$1615                        main.enr.c
-          06EB  A$main$1616                        main.enr.c
-          06ED  A$main$1618                        main.enr.c
-          06EF  A$main$1619                        main.enr.c
-          06F1  A$main$1620                        main.enr.c
-          06F3  A$main$1621                        main.enr.c
-          06F5  A$main$1622                        main.enr.c
-          06F7  __Intensity_a                      vec_rum_14_05_Intensity_a.c
+          06BC  A$main$1544                        main.enr.c
+          06BE  A$main$1549                        main.enr.c
+          06C1  A$main$1550                        main.enr.c
+          06C3  A$main$1551                        main.enr.c
+          06C5  A$main$1552                        main.enr.c
+          06C7  A$main$1557                        main.enr.c
+          06CA  A$main$1558                        main.enr.c
+          06CC  A$main$1559                        main.enr.c
+          06CD  A$main$1560                        main.enr.c
+          06CF  A$main$1561                        main.enr.c
+          06D1  A$main$1566                        main.enr.c
+          06D3  A$main$1567                        main.enr.c
+          06D5  A$main$1572                        main.enr.c
+          06D7  A$main$1573                        main.enr.c
+          06D9  A$main$1578                        main.enr.c
+          06DB  A$main$1579                        main.enr.c
+          06DD  A$main$1580                        main.enr.c
+          06DF  A$main$1585                        main.enr.c
+          06E1  A$main$1586                        main.enr.c
+          06E3  A$main$1587                        main.enr.c
+          06E5  A$main$1593                        main.enr.c
+          06E7  A$main$1594                        main.enr.c
+          06E9  A$main$1595                        main.enr.c
+          06EB  A$main$1600                        main.enr.c
+          06ED  A$main$1601                        main.enr.c
+          06EF  A$main$1602                        main.enr.c
+          06F1  A$main$1607                        main.enr.c
+          06F3  A$main$1608                        main.enr.c
+          06F5  A$main$1609                        main.enr.c
+          06F7  A$main$1615                        main.enr.c
+          06F9  A$main$1616                        main.enr.c
+          06FB  A$main$1617                        main.enr.c
+          06FD  A$main$1622                        main.enr.c
+          06FF  A$main$1623                        main.enr.c
+          0701  A$main$1624                        main.enr.c
+          0703  A$main$1629                        main.enr.c
+          0705  A$main$1630                        main.enr.c
+          0707  A$main$1631                        main.enr.c
+          0709  A$main$1637                        main.enr.c
+          070B  A$main$1638                        main.enr.c
+          070D  A$main$1639                        main.enr.c
+          070F  A$main$1644                        main.enr.c
+          0711  A$main$1645                        main.enr.c
+          0713  A$main$1646                        main.enr.c
+          0715  A$main$1651                        main.enr.c
+          0717  A$main$1652                        main.enr.c
+          0719  A$main$1653                        main.enr.c
+          071B  A$main$1655                        main.enr.c
+          071D  A$main$1656                        main.enr.c
+          071E  A$main$1658                        main.enr.c
 ASxxxx Linker V05.00,  page 19.
 Hexidecimal  [16-Bits]
 [ Bank == rom ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.text                      0057        06D1 =        1745. bytes (REL,CON,CSEG)
+.text                      0057        072F =        1839. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
-          06FC  __Random                           vec_rum_06_02_Random.c
-          0706  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
-          0719  __Dot_d                            vec_rum_05_01_03_Dot_d.c
-          071E  __Draw_Line_d                      vec_rum_05_03_01_04_Draw_Lin
-          0723  __Moveto_d                         vec_rum_13_07_Moveto_d.c
+          0720  A$main$1659                        main.enr.c
+          0722  A$main$1666                        main.enr.c
+          0724  A$main$1667                        main.enr.c
+          0726  A$main$1673                        main.enr.c
+          0728  A$main$1674                        main.enr.c
+          0729  A$main$1675                        main.enr.c
+          072B  A$main$1676                        main.enr.c
+          072D  A$main$1677                        main.enr.c
+          072F  A$main$1678                        main.enr.c
+          0730  A$main$1679                        main.enr.c
+          0731  A$main$1680                        main.enr.c
+          0733  A$main$1681                        main.enr.c
+          0735  A$main$1682                        main.enr.c
+          0737  A$main$1683                        main.enr.c
+          0739  A$main$1684                        main.enr.c
+          073B  A$main$1685                        main.enr.c
+          073C  A$main$1686                        main.enr.c
+          073D  A$main$1687                        main.enr.c
+          073F  A$main$1688                        main.enr.c
+          0741  A$main$1689                        main.enr.c
+          0745  A$main$1690                        main.enr.c
+          0747  A$main$1691                        main.enr.c
+          0749  A$main$1692                        main.enr.c
+          074B  A$main$1694                        main.enr.c
+          074D  A$main$1695                        main.enr.c
+          074F  A$main$1696                        main.enr.c
+          0751  A$main$1697                        main.enr.c
+          0753  A$main$1698                        main.enr.c
+          0755  __Intensity_a                      vec_rum_14_05_Intensity_a.c
+          075A  __Random                           vec_rum_06_02_Random.c
+          0764  __Print_Str_d                      vec_rum_05_02_03_Print_Str_d
+          0777  __Dot_d                            vec_rum_05_01_03_Dot_d.c
+          077C  __Draw_Line_d                      vec_rum_05_03_01_04_Draw_Lin
+          0781  __Moveto_d                         vec_rum_13_07_Moveto_d.c
+
 ASxxxx Linker V05.00,  page 20.
 Hexidecimal  [16-Bits]
 [ Bank == ram ]
 
 Area                       Addr        Size        Decimal Bytes (Attributes)
 --------------------       ----        ----        ------- ----- ------------
-.bss                       C880        0017 =          23. bytes (REL,CON,CSEG)
+.bss                       C880        0018 =          24. bytes (REL,CON,CSEG)
 
          Value  Global                             Global Defined In Module
          -----  --------------------------------   ------------------------
@@ -1001,8 +1031,9 @@ Area                       Addr        Size        Decimal Bytes (Attributes)
           C881  _GameState                         main.enr.c
           C882  _hook_yPos                         main.enr.c
           C883  _hook_xPos                         main.enr.c
-          C884  _fishIsCaught                      main.enr.c
-          C885  _current_fishes                    main.enr.c
+          C884  _lives                             main.enr.c
+          C885  _fishIsCaught                      main.enr.c
+          C886  _current_fishes                    main.enr.c
 
 ASxxxx Linker V05.00,  page 21.
 Hexidecimal  [16-Bits]

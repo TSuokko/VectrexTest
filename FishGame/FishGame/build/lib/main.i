@@ -1956,6 +1956,7 @@ const signed char AnotherWave[]=
 
 signed hook_yPos;
 signed hook_xPos;
+signed char lives;
 const int paddleHeight = 5;
 const int paddleWidth = 10;
 
@@ -1975,7 +1976,7 @@ struct fish current_fishes[3];
 
 const int screenMaxFromCentre = 45;
 const int courtMaxWidthFromCentre = 64;
-# 156 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 157 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 void setup(void)
 {
   enable_controller_1_x();
@@ -2073,7 +2074,7 @@ static inline void do_fish(struct fish *current_fish)
    case 0:
    {
 
-    if ((current_fish->x > 120) || (current_fish->y > 120) )
+    if ((current_fish->x > 120) || (current_fish->y > 100) )
     {
 
      current_fish->fish_counter = 4;
@@ -2159,7 +2160,7 @@ static inline void do_fish(struct fish *current_fish)
    case 6:
    {
 
-    if ((current_fish->x < -120) || (current_fish->y > 120) )
+    if ((current_fish->x < -120) || (current_fish->y > 100) )
     {
 
      current_fish->fish_counter = 4;
@@ -2174,7 +2175,7 @@ static inline void do_fish(struct fish *current_fish)
    case 7:
    {
 
-    if (current_fish->y > 120)
+    if (current_fish->y > 100)
     {
 
      current_fish->fish_counter = 4;
@@ -2282,7 +2283,7 @@ void drawCourt()
     Reset0Ref();
     Moveto_d(-screenMaxFromCentre, courtMaxWidthFromCentre);
     Draw_Line_d(0, -2 * courtMaxWidthFromCentre);
-# 470 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 471 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 }
 
 void PressButtonsToReelIn()
@@ -2334,6 +2335,11 @@ void catchingMinigame()
   {
    GameState = Hunting;
    fishIsCaught = 0;
+   lives--;
+   if(lives <= 0)
+   {
+    GameState = Lose;
+   }
   }
 
  }
@@ -2362,14 +2368,20 @@ void catchingMinigame()
 
 }
 
-int main(void)
+void resetGame()
 {
- unsigned char i;
  hook_yPos = 0;
  hook_xPos = 0;
  fishIsCaught = 0;
  waitTimer = 0;
  GameState = Hunting;
+ lives = 3;
+}
+
+int main(void)
+{
+ unsigned char i;
+ resetGame();
 
  setup();
  init_new_game();
@@ -2387,16 +2399,30 @@ int main(void)
   drawWater();
   drawCourt();
 
-  if(fishIsCaught == 0){
-   for (i=0; i < 3; i++)
+  if(GameState == Lose)
+  {
+   Reset0Ref();
+   Print_Str_d(-100,-128, "YOU HAVE LOST THE GAME.\x80");
+   if (Vec_Buttons & 8)
    {
-    do_fish(&current_fishes[i]);
-    fishCollision(&current_fishes[i]);
+    resetGame();
+   }
+
+  }
+  else
+  {
+   if(fishIsCaught == 0){
+    for (i=0; i < 3; i++)
+    {
+     do_fish(&current_fishes[i]);
+     fishCollision(&current_fishes[i]);
+    }
+   }
+   else{
+    catchingMinigame();
    }
   }
-  else{
-   catchingMinigame();
-  }
+
  };
 
 

@@ -54,10 +54,6 @@
 unsigned int waitTimer;
 #define WAIT(a) do {waitTimer = a;} while (0)
 
-
-
-
-
 #define TextY -100
 #define TextX -128
 
@@ -124,6 +120,7 @@ const signed char AnotherWave[]=
 
 signed hook_yPos;               /* where is the hook? */
 signed hook_xPos;
+signed char lives;
 const int paddleHeight = 5;
 const int paddleWidth = 10;
 
@@ -181,7 +178,7 @@ void drawSpriteWithScaleAtPos(const signed char sprite[], unsigned int drawScale
 static inline void init_fish(struct fish *current_fish)
 {
   unsigned int choice = Random() % 4;          /* start on which side? */
-  signed int start =  30;//(signed int)Random();               /* start on which position? */
+  signed int start = 30;//(signed int)Random();               /* start on which position? */
   current_fish->fish_counter = -1;              /* shotcounter negative -> active */
     current_fish->direction = (signed int) (Random() % HIGHEST_DIRECTION);  /* random direction of fish */
   current_fish->speed = ((signed int) (Random()) & 3) + 1;     /* random speed */
@@ -250,7 +247,7 @@ static inline void do_fish(struct fish *current_fish)
 			case KOILLINEN:
 			{
 				/* is dot out of bounds? */
-				if ((current_fish->x > 120) || (current_fish->y > 120) )
+				if ((current_fish->x > 120) || (current_fish->y > 100) )
 				{
 					/* yep, than make inactive and reset 'timer' */
 					current_fish->fish_counter = FISH_INTERVALL;
@@ -336,7 +333,7 @@ static inline void do_fish(struct fish *current_fish)
 			case LUODE:
 			{
 				/* is dot out of bounds? */
-				if ((current_fish->x < -120) || (current_fish->y > 120) )
+				if ((current_fish->x < -120) || (current_fish->y > 100) )
 				{
 					/* yep, than make inactive and reset 'timer' */
 					current_fish->fish_counter = FISH_INTERVALL;
@@ -351,7 +348,7 @@ static inline void do_fish(struct fish *current_fish)
 			case NORTH:
 			{
 				/* is dot out of bounds? */
-				if (current_fish->y > 120)
+				if (current_fish->y > 100)
 				{
 					/* yep, than make inactive and reset 'timer' */
 					current_fish->fish_counter = FISH_INTERVALL;
@@ -518,6 +515,11 @@ void catchingMinigame()
 		{
 			GameState = Hunting;
 			fishIsCaught = 0;
+			lives--;
+			if(lives <= 0)
+			{
+				GameState = Lose;
+			}
 		}
 		//return;
 	}
@@ -546,14 +548,20 @@ void catchingMinigame()
 	//else if(current_fish->x == hook_xPos && current_fish->y == hook_yPos)
 }
 
-int main(void)
+void resetGame()
 {
-	unsigned char i;              /* a counter */
 	hook_yPos = 0;
 	hook_xPos = 0;
 	fishIsCaught = 0;
 	waitTimer = 0;
 	GameState = Hunting;
+	lives = 3;
+}
+
+int main(void)
+{
+	unsigned char i;              /* a counter */
+	resetGame();
 
 	setup();                            /* setup our program */
 	init_new_game();              /* initialize dots ... */
@@ -571,16 +579,30 @@ int main(void)
 		drawWater();
 		drawCourt();
 
-		if(fishIsCaught == 0){
-			for (i=0; i < FISHES; i++)   /* and process all dots */
+		if(GameState == Lose)
+		{
+			Reset0Ref();
+			Print_Str_d(TextY,TextX, "YOU HAVE LOST THE GAME.\x80"); /* a message! */
+			if (Vec_Buttons & 8)
 			{
-				do_fish(&current_fishes[i]); /* with this function ... */
-				fishCollision(&current_fishes[i]);
+				resetGame();
+			} 
+
+		}
+		else
+		{
+			if(fishIsCaught == 0){
+				for (i=0; i < FISHES; i++)   /* and process all dots */
+				{
+					do_fish(&current_fishes[i]); /* with this function ... */
+					fishCollision(&current_fishes[i]);
+				}
+			}
+			else{
+				catchingMinigame();
 			}
 		}
-		else{
-			catchingMinigame();
-		}
+
 	};
 
 	// if return value is <= 0, then a warm reset will be performed,
