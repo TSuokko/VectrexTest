@@ -26,6 +26,11 @@
 #define frwait Wait_Recal
 #define MAX_SCALE (0xf0)
 
+typedef unsigned long uint16_t;
+typedef unsigned char uint8_t;
+
+
+
 /*
  * Nicer would have been an enum... what the heck... 8 possible directions
  * THREE e.g. mean from left to right...
@@ -59,6 +64,7 @@ unsigned int waitTimer;
 
 #define scale (*((volatile unsigned int *) 0xd004))		// 0xD004	Scale register on VIA
 const unsigned int drawScaleScreen = (unsigned int)0xFF;
+char infoText[10];
 
 //Game states
 enum GameState_t {
@@ -68,6 +74,8 @@ enum GameState_t {
 	Success,
 	Lose
 } GameState;
+
+signed char FishSizes[10] = {0,0,0,0,0,0,0,0,0,0};
 
 const signed char HookPlayer[]=
 {
@@ -87,13 +95,13 @@ const signed char HookPlayer[]=
     +0x0D, +0x00, // draw to y, x
 };
 
-const signed char LifeSymbol[]=
+const signed char FishSymbol[]=
 {	+0x04,
-	+0x00, +0x06, // draw to y, x
-	-0x04, +0x00, // draw to y, x
-	-0x04, -0x03, // draw to y, x
-	+0x04, -0x03, // draw to y, x
-	+0x04, +0x00, // draw to y, x
+    +0x0A, +0x05, // draw to y, x
+    -0x0A, +0x05, // draw to y, x
+    -0x0A, -0x0A, // draw to y, x
+    +0x00, +0x0A, // draw to y, x
+    +0x0A, -0x0A, // draw to y, x
 };
 
 
@@ -110,36 +118,13 @@ const signed char AnotherWave[]=
     (signed char) 0xFF, +0x28, +0x14,  // pattern, y, x
     (signed char) 0xFF, -0x28, +0x14,  // pattern, y, x
     (signed char) 0x01 // endmarker (high bit in pattern not set)
-	/*(signed char) 0xFF, +0x3D, +0x3D,  // pattern, y, x
-	(signed char) 0xFF, +0x00, +0x3A,  // pattern, y, x
-	(signed char) 0xFF, -0x3D, +0x3D,  // pattern, y, x
-	(signed char) 0xFF, +0x00, +0x3A,  // pattern, y, x
-	(signed char) 0xFF, +0x3D, +0x3D,  // pattern, y, x
-	(signed char) 0xFF, +0x00, +0x3A,  // pattern, y, x
-	(signed char) 0xFF, -0x3D, +0x3D,  // pattern, y, x
-	(signed char) 0xFF, +0x00, +0x50,  // pattern, y, x
-	(signed char) 0xFF, +0x3D, +0x3A,  // pattern, y, x
-	(signed char) 0xFF, +0x00, +0x3D,  // pattern, y, x
-	(signed char) 0xFF, -0x3D, +0x3B,  // pattern, y, x
-	(signed char) 0xFF, -0x28, +0x00,  // pattern, y, x
-	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x	
-    (signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, +0x00, -0x50,  // pattern, y, x
-	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
-	(signed char) 0xFF, +0x28, +0x00,  // pattern, y, x
-	(signed char) 0x01 // endmarker (high bit in pattern not set)*/
 };
 
 signed hook_yPos;               /* where is the hook? */
 signed hook_xPos;
 signed char lives;
+signed fishSize;
+signed levelHighscore;
 const int paddleHeight = 5;
 const int paddleWidth = 10;
 
@@ -159,6 +144,7 @@ struct fish current_fishes[FISHES];       /* all dots bundled */
 
 const int screenMaxFromCentre = 45;
 const int courtMaxWidthFromCentre = 64;
+unsigned int foundFish;
 // ---------------------------------------------------------------------------
 // cold reset: the vectrex logo is shown, all ram data is cleared
 // warm reset: skip vectrex logo and keep ram data
@@ -238,6 +224,10 @@ static inline void fishCollision(struct fish *current_fish)
 		{
 			fishIsCaught = 1;
 			GameState = Waiting;
+
+			if(hook_yPos >= 0) fishSize = 0;
+			else fishSize = 1;
+
 			WAIT(127);
 		}
 	}
@@ -431,9 +421,6 @@ void movehook()
 	Joy_Digital();                        /* call once per round, to insure */
 }
 
-
-
-
 void FishGame()
 {	
     Reset0Ref();
@@ -443,27 +430,18 @@ void FishGame()
 	Moveto_d(hook_yPos, hook_xPos);
 	//VIA_t1_cnt_lo = 0x80;
   	VIA_t1_cnt_lo= (unsigned int)120; /* set scale for positioning */
-
-	
 	Draw_VLc((void*) HookPlayer);
-
-	//drawSpriteWithScaleAtPos(HookPlayer,0x80, hook_yPos, hook_xPos)
-	//drawSpriteWithScaleAtPos(drawPlayer1Sprite, 0x4F, gameVars->player1.xPos, player1YPos);
 	////////////////////////////////
 	if(fishIsCaught == 0)
 	{
 		movehook();
 	}
-	
-
 }
 
 void drawWater()
 {
 	drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x40, -50,50);
-	//Reset0Ref();//bottom-right left
-    //Moveto_d(-screenMaxFromCentre, courtMaxWidthFromCentre);
-    //Draw_Line_d(-80,120);
+	drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x40, 2,50);
 }
 
 void drawLives(int yPos)
@@ -484,6 +462,30 @@ void renderLives()
 	}
 }
 
+void renderScore()
+{
+	for(int i = 0; i < levelHighscore; i++)
+	{
+		//drawSpriteWithScaleAtPos(FishSymbol, MAX_SCALE, (-60 + (i*20)),-60);
+		//draw cursor middle of screen 
+    	Reset0Ref();//bottom-right left
+
+		VIA_t1_cnt_lo = 0xFF;
+		Moveto_d(-70, (-60 + (i*15)));
+
+		if(FishSizes[i] == 0)
+		{
+			VIA_t1_cnt_lo = 0x80;
+		}
+		else
+		{
+			VIA_t1_cnt_lo = 0xf0;
+		}
+
+		Draw_VLc((void*) FishSymbol);
+	}
+}
+
 
 void drawBottom()
 {
@@ -499,13 +501,21 @@ void PressButtonsToReelIn()
 	{
 		hook_yPos = 120;    /* make sure hook is not */
 		GameState = Success;
+		foundFish = Random() % 4;
+		if(fishSize > 0)
+		foundFish += 3;
 		WAIT(127);
 		return;
 	}
 	
 	if (Vec_Buttons & 1) 
 	{
-		hook_yPos += 5;
+		unsigned int modulo = 10;
+		if(hook_yPos < 0)
+			modulo = 20;
+
+		unsigned int power = Random() % modulo;          /* start on which side? */
+		hook_yPos += (signed)power;
 	}
 }
 
@@ -517,7 +527,39 @@ void catchingMinigame()
 	if(GameState == Success)
 	{
 		Reset0Ref();
-		Print_Str_d(TextY,TextX, "YOU GOT THE MAGIC FISH!\x80"); /* a message! */
+
+		switch(foundFish)
+		{
+			case 0:
+			Print_Str_d(TextY,TextX, "YOU GOT A FISH!\x80"); /* a message! */
+			break;
+			case 1:
+			Print_Str_d(TextY,TextX, "YOU GOT A SILLY FISH!\x80"); /* a message! */
+			break;
+			case 2:
+			Print_Str_d(TextY,TextX, "YOU GOT A COOL FISH!\x80"); /* a message! */
+			break;
+			case 3:
+			Print_Str_d(TextY,TextX, "YOU GOT A MAGIC FISH!\x80"); /* a message! */
+			break;
+			case 4:
+			Print_Str_d(TextY,TextX, "YOU GOT A SWEDISH FISH!\x80"); /* a message! */
+			break;
+			case 5:
+			Print_Str_d(TextY,TextX, "YOU GOT A UNITY FISH!\x80"); /* a message! */
+			break;
+			case 6:
+			Print_Str_d(TextY,TextX, "YOU GOT A VECTOR FISH!\x80"); /* a message! */
+			break;
+			default:
+				Print_Str_d(TextY,TextX, "YOU GOT A EVIL FISH!\x80"); /* a message! */
+				break;
+		}
+
+
+
+
+		//Print_Str_d(TextY,TextX, "YOU GOT THE MAGIC FISH!\x80"); /* a message! */
 		if(waitTimer > 0)
 		{
 			waitTimer--;
@@ -528,7 +570,9 @@ void catchingMinigame()
 			fishIsCaught = 0;
 			hook_yPos = 0;
 			hook_xPos = 0;
-
+			FishSizes[levelHighscore] = fishSize;
+			if(levelHighscore < 10)
+			levelHighscore++;
 		}
 	}
 	else if(GameState == Reeling)
@@ -550,7 +594,6 @@ void catchingMinigame()
 				GameState = Lose;
 			}
 		}
-		//return;
 	}
 	else
 	{
@@ -559,22 +602,13 @@ void catchingMinigame()
 			Reset0Ref();
 			Print_Str_d(TextY,TextX, "YOU KNOW WHAT THAT MEANS?\x80"); /* a message! */
 			waitTimer--;
-			//return;
 		}
-		else //if(waitTimer == 0)
+		else 
 		{
-			//fishIsCaught = 0;
 			GameState = Reeling;
-			WAIT(127);
+			WAIT(200);
 		}
-
 	}
-
-
-		
-
-	//}
-	//else if(current_fish->x == hook_xPos && current_fish->y == hook_yPos)
 }
 
 void resetGame()
@@ -585,6 +619,9 @@ void resetGame()
 	waitTimer = 0;
 	GameState = Hunting;
 	lives = 3;
+	levelHighscore = 0;
+	//itoa(levelHighscore, &infoText[6]);
+
 }
 
 int main(void)
@@ -594,6 +631,7 @@ int main(void)
 
 	setup();                            /* setup our program */
 	init_new_game();              /* initialize dots ... */
+
 
 	while(1)
 	{
@@ -608,6 +646,7 @@ int main(void)
 		drawWater();
 		drawBottom();
 		renderLives();
+		renderScore();
 
 		if(GameState == Lose)
 		{

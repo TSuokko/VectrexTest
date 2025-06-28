@@ -1903,7 +1903,10 @@ static inline int joystick_2_up()
  return (joystick_2_y() > 0);
 }
 # 19 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c" 2
-# 54 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 29 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+typedef unsigned long uint16_t;
+typedef unsigned char uint8_t;
+# 59 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 unsigned int waitTimer;
 
 
@@ -1912,6 +1915,7 @@ unsigned int waitTimer;
 
 
 const unsigned int drawScaleScreen = (unsigned int)0xFF;
+char infoText[10];
 
 
 enum GameState_t {
@@ -1921,6 +1925,8 @@ enum GameState_t {
  Success,
  Lose
 } GameState;
+
+signed char FishSizes[10] = {0,0,0,0,0,0,0,0,0,0};
 
 const signed char HookPlayer[]=
 {
@@ -1940,13 +1946,13 @@ const signed char HookPlayer[]=
     +0x0D, +0x00,
 };
 
-const signed char LifeSymbol[]=
+const signed char FishSymbol[]=
 { +0x04,
- +0x00, +0x06,
- -0x04, +0x00,
- -0x04, -0x03,
- +0x04, -0x03,
- +0x04, +0x00,
+    +0x0A, +0x05,
+    -0x0A, +0x05,
+    -0x0A, -0x0A,
+    +0x00, +0x0A,
+    +0x0A, -0x0A,
 };
 
 
@@ -1963,12 +1969,13 @@ const signed char AnotherWave[]=
     (signed char) 0xFF, +0x28, +0x14,
     (signed char) 0xFF, -0x28, +0x14,
     (signed char) 0x01
-# 138 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 };
 
 signed hook_yPos;
 signed hook_xPos;
 signed char lives;
+signed fishSize;
+signed levelHighscore;
 const int paddleHeight = 5;
 const int paddleWidth = 10;
 
@@ -1988,7 +1995,8 @@ struct fish current_fishes[3];
 
 const int screenMaxFromCentre = 45;
 const int courtMaxWidthFromCentre = 64;
-# 172 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+unsigned int foundFish;
+# 158 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 void setup(void)
 {
   enable_controller_1_x();
@@ -2058,6 +2066,10 @@ static inline void fishCollision(struct fish *current_fish)
   {
    fishIsCaught = 1;
    GameState = Waiting;
+
+   if(hook_yPos >= 0) fishSize = 0;
+   else fishSize = 1;
+
    do {waitTimer = 127;} while (0);
   }
  }
@@ -2251,9 +2263,6 @@ void movehook()
  Joy_Digital();
 }
 
-
-
-
 void FishGame()
 {
     Reset0Ref();
@@ -2263,27 +2272,18 @@ void FishGame()
  Moveto_d(hook_yPos, hook_xPos);
 
    VIA_t1_cnt_lo= (unsigned int)120;
-
-
  Draw_VLc((void*) HookPlayer);
-
-
-
 
  if(fishIsCaught == 0)
  {
   movehook();
  }
-
-
 }
 
 void drawWater()
 {
  drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x40, -50,50);
-
-
-
+ drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x40, 2,50);
 }
 
 void drawLives(int yPos)
@@ -2304,6 +2304,30 @@ void renderLives()
  }
 }
 
+void renderScore()
+{
+ for(int i = 0; i < levelHighscore; i++)
+ {
+
+
+     Reset0Ref();
+
+  VIA_t1_cnt_lo = 0xFF;
+  Moveto_d(-70, (-60 + (i*15)));
+
+  if(FishSizes[i] == 0)
+  {
+   VIA_t1_cnt_lo = 0x80;
+  }
+  else
+  {
+   VIA_t1_cnt_lo = 0xf0;
+  }
+
+  Draw_VLc((void*) FishSymbol);
+ }
+}
+
 
 void drawBottom()
 {
@@ -2319,13 +2343,21 @@ void PressButtonsToReelIn()
  {
   hook_yPos = 120;
   GameState = Success;
+  foundFish = Random() % 4;
+  if(fishSize > 0)
+  foundFish += 3;
   do {waitTimer = 127;} while (0);
   return;
  }
 
  if (Vec_Buttons & 1)
  {
-  hook_yPos += 5;
+  unsigned int modulo = 10;
+  if(hook_yPos < 0)
+   modulo = 20;
+
+  unsigned int power = Random() % modulo;
+  hook_yPos += (signed)power;
  }
 }
 
@@ -2337,7 +2369,39 @@ void catchingMinigame()
  if(GameState == Success)
  {
   Reset0Ref();
-  Print_Str_d(-100,-128, "YOU GOT THE MAGIC FISH!\x80");
+
+  switch(foundFish)
+  {
+   case 0:
+   Print_Str_d(-100,-128, "YOU GOT A FISH!\x80");
+   break;
+   case 1:
+   Print_Str_d(-100,-128, "YOU GOT A SILLY FISH!\x80");
+   break;
+   case 2:
+   Print_Str_d(-100,-128, "YOU GOT A COOL FISH!\x80");
+   break;
+   case 3:
+   Print_Str_d(-100,-128, "YOU GOT A MAGIC FISH!\x80");
+   break;
+   case 4:
+   Print_Str_d(-100,-128, "YOU GOT A SWEDISH FISH!\x80");
+   break;
+   case 5:
+   Print_Str_d(-100,-128, "YOU GOT A UNITY FISH!\x80");
+   break;
+   case 6:
+   Print_Str_d(-100,-128, "YOU GOT A VECTOR FISH!\x80");
+   break;
+   default:
+    Print_Str_d(-100,-128, "YOU GOT A EVIL FISH!\x80");
+    break;
+  }
+
+
+
+
+
   if(waitTimer > 0)
   {
    waitTimer--;
@@ -2348,7 +2412,9 @@ void catchingMinigame()
    fishIsCaught = 0;
    hook_yPos = 0;
    hook_xPos = 0;
-
+   FishSizes[levelHighscore] = fishSize;
+   if(levelHighscore < 10)
+   levelHighscore++;
   }
  }
  else if(GameState == Reeling)
@@ -2370,7 +2436,6 @@ void catchingMinigame()
     GameState = Lose;
    }
   }
-
  }
  else
  {
@@ -2379,22 +2444,13 @@ void catchingMinigame()
    Reset0Ref();
    Print_Str_d(-100,-128, "YOU KNOW WHAT THAT MEANS?\x80");
    waitTimer--;
-
   }
   else
   {
-
    GameState = Reeling;
-   do {waitTimer = 127;} while (0);
+   do {waitTimer = 200;} while (0);
   }
-
  }
-
-
-
-
-
-
 }
 
 void resetGame()
@@ -2405,6 +2461,9 @@ void resetGame()
  waitTimer = 0;
  GameState = Hunting;
  lives = 3;
+ levelHighscore = 0;
+
+
 }
 
 int main(void)
@@ -2414,6 +2473,7 @@ int main(void)
 
  setup();
  init_new_game();
+
 
  while(1)
  {
@@ -2428,6 +2488,7 @@ int main(void)
   drawWater();
   drawBottom();
   renderLives();
+  renderScore();
 
   if(GameState == Lose)
   {
