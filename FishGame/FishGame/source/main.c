@@ -64,6 +64,14 @@ unsigned int waitTimer;
 #define scale (*((volatile unsigned int *) 0xd004))		// 0xD004	Scale register on VIA
 const unsigned int drawScaleScreen = (unsigned int)0xFF;
 
+//Game states
+enum GameState_t {
+	Hunting,
+	Waiting,
+	Reeling,
+	Success,
+	Lose
+} GameState;
 
 const signed char MousePointer[]=
 {
@@ -210,6 +218,7 @@ static inline void fishCollision(struct fish *current_fish)
 		if(fishIsCaught == 0)
 		{
 			fishIsCaught = 1;
+			GameState = Waiting;
 			WAIT(127);
 		}
 	}
@@ -460,23 +469,79 @@ void drawCourt()
    // Draw_Line_d(0, 2 * courtMaxWidthFromCentre);
 }
 
+void PressButtonsToReelIn()
+{
+	if (hook_yPos>=120) 
+	{
+		hook_yPos = 120;    /* make sure hook is not */
+		GameState = Success;
+		WAIT(127);
+		return;
+	}
+	
+	if (Vec_Buttons & 1) 
+	{
+		hook_yPos += 5;
+	}
+}
+
 void catchingMinigame()
 {
 	//Print_Str_d(0, -70, "HELLO WORLD\x80");
 	//if(fishIsCaught == 1)
 	//{
-		
-	if (waitTimer >0)
+	if(GameState == Success)
 	{
 		Reset0Ref();
-		Print_Str_d(TextY,TextX, "YOU KNOW WHAT THAT MEANS?\x80"); /* a message! */
-		waitTimer--;
-		return;
+		Print_Str_d(TextY,TextX, "YOU GOT THE MAGIC FISH!\x80"); /* a message! */
+		if(waitTimer > 0)
+		{
+			waitTimer--;
+		}
+		else
+		{
+			GameState = Hunting;
+			fishIsCaught = 0;
+
+		}
+	}
+	else if(GameState == Reeling)
+	{
+		Reset0Ref();
+		Print_Str_d(TextY,TextX, "FISH!\x80"); /* a message! */
+		if(waitTimer > 0)
+		{
+			PressButtonsToReelIn();
+			waitTimer--;
+		}
+		else if(GameState != Success)
+		{
+			GameState = Hunting;
+			fishIsCaught = 0;
+		}
+		//return;
 	}
 	else
 	{
-		fishIsCaught = 0;
+		if (waitTimer > 0 && GameState == Waiting)
+		{
+			Reset0Ref();
+			Print_Str_d(TextY,TextX, "YOU KNOW WHAT THAT MEANS?\x80"); /* a message! */
+			waitTimer--;
+			//return;
+		}
+		else //if(waitTimer == 0)
+		{
+			//fishIsCaught = 0;
+			GameState = Reeling;
+			WAIT(127);
+		}
+
 	}
+
+
+		
+
 	//}
 	//else if(current_fish->x == hook_xPos && current_fish->y == hook_yPos)
 }
@@ -488,6 +553,7 @@ int main(void)
 	hook_xPos = 0;
 	fishIsCaught = 0;
 	waitTimer = 0;
+	GameState = Hunting;
 
 	setup();                            /* setup our program */
 	init_new_game();              /* initialize dots ... */

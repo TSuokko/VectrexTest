@@ -1909,6 +1909,14 @@ unsigned int waitTimer;
 const unsigned int drawScaleScreen = (unsigned int)0xFF;
 
 
+enum GameState_t {
+ Hunting,
+ Waiting,
+ Reeling,
+ Success,
+ Lose
+} GameState;
+
 const signed char MousePointer[]=
 {
  +0x0C,
@@ -1942,7 +1950,7 @@ const signed char AnotherWave[]=
  (signed char) 0xFF, -0x3D, +0x3B,
  (signed char) 0xFF, -0x28, +0x00,
  (signed char) 0xFF, +0x3C, -0x3C,
-# 114 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 122 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
  (signed char) 0x01
 };
 
@@ -1967,7 +1975,7 @@ struct fish current_fishes[3];
 
 const int screenMaxFromCentre = 45;
 const int courtMaxWidthFromCentre = 64;
-# 148 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 156 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
 void setup(void)
 {
   enable_controller_1_x();
@@ -2033,6 +2041,7 @@ static inline void fishCollision(struct fish *current_fish)
   if(fishIsCaught == 0)
   {
    fishIsCaught = 1;
+   GameState = Waiting;
    do {waitTimer = 127;} while (0);
   }
  }
@@ -2273,7 +2282,23 @@ void drawCourt()
     Reset0Ref();
     Moveto_d(-screenMaxFromCentre, courtMaxWidthFromCentre);
     Draw_Line_d(0, -2 * courtMaxWidthFromCentre);
-# 461 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+# 470 "C:\\Users\\tsuok\\FalloutTTRPG\\VectrexTest\\FishGame\\FishGame\\source\\main.c"
+}
+
+void PressButtonsToReelIn()
+{
+ if (hook_yPos>=120)
+ {
+  hook_yPos = 120;
+  GameState = Success;
+  do {waitTimer = 127;} while (0);
+  return;
+ }
+
+ if (Vec_Buttons & 1)
+ {
+  hook_yPos += 5;
+ }
 }
 
 void catchingMinigame()
@@ -2281,18 +2306,58 @@ void catchingMinigame()
 
 
 
-
- if (waitTimer >0)
+ if(GameState == Success)
  {
   Reset0Ref();
-  Print_Str_d(-100,-128, "YOU KNOW WHAT THAT MEANS?\x80");
-  waitTimer--;
-  return;
+  Print_Str_d(-100,-128, "YOU GOT THE MAGIC FISH!\x80");
+  if(waitTimer > 0)
+  {
+   waitTimer--;
+  }
+  else
+  {
+   GameState = Hunting;
+   fishIsCaught = 0;
+
+  }
+ }
+ else if(GameState == Reeling)
+ {
+  Reset0Ref();
+  Print_Str_d(-100,-128, "FISH!\x80");
+  if(waitTimer > 0)
+  {
+   PressButtonsToReelIn();
+   waitTimer--;
+  }
+  else if(GameState != Success)
+  {
+   GameState = Hunting;
+   fishIsCaught = 0;
+  }
+
  }
  else
  {
-  fishIsCaught = 0;
+  if (waitTimer > 0 && GameState == Waiting)
+  {
+   Reset0Ref();
+   Print_Str_d(-100,-128, "YOU KNOW WHAT THAT MEANS?\x80");
+   waitTimer--;
+
+  }
+  else
+  {
+
+   GameState = Reeling;
+   do {waitTimer = 127;} while (0);
+  }
+
  }
+
+
+
+
 
 
 }
@@ -2304,6 +2369,7 @@ int main(void)
  hook_xPos = 0;
  fishIsCaught = 0;
  waitTimer = 0;
+ GameState = Hunting;
 
  setup();
  init_new_game();
