@@ -77,21 +77,31 @@ const signed char MousePointer[]=
 };
 
 const signed char AnotherWave[]=
-{   +0x0D,
-    -0x1A, +0x18, // draw to y, x
-    +0x30, +0x33, // draw to y, x
-    -0x30, +0x30, // draw to y, x
-    +0x30, +0x33, // draw to y, x
-    -0x2E, +0x30, // draw to y, x
-    +0x2E, +0x33, // draw to y, x
-    -0x2E, +0x30, // draw to y, x
-    +0x2E, +0x33, // draw to y, x
-    -0x2E, +0x30, // draw to y, x
-    +0x2E, +0x33, // draw to y, x
-    -0x2E, +0x30, // draw to y, x
-    +0x2E, +0x33, // draw to y, x
-    -0x30, +0x30, // draw to y, x
-    +0x18, +0x1A, // draw to y, x
+{  (signed char) 0xFF, +0x3D, +0x3D,  // pattern, y, x
+	(signed char) 0xFF, +0x00, +0x3A,  // pattern, y, x
+	(signed char) 0xFF, -0x3D, +0x3D,  // pattern, y, x
+	(signed char) 0xFF, +0x00, +0x3A,  // pattern, y, x
+	(signed char) 0xFF, +0x3D, +0x3D,  // pattern, y, x
+	(signed char) 0xFF, +0x00, +0x3A,  // pattern, y, x
+	(signed char) 0xFF, -0x3D, +0x3D,  // pattern, y, x
+	(signed char) 0xFF, +0x00, +0x50,  // pattern, y, x
+	(signed char) 0xFF, +0x3D, +0x3A,  // pattern, y, x
+	(signed char) 0xFF, +0x00, +0x3D,  // pattern, y, x
+	(signed char) 0xFF, -0x3D, +0x3B,  // pattern, y, x
+	(signed char) 0xFF, -0x28, +0x00,  // pattern, y, x
+	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, +0x00, -0x50,  // pattern, y, x
+	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, +0x3C, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, +0x00, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, -0x3C, -0x3C,  // pattern, y, x
+	(signed char) 0xFF, +0x28, +0x00,  // pattern, y, x
+	(signed char) 0x01 // endmarker (high bit in pattern not set)
 };
 
 signed hook_x;               /* where is the hook? */
@@ -410,7 +420,7 @@ void FishGame()
 
 void drawWater()
 {
-	drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x80, -50,75);
+	drawSpriteWithScaleAtPos(AnotherWave, (unsigned int)0x40, -50,25);
 }
 
 int main(void)
