@@ -34,13 +34,13 @@ struct cartridge_t
 
 const struct cartridge_t game_header __attribute__((section(".cartridge"), used)) = 
 {
-	.copyright 		= "g GCE 2017\x80",	// change year if neccessary, do not change "g GCE"
+	.copyright 		= "g GCE 2025\x80",	// change year if neccessary, do not change "g GCE"
 	.music 			= &Vec_Music_1,		// taken from included headers
 	.title_height 	= -8,
 	.title_width 	= 80,
 	.title_y 		= -16,
 	.title_x 		= -72,
-	.title 			= "GAME TITLE\x80"	// note that \x00 is automatically appended!
+	.title 			= "FISH GAME\x80"	// note that \x00 is automatically appended!
 };
 
 // ***************************************************************************
