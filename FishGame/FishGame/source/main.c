@@ -613,12 +613,11 @@ int main(void)
 	while(1)
 	{
         VIA_t1_cnt_lo = MAX_SCALE;               /* set scale factor */
-		
         Read_Btns();   
-		
 		Wait_Recal();
-		Do_Sound();
 
+		Do_Sound();
+		//press button for sound effect 
 		if (button_1_1_pressed() != 0)
 		{
 			sfx_pointer_1 = (long unsigned int) (&TestSound1_data);
@@ -628,8 +627,9 @@ int main(void)
 		{
 			ayfx_sound1();
 		}
+
+
 		Intensity_a(0x5f);
-		
 		FishGame();
 		drawWater();
 		drawBottom();
