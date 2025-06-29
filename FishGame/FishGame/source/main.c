@@ -15,6 +15,10 @@
 
 #include <vectrex.h>
 #include <assert.h>	
+#include <ayfxPlayer.h>
+
+#include "TestSound1.c"
+
 #include "controller.h"
 
 // As default assertions are enabled.
@@ -120,6 +124,7 @@ const signed char AnotherWave[]=
     (signed char) 0x01 // endmarker (high bit in pattern not set)
 };
 
+
 signed hook_yPos;               /* where is the hook? */
 signed hook_xPos;
 signed char lives;
@@ -164,6 +169,9 @@ void setup(void)
   Joy_Digital();
   //check_buttons();                       /* last pressed button */
   Wait_Recal();                       /* sets this up allright... */
+
+
+
 
 }
 
@@ -638,8 +646,23 @@ int main(void)
         VIA_t1_cnt_lo = MAX_SCALE;               /* set scale factor */
 		
         Read_Btns();   
-		
+ 
+
+
 		Wait_Recal();
+ 
+      Do_Sound();
+
+      if ( button_1_1_pressed() != 0)
+      {
+        sfx_pointer_1 = (long unsigned int) (&TestSound1_data);
+        sfx_status_1 = 1;
+      }
+         if (sfx_status_1 == 1)
+        {
+         ayfx_sound1();
+        }
+
 		Intensity_a(0x5f);
 		
 		FishGame();

@@ -10,10 +10,10 @@
 ; -Wall -Wextra -Wconversion -Werror -fomit-frame-pointer
 ; -fno-toplevel-reorder -mint8 -msoft-reg-count=0 -std=gnu99
 ; -fno-time-report
-; -IC:\Users\tsuok\Downloads\Vide2.6_RC03.w32\Vide.w32\C\PeerC\vectrex\include
+; -IC:\Vectrex\Vide2.6_RC03.w64\Vide.w64\C\PeerC\vectrex\include
 ; -D__RUM_FUNCTION=1 -DOMMIT_FRAMEPOINTER=1
-; -IC:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\include
-; C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c
+; -IC:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\include
+; C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c
 ; options enabled:  -falign-loops -fargument-alias -fauto-inc-dec
 ; -fbranch-count-reg -fcommon -fearly-inlining
 ; -feliminate-unused-debug-types -ffunction-cse -fgcse-lm -fident -fivopts
@@ -27,8 +27,45 @@
 
 ; Compiler executable checksum: 8f282e2d9663ae6148257c524e608c63
 
-	.globl	_drawScaleScreen
+	.globl	_TestSound1_data
 	.area	.text
+_TestSound1_data:
+	.byte	96
+	.byte	-101
+	.byte	10
+	.byte	0
+	.byte	47
+	.byte	-100
+	.byte	12
+	.byte	47
+	.byte	115
+	.byte	9
+	.byte	47
+	.byte	2
+	.byte	10
+	.byte	47
+	.byte	32
+	.byte	0
+	.byte	47
+	.byte	34
+	.byte	0
+	.byte	47
+	.byte	50
+	.byte	0
+	.byte	15
+	.byte	47
+	.byte	45
+	.byte	0
+	.byte	15
+	.byte	47
+	.byte	90
+	.byte	0
+	.byte	47
+	.byte	93
+	.byte	13
+	.byte	-48
+	.byte	32
+	.globl	_drawScaleScreen
 _drawScaleScreen:
 	.byte	-1
 	.globl	_FishSizes
@@ -126,33 +163,33 @@ _courtMaxWidthFromCentre:
 	.globl	_setup
 _setup:
 ;----- asm -----
-; 160 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[159]enable_controller_1_x();
+; 165 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[164]enable_controller_1_x();
 ;--- end asm ---
 	jsr	_enable_controller_1_x
 ;----- asm -----
-; 162 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[160]enable_controller_1_y();
+; 167 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[165]enable_controller_1_y();
 ;--- end asm ---
 	jsr	_enable_controller_1_y
 ;----- asm -----
-; 164 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[161]disable_controller_2_x();
+; 169 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[166]disable_controller_2_x();
 ;--- end asm ---
 	jsr	_disable_controller_2_x
 ;----- asm -----
-; 166 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[162]disable_controller_2_y();
+; 171 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[167]disable_controller_2_y();
 ;--- end asm ---
 	jsr	_disable_controller_2_y
 ;----- asm -----
-; 168 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[163]joy_digital();
+; 173 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[168]joy_digital();
 ;--- end asm ---
 	jsr	___Joy_Digital
 ;----- asm -----
-; 171 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[165]wait_recal();
+; 176 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[170]wait_recal();
 ;--- end asm ---
 	jsr	___Wait_Recal
 	rts
@@ -176,19 +213,19 @@ _drawSpriteWithScaleAtPos:
 	stx	1,s	; sprite, sprite
 	stb	,s	; drawScale, drawScale
 ;----- asm -----
-; 179 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[172]reset0ref();
+; 187 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[180]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 182 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[174]via_t1_cnt_lo = drawscalescreen;
+; 190 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[182]via_t1_cnt_lo = drawscalescreen;
 ;--- end asm ---
 	ldb	_drawScaleScreen	; drawScaleScreen.1, drawScaleScreen
 	stb	_VIA_t1_cnt_lo	; drawScaleScreen.1, VIA_t1_cnt_lo
 ;----- asm -----
-; 184 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[175]moveto_d(ypos, xpos);
+; 192 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[183]moveto_d(ypos, xpos);
 ;--- end asm ---
 	ldb	10,s	;, yPos
 	stb	4,s	;, a
@@ -200,14 +237,14 @@ _drawSpriteWithScaleAtPos:
 	jsr	__Moveto_d
 	leas	1,s	;,,
 ;----- asm -----
-; 187 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[177]via_t1_cnt_lo = drawscale;
+; 195 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[185]via_t1_cnt_lo = drawscale;
 ;--- end asm ---
 	ldb	,s	;, drawScale
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 ;----- asm -----
-; 190 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[179]draw_vlp((void*) sprite);
+; 198 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[187]draw_vlp((void*) sprite);
 ;--- end asm ---
 	ldx	1,s	; tmp28, sprite
 	stx	5,s	; tmp28, x
@@ -218,15 +255,15 @@ _drawSpriteWithScaleAtPos:
 	.globl	_movehook
 _movehook:
 ;----- asm -----
-; 538 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[400]if (joystick_1_x()>0)
+; 546 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[408]if (joystick_1_x()>0)
 ;--- end asm ---
 	jsr	_joystick_1_x
-	tstb	; D.3295
+	tstb	; D.3311
 	ble	L14	;
 ;----- asm -----
-; 541 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[402]hook_xpos += 5;
+; 549 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[410]hook_xpos += 5;
 ;--- end asm ---
 	ldb	_hook_xPos	; hook_xPos.13, hook_xPos
 	addb	#5	; hook_xPos.14,
@@ -234,26 +271,26 @@ _movehook:
 	bra	L15	;
 L14:
 	jsr	_joystick_1_x
-	tstb	; D.3298
+	tstb	; D.3314
 	bge	L15	;
 ;----- asm -----
-; 546 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[406]hook_xpos -= 5;
+; 554 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[414]hook_xpos -= 5;
 ;--- end asm ---
 	ldb	_hook_xPos	; hook_xPos.15, hook_xPos
 	addb	#-5	; hook_xPos.16,
 	stb	_hook_xPos	; hook_xPos.16, hook_xPos
 L15:
 ;----- asm -----
-; 549 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[408]if (joystick_1_y()>0)
+; 557 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[416]if (joystick_1_y()>0)
 ;--- end asm ---
 	jsr	_joystick_1_y
-	tstb	; D.3301
+	tstb	; D.3317
 	ble	L16	;
 ;----- asm -----
-; 552 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[410]hook_ypos += 5;
+; 560 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[418]hook_ypos += 5;
 ;--- end asm ---
 	ldb	_hook_yPos	; hook_yPos.17, hook_yPos
 	addb	#5	; hook_yPos.18,
@@ -261,19 +298,19 @@ L15:
 	bra	L17	;
 L16:
 	jsr	_joystick_1_y
-	tstb	; D.3304
+	tstb	; D.3320
 	bge	L17	;
 ;----- asm -----
-; 557 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[414]hook_ypos -= 5;
+; 565 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[422]hook_ypos -= 5;
 ;--- end asm ---
 	ldb	_hook_yPos	; hook_yPos.19, hook_yPos
 	addb	#-5	; hook_yPos.20,
 	stb	_hook_yPos	; hook_yPos.20, hook_yPos
 L17:
 ;----- asm -----
-; 560 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[416]if (hook_ypos>=120) hook_ypos = 120;
+; 568 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[424]if (hook_ypos>=120) hook_ypos = 120;
 ;--- end asm ---
 	ldb	_hook_yPos	; hook_yPos.21, hook_yPos
 	cmpb	#119	;cmpqi:	; hook_yPos.21,
@@ -282,8 +319,8 @@ L17:
 	stb	_hook_yPos	;, hook_yPos
 L18:
 ;----- asm -----
-; 562 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[417]if (hook_ypos<=-80) hook_ypos = -80;
+; 570 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[425]if (hook_ypos<=-80) hook_ypos = -80;
 ;--- end asm ---
 	ldb	_hook_yPos	; hook_yPos.22, hook_yPos
 	cmpb	#-80	;cmpqi:	; hook_yPos.22,
@@ -292,8 +329,8 @@ L18:
 	stb	_hook_yPos	;, hook_yPos
 L19:
 ;----- asm -----
-; 564 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[418]if (hook_xpos>=120) hook_xpos = 120;
+; 572 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[426]if (hook_xpos>=120) hook_xpos = 120;
 ;--- end asm ---
 	ldb	_hook_xPos	; hook_xPos.23, hook_xPos
 	cmpb	#119	;cmpqi:	; hook_xPos.23,
@@ -302,8 +339,8 @@ L19:
 	stb	_hook_xPos	;, hook_xPos
 L20:
 ;----- asm -----
-; 566 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[419]if (hook_xpos<=-120) hook_xpos = -120;
+; 574 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[427]if (hook_xpos<=-120) hook_xpos = -120;
 ;--- end asm ---
 	ldb	_hook_xPos	; hook_xPos.24, hook_xPos
 	cmpb	#-120	;cmpqi:	; hook_xPos.24,
@@ -312,34 +349,34 @@ L20:
 	stb	_hook_xPos	;, hook_xPos
 L21:
 ;----- asm -----
-; 568 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[420]joy_digital();
+; 576 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[428]joy_digital();
 ;--- end asm ---
 	jsr	___Joy_Digital
 	rts
 _joystick_1_y:
-	ldb	_Vec_Joy_1_Y	; D.3035, Vec_Joy_1_Y
+	ldb	_Vec_Joy_1_Y	; D.3051, Vec_Joy_1_Y
 	rts
 _joystick_1_x:
-	ldb	_Vec_Joy_1_X	; D.3031, Vec_Joy_1_X
+	ldb	_Vec_Joy_1_X	; D.3047, Vec_Joy_1_X
 	rts
 	.globl	_FishGame
 _FishGame:
 	leas	-4,s	;,,
 ;----- asm -----
-; 574 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[425]reset0ref();
+; 582 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[433]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 578 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[428]via_t1_cnt_lo = 0x80;
+; 586 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[436]via_t1_cnt_lo = 0x80;
 ;--- end asm ---
 	ldb	#-128	;,
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 ;----- asm -----
-; 580 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[429]moveto_d(hook_ypos, hook_xpos);
+; 588 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[437]moveto_d(hook_ypos, hook_xpos);
 ;--- end asm ---
 	ldb	_hook_xPos	;, hook_xPos
 	stb	,s	;, hook_xPos.25
@@ -355,27 +392,27 @@ _FishGame:
 	jsr	__Moveto_d
 	leas	1,s	;,,
 ;----- asm -----
-; 583 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[431]via_t1_cnt_lo= (unsigned int)120;
+; 591 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[439]via_t1_cnt_lo= (unsigned int)120;
 ;--- end asm ---
 	ldb	#120	;,
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 ;----- asm -----
-; 585 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[432]draw_vlc((void*) hookplayer);
+; 593 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[440]draw_vlc((void*) hookplayer);
 ;--- end asm ---
 	ldx	#_HookPlayer	;,
 	jsr	___Draw_VLc
 ;----- asm -----
-; 588 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[434]if(fishiscaught == 0)
+; 596 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[442]if(fishiscaught == 0)
 ;--- end asm ---
 	ldb	_fishIsCaught	; fishIsCaught.27, fishIsCaught
 	tstb	; fishIsCaught.27
 	bne	L29	;
 ;----- asm -----
-; 591 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[436]movehook();
+; 599 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[444]movehook();
 ;--- end asm ---
 	jsr	_movehook
 L29:
@@ -384,8 +421,8 @@ L29:
 	.globl	_drawWater
 _drawWater:
 ;----- asm -----
-; 598 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[442]drawspritewithscaleatpos(anotherwave, (unsigned int)0x40, -50,50);
+; 606 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[450]drawspritewithscaleatpos(anotherwave, (unsigned int)0x40, -50,50);
 ;--- end asm ---
 	ldb	#50	;,
 	stb	,-s	;,
@@ -396,8 +433,8 @@ _drawWater:
 	jsr	_drawSpriteWithScaleAtPos
 	leas	2,s	;,,
 ;----- asm -----
-; 600 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[443]drawspritewithscaleatpos(anotherwave, (unsigned int)0x40, 2,50);
+; 608 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[451]drawspritewithscaleatpos(anotherwave, (unsigned int)0x40, 2,50);
 ;--- end asm ---
 	ldb	#50	;,
 	stb	,-s	;,
@@ -413,19 +450,19 @@ _drawLives:
 	leas	-2,s	;,,
 	stb	,s	; yPos, yPos
 ;----- asm -----
-; 606 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[448]reset0ref();
+; 614 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[456]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 609 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[450]via_t1_cnt_lo = 0xff;
+; 617 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[458]via_t1_cnt_lo = 0xff;
 ;--- end asm ---
 	ldb	#-1	;,
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 ;----- asm -----
-; 611 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[451]moveto_d(ypos, 70);
+; 619 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[459]moveto_d(ypos, 70);
 ;--- end asm ---
 	ldb	,s	;, yPos
 	stb	1,s	;, a
@@ -435,14 +472,14 @@ _drawLives:
 	jsr	__Moveto_d
 	leas	1,s	;,,
 ;----- asm -----
-; 613 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[452]via_t1_cnt_lo = 0x40;
+; 621 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[460]via_t1_cnt_lo = 0x40;
 ;--- end asm ---
 	ldb	#64	;,
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 ;----- asm -----
-; 615 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[453]draw_vlc((void*) hookplayer);
+; 623 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[461]draw_vlc((void*) hookplayer);
 ;--- end asm ---
 	ldx	#_HookPlayer	;,
 	jsr	___Draw_VLc
@@ -452,28 +489,28 @@ _drawLives:
 _renderLives:
 	leas	-3,s	;,,
 ;----- asm -----
-; 621 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[458]for(int i = -1; i < (lives - 1); i++)
+; 629 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[466]for(int i = -1; i < (lives - 1); i++)
 ;--- end asm ---
 	ldb	#-1	;,
 	stb	2,s	;, i
 	bra	L35	;
 L36:
 ;----- asm -----
-; 624 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[460]drawlives(i * 20);
+; 632 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[468]drawlives(i * 20);
 ;--- end asm ---
 	ldb	2,s	;, i
 	lda	#20	;mulqihi3	;
 	mul
 	std	,s	;,
-	ldb	1,s	;movlsbqihi: msb:,s -> R:b	; D.3350,
+	ldb	1,s	;movlsbqihi: msb:,s -> R:b	; D.3366,
 	jsr	_drawLives
 	inc	2,s	; i
 L35:
 	ldb	_lives	; lives.28, lives
-	decb	; D.3352
-	cmpb	2,s	;cmpqi:	; D.3352, i
+	decb	; D.3368
+	cmpb	2,s	;cmpqi:	; D.3368, i
 	bgt	L36	;
 	leas	3,s	;,,
 	rts
@@ -481,67 +518,67 @@ L35:
 _renderScore:
 	leas	-4,s	;,,
 ;----- asm -----
-; 631 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[466]for(int i = 0; i < levelhighscore; i++)
+; 639 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[474]for(int i = 0; i < levelhighscore; i++)
 ;--- end asm ---
 	clr	2,s	; i
 	lbra	L39	;
 L42:
 ;----- asm -----
-; 636 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[470]reset0ref();
+; 644 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[478]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 639 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[472]via_t1_cnt_lo = 0xff;
+; 647 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[480]via_t1_cnt_lo = 0xff;
 ;--- end asm ---
 	ldb	#-1	;,
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 ;----- asm -----
-; 641 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[473]moveto_d(-70, (-60 + (i*15)));
+; 649 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[481]moveto_d(-70, (-60 + (i*15)));
 ;--- end asm ---
 	ldb	2,s	;, i
 	lda	#15	;mulqihi3	;
 	mul
 	std	,s	;,
-	ldb	1,s	;movlsbqihi: msb:,s -> R:b	; D.3359,
-	addb	#-60	; D.3360,
-	stb	3,s	; D.3360, b
+	ldb	1,s	;movlsbqihi: msb:,s -> R:b	; D.3375,
+	addb	#-60	; D.3376,
+	stb	3,s	; D.3376, b
 	ldb	#-70	;,
 	stb	,-s	;,
 	ldb	4,s	;, b
 	jsr	__Moveto_d
 	leas	1,s	;,,
 ;----- asm -----
-; 644 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[475]if(fishsizes[i] == 0)
+; 652 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[483]if(fishsizes[i] == 0)
 ;--- end asm ---
 	ldb	2,s	; i.29, i
 	sex		;extendqihi2: R:b -> R:d	; i.29,
 	tfr	d,x	;, tmp33
-	ldb	_FishSizes,x	; D.3362, FishSizes
-	tstb	; D.3362
+	ldb	_FishSizes,x	; D.3378, FishSizes
+	tstb	; D.3378
 	bne	L40	;
 ;----- asm -----
-; 647 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[477]via_t1_cnt_lo = 0x80;
+; 655 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[485]via_t1_cnt_lo = 0x80;
 ;--- end asm ---
 	ldb	#-128	;,
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 	bra	L41	;
 L40:
 ;----- asm -----
-; 652 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[481]via_t1_cnt_lo = 0xf0;
+; 660 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[489]via_t1_cnt_lo = 0xf0;
 ;--- end asm ---
 	ldb	#-16	;,
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 L41:
 ;----- asm -----
-; 656 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[484]draw_vlc((void*) fishsymbol);
+; 664 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[492]draw_vlc((void*) fishsymbol);
 ;--- end asm ---
 	ldx	#_FishSymbol	;,
 	jsr	___Draw_VLc
@@ -556,25 +593,25 @@ L39:
 _drawBottom:
 	leas	-5,s	;,,
 ;----- asm -----
-; 664 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[491]via_t1_cnt_lo = drawscalescreen;
+; 672 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[499]via_t1_cnt_lo = drawscalescreen;
 ;--- end asm ---
 	ldb	_drawScaleScreen	; drawScaleScreen.31, drawScaleScreen
 	stb	_VIA_t1_cnt_lo	; drawScaleScreen.31, VIA_t1_cnt_lo
 ;----- asm -----
-; 666 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[492]reset0ref();
+; 674 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[500]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 668 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[493]moveto_d(-screenmaxfromcentre, courtmaxwidthfromcentre);
+; 676 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[501]moveto_d(-screenmaxfromcentre, courtmaxwidthfromcentre);
 ;--- end asm ---
 	ldb	_courtMaxWidthFromCentre	;, courtMaxWidthFromCentre
 	stb	1,s	;, courtMaxWidthFromCentre.32
 	ldb	_screenMaxFromCentre	; screenMaxFromCentre.33, screenMaxFromCentre
-	negb	; D.3373
-	stb	3,s	; D.3373, a
+	negb	; D.3389
+	stb	3,s	; D.3389, a
 	ldb	1,s	;, courtMaxWidthFromCentre.32
 	stb	2,s	;, b
 	ldb	3,s	;, a
@@ -583,17 +620,17 @@ _drawBottom:
 	jsr	__Moveto_d
 	leas	1,s	;,,
 ;----- asm -----
-; 670 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[494]draw_line_d(0, -2 * courtmaxwidthfromcentre);
+; 678 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[502]draw_line_d(0, -2 * courtmaxwidthfromcentre);
 ;--- end asm ---
 	ldb	_courtMaxWidthFromCentre	; courtMaxWidthFromCentre.34, courtMaxWidthFromCentre
 	stb	,s	; courtMaxWidthFromCentre.34,
 	ldb	,s	; tmp34,
 	aslb	; tmp34
 	stb	,s	; tmp34,
-	ldb	,s	; D.3375,
-	negb	; D.3375
-	stb	4,s	; D.3375, b
+	ldb	,s	; D.3391,
+	negb	; D.3391
+	stb	4,s	; D.3391, b
 	clr	,-s	;
 	ldb	5,s	;, b
 	jsr	__Draw_Line_d
@@ -605,34 +642,34 @@ _PressButtonsToReelIn:
 	pshs	u	;
 	leas	-5,s	;,,
 ;----- asm -----
-; 676 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[499]if (hook_ypos>=120)
+; 684 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[507]if (hook_ypos>=120)
 ;--- end asm ---
 	ldb	_hook_yPos	; hook_yPos.35, hook_yPos
 	cmpb	#119	;cmpqi:	; hook_yPos.35,
 	ble	L47	;
 ;----- asm -----
-; 679 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[501]hook_ypos = 120;
+; 687 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[509]hook_ypos = 120;
 ;--- end asm ---
 	ldb	#120	;,
 	stb	_hook_yPos	;, hook_yPos
 ;----- asm -----
-; 681 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[502]gamestate = success;
+; 689 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[510]gamestate = success;
 ;--- end asm ---
 	ldb	#3	;,
 	stb	_GameState	;, GameState
 ;----- asm -----
-; 683 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[503]foundfish = random() % 4;
+; 691 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[511]foundfish = random() % 4;
 ;--- end asm ---
 	jsr	__Random
 	andb	#3	; foundFish.36,
 	stb	_foundFish	; foundFish.36, foundFish
 ;----- asm -----
-; 685 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[504]if(fishsize > 0)
+; 693 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[512]if(fishsize > 0)
 ;--- end asm ---
 	ldb	_fishSize	; fishSize.37, fishSize
 	tstb	; fishSize.37
@@ -642,34 +679,34 @@ _PressButtonsToReelIn:
 	stb	_foundFish	; foundFish.39, foundFish
 L48:
 ;----- asm -----
-; 688 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[506]wait(127);
+; 696 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[514]wait(127);
 ;--- end asm ---
 	ldb	#127	;,
 	stb	_waitTimer	;, waitTimer
 ;----- asm -----
-; 690 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[507]return;
+; 698 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[515]return;
 ;--- end asm ---
 	lbra	L51	;
 L47:
 ;----- asm -----
-; 694 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[510]if (vec_buttons & 1)
+; 702 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[518]if (vec_buttons & 1)
 ;--- end asm ---
 	ldb	_Vec_Buttons	; Vec_Buttons.40, Vec_Buttons
-	andb	#1	; D.3391,
-	tstb	; D.3392
+	andb	#1	; D.3407,
+	tstb	; D.3408
 	beq	L51	;
 ;----- asm -----
-; 697 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[512]unsigned int modulo = 10;
+; 705 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[520]unsigned int modulo = 10;
 ;--- end asm ---
 	ldb	#10	;,
 	stb	3,s	;, modulo
 ;----- asm -----
-; 699 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[513]if(hook_ypos < 0)
+; 707 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[521]if(hook_ypos < 0)
 ;--- end asm ---
 	ldb	_hook_yPos	; hook_yPos.42, hook_yPos
 	tstb	; hook_yPos.42
@@ -678,11 +715,11 @@ L47:
 	stb	3,s	;, modulo
 L50:
 ;----- asm -----
-; 703 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[516]unsigned int power = random() % modulo;
+; 711 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[524]unsigned int power = random() % modulo;
 ;--- end asm ---
 	jsr	__Random
-	clra		;zero_extendqihi: R:b -> R:d	; D.3394,
+	clra		;zero_extendqihi: R:b -> R:d	; D.3410,
 	tfr	d,x	;, tmp47
 	ldb	3,s	;, modulo
 	clra		;zero_extendqihi: R:b -> R:d	;,
@@ -694,8 +731,8 @@ L50:
 	tfr	x,d	;, tmp49
 	stb	4,s	;movlsbqihi: R:d -> 4,s	; power, tmp49
 ;----- asm -----
-; 705 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[517]hook_ypos += (signed)power;
+; 713 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[525]hook_ypos += (signed)power;
 ;--- end asm ---
 	ldb	_hook_yPos	;, hook_yPos
 	stb	2,s	;, hook_yPos.43
@@ -750,20 +787,20 @@ _catchingMinigame:
 	pshs	u	;
 	leas	-5,s	;,,
 ;----- asm -----
-; 715 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[526]if(gamestate == success)
+; 723 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[534]if(gamestate == success)
 ;--- end asm ---
 	ldb	_GameState	; GameState.46, GameState
 	cmpb	#3	;cmpqi:	; GameState.46,
 	lbne	L53	;
 ;----- asm -----
-; 718 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[528]reset0ref();
+; 726 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[536]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 721 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[530]switch(foundfish)
+; 729 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[538]switch(foundfish)
 ;--- end asm ---
 	ldb	_foundFish	;, foundFish
 	stb	3,s	;, foundFish.47
@@ -790,8 +827,8 @@ L62:
 	.word	L61
 L55:
 ;----- asm -----
-; 726 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[533]print_str_d(texty,textx, );
+; 734 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[541]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -800,14 +837,14 @@ L55:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 728 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[534]break;
+; 736 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[542]break;
 ;--- end asm ---
 	lbra	L63	;
 L56:
 ;----- asm -----
-; 732 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[536]print_str_d(texty,textx, );
+; 740 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[544]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -816,14 +853,14 @@ L56:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 734 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[537]break;
+; 742 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[545]break;
 ;--- end asm ---
 	lbra	L63	;
 L57:
 ;----- asm -----
-; 738 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[539]print_str_d(texty,textx, );
+; 746 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[547]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -832,14 +869,14 @@ L57:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 740 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[540]break;
+; 748 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[548]break;
 ;--- end asm ---
 	lbra	L63	;
 L58:
 ;----- asm -----
-; 744 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[542]print_str_d(texty,textx, );
+; 752 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[550]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -848,14 +885,14 @@ L58:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 746 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[543]break;
+; 754 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[551]break;
 ;--- end asm ---
 	lbra	L63	;
 L59:
 ;----- asm -----
-; 750 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[545]print_str_d(texty,textx, );
+; 758 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[553]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -864,14 +901,14 @@ L59:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 752 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[546]break;
+; 760 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[554]break;
 ;--- end asm ---
 	lbra	L63	;
 L60:
 ;----- asm -----
-; 756 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[548]print_str_d(texty,textx, );
+; 764 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[556]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -880,14 +917,14 @@ L60:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 758 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[549]break;
+; 766 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[557]break;
 ;--- end asm ---
 	bra	L63	;
 L61:
 ;----- asm -----
-; 762 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[551]print_str_d(texty,textx, );
+; 770 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[559]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -896,14 +933,14 @@ L61:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 764 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[552]break;
+; 772 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[560]break;
 ;--- end asm ---
 	bra	L63	;
 L54:
 ;----- asm -----
-; 768 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[554]print_str_d(texty,textx, );
+; 776 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[562]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -912,20 +949,20 @@ L54:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 770 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[555]break;
+; 778 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[563]break;
 ;--- end asm ---
 L63:
 ;----- asm -----
-; 778 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[562]if(waittimer > 0)
+; 786 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[570]if(waittimer > 0)
 ;--- end asm ---
 	ldb	_waitTimer	; waitTimer.48, waitTimer
 	tstb	; waitTimer.48
 	beq	L64	;
 ;----- asm -----
-; 781 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[564]waittimer--;
+; 789 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[572]waittimer--;
 ;--- end asm ---
 	ldb	_waitTimer	; waitTimer.49, waitTimer
 	decb	; waitTimer.50
@@ -933,28 +970,28 @@ L63:
 	lbra	L71	;
 L64:
 ;----- asm -----
-; 786 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[568]gamestate = hunting;
+; 794 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[576]gamestate = hunting;
 ;--- end asm ---
 	clr	_GameState	; GameState
 ;----- asm -----
-; 788 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[569]fishiscaught = 0;
+; 796 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[577]fishiscaught = 0;
 ;--- end asm ---
 	clr	_fishIsCaught	; fishIsCaught
 ;----- asm -----
-; 790 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[570]hook_ypos = 0;
+; 798 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[578]hook_ypos = 0;
 ;--- end asm ---
 	clr	_hook_yPos	; hook_yPos
 ;----- asm -----
-; 792 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[571]hook_xpos = 0;
+; 800 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[579]hook_xpos = 0;
 ;--- end asm ---
 	clr	_hook_xPos	; hook_xPos
 ;----- asm -----
-; 794 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[572]fishsizes[levelhighscore] = fishsize;
+; 802 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[580]fishsizes[levelhighscore] = fishsize;
 ;--- end asm ---
 	ldb	_levelHighscore	;, levelHighscore
 	stb	2,s	;, levelHighscore.51
@@ -966,8 +1003,8 @@ L64:
 	ldb	4,s	;, fishSize.52
 	stb	_FishSizes,x	;, FishSizes
 ;----- asm -----
-; 796 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[573]if(levelhighscore < 10)
+; 804 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[581]if(levelhighscore < 10)
 ;--- end asm ---
 	ldb	_levelHighscore	; levelHighscore.53, levelHighscore
 	cmpb	#9	;cmpqi:	; levelHighscore.53,
@@ -981,13 +1018,13 @@ L53:
 	cmpb	#2	;cmpqi:	; GameState.56,
 	lbne	L67	;
 ;----- asm -----
-; 803 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[579]reset0ref();
+; 811 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[587]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 805 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[580]print_str_d(texty,textx, );
+; 813 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[588]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -996,20 +1033,20 @@ L53:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 807 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[581]if(waittimer > 0)
+; 815 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[589]if(waittimer > 0)
 ;--- end asm ---
 	ldb	_waitTimer	; waitTimer.57, waitTimer
 	tstb	; waitTimer.57
 	beq	L68	;
 ;----- asm -----
-; 810 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[583]pressbuttonstoreelin();
+; 818 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[591]pressbuttonstoreelin();
 ;--- end asm ---
 	jsr	_PressButtonsToReelIn
 ;----- asm -----
-; 812 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[584]waittimer--;
+; 820 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[592]waittimer--;
 ;--- end asm ---
 	ldb	_waitTimer	; waitTimer.58, waitTimer
 	decb	; waitTimer.59
@@ -1020,40 +1057,40 @@ L68:
 	cmpb	#3	;cmpqi:	; GameState.60,
 	lbeq	L71	;
 ;----- asm -----
-; 817 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[588]gamestate = hunting;
+; 825 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[596]gamestate = hunting;
 ;--- end asm ---
 	clr	_GameState	; GameState
 ;----- asm -----
-; 819 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[589]fishiscaught = 0;
+; 827 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[597]fishiscaught = 0;
 ;--- end asm ---
 	clr	_fishIsCaught	; fishIsCaught
 ;----- asm -----
-; 821 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[590]lives--;
+; 829 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[598]lives--;
 ;--- end asm ---
 	ldb	_lives	; lives.61, lives
 	decb	; lives.62
 	stb	_lives	; lives.62, lives
 ;----- asm -----
-; 823 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[591]if(lives <= 0)
+; 831 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[599]if(lives <= 0)
 ;--- end asm ---
 	ldb	_lives	; lives.63, lives
 	tstb	; lives.63
 	lbgt	L71	;
 ;----- asm -----
-; 826 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[593]gamestate = lose;
+; 834 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[601]gamestate = lose;
 ;--- end asm ---
 	ldb	#4	;,
 	stb	_GameState	;, GameState
 	lbra	L71	;
 L67:
 ;----- asm -----
-; 833 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[599]if (waittimer > 0 && gamestate == waiting)
+; 841 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[607]if (waittimer > 0 && gamestate == waiting)
 ;--- end asm ---
 	ldb	_waitTimer	; waitTimer.64, waitTimer
 	tstb	; waitTimer.64
@@ -1062,13 +1099,13 @@ L67:
 	cmpb	#1	;cmpqi:	; GameState.65,
 	bne	L70	;
 ;----- asm -----
-; 836 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[601]reset0ref();
+; 844 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[609]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 838 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[602]print_str_d(texty,textx, );
+; 846 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[610]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -1077,8 +1114,8 @@ L67:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 840 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[603]waittimer--;
+; 848 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[611]waittimer--;
 ;--- end asm ---
 	ldb	_waitTimer	; waitTimer.66, waitTimer
 	decb	; waitTimer.67
@@ -1086,14 +1123,14 @@ L67:
 	bra	L71	;
 L70:
 ;----- asm -----
-; 845 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[607]gamestate = reeling;
+; 853 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[615]gamestate = reeling;
 ;--- end asm ---
 	ldb	#2	;,
 	stb	_GameState	;, GameState
 ;----- asm -----
-; 847 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[608]wait(200);
+; 855 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[616]wait(200);
 ;--- end asm ---
 	ldb	#-56	;,
 	stb	_waitTimer	;, waitTimer
@@ -1103,39 +1140,39 @@ L71:
 	.globl	_resetGame
 _resetGame:
 ;----- asm -----
-; 855 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[615]hook_ypos = 0;
+; 863 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[623]hook_ypos = 0;
 ;--- end asm ---
 	clr	_hook_yPos	; hook_yPos
 ;----- asm -----
-; 857 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[616]hook_xpos = 0;
+; 865 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[624]hook_xpos = 0;
 ;--- end asm ---
 	clr	_hook_xPos	; hook_xPos
 ;----- asm -----
-; 859 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[617]fishiscaught = 0;
+; 867 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[625]fishiscaught = 0;
 ;--- end asm ---
 	clr	_fishIsCaught	; fishIsCaught
 ;----- asm -----
-; 861 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[618]waittimer = 0;
+; 869 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[626]waittimer = 0;
 ;--- end asm ---
 	clr	_waitTimer	; waitTimer
 ;----- asm -----
-; 863 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[619]gamestate = hunting;
+; 871 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[627]gamestate = hunting;
 ;--- end asm ---
 	clr	_GameState	; GameState
 ;----- asm -----
-; 865 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[620]lives = 3;
+; 873 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[628]lives = 3;
 ;--- end asm ---
 	ldb	#3	;,
 	stb	_lives	;, lives
 ;----- asm -----
-; 867 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[621]levelhighscore = 0;
+; 875 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[629]levelhighscore = 0;
 ;--- end asm ---
 	clr	_levelHighscore	; levelHighscore
 	rts
@@ -1146,91 +1183,132 @@ LC10:
 	.byte	0
 	.globl	_main
 _main:
+	pshs	u	;
 	leas	-5,s	;,,
 ;----- asm -----
-; 875 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[628]unsigned char i;
-; 877 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[629]resetgame();
+; 883 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[636]unsigned char i;
+; 885 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[637]resetgame();
 ;--- end asm ---
 	jsr	_resetGame
 ;----- asm -----
-; 880 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[631]setup();
+; 888 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[639]setup();
 ;--- end asm ---
 	jsr	_setup
 ;----- asm -----
-; 882 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[632]init_new_game();
+; 890 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[640]init_new_game();
 ;--- end asm ---
 	jsr	_init_new_game
 ;----- asm -----
-; 886 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[635]while(1)
+; 894 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[643]while(1)
 ;--- end asm ---
-L81:
+L83:
 ;----- asm -----
-; 889 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[637]via_t1_cnt_lo = max_scale;
+; 897 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[645]via_t1_cnt_lo = max_scale;
 ;--- end asm ---
 	ldb	#-16	;,
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 ;----- asm -----
-; 892 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[639]read_btns();
+; 900 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[647]read_btns();
 ;--- end asm ---
 	jsr	___Read_Btns
 ;----- asm -----
-; 895 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[641]wait_recal();
+; 905 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[651]wait_recal();
 ;--- end asm ---
 	jsr	___Wait_Recal
 ;----- asm -----
-; 897 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[642]intensity_a(0x5f);
+; 908 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[653]do_sound();
+;--- end asm ---
+	jsr	__Do_Sound
+;----- asm -----
+; 911 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[655]if ( button_1_1_pressed() != 0)
+;--- end asm ---
+	jsr	_button_1_1_pressed
+	tstb	; D.3492
+	beq	L75	;
+;----- asm -----
+; 914 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[657]sfx_pointer_1 = (long unsigned int) (&testsound1_data);
+;--- end asm ---
+	ldx	#_TestSound1_data	; TestSound1_data.68,
+	stx	_sfx_pointer_1	; TestSound1_data.68, sfx_pointer_1
+;----- asm -----
+; 916 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[658]sfx_status_1 = 1;
+;--- end asm ---
+	ldb	#1	;,
+	stb	_sfx_status_1	;, sfx_status_1
+L75:
+;----- asm -----
+; 919 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[660]if (sfx_status_1 == 1)
+;--- end asm ---
+	ldb	_sfx_status_1	; sfx_status_1.69, sfx_status_1
+	cmpb	#1	;cmpqi:	; sfx_status_1.69,
+	bne	L76	;
+;----- asm -----
+; 922 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[662]ayfx_sound1();
+; 81 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\include/ayfxPlayer.h" 1
+	jsr sfx_doframe_intern_1; DO_SFX1
+	
+;--- end asm ---
+L76:
+;----- asm -----
+; 926 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[665]intensity_a(0x5f);
 ;--- end asm ---
 	ldb	#95	;,
 	jsr	__Intensity_a
 ;----- asm -----
-; 900 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[644]fishgame();
+; 929 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[667]fishgame();
 ;--- end asm ---
 	jsr	_FishGame
 ;----- asm -----
-; 902 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[645]drawwater();
+; 931 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[668]drawwater();
 ;--- end asm ---
 	jsr	_drawWater
 ;----- asm -----
-; 904 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[646]drawbottom();
+; 933 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[669]drawbottom();
 ;--- end asm ---
 	jsr	_drawBottom
 ;----- asm -----
-; 906 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[647]renderlives();
+; 935 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[670]renderlives();
 ;--- end asm ---
 	jsr	_renderLives
 ;----- asm -----
-; 908 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[648]renderscore();
+; 937 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[671]renderscore();
 ;--- end asm ---
 	jsr	_renderScore
 ;----- asm -----
-; 911 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[650]if(gamestate == lose)
+; 940 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[673]if(gamestate == lose)
 ;--- end asm ---
-	ldb	_GameState	; GameState.68, GameState
-	cmpb	#4	;cmpqi:	; GameState.68,
-	bne	L75	;
+	ldb	_GameState	; GameState.70, GameState
+	cmpb	#4	;cmpqi:	; GameState.70,
+	bne	L77	;
 ;----- asm -----
-; 914 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[652]reset0ref();
+; 943 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[675]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 916 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[653]print_str_d(texty,textx, );
+; 945 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[676]print_str_d(texty,textx, );
 ;--- end asm ---
 	ldb	#-100	;,
 	stb	,-s	;,
@@ -1239,180 +1317,180 @@ L81:
 	jsr	__Print_Str_d
 	leas	1,s	;,,
 ;----- asm -----
-; 918 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[654]if (vec_buttons & 8)
+; 947 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[677]if (vec_buttons & 8)
 ;--- end asm ---
-	ldb	_Vec_Buttons	; Vec_Buttons.69, Vec_Buttons
-	andb	#8	; D.3478,
-	tstb	; D.3478
-	lbeq	L81	;
+	ldb	_Vec_Buttons	; Vec_Buttons.71, Vec_Buttons
+	andb	#8	; D.3497,
+	tstb	; D.3497
+	lbeq	L83	;
 ;----- asm -----
-; 921 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[656]resetgame();
+; 950 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[679]resetgame();
 ;--- end asm ---
 	jsr	_resetGame
-	lbra	L81	;
-L75:
+	lbra	L83	;
+L77:
 ;----- asm -----
-; 928 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[662]if(fishiscaught == 0){
+; 957 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[685]if(fishiscaught == 0){
 ;--- end asm ---
-	ldb	_fishIsCaught	; fishIsCaught.70, fishIsCaught
-	tstb	; fishIsCaught.70
-	lbne	L78	;
+	ldb	_fishIsCaught	; fishIsCaught.72, fishIsCaught
+	tstb	; fishIsCaught.72
+	lbne	L80	;
 ;----- asm -----
-; 930 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[663]for (i=0; i < fishes; i++)
+; 959 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[686]for (i=0; i < fishes; i++)
 ;--- end asm ---
 	clr	4,s	; i
-	lbra	L79	;
-L80:
+	lbra	L81	;
+L82:
 ;----- asm -----
-; 933 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[665]do_fish(&current_fishes[i]);
+; 962 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[688]do_fish(&current_fishes[i]);
 ;--- end asm ---
 	ldb	4,s	;, i
 	clra		;zero_extendqihi: R:b -> R:d	;,
-	tfr	d,x	;, D.3480
-	stx	2,s	; D.3480,
-	ldd	2,s	; tmp40,
+	tfr	d,x	;, D.3499
+	stx	2,s	; D.3499,
+	ldd	2,s	; tmp43,
 	aslb	;
 	rola	;
-	std	2,s	; tmp40,
+	std	2,s	; tmp43,
 	ldd	2,s	;,
-	leax	d,x	;,, D.3480
+	leax	d,x	;,, D.3499
 	stx	2,s	;,
-	ldd	2,s	; tmp41,
+	ldd	2,s	; tmp44,
 	aslb	;
 	rola	;
-	std	2,s	; tmp41,
-	ldx	2,s	; D.3481,
-	leax	_current_fishes,x	; D.3482,, D.3481
+	std	2,s	; tmp44,
+	ldx	2,s	; D.3500,
+	leax	_current_fishes,x	; D.3501,, D.3500
 	jsr	_do_fish
 ;----- asm -----
-; 935 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[666]fishcollision(&current_fishes[i]);
+; 964 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[689]fishcollision(&current_fishes[i]);
 ;--- end asm ---
 	ldb	4,s	;, i
 	clra		;zero_extendqihi: R:b -> R:d	;,
-	tfr	d,x	;, D.3483
-	stx	,s	; D.3483,
-	ldd	,s	; tmp43,
+	tfr	d,x	;, D.3502
+	stx	,s	; D.3502,
+	ldd	,s	; tmp46,
 	aslb	;
 	rola	;
-	std	,s	; tmp43,
+	std	,s	; tmp46,
 	ldd	,s	;,
-	leax	d,x	;,, D.3483
+	leax	d,x	;,, D.3502
 	stx	,s	;,
-	ldd	,s	; tmp44,
+	ldd	,s	; tmp47,
 	aslb	;
 	rola	;
-	std	,s	; tmp44,
-	ldx	,s	; D.3484,
-	leax	_current_fishes,x	; D.3485,, D.3484
+	std	,s	; tmp47,
+	ldx	,s	; D.3503,
+	leax	_current_fishes,x	; D.3504,, D.3503
 	jsr	_fishCollision
 	inc	4,s	; i
-L79:
+L81:
 	ldb	4,s	;, i
 	cmpb	#2	;cmpqi:	;,
-	lbls	L80	;
-	lbra	L81	;
-L78:
+	lbls	L82	;
+	lbra	L83	;
+L80:
 ;----- asm -----
-; 940 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[670]catchingminigame();
+; 969 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[693]catchingminigame();
 ;--- end asm ---
 	jsr	_catchingMinigame
-	lbra	L81	;
+	lbra	L83	;
 _fishCollision:
 	leas	-10,s	;,,
 	stx	8,s	; current_fish, current_fish
 ;----- asm -----
-; 248 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[218]if(current_fish->y >= (hook_ypos - paddleheight) && current_fish->y <= (hook_ypos - paddleheight + 4)
+; 256 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[226]if(current_fish->y >= (hook_ypos - paddleheight) && current_fish->y <= (hook_ypos - paddleheight + 4)
 ;--- end asm ---
 	ldx	8,s	; tmp46, current_fish
 	ldb	5,x	;, <variable>.y
-	stb	,s	;, D.3159
+	stb	,s	;, D.3175
 	ldb	_hook_yPos	;, hook_yPos
 	stb	1,s	;, hook_yPos.2
 	ldb	_paddleHeight	; paddleHeight.3, paddleHeight
-	subb	1,s	; D.3162, hook_yPos.2
-	negb	; D.3162
-	cmpb	,s	;cmpqi:(R)	; D.3162, D.3159
-	lbgt	L84	;
+	subb	1,s	; D.3178, hook_yPos.2
+	negb	; D.3178
+	cmpb	,s	;cmpqi:(R)	; D.3178, D.3175
+	lbgt	L86	;
 	ldx	8,s	; tmp47, current_fish
 	ldb	5,x	;, <variable>.y
-	stb	2,s	;, D.3163
+	stb	2,s	;, D.3179
 	ldb	_hook_yPos	;, hook_yPos
 	stb	3,s	;, hook_yPos.4
 	ldb	_paddleHeight	; paddleHeight.5, paddleHeight
-	subb	3,s	; D.3166, hook_yPos.4
-	negb	; D.3166
-	addb	#4	; D.3167,
-	cmpb	2,s	;cmpqi:(R)	; D.3167, D.3163
-	lblt	L84	;
+	subb	3,s	; D.3182, hook_yPos.4
+	negb	; D.3182
+	addb	#4	; D.3183,
+	cmpb	2,s	;cmpqi:(R)	; D.3183, D.3179
+	lblt	L86	;
 	ldx	8,s	; tmp48, current_fish
 	ldb	4,x	;, <variable>.x
-	stb	4,s	;, D.3168
+	stb	4,s	;, D.3184
 	ldb	_hook_xPos	;, hook_xPos
 	stb	5,s	;, hook_xPos.6
 	ldb	_paddleWidth	; paddleWidth.7, paddleWidth
-	addb	5,s	; D.3171, hook_xPos.6
-	cmpb	4,s	;cmpqi:(R)	; D.3171, D.3168
-	lblt	L84	;
+	addb	5,s	; D.3187, hook_xPos.6
+	cmpb	4,s	;cmpqi:(R)	; D.3187, D.3184
+	lblt	L86	;
 	ldx	8,s	; tmp49, current_fish
 	ldb	4,x	;, <variable>.x
-	stb	6,s	;, D.3172
+	stb	6,s	;, D.3188
 	ldb	_hook_xPos	;, hook_xPos
 	stb	7,s	;, hook_xPos.8
 	ldb	_paddleWidth	; paddleWidth.9, paddleWidth
-	subb	7,s	; D.3175, hook_xPos.8
-	negb	; D.3175
-	cmpb	6,s	;cmpqi:(R)	; D.3175, D.3172
-	bgt	L84	;
+	subb	7,s	; D.3191, hook_xPos.8
+	negb	; D.3191
+	cmpb	6,s	;cmpqi:(R)	; D.3191, D.3188
+	bgt	L86	;
 ;----- asm -----
-; 253 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[222]if(fishiscaught == 0)
+; 261 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[230]if(fishiscaught == 0)
 ;--- end asm ---
 	ldb	_fishIsCaught	; fishIsCaught.10, fishIsCaught
 	tstb	; fishIsCaught.10
-	bne	L84	;
+	bne	L86	;
 ;----- asm -----
-; 256 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[224]fishiscaught = 1;
+; 264 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[232]fishiscaught = 1;
 ;--- end asm ---
 	ldb	#1	;,
 	stb	_fishIsCaught	;, fishIsCaught
 ;----- asm -----
-; 258 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[225]gamestate = waiting;
+; 266 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[233]gamestate = waiting;
 ;--- end asm ---
 	ldb	#1	;,
 	stb	_GameState	;, GameState
 ;----- asm -----
-; 261 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[227]if(hook_ypos >= 0) fishsize = 0;
+; 269 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[235]if(hook_ypos >= 0) fishsize = 0;
 ;--- end asm ---
 	ldb	_hook_yPos	; hook_yPos.11, hook_yPos
 	tstb	; hook_yPos.11
-	blt	L85	;
+	blt	L87	;
 	clr	_fishSize	; fishSize
-	bra	L86	;
-L85:
+	bra	L88	;
+L87:
 	ldb	#1	;,
 	stb	_fishSize	;, fishSize
-L86:
+L88:
 ;----- asm -----
-; 265 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[230]wait(127);
+; 273 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[238]wait(127);
 ;--- end asm ---
 	ldb	#127	;,
 	stb	_waitTimer	;, waitTimer
-L84:
+L86:
 ;----- asm -----
-; 269 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[233]return;
+; 277 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[241]return;
 ;--- end asm ---
 	leas	10,s	;,,
 	rts
@@ -1421,579 +1499,579 @@ _do_fish:
 	leas	-20,s	;,,
 	stx	16,s	; current_fish, current_fish
 ;----- asm -----
-; 281 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[244]reset0ref();
+; 289 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[252]reset0ref();
 ;--- end asm ---
 	jsr	___Reset0Ref
 ;----- asm -----
-; 283 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[245]if (current_fish->fish_counter > 0)
+; 291 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[253]if (current_fish->fish_counter > 0)
 ;--- end asm ---
-	ldb	[16,s]	; D.3205, <variable>.fish_counter
-	tstb	; D.3205
-	ble	L89	;
+	ldb	[16,s]	; D.3221, <variable>.fish_counter
+	tstb	; D.3221
+	ble	L91	;
 ;----- asm -----
-; 286 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[247]current_fish->fish_counter--;
+; 294 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[255]current_fish->fish_counter--;
 ;--- end asm ---
-	ldb	[16,s]	; D.3206, <variable>.fish_counter
-	decb	; D.3207
-	stb	[16,s]	; D.3207, <variable>.fish_counter
+	ldb	[16,s]	; D.3222, <variable>.fish_counter
+	decb	; D.3223
+	stb	[16,s]	; D.3223, <variable>.fish_counter
 ;----- asm -----
-; 288 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[248]if (current_fish->fish_counter == 0)
+; 296 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[256]if (current_fish->fish_counter == 0)
 ;--- end asm ---
-	ldb	[16,s]	; D.3208, <variable>.fish_counter
-	tstb	; D.3208
-	bne	L90	;
+	ldb	[16,s]	; D.3224, <variable>.fish_counter
+	tstb	; D.3224
+	bne	L92	;
 ;----- asm -----
-; 291 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[250]init_fish(current_fish);
+; 299 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[258]init_fish(current_fish);
 ;--- end asm ---
 	ldx	16,s	;, current_fish
 	jsr	_init_fish
-L90:
+L92:
 ;----- asm -----
-; 294 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[252]return;
+; 302 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[260]return;
 ;--- end asm ---
-	lbra	L115	;
-L89:
+	lbra	L117	;
+L91:
 ;----- asm -----
-; 299 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[256]switch (current_fish->direction)
+; 307 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[264]switch (current_fish->direction)
 ;--- end asm ---
 	ldx	16,s	; tmp82, current_fish
 	ldb	1,x	;, <variable>.direction
-	stb	2,s	;, D.3209
-	ldb	2,s	;, D.3209
+	stb	2,s	;, D.3225
+	ldb	2,s	;, D.3225
 	cmpb	#7	;cmpqi:	;,
-	lbhi	L92	;
-	ldb	2,s	;, D.3209
+	lbhi	L94	;
+	ldb	2,s	;, D.3225
 	clra		;zero_extendqihi: R:b -> R:d	;,
 	std	,s	;,
 	ldd	,s	; tmp84,
 	aslb	;
 	rola	;
-	ldu	#L101	;,
+	ldu	#L103	;,
 	leax	d,u	; tmp85, tmp84,
 	ldx	,x	; tmp86,
 	jmp	,x	; tmp86
-L101:
-	.word	L93
-	.word	L94
+L103:
 	.word	L95
 	.word	L96
 	.word	L97
 	.word	L98
 	.word	L99
 	.word	L100
-L93:
+	.word	L101
+	.word	L102
+L95:
 ;----- asm -----
-; 305 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[260]
-; 307 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[261]if ((current_fish->x > 120) || (current_fish->y > 100) )
+; 313 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[268]
+; 315 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[269]if ((current_fish->x > 120) || (current_fish->y > 100) )
 ;--- end asm ---
 	ldx	16,s	; tmp87, current_fish
-	ldb	4,x	; D.3212, <variable>.x
-	cmpb	#120	;cmpqi:	; D.3212,
-	bgt	L102	;
+	ldb	4,x	; D.3228, <variable>.x
+	cmpb	#120	;cmpqi:	; D.3228,
+	bgt	L104	;
 	ldx	16,s	; tmp88, current_fish
-	ldb	5,x	; D.3213, <variable>.y
-	cmpb	#100	;cmpqi:	; D.3213,
-	ble	L103	;
-L102:
+	ldb	5,x	; D.3229, <variable>.y
+	cmpb	#100	;cmpqi:	; D.3229,
+	ble	L105	;
+L104:
 ;----- asm -----
-; 310 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[263]
-; 312 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[264]current_fish->fish_counter = fish_intervall;
+; 318 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[271]
+; 320 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[272]current_fish->fish_counter = fish_intervall;
 ;--- end asm ---
 	ldb	#7	;,
 	stb	[16,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 314 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[265]
-; 316 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[266]return;
+; 322 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[273]
+; 324 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[274]return;
 ;--- end asm ---
-	lbra	L115	;
-L103:
+	lbra	L117	;
+L105:
 ;----- asm -----
-; 319 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[268]current_fish->x += current_fish->speed;
+; 327 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[276]current_fish->x += current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp89, current_fish
 	ldb	4,x	;, <variable>.x
-	stb	3,s	;, D.3214
+	stb	3,s	;, D.3230
 	ldx	16,s	; tmp90, current_fish
-	ldb	2,x	; D.3215, <variable>.speed
-	addb	3,s	; D.3216, D.3214
+	ldb	2,x	; D.3231, <variable>.speed
+	addb	3,s	; D.3232, D.3230
 	ldx	16,s	; tmp91, current_fish
-	stb	4,x	; D.3216, <variable>.x
+	stb	4,x	; D.3232, <variable>.x
 ;----- asm -----
-; 321 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[269]current_fish->y += current_fish->speed;
+; 329 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[277]current_fish->y += current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp92, current_fish
 	ldb	5,x	;, <variable>.y
-	stb	4,s	;, D.3217
+	stb	4,s	;, D.3233
 	ldx	16,s	; tmp93, current_fish
-	ldb	2,x	; D.3218, <variable>.speed
-	addb	4,s	; D.3219, D.3217
+	ldb	2,x	; D.3234, <variable>.speed
+	addb	4,s	; D.3235, D.3233
 	ldx	16,s	; tmp94, current_fish
-	stb	5,x	; D.3219, <variable>.y
+	stb	5,x	; D.3235, <variable>.y
 ;----- asm -----
-; 323 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[270]break;
+; 331 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[278]break;
 ;--- end asm ---
-	lbra	L104	;
-L94:
+	lbra	L106	;
+L96:
 ;----- asm -----
-; 329 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[274]
-; 331 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[275]if (current_fish->x > 120)
+; 337 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[282]
+; 339 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[283]if (current_fish->x > 120)
 ;--- end asm ---
 	ldx	16,s	; tmp95, current_fish
-	ldb	4,x	; D.3220, <variable>.x
-	cmpb	#120	;cmpqi:	; D.3220,
-	ble	L105	;
+	ldb	4,x	; D.3236, <variable>.x
+	cmpb	#120	;cmpqi:	; D.3236,
+	ble	L107	;
 ;----- asm -----
-; 334 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[277]
-; 336 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[278]current_fish->fish_counter = fish_intervall;
+; 342 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[285]
+; 344 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[286]current_fish->fish_counter = fish_intervall;
 ;--- end asm ---
 	ldb	#7	;,
 	stb	[16,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 338 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[279]
-; 340 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[280]return;
+; 346 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[287]
+; 348 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[288]return;
 ;--- end asm ---
-	lbra	L115	;
-L105:
+	lbra	L117	;
+L107:
 ;----- asm -----
-; 343 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[282]
-; 345 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[283]current_fish->x += current_fish->speed;
+; 351 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[290]
+; 353 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[291]current_fish->x += current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp96, current_fish
 	ldb	4,x	;, <variable>.x
-	stb	5,s	;, D.3221
+	stb	5,s	;, D.3237
 	ldx	16,s	; tmp97, current_fish
-	ldb	2,x	; D.3222, <variable>.speed
-	addb	5,s	; D.3223, D.3221
+	ldb	2,x	; D.3238, <variable>.speed
+	addb	5,s	; D.3239, D.3237
 	ldx	16,s	; tmp98, current_fish
-	stb	4,x	; D.3223, <variable>.x
+	stb	4,x	; D.3239, <variable>.x
 ;----- asm -----
-; 347 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[284]break;
+; 355 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[292]break;
 ;--- end asm ---
-	lbra	L104	;
-L95:
+	lbra	L106	;
+L97:
 ;----- asm -----
-; 353 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[288]
-; 355 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[289]if ((current_fish->x > 120) || (current_fish->y < -120) )
+; 361 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[296]
+; 363 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[297]if ((current_fish->x > 120) || (current_fish->y < -120) )
 ;--- end asm ---
 	ldx	16,s	; tmp99, current_fish
-	ldb	4,x	; D.3226, <variable>.x
-	cmpb	#120	;cmpqi:	; D.3226,
-	bgt	L106	;
+	ldb	4,x	; D.3242, <variable>.x
+	cmpb	#120	;cmpqi:	; D.3242,
+	bgt	L108	;
 	ldx	16,s	; tmp100, current_fish
-	ldb	5,x	; D.3227, <variable>.y
-	cmpb	#-120	;cmpqi:	; D.3227,
-	bge	L107	;
-L106:
+	ldb	5,x	; D.3243, <variable>.y
+	cmpb	#-120	;cmpqi:	; D.3243,
+	bge	L109	;
+L108:
 ;----- asm -----
-; 358 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[291]
-; 360 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[292]current_fish->fish_counter = fish_intervall;
+; 366 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[299]
+; 368 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[300]current_fish->fish_counter = fish_intervall;
 ;--- end asm ---
 	ldb	#7	;,
 	stb	[16,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 362 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[293]
-; 364 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[294]return;
+; 370 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[301]
+; 372 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[302]return;
 ;--- end asm ---
-	lbra	L115	;
-L107:
+	lbra	L117	;
+L109:
 ;----- asm -----
-; 367 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[296]
-; 369 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[297]current_fish->x += current_fish->speed;
+; 375 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[304]
+; 377 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[305]current_fish->x += current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp101, current_fish
 	ldb	4,x	;, <variable>.x
-	stb	6,s	;, D.3228
+	stb	6,s	;, D.3244
 	ldx	16,s	; tmp102, current_fish
-	ldb	2,x	; D.3229, <variable>.speed
-	addb	6,s	; D.3230, D.3228
+	ldb	2,x	; D.3245, <variable>.speed
+	addb	6,s	; D.3246, D.3244
 	ldx	16,s	; tmp103, current_fish
-	stb	4,x	; D.3230, <variable>.x
+	stb	4,x	; D.3246, <variable>.x
 ;----- asm -----
-; 371 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[298]current_fish->y -= current_fish->speed;
+; 379 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[306]current_fish->y -= current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp104, current_fish
 	ldb	5,x	;, <variable>.y
-	stb	7,s	;, D.3231
+	stb	7,s	;, D.3247
 	ldx	16,s	; tmp105, current_fish
-	ldb	2,x	; D.3232, <variable>.speed
-	subb	7,s	; D.3233, D.3231
-	negb	; D.3233
+	ldb	2,x	; D.3248, <variable>.speed
+	subb	7,s	; D.3249, D.3247
+	negb	; D.3249
 	ldx	16,s	; tmp106, current_fish
-	stb	5,x	; D.3233, <variable>.y
+	stb	5,x	; D.3249, <variable>.y
 ;----- asm -----
-; 373 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[299]break;
+; 381 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[307]break;
 ;--- end asm ---
-	lbra	L104	;
-L96:
+	lbra	L106	;
+L98:
 ;----- asm -----
-; 379 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[303]
-; 381 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[304]if (current_fish->y < -120)
+; 387 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[311]
+; 389 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[312]if (current_fish->y < -120)
 ;--- end asm ---
 	ldx	16,s	; tmp107, current_fish
-	ldb	5,x	; D.3234, <variable>.y
-	cmpb	#-120	;cmpqi:	; D.3234,
-	bge	L108	;
+	ldb	5,x	; D.3250, <variable>.y
+	cmpb	#-120	;cmpqi:	; D.3250,
+	bge	L110	;
 ;----- asm -----
-; 384 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[306]
-; 386 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[307]current_fish->fish_counter = fish_intervall;
+; 392 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[314]
+; 394 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[315]current_fish->fish_counter = fish_intervall;
 ;--- end asm ---
 	ldb	#7	;,
 	stb	[16,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 388 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[308]
-; 390 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[309]return;
+; 396 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[316]
+; 398 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[317]return;
 ;--- end asm ---
-	lbra	L115	;
-L108:
+	lbra	L117	;
+L110:
 ;----- asm -----
-; 393 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[311]
-; 395 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[312]current_fish->y -= current_fish->speed;
+; 401 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[319]
+; 403 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[320]current_fish->y -= current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp108, current_fish
 	ldb	5,x	;, <variable>.y
-	stb	8,s	;, D.3235
+	stb	8,s	;, D.3251
 	ldx	16,s	; tmp109, current_fish
-	ldb	2,x	; D.3236, <variable>.speed
-	subb	8,s	; D.3237, D.3235
-	negb	; D.3237
+	ldb	2,x	; D.3252, <variable>.speed
+	subb	8,s	; D.3253, D.3251
+	negb	; D.3253
 	ldx	16,s	; tmp110, current_fish
-	stb	5,x	; D.3237, <variable>.y
+	stb	5,x	; D.3253, <variable>.y
 ;----- asm -----
-; 397 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[313]break;
+; 405 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[321]break;
 ;--- end asm ---
-	lbra	L104	;
-L97:
+	lbra	L106	;
+L99:
 ;----- asm -----
-; 403 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[317]
-; 405 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[318]if ((current_fish->x < -120) || (current_fish->y < -120) )
+; 411 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[325]
+; 413 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[326]if ((current_fish->x < -120) || (current_fish->y < -120) )
 ;--- end asm ---
 	ldx	16,s	; tmp111, current_fish
-	ldb	4,x	; D.3240, <variable>.x
-	cmpb	#-120	;cmpqi:	; D.3240,
-	blt	L109	;
+	ldb	4,x	; D.3256, <variable>.x
+	cmpb	#-120	;cmpqi:	; D.3256,
+	blt	L111	;
 	ldx	16,s	; tmp112, current_fish
-	ldb	5,x	; D.3241, <variable>.y
-	cmpb	#-120	;cmpqi:	; D.3241,
-	bge	L110	;
-L109:
+	ldb	5,x	; D.3257, <variable>.y
+	cmpb	#-120	;cmpqi:	; D.3257,
+	bge	L112	;
+L111:
 ;----- asm -----
-; 408 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[320]
-; 410 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[321]current_fish->fish_counter = fish_intervall;
+; 416 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[328]
+; 418 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[329]current_fish->fish_counter = fish_intervall;
 ;--- end asm ---
 	ldb	#7	;,
 	stb	[16,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 412 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[322]
-; 414 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[323]return;
+; 420 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[330]
+; 422 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[331]return;
 ;--- end asm ---
-	lbra	L115	;
-L110:
+	lbra	L117	;
+L112:
 ;----- asm -----
-; 417 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[325]
-; 419 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[326]current_fish->x -= current_fish->speed;
+; 425 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[333]
+; 427 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[334]current_fish->x -= current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp113, current_fish
 	ldb	4,x	;, <variable>.x
-	stb	9,s	;, D.3242
+	stb	9,s	;, D.3258
 	ldx	16,s	; tmp114, current_fish
-	ldb	2,x	; D.3243, <variable>.speed
-	subb	9,s	; D.3244, D.3242
-	negb	; D.3244
+	ldb	2,x	; D.3259, <variable>.speed
+	subb	9,s	; D.3260, D.3258
+	negb	; D.3260
 	ldx	16,s	; tmp115, current_fish
-	stb	4,x	; D.3244, <variable>.x
+	stb	4,x	; D.3260, <variable>.x
 ;----- asm -----
-; 421 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[327]current_fish->y -= current_fish->speed;
+; 429 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[335]current_fish->y -= current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp116, current_fish
 	ldb	5,x	;, <variable>.y
-	stb	10,s	;, D.3245
+	stb	10,s	;, D.3261
 	ldx	16,s	; tmp117, current_fish
-	ldb	2,x	; D.3246, <variable>.speed
-	subb	10,s	; D.3247, D.3245
-	negb	; D.3247
+	ldb	2,x	; D.3262, <variable>.speed
+	subb	10,s	; D.3263, D.3261
+	negb	; D.3263
 	ldx	16,s	; tmp118, current_fish
-	stb	5,x	; D.3247, <variable>.y
+	stb	5,x	; D.3263, <variable>.y
 ;----- asm -----
-; 423 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[328]break;
+; 431 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[336]break;
 ;--- end asm ---
-	lbra	L104	;
-L98:
+	lbra	L106	;
+L100:
 ;----- asm -----
-; 429 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[332]
-; 431 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[333]if (current_fish->x < -120)
+; 437 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[340]
+; 439 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[341]if (current_fish->x < -120)
 ;--- end asm ---
 	ldx	16,s	; tmp119, current_fish
-	ldb	4,x	; D.3248, <variable>.x
-	cmpb	#-120	;cmpqi:	; D.3248,
-	bge	L111	;
+	ldb	4,x	; D.3264, <variable>.x
+	cmpb	#-120	;cmpqi:	; D.3264,
+	bge	L113	;
 ;----- asm -----
-; 434 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[335]
-; 436 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[336]current_fish->fish_counter = fish_intervall;
+; 442 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[343]
+; 444 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[344]current_fish->fish_counter = fish_intervall;
 ;--- end asm ---
 	ldb	#7	;,
 	stb	[16,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 438 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[337]
-; 440 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[338]return;
+; 446 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[345]
+; 448 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[346]return;
 ;--- end asm ---
-	lbra	L115	;
-L111:
+	lbra	L117	;
+L113:
 ;----- asm -----
-; 443 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[340]
-; 445 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[341]current_fish->x -= current_fish->speed;
+; 451 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[348]
+; 453 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[349]current_fish->x -= current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp120, current_fish
 	ldb	4,x	;, <variable>.x
-	stb	11,s	;, D.3249
+	stb	11,s	;, D.3265
 	ldx	16,s	; tmp121, current_fish
-	ldb	2,x	; D.3250, <variable>.speed
-	subb	11,s	; D.3251, D.3249
-	negb	; D.3251
+	ldb	2,x	; D.3266, <variable>.speed
+	subb	11,s	; D.3267, D.3265
+	negb	; D.3267
 	ldx	16,s	; tmp122, current_fish
-	stb	4,x	; D.3251, <variable>.x
+	stb	4,x	; D.3267, <variable>.x
 ;----- asm -----
-; 447 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[342]break;
+; 455 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[350]break;
 ;--- end asm ---
-	lbra	L104	;
-L99:
+	lbra	L106	;
+L101:
 ;----- asm -----
-; 453 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[346]
-; 455 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[347]if ((current_fish->x < -120) || (current_fish->y > 100) )
+; 461 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[354]
+; 463 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[355]if ((current_fish->x < -120) || (current_fish->y > 100) )
 ;--- end asm ---
 	ldx	16,s	; tmp123, current_fish
-	ldb	4,x	; D.3254, <variable>.x
-	cmpb	#-120	;cmpqi:	; D.3254,
-	blt	L112	;
+	ldb	4,x	; D.3270, <variable>.x
+	cmpb	#-120	;cmpqi:	; D.3270,
+	blt	L114	;
 	ldx	16,s	; tmp124, current_fish
-	ldb	5,x	; D.3255, <variable>.y
-	cmpb	#100	;cmpqi:	; D.3255,
-	ble	L113	;
-L112:
+	ldb	5,x	; D.3271, <variable>.y
+	cmpb	#100	;cmpqi:	; D.3271,
+	ble	L115	;
+L114:
 ;----- asm -----
-; 458 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[349]
-; 460 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[350]current_fish->fish_counter = fish_intervall;
+; 466 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[357]
+; 468 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[358]current_fish->fish_counter = fish_intervall;
 ;--- end asm ---
 	ldb	#7	;,
 	stb	[16,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 462 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[351]
-; 464 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[352]return;
+; 470 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[359]
+; 472 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[360]return;
 ;--- end asm ---
-	lbra	L115	;
-L113:
+	lbra	L117	;
+L115:
 ;----- asm -----
-; 467 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[354]
-; 469 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[355]current_fish->x -= current_fish->speed;
+; 475 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[362]
+; 477 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[363]current_fish->x -= current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp125, current_fish
 	ldb	4,x	;, <variable>.x
-	stb	12,s	;, D.3256
+	stb	12,s	;, D.3272
 	ldx	16,s	; tmp126, current_fish
-	ldb	2,x	; D.3257, <variable>.speed
-	subb	12,s	; D.3258, D.3256
-	negb	; D.3258
+	ldb	2,x	; D.3273, <variable>.speed
+	subb	12,s	; D.3274, D.3272
+	negb	; D.3274
 	ldx	16,s	; tmp127, current_fish
-	stb	4,x	; D.3258, <variable>.x
+	stb	4,x	; D.3274, <variable>.x
 ;----- asm -----
-; 471 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[356]current_fish->y += current_fish->speed;
+; 479 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[364]current_fish->y += current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp128, current_fish
 	ldb	5,x	;, <variable>.y
-	stb	13,s	;, D.3259
+	stb	13,s	;, D.3275
 	ldx	16,s	; tmp129, current_fish
-	ldb	2,x	; D.3260, <variable>.speed
-	addb	13,s	; D.3261, D.3259
+	ldb	2,x	; D.3276, <variable>.speed
+	addb	13,s	; D.3277, D.3275
 	ldx	16,s	; tmp130, current_fish
-	stb	5,x	; D.3261, <variable>.y
+	stb	5,x	; D.3277, <variable>.y
 ;----- asm -----
-; 473 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[357]break;
+; 481 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[365]break;
 ;--- end asm ---
-	lbra	L104	;
-L100:
+	lbra	L106	;
+L102:
 ;----- asm -----
-; 479 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[361]
-; 481 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[362]if (current_fish->y > 100)
+; 487 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[369]
+; 489 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[370]if (current_fish->y > 100)
 ;--- end asm ---
 	ldx	16,s	; tmp131, current_fish
-	ldb	5,x	; D.3262, <variable>.y
-	cmpb	#100	;cmpqi:	; D.3262,
-	ble	L114	;
+	ldb	5,x	; D.3278, <variable>.y
+	cmpb	#100	;cmpqi:	; D.3278,
+	ble	L116	;
 ;----- asm -----
-; 484 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[364]
-; 486 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[365]current_fish->fish_counter = fish_intervall;
+; 492 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[372]
+; 494 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[373]current_fish->fish_counter = fish_intervall;
 ;--- end asm ---
 	ldb	#7	;,
 	stb	[16,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 488 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[366]
-; 490 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[367]return;
+; 496 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[374]
+; 498 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[375]return;
 ;--- end asm ---
-	lbra	L115	;
-L114:
+	lbra	L117	;
+L116:
 ;----- asm -----
-; 493 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[369]
-; 495 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[370]current_fish->y += current_fish->speed;
+; 501 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[377]
+; 503 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[378]current_fish->y += current_fish->speed;
 ;--- end asm ---
 	ldx	16,s	; tmp132, current_fish
 	ldb	5,x	;, <variable>.y
-	stb	14,s	;, D.3263
+	stb	14,s	;, D.3279
 	ldx	16,s	; tmp133, current_fish
-	ldb	2,x	; D.3264, <variable>.speed
-	addb	14,s	; D.3265, D.3263
+	ldb	2,x	; D.3280, <variable>.speed
+	addb	14,s	; D.3281, D.3279
 	ldx	16,s	; tmp134, current_fish
-	stb	5,x	; D.3265, <variable>.y
+	stb	5,x	; D.3281, <variable>.y
 ;----- asm -----
-; 497 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[371]break;
+; 505 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[379]break;
 ;--- end asm ---
-	bra	L104	;
-L92:
+	bra	L106	;
+L94:
 ;----- asm -----
-; 503 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[375]
-; 505 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[376]current_fish->fish_counter = fish_intervall;
+; 511 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[383]
+; 513 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[384]current_fish->fish_counter = fish_intervall;
 ;--- end asm ---
 	ldb	#7	;,
 	stb	[16,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 507 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[377]return;
+; 515 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[385]return;
 ;--- end asm ---
-	bra	L115	;
-L104:
+	bra	L117	;
+L106:
 ;----- asm -----
-; 514 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[383]
-; 516 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[384]vec_dot_dwell = dot_brightness;
+; 522 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[391]
+; 524 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[392]vec_dot_dwell = dot_brightness;
 ;--- end asm ---
 	ldb	#5	;,
 	stb	_Vec_Dot_Dwell	;, Vec_Dot_Dwell
 ;----- asm -----
-; 518 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[385]via_t1_cnt_lo= (unsigned int)120;
+; 526 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[393]via_t1_cnt_lo= (unsigned int)120;
 ;--- end asm ---
 	ldb	#120	;,
 	stb	_VIA_t1_cnt_lo	;, VIA_t1_cnt_lo
 ;----- asm -----
-; 520 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[386]dot_d(current_fish->y, current_fish->x);
+; 528 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[394]dot_d(current_fish->y, current_fish->x);
 ;--- end asm ---
 	ldx	16,s	; tmp135, current_fish
 	ldb	4,x	;, <variable>.x
-	stb	15,s	;, D.3266
+	stb	15,s	;, D.3282
 	ldx	16,s	; tmp136, current_fish
-	ldb	5,x	; D.3267, <variable>.y
-	stb	19,s	; D.3267, a
-	ldb	15,s	;, D.3266
+	ldb	5,x	; D.3283, <variable>.y
+	stb	19,s	; D.3283, a
+	ldb	15,s	;, D.3282
 	stb	18,s	;, b
 	ldb	19,s	;, a
 	stb	,-s	;,
 	ldb	19,s	;, b
 	jsr	__Dot_d
 	leas	1,s	;,,
-L115:
+L117:
 	leas	20,s	;,,
 	puls	u,pc	;
 _init_fish:
 	leas	-8,s	;,,
 	stx	4,s	; current_fish, current_fish
 ;----- asm -----
-; 196 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[184]unsigned int choice = random() % 4;
+; 204 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[192]unsigned int choice = random() % 4;
 ;--- end asm ---
 	jsr	__Random
 	andb	#3	; tmp45,
 	stb	6,s	; tmp45, choice
 ;----- asm -----
-; 198 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[185]signed int start = (signed int)random() % 100;
+; 206 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[193]signed int start = (signed int)random() % 100;
 ;--- end asm ---
 	jsr	__Random
-	stb	3,s	; D.3139, D.3140
-	ldb	3,s	;, D.3140
+	stb	3,s	; D.3155, D.3156
+	ldb	3,s	;, D.3156
 	lda	#41	;mulqihi3	;
 	mul
 	std	,s	;,
@@ -2007,7 +2085,7 @@ _init_fish:
 	asrb	;
 	asrb	;
 	stb	2,s	;,
-	ldb	3,s	; tmp49, D.3140
+	ldb	3,s	; tmp49, D.3156
 	rolb	; tmp49
 	rolb	; tmp49
 	andb	#1	; tmp49,
@@ -2017,142 +2095,149 @@ _init_fish:
 	lda	#100	;mulqihi3	;
 	mul
 		;movlsbqihi: D->B
-	subb	3,s	; tmp53, D.3140
+	subb	3,s	; tmp53, D.3156
 	negb	; tmp53
 	stb	7,s	; tmp53, start
 ;----- asm -----
-; 200 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[186]current_fish->fish_counter = -1;
+; 208 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[194]current_fish->fish_counter = -1;
 ;--- end asm ---
 	ldb	#-1	;,
 	stb	[4,s]	;, <variable>.fish_counter
 ;----- asm -----
-; 202 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[187]current_fish->direction = (signed int) (random() % highest_direction);
+; 210 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[195]current_fish->direction = (signed int) (random() % highest_direction);
 ;--- end asm ---
 	jsr	__Random
-	andb	#7	; D.3143,
+	andb	#7	; D.3159,
 	ldx	4,s	; tmp54, current_fish
-	stb	1,x	; D.3143, <variable>.direction
+	stb	1,x	; D.3159, <variable>.direction
 ;----- asm -----
-; 204 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[188]current_fish->speed = ((signed int) (random()) & 3) + 1;
+; 212 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[196]current_fish->speed = ((signed int) (random()) & 3) + 1;
 ;--- end asm ---
 	jsr	__Random
-	andb	#3	; D.3146,
-	incb	; D.3147
+	andb	#3	; D.3162,
+	incb	; D.3163
 	ldx	4,s	; tmp55, current_fish
-	stb	2,x	; D.3147, <variable>.speed
+	stb	2,x	; D.3163, <variable>.speed
 ;----- asm -----
-; 206 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[189]current_fish->hunting = 0;
+; 214 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[197]current_fish->hunting = 0;
 ;--- end asm ---
 	ldx	4,s	; tmp56, current_fish
 	clr	3,x	; <variable>.hunting
 ;----- asm -----
-; 211 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[193]if (choice == 0)
+; 219 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[201]if (choice == 0)
 ;--- end asm ---
 	tst	6,s	; choice
-	bne	L117	;
+	bne	L119	;
 ;----- asm -----
-; 214 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[195]current_fish->y = -100;
+; 222 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[203]current_fish->y = -100;
 ;--- end asm ---
 	ldx	4,s	; tmp57, current_fish
 	ldb	#-100	;,
 	stb	5,x	;, <variable>.y
 ;----- asm -----
-; 216 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[196]current_fish->x = start;
+; 224 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[204]current_fish->x = start;
 ;--- end asm ---
 	ldx	4,s	; tmp58, current_fish
 	ldb	7,s	;, start
 	stb	4,x	;, <variable>.x
-L117:
+L119:
 ;----- asm -----
-; 219 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[198]if (choice == 1)
+; 227 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[206]if (choice == 1)
 ;--- end asm ---
 	ldb	6,s	;, choice
 	cmpb	#1	;cmpqi:	;,
-	bne	L118	;
+	bne	L120	;
 ;----- asm -----
-; 222 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[200]current_fish->y = 100;
+; 230 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[208]current_fish->y = 100;
 ;--- end asm ---
 	ldx	4,s	; tmp59, current_fish
 	ldb	#100	;,
 	stb	5,x	;, <variable>.y
 ;----- asm -----
-; 224 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[201]current_fish->x = start;
+; 232 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[209]current_fish->x = start;
 ;--- end asm ---
 	ldx	4,s	; tmp60, current_fish
 	ldb	7,s	;, start
 	stb	4,x	;, <variable>.x
-L118:
+L120:
 ;----- asm -----
-; 227 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[203]if (choice == 2)
+; 235 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[211]if (choice == 2)
 ;--- end asm ---
 	ldb	6,s	;, choice
 	cmpb	#2	;cmpqi:	;,
-	bne	L119	;
+	bne	L121	;
 ;----- asm -----
-; 230 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[205]current_fish->y = start;
+; 238 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[213]current_fish->y = start;
 ;--- end asm ---
 	ldx	4,s	; tmp61, current_fish
 	ldb	7,s	;, start
 	stb	5,x	;, <variable>.y
 ;----- asm -----
-; 232 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[206]current_fish->x = -100;
+; 240 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[214]current_fish->x = -100;
 ;--- end asm ---
 	ldx	4,s	; tmp62, current_fish
 	ldb	#-100	;,
 	stb	4,x	;, <variable>.x
-L119:
+L121:
 ;----- asm -----
-; 235 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[208]if (choice == 3)
+; 243 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[216]if (choice == 3)
 ;--- end asm ---
 	ldb	6,s	;, choice
 	cmpb	#3	;cmpqi:	;,
-	bne	L121	;
+	bne	L123	;
 ;----- asm -----
-; 238 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[210]current_fish->y = start;
+; 246 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[218]current_fish->y = start;
 ;--- end asm ---
 	ldx	4,s	; tmp63, current_fish
 	ldb	7,s	;, start
 	stb	5,x	;, <variable>.y
 ;----- asm -----
-; 240 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[211]current_fish->x = 100;
+; 248 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[219]current_fish->x = 100;
 ;--- end asm ---
 	ldx	4,s	; tmp64, current_fish
 	ldb	#100	;,
 	stb	4,x	;, <variable>.x
-L121:
+L123:
 	leas	8,s	;,,
+	rts
+_button_1_1_pressed:
+	jsr	_buttons_pressed
+	andb	#1	; D.2965,
+	rts
+_buttons_pressed:
+	ldb	_Vec_Buttons	; D.2957, Vec_Buttons
 	rts
 _init_new_game:
 	pshs	u	;
 	leas	-3,s	;,,
 ;----- asm -----
-; 526 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[391]unsigned char i;
-; 528 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[392]for (i=0; i<fishes; i++)
+; 534 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[399]unsigned char i;
+; 536 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[400]for (i=0; i<fishes; i++)
 ;--- end asm ---
 	clr	2,s	; i
-	bra	L123	;
-L124:
+	bra	L129	;
+L130:
 ;----- asm -----
-; 531 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
-	; #ENR#[394]current_fishes[i].fish_counter = 10;
+; 539 "C:\Vectrex\WorkFolder\VectrexTest\FishGame\FishGame\source\main.enr.c" 1
+	; #ENR#[402]current_fishes[i].fish_counter = 10;
 ;--- end asm ---
 	ldb	2,s	; i.12, i
 	clra		;zero_extendqihi: R:b -> R:d	; i.12,
@@ -2174,10 +2259,10 @@ L124:
 	ldb	#10	;,
 	stb	,x	;, <variable>.fish_counter
 	inc	2,s	; i
-L123:
+L129:
 	ldb	2,s	;, i
 	cmpb	#2	;cmpqi:	;,
-	bls	L124	;
+	bls	L130	;
 	leas	3,s	;,,
 	puls	u,pc	;
 	.area	.bss
