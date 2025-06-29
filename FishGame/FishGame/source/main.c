@@ -62,10 +62,11 @@ enum GameState_t {
 	Waiting,
 	Reeling,
 	Success,
-	Lose
+	Lose,
+	YouAreWinner
 } GameState;
 
-signed char FishSizes[10] = {0,0,0,0,0,0,0,0,0,0};
+signed char FishSizes[8] = {0,0,0,0,0,0,0,0};
 
 const signed char HookPlayer[]=
 {
@@ -436,9 +437,9 @@ void drawLives(int yPos)
 
 void renderLives()
 {
-	for(int i = -1; i < (lives - 1); i++)
+	for(int i = -2; i < (lives - 2); i++)
 	{
-		drawLives(i * 20);
+		drawLives(i * -20);
 	}
 }
 
@@ -551,8 +552,22 @@ void catchingMinigame()
 			levelHighscore++;
 			if(levelHighscore == 6)//maybe some resetting and 1up?
 			{
+				int bigFishCaughtForLifeUp = 0;
+				for(int f = 0; f < (levelHighscore - 1); f++)
+				{
+					if(FishSizes[f] == 1)
+					bigFishCaughtForLifeUp++;
+				}
+
 				levelHighscore = 0;
+
+				if(bigFishCaughtForLifeUp > 1)
 				lives++;
+
+				if(bigFishCaughtForLifeUp == 5)
+				{
+					GameState = YouAreWinner;
+				}
 			}
 		}
 	}
@@ -587,7 +602,7 @@ void catchingMinigame()
 		else 
 		{
 			GameState = Reeling;
-			WAIT(200);
+			WAIT(230);
 		}
 	}
 }
@@ -640,6 +655,15 @@ int main(void)
 		{
 			Reset0Ref();
 			Print_Str_d(TextY,TextX, "YOU HAVE LOST THE GAME.\x80");  
+			if (Vec_Buttons & 8) //button #4
+			{
+				resetGame();
+			} 
+		}
+		else if(GameState == YouAreWinner)
+		{
+			Reset0Ref();
+			Print_Str_d(TextY,TextX, "YOU HAVE WON THE GAME!!!\x80");  
 			if (Vec_Buttons & 8) //button #4
 			{
 				resetGame();

@@ -1,0 +1,6 @@
+// AYFX - Data of file: "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\chopper.afx"
+const unsigned int chopper_data[]=
+{
+	0xF0, 0x00, 0x00, 0x00, 0x90, 0x90, 0x2F, 0x5D, 0x0D, 0xD0, 
+	0x20, 
+};
