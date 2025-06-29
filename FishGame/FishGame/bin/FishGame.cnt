@@ -784,7 +784,7 @@ C_INFO_BLOCK $01DC "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\so
 C_INFO_BLOCK $01EE "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 425 "drawspritewithscaleatpos(anotherwave, (unsigned int)0x40, 2,50); " BKPOINT=0
 C_INFO_BLOCK $0205 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 430 "reset0ref(); " BKPOINT=0
 C_INFO_BLOCK $0208 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 431 "via_t1_cnt_lo = 0xff; " BKPOINT=0
-C_INFO_BLOCK $020D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 432 "moveto_d(ypos, 70); " BKPOINT=0
+C_INFO_BLOCK $020D "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 432 "moveto_d(ypos, 50); " BKPOINT=0
 C_INFO_BLOCK $021C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 433 "via_t1_cnt_lo = 0x40; " BKPOINT=0
 C_INFO_BLOCK $0221 "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 434 "draw_vlc((void*) hookplayer); " BKPOINT=0
 C_INFO_BLOCK $022C "C:\Users\tsuok\FalloutTTRPG\VectrexTest\FishGame\FishGame\source\main.c "FN_END 439 "for(int i = -2; i < (lives - 2); i++) " BKPOINT=0

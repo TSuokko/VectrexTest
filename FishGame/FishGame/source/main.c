@@ -430,7 +430,7 @@ void drawLives(int yPos)
 {
 	Reset0Ref();
 	VIA_t1_cnt_lo = 0xFF;
-	Moveto_d(yPos, 70);
+	Moveto_d(yPos, 50);
 	VIA_t1_cnt_lo = 0x40;
 	Draw_VLc((void*) HookPlayer);
 }
